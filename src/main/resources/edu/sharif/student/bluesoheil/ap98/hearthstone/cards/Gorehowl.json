@@ -1,0 +1,12 @@
+{
+  "name": "Gorehowl",
+  "manaCost": 7,
+  "type": "WEAPON",
+  "heroClass": "NEUTRAL",
+  "rarity": "EPIC",
+  "description": "N/A",
+  "cost": 4,
+  "HP": 0,
+  "attack": 7,
+  "durability": 1
+}

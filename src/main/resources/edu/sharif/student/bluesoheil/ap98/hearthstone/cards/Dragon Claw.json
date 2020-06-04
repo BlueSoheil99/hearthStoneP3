@@ -1,0 +1,12 @@
+{
+  "name": "Dragon Claw",
+  "manaCost": 5,
+  "type": "WEAPON",
+  "heroClass": "NEUTRAL",
+  "rarity": "COMMON",
+  "description": "N/A",
+  "cost": 2,
+  "HP": 0,
+  "attack": 5,
+  "durability": 2
+}

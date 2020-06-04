@@ -1,0 +1,13 @@
+{
+  "isInRush": false,
+  "name": "Abomination",
+  "manaCost": 4,
+  "type": "MINION",
+  "heroClass": "NEUTRAL",
+  "rarity": "RARE",
+  "description": "N/A",
+  "cost": 3,
+  "HP": 4,
+  "attack": 4,
+  "durability": 0
+}

@@ -1,0 +1,13 @@
+{
+  "value": 0,
+  "name": "Innervate",
+  "manaCost": 0,
+  "type": "SPELL",
+  "heroClass": "NEUTRAL",
+  "rarity": "RARE",
+  "description": "N/A",
+  "cost": 2,
+  "HP": 0,
+  "attack": 0,
+  "durability": 0
+}

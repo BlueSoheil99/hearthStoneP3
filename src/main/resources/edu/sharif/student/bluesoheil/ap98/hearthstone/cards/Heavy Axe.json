@@ -1,0 +1,12 @@
+{
+  "name": "Heavy Axe",
+  "manaCost": 1,
+  "type": "WEAPON",
+  "heroClass": "NEUTRAL",
+  "rarity": "COMMON",
+  "description": "N/A",
+  "cost": 2,
+  "HP": 0,
+  "attack": 1,
+  "durability": 3
+}

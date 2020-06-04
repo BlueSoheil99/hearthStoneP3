@@ -1,0 +1,13 @@
+{
+  "value": 0,
+  "name": "Concrete Shield",
+  "manaCost": 4,
+  "type": "SPELL",
+  "heroClass": "WARLOCK",
+  "rarity": "EPIC",
+  "description": "Adds 10 defence to hero",
+  "cost": 4,
+  "HP": 0,
+  "attack": 0,
+  "durability": 0
+}

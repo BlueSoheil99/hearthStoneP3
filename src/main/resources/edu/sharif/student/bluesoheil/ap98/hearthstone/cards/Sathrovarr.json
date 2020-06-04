@@ -1,0 +1,13 @@
+{
+  "isInRush": false,
+  "name": "Sathrovarr",
+  "manaCost": 9,
+  "type": "MINION",
+  "heroClass": "NEUTRAL",
+  "rarity": "LEGENDARY",
+  "description": "N/A",
+  "cost": 6,
+  "HP": 5,
+  "attack": 5,
+  "durability": 0
+}

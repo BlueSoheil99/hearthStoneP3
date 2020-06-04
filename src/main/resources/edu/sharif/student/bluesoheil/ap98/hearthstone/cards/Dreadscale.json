@@ -1,0 +1,13 @@
+{
+  "isInRush": false,
+  "name": "Dreadscale",
+  "manaCost": 3,
+  "type": "MINION",
+  "heroClass": "WARLOCK",
+  "rarity": "LEGENDARY",
+  "description": "N/A",
+  "cost": 3,
+  "HP": 2,
+  "attack": 4,
+  "durability": 0
+}

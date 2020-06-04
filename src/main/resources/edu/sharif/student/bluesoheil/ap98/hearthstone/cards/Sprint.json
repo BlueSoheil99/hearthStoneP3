@@ -1,0 +1,13 @@
+{
+  "value": 0,
+  "name": "Sprint",
+  "manaCost": 7,
+  "type": "SPELL",
+  "heroClass": "NEUTRAL",
+  "rarity": "RARE",
+  "description": "N/A",
+  "cost": 4,
+  "HP": 0,
+  "attack": 0,
+  "durability": 0
+}

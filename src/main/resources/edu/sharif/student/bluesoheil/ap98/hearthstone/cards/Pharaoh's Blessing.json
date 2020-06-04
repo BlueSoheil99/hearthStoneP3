@@ -1,0 +1,13 @@
+{
+  "value": 0,
+  "name": "Pharaoh\u0027s Blessing",
+  "manaCost": 6,
+  "type": "SPELL",
+  "heroClass": "NEUTRAL",
+  "rarity": "RARE",
+  "description": "N/A",
+  "cost": 4,
+  "HP": 0,
+  "attack": 0,
+  "durability": 0
+}

@@ -1,0 +1,13 @@
+{
+  "isInRush": false,
+  "name": "Security Rover",
+  "manaCost": 6,
+  "type": "MINION",
+  "heroClass": "NEUTRAL",
+  "rarity": "RARE",
+  "description": "N/A",
+  "cost": 3,
+  "HP": 6,
+  "attack": 2,
+  "durability": 0
+}

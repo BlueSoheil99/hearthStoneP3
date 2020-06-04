@@ -1,0 +1,13 @@
+{
+  "isInRush": false,
+  "name": "Omega Medic",
+  "manaCost": 3,
+  "type": "MINION",
+  "heroClass": "NEUTRAL",
+  "rarity": "RARE",
+  "description": "N/A",
+  "cost": 2,
+  "HP": 4,
+  "attack": 3,
+  "durability": 0
+}

@@ -1,0 +1,13 @@
+{
+  "isInRush": false,
+  "name": "High Priest Amet",
+  "manaCost": 4,
+  "type": "MINION",
+  "heroClass": "PRIEST",
+  "rarity": "LEGENDARY",
+  "description": "N/A",
+  "cost": 8,
+  "HP": 7,
+  "attack": 2,
+  "durability": 0
+}

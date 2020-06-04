@@ -1,0 +1,13 @@
+{
+  "value": 0,
+  "name": "Stormhammer",
+  "manaCost": 3,
+  "type": "SPELL",
+  "heroClass": "NEUTRAL",
+  "rarity": "EPIC",
+  "description": "N/A",
+  "cost": 4,
+  "HP": 0,
+  "attack": 0,
+  "durability": 0
+}

@@ -1,0 +1,13 @@
+{
+  "value": 0,
+  "name": "Arcane explosion",
+  "manaCost": 2,
+  "type": "SPELL",
+  "heroClass": "MAGE",
+  "rarity": "COMMON",
+  "description": "N/A",
+  "cost": 3,
+  "HP": 0,
+  "attack": 0,
+  "durability": 0
+}

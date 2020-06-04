@@ -1,0 +1,13 @@
+{
+  "isInRush": false,
+  "name": "Zilliax",
+  "manaCost": 5,
+  "type": "MINION",
+  "heroClass": "NEUTRAL",
+  "rarity": "LEGENDARY",
+  "description": "N/A",
+  "cost": 2,
+  "HP": 2,
+  "attack": 3,
+  "durability": 0
+}

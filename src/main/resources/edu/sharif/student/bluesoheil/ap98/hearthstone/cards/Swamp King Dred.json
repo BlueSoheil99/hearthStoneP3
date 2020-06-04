@@ -1,0 +1,13 @@
+{
+  "isInRush": false,
+  "name": "Swamp King Dred",
+  "manaCost": 7,
+  "type": "MINION",
+  "heroClass": "HUNTER",
+  "rarity": "LEGENDARY",
+  "description": "N/A",
+  "cost": 10,
+  "HP": 9,
+  "attack": 9,
+  "durability": 0
+}

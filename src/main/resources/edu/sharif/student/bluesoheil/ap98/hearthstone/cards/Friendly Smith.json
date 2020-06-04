@@ -1,0 +1,13 @@
+{
+  "value": 0,
+  "name": "Friendly Smith",
+  "manaCost": 1,
+  "type": "SPELL",
+  "heroClass": "ROGUE",
+  "rarity": "COMMON",
+  "description": "N/A",
+  "cost": 3,
+  "HP": 0,
+  "attack": 0,
+  "durability": 0
+}

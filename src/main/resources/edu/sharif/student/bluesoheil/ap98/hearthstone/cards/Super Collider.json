@@ -1,0 +1,12 @@
+{
+  "name": "Super Collider",
+  "manaCost": 5,
+  "type": "WEAPON",
+  "heroClass": "NEUTRAL",
+  "rarity": "EPIC",
+  "description": "N/A",
+  "cost": 2,
+  "HP": 0,
+  "attack": 1,
+  "durability": 3
+}
