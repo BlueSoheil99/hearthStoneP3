@@ -7,9 +7,6 @@ public class Spell extends Card {
     Spell(String name, int manaCost, Rarity rarity, HeroClass heroClass, String description , int cost){
         super(name , manaCost , rarity , heroClass, description , cost);
         setType(CardType.SPELL);
-
-//        saveCard();
-
     }
 
 }

@@ -61,3 +61,325 @@ CLICK_BUTTON		2020/06/04  15:36:09	card: BOOK OF SPECTERS  selected.
 CLICK_BUTTON		2020/06/04  15:36:11	card: DRAGON CLAW  selected.
 CLICK_BUTTON		2020/06/04  15:36:17	button: EXIT selected .
 PLAYER		2020/06/04  15:36:18	123456 logged out
+PLAYER		2020/06/07  01:38:43	123456 logged in
+NAVIGATION		2020/06/07  01:38:46	To Shop
+CLICK_BUTTON		2020/06/07  01:38:48	button: BACK selected .
+NAVIGATION		2020/06/07  01:38:48	Back to previous panel
+NAVIGATION		2020/06/07  01:38:54	To Collection
+CLICK_BUTTON		2020/06/07  01:38:55	button: EXIT selected .
+PLAYER		2020/06/07  01:38:57	123456 logged out
+PLAYER		2020/06/07  01:45:32	123456 logged in
+CLICK_BUTTON		2020/06/07  01:45:36	button: LOGOUT  selected.
+NAVIGATION		2020/06/07  01:45:39	To Status
+CLICK_BUTTON		2020/06/07  01:45:42	button: BACK selected .
+NAVIGATION		2020/06/07  01:45:42	Back to previous panel
+CLICK_BUTTON		2020/06/07  01:45:43	button: LOGOUT  selected.
+PLAYER		2020/06/07  01:45:45	123456 logged out
+PLAYER		2020/06/07  01:45:51	123456 logged in
+CLICK_BUTTON		2020/06/07  01:45:53	button: LOGOUT  selected.
+PLAYER		2020/06/07  01:45:56	123456 logged out
+PLAYER		2020/06/07  01:52:27	123456 logged in
+PLAYER		2020/06/07  01:52:30	123456 logged out
+PLAYER		2020/06/07  01:54:49	123456 logged in
+NAVIGATION		2020/06/07  01:54:51	To Setting
+CLICK_BUTTON		2020/06/07  01:54:54	button: DELETE PLAYER  selected.
+CLICK_BUTTON		2020/06/07  01:54:56	button: BACK selected .
+NAVIGATION		2020/06/07  01:54:56	Back to previous panel
+PLAYER		2020/06/07  01:54:58	123456 logged out
+PLAYER		2020/06/07  01:55:39	123456 logged in
+NAVIGATION		2020/06/07  01:55:41	To Shop
+CLICK_BUTTON		2020/06/07  01:55:42	button: EXIT selected .
+PLAYER		2020/06/07  01:55:44	123456 logged out
+PLAYER		2020/06/07  02:23:34	123456 logged in
+PLAYER		2020/06/07  02:23:38	123456 logged out
+PLAYER		2020/06/07  02:39:50	123456 logged in
+NAVIGATION		2020/06/07  02:39:52	To Shop
+CLICK_BUTTON		2020/06/07  02:39:54	card: SWARM OF LOCUSTS  selected.
+CLICK_BUTTON		2020/06/07  02:39:57	button: SELL selected .
+ERROR: SHOP	2020/06/07  02:40:03	edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.CardControllerException: unsalable card: SWARM OF LOCUSTS is in these decks:	[MageDefaultDeck, WarlockDefaultDeck, RogueDefaultDeck, PriestDefaultDeck, HunterDefaultDeck]
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.CardController.sellCard(CardController.java:198)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer.sellCard(Administer.java:233)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.ShopPanel.lambda$setControllerActionListeners$1(ShopPanel.java:151)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+CLICK_BUTTON		2020/06/07  02:40:04	card: CURIO COLLECTOR  selected.
+CLICK_BUTTON		2020/06/07  02:40:06	button: SELL selected .
+ERROR: SHOP	2020/06/07  02:40:08	edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.CardControllerException: unsalable card: CURIO COLLECTOR is in these decks:	[MageDefaultDeck, WarlockDefaultDeck, RogueDefaultDeck, PriestDefaultDeck, HunterDefaultDeck]
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.CardController.sellCard(CardController.java:198)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer.sellCard(Administer.java:233)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.ShopPanel.lambda$setControllerActionListeners$1(ShopPanel.java:151)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+CLICK_BUTTON		2020/06/07  02:40:12	card: FRIENDLY SMITH  selected.
+CLICK_BUTTON		2020/06/07  02:40:15	button: SELL selected .
+ERROR: SHOP	2020/06/07  02:40:20	edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.CardControllerException: unsalable card: FRIENDLY SMITH is in these decks:	[RogueDefaultDeck]
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.CardController.sellCard(CardController.java:198)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer.sellCard(Administer.java:233)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.ShopPanel.lambda$setControllerActionListeners$1(ShopPanel.java:151)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+CLICK_BUTTON		2020/06/07  02:40:21	card: COVID  selected.
+CLICK_BUTTON		2020/06/07  02:40:23	button: SELL selected .
+ERROR: SHOP	2020/06/07  02:40:25	edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.CardControllerException: players hasn't COVID card
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.CardController.sellCard(CardController.java:199)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer.sellCard(Administer.java:233)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.ShopPanel.lambda$setControllerActionListeners$1(ShopPanel.java:151)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+CLICK_BUTTON		2020/06/07  02:40:30	card: SECURITY ROVER  selected.
+CLICK_BUTTON		2020/06/07  02:40:31	button: SELL selected .
+ERROR: SHOP	2020/06/07  02:40:34	edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.CardControllerException: players hasn't SECURITY ROVER card
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.CardController.sellCard(CardController.java:199)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer.sellCard(Administer.java:233)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.ShopPanel.lambda$setControllerActionListeners$1(ShopPanel.java:151)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+CLICK_BUTTON		2020/06/07  02:40:35	card: DRAGON CLAW  selected.
+CLICK_BUTTON		2020/06/07  02:40:37	card: HEAVY AXE  selected.
+CLICK_BUTTON		2020/06/07  02:40:38	card: CONCRETE SHIELD  selected.
+CLICK_BUTTON		2020/06/07  02:40:39	button: SELL selected .
+ERROR: SHOP	2020/06/07  02:40:42	edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.CardControllerException: players hasn't CONCRETE SHIELD card
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.CardController.sellCard(CardController.java:199)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer.sellCard(Administer.java:233)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.ShopPanel.lambda$setControllerActionListeners$1(ShopPanel.java:151)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+CLICK_BUTTON		2020/06/07  02:40:43	button: BUY selected .
+SHOP		2020/06/07  02:40:46	card: CONCRETE SHIELD purchased
+CLICK_BUTTON		2020/06/07  02:40:48	card: CONCRETE SHIELD  selected.
+CLICK_BUTTON		2020/06/07  02:40:49	button: SELL selected .
+SHOP		2020/06/07  02:40:54	card: CONCRETE SHIELD sold
+CLICK_BUTTON		2020/06/07  02:40:57	button: EXIT selected .
+PLAYER		2020/06/07  02:40:58	123456 logged out
+PLAYER		2020/06/07  02:52:05	123456 logged in
+NAVIGATION		2020/06/07  02:52:07	To Status
+STATUS		2020/06/07  02:52:08	HunterDefaultDeck states showed .
+CLICK_BUTTON		2020/06/07  02:52:08	deck:  HunterDefaultDeck  selected .
+STATUS		2020/06/07  02:52:09	PriestDefaultDeck states showed .
+CLICK_BUTTON		2020/06/07  02:52:09	deck:  PriestDefaultDeck  selected .
+STATUS		2020/06/07  02:52:11	MageDefaultDeck states showed .
+CLICK_BUTTON		2020/06/07  02:52:11	deck:  MageDefaultDeck  selected .
+STATUS		2020/06/07  02:52:13	RogueDefaultDeck states showed .
+CLICK_BUTTON		2020/06/07  02:52:13	deck:  RogueDefaultDeck  selected .
+STATUS		2020/06/07  02:52:15	WarlockDefaultDeck states showed .
+CLICK_BUTTON		2020/06/07  02:52:15	deck:  WarlockDefaultDeck  selected .
+STATUS		2020/06/07  02:52:15	HunterDefaultDeck states showed .
+CLICK_BUTTON		2020/06/07  02:52:15	deck:  HunterDefaultDeck  selected .
+STATUS		2020/06/07  02:52:16	PriestDefaultDeck states showed .
+CLICK_BUTTON		2020/06/07  02:52:16	deck:  PriestDefaultDeck  selected .
+STATUS		2020/06/07  02:52:18	WarlockDefaultDeck states showed .
+CLICK_BUTTON		2020/06/07  02:52:18	deck:  WarlockDefaultDeck  selected .
+STATUS		2020/06/07  02:52:19	MageDefaultDeck states showed .
+CLICK_BUTTON		2020/06/07  02:52:19	deck:  MageDefaultDeck  selected .
+CLICK_BUTTON		2020/06/07  02:52:24	button: EXIT selected .
+PLAYER		2020/06/07  02:52:26	123456 logged out

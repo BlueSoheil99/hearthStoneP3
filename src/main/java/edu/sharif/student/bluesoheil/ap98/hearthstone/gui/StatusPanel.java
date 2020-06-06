@@ -27,21 +27,16 @@ public class StatusPanel extends GamePanel {
     }
 
     @Override
-    protected void loadConfig() {
-
-    }
+    protected void loadConfig() { }
 
     @Override
     protected void createFields() {
         deckPanel = new DeckPanel(this.getWidth() / 5, this.getHeight());
         deckPanel.setDecks(Administer.getInstance().getPlayerDecks(10));
-        deckPanel.setClickListener(new ClickListener() {
-            @Override
-            public void select(String objName) {
-                selectedDeck = objName;
-                revalidateDeckStates();
-                Logger.log(LogTypes.STATUS, selectedDeck +" states showed .");
-            }
+        deckPanel.setClickListener(objName -> {
+            selectedDeck = objName;
+            revalidateDeckStates();
+            Logger.log(LogTypes.STATUS, selectedDeck +" states showed .");
         });
         createStatesPanel();
     }
@@ -63,34 +58,27 @@ public class StatusPanel extends GamePanel {
     private void createStatesComponents() {
         Font font1 = statesPanel.getFont1();
         Font font2 = statesPanel.getFont2();
-        //todo create statusLabel class with constructor StatusLabel(String msg , Font font)
-        deckName = new JLabel("Deck Name: ");
-        winRatio = new JLabel("Win Ratio: ");
-        gamesPlayed = new JLabel("Games Played: ");
-        manaAverage = new JLabel("Average of Manas: ");
-        hero = new JLabel("Deck Hero: ");
-        mostUsedCard = new JLabel("Most Used Card: ");
-        deckName.setFont(font1);
-        winRatio.setFont(font1);
-        gamesPlayed.setFont(font1);
-        manaAverage.setFont(font1);
-        hero.setFont(font1);
-        mostUsedCard.setFont(font1);
+        
+        deckName =createStatusLabel("Deck Name: ",font1);
+        winRatio =createStatusLabel("Win Ratio: ",font1);
+        gamesPlayed =createStatusLabel("Games Played: ",font1);
+        manaAverage =createStatusLabel("Average of Manas: ",font1);
+        hero =createStatusLabel("Deck hero: ",font1);
+        mostUsedCard =createStatusLabel("Most Used Card: ",font1);
 
-        selectedDeckName = new JLabel("");
-        selectedWinRatio = new JLabel("");
-        selectedGamesPlayed = new JLabel("");
-        selectedManaAverage = new JLabel("");
-        selectedHero = new JLabel("");
-        selectedMostUsedCard = new JLabel("");
-        selectedDeckName.setFont(font2);
-        selectedWinRatio.setFont(font2);
-        selectedGamesPlayed.setFont(font2);
-        selectedManaAverage.setFont(font2);
-        selectedHero.setFont(font2);
-        selectedMostUsedCard.setFont(font2);
+        selectedDeckName = createStatusLabel("" , font2);
+        selectedWinRatio = createStatusLabel("" , font2);
+        selectedGamesPlayed = createStatusLabel("" , font2);
+        selectedManaAverage = createStatusLabel("" , font2);
+        selectedHero = createStatusLabel("" , font2);
+        selectedMostUsedCard = createStatusLabel("" , font2);
+
     }
-
+    private JLabel createStatusLabel(String name, Font font) {
+        JLabel L = new JLabel(name);
+        L.setFont(font);
+        return L;
+    }
     private void addStatesComponents() {
         statesPanel.setLayout(new GridBagLayout());
         GridBagConstraints gc = new GridBagConstraints();

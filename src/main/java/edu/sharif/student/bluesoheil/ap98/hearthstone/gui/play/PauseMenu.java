@@ -1,7 +1,7 @@
 package edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play;
 
-import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.BackButton;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.ExitButton;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.buttons.BackButton;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.buttons.ExitButton;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.SidePanel;
 
 import javax.swing.*;

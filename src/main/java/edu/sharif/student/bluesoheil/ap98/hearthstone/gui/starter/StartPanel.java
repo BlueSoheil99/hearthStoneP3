@@ -18,7 +18,6 @@ public abstract class StartPanel extends JPanel {
 
     public StartPanel(){
         loadConfig();
-//        loadNormally();
         setSize(new Dimension( width , height));
         setBackground(Color.white);
 
@@ -43,22 +42,11 @@ public abstract class StartPanel extends JPanel {
         X2Inset=X1Inset+labelWidth;
         YInset= 4*height/11;
     }
-    private void loadNormally(){
-        logoPath = "src/res/edu/sharif/student/bluesoheil/ap98/hearthstone/Images/Hearthstone_2016_logo.png";
-        backGroundPath = "src/res/edu/sharif/student/bluesoheil/ap98/hearthstone/Images/7ho000lptrr01.jpg";
-        width = 640;
-        height = 480;
-        labelWidth = 80;
-        fieldWidth = 150;
-        X1Inset=width/2-(labelWidth+fieldWidth)/2;
-        X2Inset=X1Inset+labelWidth;
-        YInset= 4*height/11;
-    }
 
-    public int getX1Inset() {
+    private int getX1Inset() {
         return X1Inset;
     }
-    public int getX2Inset() {
+    private int getX2Inset() {
         return X2Inset;
     }
     public int getYInset() {
@@ -81,6 +69,10 @@ public abstract class StartPanel extends JPanel {
         x1 = getX1Inset();
         x2 = getX2Inset();
         y0 = getYInset();
+    }
+    protected void addComponent(JComponent component, int x , int y , int width , int height){
+        component.setBounds(x , y , width , height);
+        add(component);
     }
 
 }

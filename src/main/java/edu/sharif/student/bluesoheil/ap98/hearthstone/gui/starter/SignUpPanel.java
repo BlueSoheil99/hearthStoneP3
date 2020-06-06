@@ -4,8 +4,7 @@ import edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+
 
 public class SignUpPanel extends StartPanel {
 
@@ -40,50 +39,27 @@ public class SignUpPanel extends StartPanel {
     @Override
     protected void init() {
         super.init();
-
-        userLabel.setBounds(x1, y0, 80, 25);
-        pass1Label.setBounds(x1, y0 = y0 + 30, 80, 25);
-        pass2Label.setBounds(x1, y0 = y0 + 30, 80, 25);
-        usernameField.setBounds(x2, y0 = getYInset(), 150, 25);
-        passwordField1.setBounds(x2, y0 = y0 + 30, 150, 25);
-        passwordField2.setBounds(x2, y0 = y0 + 30, 150, 25);
-        signUpBtn.setBounds(x1, y0 = y0 + 30, 230, 25);
-        loginBtn.setBounds(x1, y0 = y0 + 30, 230, 25);
-
         userLabel.setForeground(Color.white);
         pass1Label.setForeground(Color.white);
         pass2Label.setForeground(Color.white);
-
-        add(userLabel);
-//        usernameField.setBackground(new Color(0,0,0,70));
-//        usernameField.setForeground(Color.white);
-        add(usernameField);
-        add(pass1Label);
-        add(passwordField1);
-        add(pass2Label);
-        add(passwordField2);
-        add(signUpBtn);
         loginBtn.setForeground(Color.white);
         loginBtn.setBackground(new Color(114, 59, 38));
         loginBtn.setBorderPainted(false);
-        add(loginBtn);
+        addComponent(userLabel , x1, y0, 80, 25);
+        addComponent(pass1Label , x1, y0 = y0 + 30, 80, 25);
+        addComponent(pass2Label , x1, y0 = y0 + 30, 80, 25);
+        addComponent(usernameField , x2, y0 = getYInset(), 150, 25);
+        addComponent(passwordField1 , x2, y0 = y0 + 30, 150, 25);
+        addComponent(passwordField2 , x2, y0 = y0 + 30, 150, 25);
+        addComponent(signUpBtn , x1, y0 = y0 + 30, 230, 25);
+        addComponent(loginBtn ,x1 , y0 = y0 + 30, 230, 25);
         add(message);
-
-        loginBtn.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                Administer.getInstance().runLogin();
-            }
-        });
-
-        signUpBtn.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String username = usernameField.getText();
-                String pass1 = passwordField1.getText();
-                String pass2 = passwordField2.getText();
-                tryToSignUp(username, pass1, pass2);
-            }
+        loginBtn.addActionListener(e -> Administer.getInstance().runLogin());
+        signUpBtn.addActionListener(e -> {
+            String username = usernameField.getText();
+            String pass1 = passwordField1.getText();
+            String pass2 = passwordField2.getText();
+            tryToSignUp(username, pass1, pass2);
         });
 
     }

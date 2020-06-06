@@ -13,7 +13,6 @@ public  class Card {
     private Rarity rarity;
     private String description;
     private int cost;
-    private int HP,attack, durability;
 
     public Card(String name , int manaCost , Rarity rarity, HeroClass heroClass , String description, int cost){
         this.name = name;
@@ -23,7 +22,6 @@ public  class Card {
         this.cost = cost;
         // we don't need setters for methods above
         setManaCost(manaCost);
-//        CardController.getInstance().saveCard(this);
     }
 
     //todo delete methods that only use here , for example i THINK setManaCost is not necessary
@@ -40,7 +38,7 @@ public  class Card {
     public CardType getType() {
         return type;
     }
-     void setType(CardType type){ this.type = type;}
+    void setType(CardType type){ this.type = type;}
     public HeroClass getHeroClass() {
         return heroClass;
     }
@@ -52,30 +50,6 @@ public  class Card {
     }
     public int getCost() {
         return cost;
-    }
-
-    public int getHP() {
-        return HP;
-    }
-
-    public void setHP(int HP) {
-        this.HP = HP;
-    }
-
-    public int getAttack() {
-        return attack;
-    }
-
-    public void setAttack(int attack) {
-        this.attack = attack;
-    }
-
-    public int getDurability() {
-        return durability;
-    }
-
-    public void setDurability(int durability) {
-        this.durability = durability;
     }
 
     @Override

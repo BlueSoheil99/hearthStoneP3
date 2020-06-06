@@ -1,6 +1,7 @@
 package edu.sharif.student.bluesoheil.ap98.hearthstone.models.cards;
 
 public class Weapon extends Card{
+    private int HP,attack, durability;
 
     Weapon(String name, int manaCost, Rarity rarity, HeroClass heroClass, String description
             , int cost, int attack , int durability) {
@@ -11,4 +12,23 @@ public class Weapon extends Card{
 
     }
 
+    public int getHP() {
+        return HP;
+    }
+
+    public void setHP(int HP) {
+        this.HP = HP;
+    }
+
+    public int getAttack() {
+        return attack;
+    }
+
+    public void setAttack(int attack) {
+        this.attack = attack;
+    }
+
+    public void setDurability(int durability) {
+        this.durability = durability;
+    }
 }

@@ -140,20 +140,20 @@ public class Administer {
     }
 
     public void runExit() {
-        //i've put confirmDialog so I didn't duplicate code in exit button class and exit button in menuPanel
+//      i've put confirmDialog here so I didn't duplicate code in exitButton class and exitBtn in menuPanel
         int ans = JOptionPane.showConfirmDialog(null, "Are You Sure You Want to Exit?",
                 "Confirm Exit", JOptionPane.YES_NO_OPTION);
         if (ans == JOptionPane.YES_OPTION) {
-            playerController.logOut();
-            System.exit(0);
         }
+        playerController.logOut();
+        System.exit(0);
     }
 
     public void back() {
         Logger.log(LogTypes.NAVIGATION, "Back to previous panel");
         GamePanel lastPanel = getPreviousPanel();
         if (lastPanel.getClass() == CollectionPanel.class) lastPanel = new CollectionPanel();
-        // line above is because when we get back to collection in shop, navigation panel disappears!/ find the reason and fix that instead of lines like line above
+        // todo line above is because when we get back to collection in shop, navigation panel disappears!/ find the reason and fix that instead of lines like line above
         mainFrame.initFrame(lastPanel);
     }
 
