@@ -238,9 +238,12 @@ public class Administer {
     public HashMap<String, String> getPlayerDecks(int numberOfDecks) {
         HashMap<String, String> decksInfo = new HashMap<>();
         int x = 0;
-        for (Deck deck : deckController.getPlayerDecks()) {
+        ArrayList<Deck> playerDecks = deckController.getPlayerDecks();
+        for (Deck deck : playerDecks) {
             if (x < numberOfDecks) {
+                //todo this line redistributes our sorted decks and mess things up
                 decksInfo.put(deck.getName(), deck.getHero().toString());
+                x++;
             }
         }
         return decksInfo;

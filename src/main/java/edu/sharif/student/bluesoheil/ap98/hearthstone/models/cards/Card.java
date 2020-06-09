@@ -1,20 +1,31 @@
 package edu.sharif.student.bluesoheil.ap98.hearthstone.models.cards;
 
-public  class Card {
-    enum Rarity  {COMMON , RARE, EPIC , LEGENDARY}
-    public enum HeroClass { MAGE , ROGUE , WARLOCK ,PRIEST,HUNTER, NEUTRAL}
-    public enum CardType { SPELL , MINION , WEAPON , QUESTANDREWARD , BEAST}
+public class Card {
+    public enum Rarity {
+        COMMON(4),
+        RARE(3),
+        EPIC(2),
+        LEGENDARY(1);
+        int rank;
+        Rarity(int rank) {
+            this.rank = rank;
+        }
+    }
+
+    public enum HeroClass {MAGE, ROGUE, WARLOCK, PRIEST, HUNTER, NEUTRAL}
+
+    public enum CardType {SPELL, MINION, WEAPON, QUESTANDREWARD, BEAST}
 
     //properties
     private String name;
     private int manaCost;
-    private CardType type ;
+    private CardType type;
     private HeroClass heroClass;
     private Rarity rarity;
     private String description;
     private int cost;
 
-    public Card(String name , int manaCost , Rarity rarity, HeroClass heroClass , String description, int cost){
+    public Card(String name, int manaCost, Rarity rarity, HeroClass heroClass, String description, int cost) {
         this.name = name;
         this.heroClass = heroClass;
         this.rarity = rarity;
@@ -29,25 +40,35 @@ public  class Card {
     public String getName() {
         return name;
     }
+
     public int getManaCost() {
         return manaCost;
     }
+
     public void setManaCost(int manaCost) {
         this.manaCost = manaCost;
     }
+
     public CardType getType() {
         return type;
     }
-    void setType(CardType type){ this.type = type;}
+
+    void setType(CardType type) {
+        this.type = type;
+    }
+
     public HeroClass getHeroClass() {
         return heroClass;
     }
+
     public Rarity getRarity() {
         return rarity;
     }
+
     public String getDescription() {
         return description;
     }
+
     public int getCost() {
         return cost;
     }

@@ -23,6 +23,7 @@ public class PlayHandler {
     }
 
     public ArrayList<CardShape> get3Passives() {
+        //todo use collections.shuffle(list)
         ArrayList<CardShape> passives = administer.getPassives();
         ArrayList<CardShape> threeOnes = new ArrayList<>();
         HashSet<Integer> threeIndex = new HashSet(); // I created this set to avoid generating same indexes

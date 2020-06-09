@@ -7,6 +7,8 @@ import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Deck;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.Configuration.LogicConfigs.CardConfig;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class DeckController {
     private static final int MAXIMUM_NUMBER_OF_DECKS = 25; //i'm not sure whether it's important or not!
@@ -108,7 +110,21 @@ public class DeckController {
     }
 
     private void sortDecks() {
-        //todo sortDecks
+        //https://www.baeldung.com/java-comparator-comparable
+
+//        Collections.sort(playerDecks, (o1, o2) -> {
+//            float x = o1.getManaAverage()*100;
+//            float y = o2.getManaAverage()*100;
+//            System.out.println(o1.getManaAverage()+" "+x);
+//            System.out.println(o2.getManaAverage()+" "+y);
+//            int result = (int) (x-y);
+//            return result;
+//        });
+        Collections.sort(playerDecks, Comparator.comparing(Deck::getManaAverage));
+        Collections.sort(playerDecks, Comparator.comparing(Deck::getGamesPlayed));
+        Collections.sort(playerDecks, Comparator.comparing(Deck::getWins));
+        Collections.sort(playerDecks, Comparator.comparing(Deck::getWinRatio));
+//        Collections.sort(playerDecks, Collections.reverseOrder());
     }
 
     public String[] getDeckStates(String deckName) {

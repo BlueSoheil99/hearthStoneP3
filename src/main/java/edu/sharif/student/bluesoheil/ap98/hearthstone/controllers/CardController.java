@@ -164,6 +164,7 @@ public class CardController {
 
 
     public void buyCard(String cardName) throws CardControllerException {
+        //todo when a previously card is bought, i guess it needs to be revalidate. check it out
         cardName = cardName.toUpperCase();
         if (gameTotalCards.containsKey(cardName)) {
             Card card = gameTotalCards.get(cardName);

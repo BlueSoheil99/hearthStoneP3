@@ -25,5 +25,7 @@ public class GameController {
         deck1 = DeckController.getInstance().getCurrentDeck();
         hero1 = deck1.getHero().getHero();
     }
+    //todo use Stack.class for deck
+
 
 }
