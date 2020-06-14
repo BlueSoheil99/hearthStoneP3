@@ -12,7 +12,6 @@ import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.CardShape;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.starter.LoginPanel;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.starter.SignUpPanel;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.*;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.ClickListener;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Deck;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Heroes.HeroTypes;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.InfoPassives.InfoPassive;
@@ -86,26 +85,23 @@ public class Administer {
             runCollection();
         }else{
             Logger.log(LogTypes.NAVIGATION, "To PassiveSelector");
-            String selectedPassive;
-            GameController game = new GameController();
+            GameController.setNewGame();
+            GameController gameController = GameController.getInstance();
             InfoPassivePanel passive = new InfoPassivePanel();
-            passive.setClickListener(new ClickListener() {
-                @Override
-                public void select(String objName) {
-                    Logger.log(LogTypes.PLAY, "passive '"+objName+"' selected");
-                    game.setPassive(objName);
-                    System.out.println("passive selected  "+objName);
-                    startPlay(game);
-                }
+            passive.setClickListener(objName -> {
+                Logger.log(LogTypes.PLAY, "passive '"+objName+"' selected");
+                gameController.setPassive(objName);
+                System.out.println("passive selected  "+objName);
+                startGame(gameController);
             });
             mainFrame.initFrame(passive);
         }
     }
 
-    private void startPlay(GameController game){
+    private void startGame(GameController gameController){
         Logger.log(LogTypes.NAVIGATION, "To Play");
         PlayPanel playPanel = new PlayPanel();
-        PlayHandler.getInstance().setGameController(game);
+        PlayHandler.setNewHandler(gameController , playPanel);
         recentPanels.add(playPanel);
         mainFrame.initFrame(playPanel);
     }
@@ -315,8 +311,9 @@ public class Administer {
     public void changeDeckHero(String selectedDeck, HeroTypes heroName) throws DeckControllerException {
         deckController.changeDeckHero(selectedDeck , heroName);
     }
-    //////////////////
-    //////////////////
+
+    //////////////////////
+    //////////play////////
     public ArrayList<CardShape> getPassives() {
         ArrayList<CardShape> passives = new ArrayList<>();
         for (InfoPassive passive : InfoPassive.values()) {

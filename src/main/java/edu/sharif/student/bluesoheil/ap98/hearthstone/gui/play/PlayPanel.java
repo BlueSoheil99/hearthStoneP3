@@ -1,21 +1,19 @@
 package edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play;
 
-import edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.PlayHandler;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.GamePanel;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.CardPanel;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class PlayPanel extends GamePanel {
 
     private PlayHandler playHandler;
     private PauseMenu pauseMenu;
     private CardPanel playerCards,opponentCards;
-    private HeroPanel playerHeroPanel , opponentHeroPanel;
+    private PlayerPanel playerHeroPanel , opponentHeroPanel;
+    private BoardPanel board;
 
 
 
@@ -28,6 +26,7 @@ public class PlayPanel extends GamePanel {
     protected void createFields() {
         playHandler = PlayHandler.getInstance();
         pauseMenu = PauseMenu.getInstance();
+        board = new BoardPanel();
     }
 
     @Override
@@ -36,6 +35,7 @@ public class PlayPanel extends GamePanel {
 
         setLayout(new BorderLayout());
         add(new JScrollPane(new EventBox()) , BorderLayout.SOUTH);
+        add(board , BorderLayout.NORTH);
 
     }
 }

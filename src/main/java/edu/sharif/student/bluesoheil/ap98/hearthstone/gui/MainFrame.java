@@ -16,7 +16,7 @@ public class MainFrame extends JFrame {
         setContentPane(panel);
         setPreferredSize(panel.getSize());
 //        getContentPane().setPreferredSize(Toolkit.getDefaultToolkit().getScreenSize());
-        setMinimumSize(panel.getSize());
+        setMinimumSize(panel.getSize()); // without it farme gets smaller and smaller
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         pack();
         revalidate();

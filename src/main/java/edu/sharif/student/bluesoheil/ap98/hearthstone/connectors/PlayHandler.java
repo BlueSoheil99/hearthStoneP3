@@ -1,52 +1,70 @@
 package edu.sharif.student.bluesoheil.ap98.hearthstone.connectors;
 
 import edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.GameController;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play.PlayPanel;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.CardShape;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.log.Logger;
 
 import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Random;
+import java.util.Collections;
 
 public class PlayHandler {
     private static PlayHandler instance;
     private Administer administer;
     private GameController gameController;
+    private PlayPanel playPanel;
 
-    public PlayHandler() {
+    /**
+     * this class works as a connection between gui and logic(administer + gameController)
+     */
+    private PlayHandler() {
         administer = Administer.getInstance();
     }
 
+    ///////////////////////////////
+    ///////////statics/////////////
+
     public static PlayHandler getInstance() {
-        if (instance == null) instance = new PlayHandler();
+
+        if (instance == null || instance.gameController == null || instance.playPanel == null)
+            instance = new PlayHandler(); //it's not stable until gets a gameController and playPanel and therefore a game get started
         return instance;
     }
 
+    public static void setNewHandler(GameController gameController, PlayPanel playPanel) {
+        instance.gameController = gameController;
+        instance.playPanel = playPanel;
+    }
+
+    //////////////////////////////
+    /////////non-statics//////////
+
+    //
+    ///
+    ////getters and setters
+    ///
+    //
+
     public ArrayList<CardShape> get3Passives() {
-        //todo use collections.shuffle(list)
         ArrayList<CardShape> passives = administer.getPassives();
         ArrayList<CardShape> threeOnes = new ArrayList<>();
-        HashSet<Integer> threeIndex = new HashSet(); // I created this set to avoid generating same indexes
-        Random rand = new Random();
-        int x;
-        boolean isEnough = false;
-        while (!isEnough) {
-            x = rand.nextInt(passives.size());
-            threeIndex.add(x);
-            if (threeIndex.size() == 3) isEnough = true;
-        }
-        for (int i : threeIndex) {
-            threeOnes.add(passives.get(i));
-        }
+        Collections.shuffle(passives);
+        for (int i = 0; i < 3; i++) threeOnes.add(passives.get(i));
         return threeOnes;
     }
 
     public void setGameController(GameController gameController) {
-        this.gameController = new GameController();
+        this.gameController = gameController;
     }
 
     public ArrayList<String> getEvents() {
         return Logger.getEventLogs();
     }
+
+    //
+    ///
+    ////other methods
+    ///
+    //
 
 }

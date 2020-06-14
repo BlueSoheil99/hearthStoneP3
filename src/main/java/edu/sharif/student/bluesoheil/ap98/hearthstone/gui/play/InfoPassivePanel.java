@@ -14,6 +14,7 @@ import java.awt.event.ActionListener;
 
 
 public class InfoPassivePanel extends GamePanel {
+    //todo change the name into GameStarterPanel
     private PlayConfig properties;
     private CardPanel panel;
     private JLabel selectLabel;
@@ -44,23 +45,15 @@ public class InfoPassivePanel extends GamePanel {
         SetSelectBtnActionListener();
         panel = new CardPanel();
         panel.setPassives(PlayHandler.getInstance().get3Passives());
-        panel.setClickListener(new ClickListener() {
-            @Override
-            public void select(String objName) {
-                selectedPassive = objName;
-            }
-        });
+        panel.setClickListener(objName -> selectedPassive = objName);
     }
 
     private void SetSelectBtnActionListener() {
-        selectBtn.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if(selectedPassive ==null){
-                    JOptionPane.showMessageDialog(null ,"You Haven't Chosen a Passive Yet");
-                }else{
-                    clickListener.select(selectedPassive);
-                }
+        selectBtn.addActionListener(e -> {
+            if(selectedPassive ==null){
+                JOptionPane.showMessageDialog(null ,"You Haven't Chosen a Passive Yet");
+            }else{
+                clickListener.select(selectedPassive);
             }
         });
     }
