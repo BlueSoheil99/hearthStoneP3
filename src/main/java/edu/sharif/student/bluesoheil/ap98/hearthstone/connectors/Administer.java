@@ -100,8 +100,8 @@ public class Administer {
 
     private void startGame(GameController gameController){
         Logger.log(LogTypes.NAVIGATION, "To Play");
+        PlayHandler.setNewHandler(gameController);
         PlayPanel playPanel = new PlayPanel();
-        PlayHandler.setNewHandler(gameController , playPanel);
         recentPanels.add(playPanel);
         mainFrame.initFrame(playPanel);
     }

@@ -9,7 +9,6 @@ public class ImageLoader {
     public static BufferedImage loadImage(String path){
         BufferedImage image = null;
         try {
-//            image = ImageIO.read(ImageLoader.class.getResource(path));
             image = ImageIO.read(new File(path));
         } catch (IOException e) {
             System.out.println("invalid path: "+path);

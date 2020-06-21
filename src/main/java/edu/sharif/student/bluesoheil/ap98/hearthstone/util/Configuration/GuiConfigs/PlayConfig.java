@@ -7,6 +7,8 @@ public class PlayConfig extends GuiConfig {
     private static PlayConfig instance;
     private Configs properties;
     private int pauseWidth, pauseHeight, eventHeight,passivePanelWidth,passivePanelHeight;
+    private int playerPanelHeight , playerPanelWidth;
+    private String heroIconsPath;
 
     public static PlayConfig getInstance(){
         if (instance== null) instance = new PlayConfig();
@@ -25,6 +27,13 @@ public class PlayConfig extends GuiConfig {
         eventHeight = properties.readInt("eventHeight");
         passivePanelHeight = properties.readInt("passivePanelHeight");
         passivePanelWidth = properties.readInt("passivePanelWidth");
+        playerPanelHeight = properties.readInt("playerPanelHeight");
+        playerPanelWidth  = properties.readInt("playerPanelWidth");
+        heroIconsPath = properties.getProperty("heroIconsPath");
+    }
+
+    public String getHeroIconsPath() {
+        return heroIconsPath;
     }
 
     public int getEventHeight() {
@@ -37,5 +46,13 @@ public class PlayConfig extends GuiConfig {
 
     public int getPassivePanelHeight() {
         return passivePanelHeight;
+    }
+
+    public int getPlayerPanelHeight() {
+        return playerPanelHeight;
+    }
+
+    public int getPlayerPanelWidth() {
+        return playerPanelWidth;
     }
 }

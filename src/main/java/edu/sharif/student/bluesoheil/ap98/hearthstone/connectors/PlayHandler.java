@@ -2,6 +2,7 @@ package edu.sharif.student.bluesoheil.ap98.hearthstone.connectors;
 
 import edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.GameController;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play.PlayPanel;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play.PlayerPanel;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.CardShape;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.log.Logger;
 
@@ -26,14 +27,14 @@ public class PlayHandler {
 
     public static PlayHandler getInstance() {
 
-        if (instance == null || instance.gameController == null || instance.playPanel == null)
+        if (instance == null || instance.gameController == null) // || instance.playPanel == null)
             instance = new PlayHandler(); //it's not stable until gets a gameController and playPanel and therefore a game get started
         return instance;
     }
 
-    public static void setNewHandler(GameController gameController, PlayPanel playPanel) {
+    public static void setNewHandler(GameController gameController) {
         instance.gameController = gameController;
-        instance.playPanel = playPanel;
+//        instance.playPanel = playPanel;
     }
 
     //////////////////////////////
@@ -59,6 +60,10 @@ public class PlayHandler {
 
     public ArrayList<String> getEvents() {
         return Logger.getEventLogs();
+    }
+
+    public PlayerPanel getPlayerPanel() {
+        return new PlayerPanel(gameController.getPlayerHero() , gameController.getInitialPlayerHP() , gameController.getInitialPlayerMana());
     }
 
     //

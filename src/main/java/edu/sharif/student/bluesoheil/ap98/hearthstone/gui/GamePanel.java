@@ -17,7 +17,6 @@ public abstract class GamePanel extends JPanel {
         setSize(new Dimension(width, height));
         setMinimumSize(new Dimension(width, height));
         setBackground(Color.white);
-        //todo read about layouts
         setLayout(null);
         loadConfig();
         createFields();

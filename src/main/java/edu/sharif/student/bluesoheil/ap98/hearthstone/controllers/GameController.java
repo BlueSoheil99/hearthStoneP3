@@ -1,15 +1,14 @@
 package edu.sharif.student.bluesoheil.ap98.hearthstone.controllers;
 
-import edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.CardShape;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Deck;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Heroes.Hero;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Heroes.HeroTypes;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Heroes.Warlock;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.InfoPassives.InfoPassive;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Player;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.cards.Card;
 
 import java.awt.image.BufferedImage;
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Stack;
@@ -20,8 +19,8 @@ public class GameController {
     private InfoPassive passive;
     private PlayerController playerController;
     private Player player, opponent;
-    private Deck deck1, deck2;
-    private Hero hero1 , hero2;
+    private Deck playerDeck, deck2;
+    private Hero playerHero, hero2;
     static {
        loadHeroAvatars();
     }
@@ -29,7 +28,7 @@ public class GameController {
     public GameController(){
         playerController = PlayerController.getInstance();
         player = playerController.getCurrentPlayer();
-        setPlayerProperties();
+        setPlayerProperties();// todo uncomment it
         //opponent = ...
         //setOpponentProperties();
     }
@@ -61,17 +60,33 @@ public class GameController {
     }
 
     private void setPlayerProperties() {
-        deck1 = DeckController.getInstance().getCurrentDeck();
-        Collections.shuffle(deck1.getCards());
+        playerDeck = DeckController.getInstance().getCurrentDeck();
+
+        Collections.shuffle(playerDeck.getCards());
         Stack<Card> cardStack = new Stack<>();
-        for (int i = 0; i < deck1.getNumberOfCards(); i++) {
-            cardStack.add(deck1.getCards().get(i));
+        for (int i = 0; i < playerDeck.getNumberOfCards(); i++) {
+            cardStack.add(playerDeck.getCards().get(i));
         }
-        hero1 = deck1.getHero().getHero();
+        playerHero = playerDeck.getHero().getHero();
     }
     private void setOpponentProperties() {
 //        deck1 = DeckController.getInstance().getCurrentDeck();
 //        hero1 = deck1.getHero().getHero();
+    }
+
+    public HeroTypes getPlayerHero() {
+        return playerDeck.getHero();
+    }
+
+    public int getInitialPlayerHP() {
+        System.out.println(playerDeck.getHero().getName());
+        if (playerDeck.getHero().getName().equals("Warlock"))
+            return 35;
+        return 30;
+    }
+
+    public int getInitialPlayerMana() {
+        return 1;
     }
     //todo use Stack.class for deck
 
