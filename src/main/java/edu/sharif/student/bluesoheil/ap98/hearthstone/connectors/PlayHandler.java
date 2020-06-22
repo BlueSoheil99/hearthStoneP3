@@ -36,6 +36,10 @@ public class PlayHandler {
 //        instance.playPanel = playPanel;
     }
 
+    public static void dismissHandler(){
+        instance.gameController = null;
+    }
+
     //////////////////////////////
     /////////non-statics//////////
 

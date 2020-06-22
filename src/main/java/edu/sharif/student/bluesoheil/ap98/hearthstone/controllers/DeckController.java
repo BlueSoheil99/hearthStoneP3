@@ -1,5 +1,6 @@
 package edu.sharif.student.bluesoheil.ap98.hearthstone.controllers;
 
+import com.google.gson.Gson;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.DeckControllerException;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Heroes.HeroTypes;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.cards.Card;
@@ -9,6 +10,7 @@ import edu.sharif.student.bluesoheil.ap98.hearthstone.util.Configuration.LogicCo
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
 
 public class DeckController {
     private static final int MAXIMUM_NUMBER_OF_DECKS = 25; //i'm not sure whether it's important or not!
@@ -18,7 +20,6 @@ public class DeckController {
     private Deck currentDeck;
 
     private DeckController() {
-
     }
 
     /*
@@ -207,5 +208,16 @@ public class DeckController {
         } else {
             throw new DeckControllerException("You Can't change Hero According to cards in this deck");
         }
+    }
+
+    public Deck getCopy(Deck originalDeck){
+        Gson gson = new Gson();
+        String deckJson = gson.toJson(originalDeck);
+        Deck copiedDeck = gson.fromJson(deckJson , Deck.class);
+        return copiedDeck;
+    }
+
+    public void updateCardUsages( Deck outDatedDeck , HashMap<String, Integer> newCardUsage){
+        outDatedDeck.setCardsUsage(newCardUsage);
     }
 }

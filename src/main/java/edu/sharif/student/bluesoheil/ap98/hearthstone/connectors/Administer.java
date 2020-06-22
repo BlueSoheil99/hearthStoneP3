@@ -27,8 +27,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Administer {
-    private MainFrame mainFrame;
     private static Administer administer;
+    private MainFrame mainFrame;
     private ArrayList<GamePanel> recentPanels;
     private PlayerController playerController;
     private CardController cardController;

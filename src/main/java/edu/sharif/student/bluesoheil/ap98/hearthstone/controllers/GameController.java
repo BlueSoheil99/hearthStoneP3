@@ -1,5 +1,6 @@
 package edu.sharif.student.bluesoheil.ap98.hearthstone.controllers;
 
+import edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.PlayHandler;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Deck;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Heroes.Hero;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Heroes.HeroTypes;
@@ -19,11 +20,14 @@ public class GameController {
     private Deck playerDeck, opponentDeck;
     private Hero playerHero, opponentHero;
     private ArrayList<Card> playerHand;
+    private Stack<Card> playerCards;
+    private boolean playerIsWinner = false;
+
     {
-        opponentDeck = DeckController.getDefaultDeck(HeroTypes.ROGUE);
+        opponentDeck = DeckController.getInstance().getCopy(DeckController.getDefaultDeck(HeroTypes.ROGUE));
     }
 
-    public GameController(){
+    public GameController() {
         playerController = PlayerController.getInstance();
         player = playerController.getCurrentPlayer();
         setPlayerProperties();// todo uncomment it
@@ -35,38 +39,46 @@ public class GameController {
     ///////////
     //statics//
     ///////////
-    public static GameController getInstance(){
+    public static GameController getInstance() {
         if (instance == null) setNewGame();
         return instance;
     }
 
-    public static void setNewGame(){
+    public static void setNewGame() {
         instance = new GameController();
     }
 
-    public static void endGame(){
+    public static void endGame() {
+        if (instance.playerIsWinner) DeckController.getInstance().getCurrentDeck().incrementWins();
+        DeckController.getInstance().getCurrentDeck().setCardsUsage(instance.playerDeck.getCardsUsage());
         instance.playerDeck.getHeroType().resetHero();
-        instance = null;}
+        instance.opponentDeck.getHeroType().resetHero();
+        PlayHandler.dismissHandler();
+        instance = null;
+    }
 
 
     /////////////////
     ///non-statics///
-    ////////////////
+    /////////////////
 
     public void setPassive(String objName) {
         passive = InfoPassive.valueOf(objName.toUpperCase());
     }
 
     private void setPlayerProperties() {
-        playerDeck = DeckController.getInstance().getCurrentDeck();
-
+        Deck mainPlayerDeck = DeckController.getInstance().getCurrentDeck();
+        mainPlayerDeck.incrementGamesPlayed();
+        playerDeck = DeckController.getInstance().getCopy(
+                DeckController.getInstance().getCurrentDeck());
         Collections.shuffle(playerDeck.getCards());
-        Stack<Card> cardStack = new Stack<>();
+        playerCards = new Stack<>();
         for (int i = 0; i < playerDeck.getNumberOfCards(); i++) {
-            cardStack.add(playerDeck.getCards().get(i));
+            playerCards.add(playerDeck.getCards().get(i));
         }
         playerHero = playerDeck.getHeroType().getHero();
     }
+
     private void setOpponentProperties() {
 //        deck1 = DeckController.getInstance().getCurrentDeck();
 //        hero1 = deck1.getHero().getHero();
@@ -98,7 +110,21 @@ public class GameController {
     public int getInitialOpponentMana() {
         return 1;
     }
-    //todo use Stack.class for deck
+
+
+    public ArrayList<Card> getPlayerHand() {
+        if (playerHand == null) {
+            playerHand = new ArrayList<>();
+            for (int i = 0; i < 3; i++) {
+                playerHand.add(playerCards.pop());
+            }
+        }
+        return playerHand;
+    }
+
+    public void endTurn() {
+
+    }
 
 
 }

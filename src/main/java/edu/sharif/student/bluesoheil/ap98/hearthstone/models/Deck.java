@@ -1,13 +1,12 @@
 package edu.sharif.student.bluesoheil.ap98.hearthstone.models;
 
 import edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.DeckControllerException;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.CardPanel;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Heroes.HeroTypes;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.cards.Card;
 
 import java.util.*;
 
-public class Deck {
+public class Deck implements Cloneable{
     //TODO use configuration here.....think about how to manage the same cards we have
     private static final int MAXIMUM_NUMBER_OF_CARDS = 15;
     private static final int MINIMUM_NUMBER_OF_CARDS = 5;
@@ -60,9 +59,18 @@ public class Deck {
         return cards.size();
     }
 
+    public void setCardsUsage(HashMap<String, Integer> cardsUsage) {
+        this.cardsUsage = cardsUsage;
+    }
+
+    public HashMap<String, Integer> getCardsUsage() {
+        return cardsUsage;
+    }
+
     public String getMostUsedCard() {
         //todo check this sorting .. take a look at status panel description( phase 2 doc)
         // visit last episode of javaCup java tutorial
+
         ArrayList<Card> copyCards = new ArrayList<>();
         cards.stream()
                 .sorted(minionComp)
@@ -87,16 +95,16 @@ public class Deck {
         return gamesPlayed;
     }
 
-    public void setGamesPlayed(int gamesPlayed) {
-        this.gamesPlayed = gamesPlayed;
+    public void incrementGamesPlayed() {
+        gamesPlayed++ ;
     }
 
     public int getWins() {
         return wins;
     }
 
-    public void setWins(int wins) {
-        this.wins = wins;
+    public void incrementWins() {
+        wins++ ;
     }
 
     public float getWinRatio() {
@@ -152,6 +160,10 @@ public class Deck {
         int usage = cardsUsage.get(card.getName());
         cardsUsage.replace(card.getName(), usage - 1);
     }
+
+
+
+
 
 
 }
