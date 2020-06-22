@@ -11,15 +11,14 @@ import java.util.HashMap;
 
 
 public class HeroPanel extends JPanel {
+
     private static HashMap<HeroTypes , BufferedImage> heroImages = new HashMap<>();
-    {
+    static {
         for(HeroTypes hero : HeroTypes.values()){
             heroImages.put(hero , ImageLoader.loadImage(PlayConfig.getInstance().getHeroIconsPath()+
                     "/"+hero.getName() + ".jpg"));
         }
-//        heroImages.put(HeroTypes.PRIEST , ImageLoader.loadImage(PlayConfig.getInstance().getHeroIconsPath()+"/PRIEST.jpg"));
     }
-//    private static PlayConfig properties = PlayConfig.getInstance();
 
     private JLabel hpLabel = new JLabel("HP : ");
     private JLabel manaLabel = new JLabel("Mana : ");
@@ -31,12 +30,17 @@ public class HeroPanel extends JPanel {
     HeroPanel(HeroTypes hero, int hp, int startingMana) {
         heroIcon = new JLabel();
         heroIcon.setIcon(new ImageIcon(heroImages.get(hero)));
-        heroPower = new JButton("hero power");
+        createHeroPower();
         setHp(hp);
         setMana(startingMana);
         init();
         setBorder(BorderFactory.createTitledBorder(hero.getName()));
         setOpaque(false);
+    }
+
+    private void createHeroPower(){
+        heroPower = new JButton("hero power");
+        //todo hey make this shit up
     }
 
     private void init() {
@@ -66,6 +70,7 @@ public class HeroPanel extends JPanel {
 
     void setHp(int newHp) {
         hp.setText(Integer.toString(newHp));
+//        repaint() ?
     }
 
     void setMana(int newMana) {
@@ -73,6 +78,7 @@ public class HeroPanel extends JPanel {
     }
 
     private class heroLabel {
+        //todo use this class to have more attractive labels in hero panel
 
     }
 

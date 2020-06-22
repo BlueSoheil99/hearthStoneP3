@@ -19,4 +19,12 @@ public enum  HeroTypes {
     public Hero getHero(){
         return hero;
     }
+    public void resetHero(){
+        Class heroClass = getHero().getClass();
+        try {
+            hero =(Hero) heroClass.newInstance();
+        } catch (InstantiationException | IllegalAccessException e) {
+            e.printStackTrace();
+        }
+    }
 }

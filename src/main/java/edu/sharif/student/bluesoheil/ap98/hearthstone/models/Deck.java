@@ -44,7 +44,7 @@ public class Deck {
         this.name = name;
     }
 
-    public HeroTypes getHero() {
+    public HeroTypes getHeroType() {
         return hero;
     }
 

@@ -62,6 +62,15 @@ public class DeckController {
 
         return defaultDecks;
     }
+    public static Deck getDefaultDeck(HeroTypes heroType){
+        // i use this method for opponent's deck
+        for(Deck deck: getDefaultDecks()){
+            if (deck.getHeroType().equals(heroType)){
+                return deck;
+            }
+        }
+        return null;
+    }
 
     public ArrayList<Deck> getPlayerDecks() {
         sortDecks();
@@ -119,7 +128,7 @@ public class DeckController {
 
     public String[] getDeckStates(String deckName) {
         Deck deck = getDeck(deckName);
-        String[] states = new String[]{deck.getName(), deck.getHero().toString(), Float.toString(deck.getWinRatio())
+        String[] states = new String[]{deck.getName(), deck.getHeroType().toString(), Float.toString(deck.getWinRatio())
                 , Integer.toString(deck.getGamesPlayed()), Float.toString(deck.getManaAverage()), deck.getMostUsedCard()};
         return states;
     }

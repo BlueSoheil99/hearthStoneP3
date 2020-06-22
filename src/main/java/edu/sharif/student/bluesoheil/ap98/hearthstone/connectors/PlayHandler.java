@@ -26,9 +26,8 @@ public class PlayHandler {
     ///////////statics/////////////
 
     public static PlayHandler getInstance() {
-
-        if (instance == null || instance.gameController == null) // || instance.playPanel == null)
-            instance = new PlayHandler(); //it's not stable until gets a gameController and playPanel and therefore a game get started
+        if (instance == null || instance.gameController == null)
+            instance = new PlayHandler(); //it's not stable until gets a gameController and therefore a game get started
         return instance;
     }
 
@@ -54,16 +53,18 @@ public class PlayHandler {
         return threeOnes;
     }
 
-    public void setGameController(GameController gameController) {
-        this.gameController = gameController;
-    }
-
     public ArrayList<String> getEvents() {
         return Logger.getEventLogs();
     }
 
     public PlayerPanel getPlayerPanel() {
-        return new PlayerPanel(gameController.getPlayerHero() , gameController.getInitialPlayerHP() , gameController.getInitialPlayerMana());
+        return new PlayerPanel(gameController.getPlayerHero() ,
+                gameController.getPlayerHP() , gameController.getInitialPlayerMana());
+    }
+
+    public PlayerPanel getOpponentPanel() {
+        return new PlayerPanel(gameController.getOpponentHero() ,
+                gameController.getOpponentHP() , gameController.getInitialOpponentMana());
     }
 
     //

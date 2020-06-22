@@ -238,7 +238,7 @@ public class Administer {
         for (Deck deck : playerDecks) {
             if (x < numberOfDecks) {
                 //todo this line redistributes our sorted decks and mess things up
-                decksInfo.put(deck.getName(), deck.getHero().toString());
+                decksInfo.put(deck.getName(), deck.getHeroType().toString());
                 x++;
             }
         }

@@ -16,10 +16,9 @@ public class PlayPanel extends GamePanel {
     private PlayConfig properties;
     private PlayHandler playHandler;
     private PauseMenu pauseMenu;
-    private CardPanel playerCards,opponentCards;
+    private CardPanel playerCards, opponentCards;
     private PlayerPanel playerPanel, opponentPanel;
     private BoardPanel board;
-
 
 
     @Override
@@ -31,8 +30,7 @@ public class PlayPanel extends GamePanel {
     protected void createFields() {
         playHandler = PlayHandler.getInstance();
         playerPanel = playHandler.getPlayerPanel();
-//        opponentPanel = playHandler.getOpponentPanel();
-        opponentPanel = new PlayerPanel(HeroTypes.PRIEST, 30 , 1);
+        opponentPanel = playHandler.getOpponentPanel();
         playHandler = PlayHandler.getInstance();
         pauseMenu = PauseMenu.getInstance();
         board = new BoardPanel();
@@ -42,9 +40,10 @@ public class PlayPanel extends GamePanel {
     protected void init() {
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         add(opponentPanel);
-        add(board );
-        add(playerPanel );
+        add(board);
+        add(playerPanel);
         add(new JScrollPane(new EventBox()));
-
     }
+
+
 }
