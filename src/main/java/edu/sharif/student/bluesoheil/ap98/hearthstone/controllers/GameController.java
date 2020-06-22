@@ -24,7 +24,7 @@ public class GameController {
     private boolean playerIsWinner = false;
 
     {
-        opponentDeck = DeckController.getInstance().getCopy(DeckController.getDefaultDeck(HeroTypes.ROGUE));
+        opponentDeck = DeckController.getInstance().copyDeck(DeckController.getDefaultDeck(HeroTypes.ROGUE));
     }
 
     public GameController() {
@@ -69,7 +69,7 @@ public class GameController {
     private void setPlayerProperties() {
         Deck mainPlayerDeck = DeckController.getInstance().getCurrentDeck();
         mainPlayerDeck.incrementGamesPlayed();
-        playerDeck = DeckController.getInstance().getCopy(
+        playerDeck = DeckController.getInstance().copyDeck(
                 DeckController.getInstance().getCurrentDeck());
         Collections.shuffle(playerDeck.getCards());
         playerCards = new Stack<>();

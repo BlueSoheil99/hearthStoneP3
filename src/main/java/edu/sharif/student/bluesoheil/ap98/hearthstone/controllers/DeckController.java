@@ -29,7 +29,8 @@ public class DeckController {
         if (instance == null) instance = new DeckController();
         return instance;
     }
-    public static void reset(){
+
+    public static void reset() {
         instance = null;
     }
 
@@ -63,10 +64,11 @@ public class DeckController {
 
         return defaultDecks;
     }
-    public static Deck getDefaultDeck(HeroTypes heroType){
+
+    public static Deck getDefaultDeck(HeroTypes heroType) {
         // i use this method for opponent's deck
-        for(Deck deck: getDefaultDecks()){
-            if (deck.getHeroType().equals(heroType)){
+        for (Deck deck : getDefaultDecks()) {
+            if (deck.getHeroType().equals(heroType)) {
                 return deck;
             }
         }
@@ -85,7 +87,8 @@ public class DeckController {
     public void setCurrentDeck(String currentDeck) throws DeckControllerException {
         if (Deck.getMinimumCardsInDeck() <= getDeck(currentDeck).getNumberOfCards()) {
             this.currentDeck = getDeck(currentDeck);
-        }else throw new DeckControllerException("You should atLeast have " + Deck.getMinimumCardsInDeck() + "cards in currentDeck");
+        } else
+            throw new DeckControllerException("You should atLeast have " + Deck.getMinimumCardsInDeck() + "cards in currentDeck");
     }
 
     /*
@@ -210,14 +213,23 @@ public class DeckController {
         }
     }
 
-    public Deck getCopy(Deck originalDeck){
+    public Deck copyDeck(Deck originalDeck) {
         Gson gson = new Gson();
         String deckJson = gson.toJson(originalDeck);
-        Deck copiedDeck = gson.fromJson(deckJson , Deck.class);
+        Deck copiedDeck = gson.fromJson(deckJson, Deck.class);
+        ArrayList<Card> copiedDeckCards = copiedDeck.getCards();
+        // copiedDeck has a list of cards that each of them is just a card! not a minion or spell or ...
+        //so we should also transfer cards of this deck, to some real cards! cards with their actual class!
+        for (int i = 0; i < copiedDeckCards.size(); i++) {
+            copiedDeckCards.set(i,
+                    CardController.getInstance().copyCard(
+                            copiedDeckCards.get(i).getName().toUpperCase())
+            );
+        }
         return copiedDeck;
     }
 
-    public void updateCardUsages( Deck outDatedDeck , HashMap<String, Integer> newCardUsage){
+    public void updateCardUsages(Deck outDatedDeck, HashMap<String, Integer> newCardUsage) {
         outDatedDeck.setCardsUsage(newCardUsage);
     }
 }

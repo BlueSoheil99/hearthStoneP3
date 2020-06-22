@@ -151,9 +151,9 @@ public class CardController {
         }
     }
 
-    private Card copyCard(String cardName) {
+    Card copyCard(String CARD_NAME) { //as we also use this in copying a deck, so it's not private as it was before.
         Gson gson = new Gson();
-        Card card = gameTotalCards.get(cardName);
+        Card card = gameTotalCards.get(CARD_NAME);
         String jsonString = gson.toJson(card);
         return gson.fromJson(jsonString , card.getClass());
     }
