@@ -637,3 +637,440 @@ COLLECTION		2020/06/09  19:08:23	newDecknew is now available with mage
 CLICK_BUTTON		2020/06/09  19:09:00	button: BACK selected .
 NAVIGATION		2020/06/09  19:09:00	Back to previous panel
 PLAYER		2020/06/09  19:09:03	123456 logged out
+PLAYER		2020/06/22  18:55:46	123456 logged in
+NAVIGATION		2020/06/22  18:55:49	To Collection
+CLICK_BUTTON		2020/06/22  18:55:52	deck:  WarlockDefaultDeck  selected .
+CLICK_BUTTON		2020/06/22  18:55:53	card: DREADSCALE  selected.
+CLICK_BUTTON		2020/06/22  18:55:57	button : ADD CARD selected.
+ERROR: COLLECTION	2020/06/22  18:56:01	edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.DeckControllerException: You only have 1 of this card. Can't have more in a deck
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.DeckController.addCard(DeckController.java:172)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer.addCardToDeck(Administer.java:291)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.CollectionHandler.addCardToDeck(CollectionHandler.java:59)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.CollectionPanel$5.addCard(CollectionPanel.java:161)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.FilterPanel$5.actionPerformed(FilterPanel.java:342)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+CLICK_BUTTON		2020/06/22  18:56:05	button : ADD CARD selected.
+ERROR: COLLECTION	2020/06/22  18:56:07	edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.DeckControllerException: You only have 1 of this card. Can't have more in a deck
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.DeckController.addCard(DeckController.java:172)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer.addCardToDeck(Administer.java:291)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.CollectionHandler.addCardToDeck(CollectionHandler.java:59)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.CollectionPanel$5.addCard(CollectionPanel.java:161)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.FilterPanel$5.actionPerformed(FilterPanel.java:342)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+CLICK_BUTTON		2020/06/22  18:56:13	card: HIGH PRIEST AMET  selected.
+CLICK_BUTTON		2020/06/22  18:56:15	button : ADD CARD selected.
+ERROR: COLLECTION	2020/06/22  18:56:17	edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.DeckControllerException: this card is not valid for this hero
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.models.Deck.addCard(Deck.java:140)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.DeckController.addCard(DeckController.java:171)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer.addCardToDeck(Administer.java:291)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.CollectionHandler.addCardToDeck(CollectionHandler.java:59)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.CollectionPanel$5.addCard(CollectionPanel.java:161)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.FilterPanel$5.actionPerformed(FilterPanel.java:342)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+CLICK_BUTTON		2020/06/22  18:56:41	button: BACK selected .
+NAVIGATION		2020/06/22  18:56:41	Back to previous panel
+NAVIGATION		2020/06/22  18:56:46	To Collection
+CLICK_BUTTON		2020/06/22  18:56:48	deck:  newDecknew  selected .
+CLICK_BUTTON		2020/06/22  18:56:51	card: LEARN DRACONIC  selected.
+CLICK_BUTTON		2020/06/22  18:56:54	button : ADD CARD selected.
+COLLECTION		2020/06/22  18:56:55	LEARN DRACONIC has been added to newDecknew
+CLICK_BUTTON		2020/06/22  18:56:57	card: LEARN DRACONIC  selected.
+CLICK_BUTTON		2020/06/22  18:56:59	deck:  newDecknew  selected .
+CLICK_BUTTON		2020/06/22  18:57:00	card: LEARN DRACONIC  selected.
+CLICK_BUTTON		2020/06/22  18:57:01	button : ADD CARD selected.
+ERROR: COLLECTION	2020/06/22  18:57:04	edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.DeckControllerException: You only have 1 of this card. Can't have more in a deck
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.DeckController.addCard(DeckController.java:172)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer.addCardToDeck(Administer.java:291)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.CollectionHandler.addCardToDeck(CollectionHandler.java:59)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.CollectionPanel$5.addCard(CollectionPanel.java:161)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.FilterPanel$5.actionPerformed(FilterPanel.java:342)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+CLICK_BUTTON		2020/06/22  18:57:07	button: BACK selected .
+NAVIGATION		2020/06/22  18:57:07	Back to previous panel
+NAVIGATION		2020/06/22  18:57:08	To Shop
+CLICK_BUTTON		2020/06/22  18:57:11	card: LEARN DRACONIC  selected.
+CLICK_BUTTON		2020/06/22  18:57:13	button: BUY selected .
+SHOP		2020/06/22  18:57:15	card: LEARN DRACONIC purchased
+CLICK_BUTTON		2020/06/22  18:57:16	button: BACK selected .
+NAVIGATION		2020/06/22  18:57:16	Back to previous panel
+NAVIGATION		2020/06/22  18:57:18	To Collection
+CLICK_BUTTON		2020/06/22  18:57:19	deck:  newDecknew  selected .
+CLICK_BUTTON		2020/06/22  18:57:21	card: LEARN DRACONIC  selected.
+CLICK_BUTTON		2020/06/22  18:57:22	button : ADD CARD selected.
+COLLECTION		2020/06/22  18:57:24	LEARN DRACONIC has been added to newDecknew
+CLICK_BUTTON		2020/06/22  18:57:26	deck:  newDecknew  selected .
+CLICK_BUTTON		2020/06/22  18:57:29	card: LEARN DRACONIC  selected.
+CLICK_BUTTON		2020/06/22  18:57:30	button : ADD CARD selected.
+ERROR: COLLECTION	2020/06/22  18:57:32	edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.DeckControllerException: You only have 2 of this card. Can't have more in a deck
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.DeckController.addCard(DeckController.java:172)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer.addCardToDeck(Administer.java:291)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.CollectionHandler.addCardToDeck(CollectionHandler.java:59)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.CollectionPanel$5.addCard(CollectionPanel.java:161)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.FilterPanel$5.actionPerformed(FilterPanel.java:342)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+CLICK_BUTTON		2020/06/22  18:58:13	button : NEW DECK selected.
+CLICK_BUTTON		2020/06/22  18:58:15	deck creating canceled
+CLICK_BUTTON		2020/06/22  18:58:20	button: EXIT selected .
+PLAYER		2020/06/22  18:58:21	123456 logged out
+PLAYER		2020/06/22  19:26:55	123456 logged in
+NAVIGATION		2020/06/22  19:26:57	To Collection
+CLICK_BUTTON		2020/06/22  19:26:58	deck:  newDecknew  selected .
+CLICK_BUTTON		2020/06/22  19:27:02	card: LEARN DRACONIC  selected.
+CLICK_BUTTON		2020/06/22  19:27:02	card: LEARN DRACONIC  selected.
+CLICK_BUTTON		2020/06/22  19:27:03	card: LEARN DRACONIC  selected.
+CLICK_BUTTON		2020/06/22  19:27:05	button : REMOVE CARD selected.
+ERROR: COLLECTION	2020/06/22  19:27:06	edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.DeckControllerException: You can't have less than 5 cards in a deck
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.models.Deck.removeCard(Deck.java:151)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.DeckController.removeCard(DeckController.java:179)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer.removeCardFromDeck(Administer.java:296)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.CollectionHandler.removeCardFromDeck(CollectionHandler.java:71)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.CollectionPanel$5.removeCard(CollectionPanel.java:147)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.FilterPanel$6.actionPerformed(FilterPanel.java:351)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+CLICK_BUTTON		2020/06/22  19:27:08	deck:  WarlockDefaultDeck  selected .
+CLICK_BUTTON		2020/06/22  19:27:12	card: DREADSCALE  selected.
+CLICK_BUTTON		2020/06/22  19:27:14	card: DREADSCALE  selected.
+CLICK_BUTTON		2020/06/22  19:27:15	button : ADD CARD selected.
+ERROR: COLLECTION	2020/06/22  19:27:17	edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.DeckControllerException: You only have 1 of this card. Can't have more in a deck
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.DeckController.addCard(DeckController.java:172)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer.addCardToDeck(Administer.java:291)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.CollectionHandler.addCardToDeck(CollectionHandler.java:67)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.CollectionPanel$5.addCard(CollectionPanel.java:161)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.FilterPanel$5.actionPerformed(FilterPanel.java:342)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+CLICK_BUTTON		2020/06/22  19:27:19	card: DREADSCALE  selected.
+CLICK_BUTTON		2020/06/22  19:27:21	button : REMOVE CARD selected.
+COLLECTION		2020/06/22  19:27:21	DREADSCALE has been removed from WarlockDefaultDeck
+CLICK_BUTTON		2020/06/22  19:27:23	deck:  WarlockDefaultDeck  selected .
+CLICK_BUTTON		2020/06/22  19:27:35	card: DREADSCALE  selected.
+CLICK_BUTTON		2020/06/22  19:27:38	deck:  newDecknew  selected .
+CLICK_BUTTON		2020/06/22  19:27:39	deck:  RogueDefaultDeck  selected .
+CLICK_BUTTON		2020/06/22  19:27:47	button: BACK selected .
+NAVIGATION		2020/06/22  19:27:47	Back to previous panel
+NAVIGATION		2020/06/22  19:27:51	To Collection
+CLICK_BUTTON		2020/06/22  19:27:53	deck:  WarlockDefaultDeck  selected .
+CLICK_BUTTON		2020/06/22  19:27:55	button: EXIT selected .
+PLAYER		2020/06/22  19:27:56	123456 logged out
+PLAYER		2020/06/22  19:54:09	123456 logged in
+NAVIGATION		2020/06/22  19:54:11	To Collection
+CLICK_BUTTON		2020/06/22  19:54:12	deck:  newDecknew  selected .
+CLICK_BUTTON		2020/06/22  19:54:14	card: LEARN DRACONIC  selected.
+CLICK_BUTTON		2020/06/22  19:54:16	button: EXIT selected .
+PLAYER		2020/06/22  19:54:17	123456 logged out
+PLAYER		2020/06/22  20:03:26	123456 logged in
+NAVIGATION		2020/06/22  20:03:29	To Collection
+CLICK_BUTTON		2020/06/22  20:03:31	deck:  MageDefaultDeck  selected .
+CLICK_BUTTON		2020/06/22  20:03:37	card: DREADSCALE  selected.
+CLICK_BUTTON		2020/06/22  20:03:39	card: POLYMORPH  selected.
+CLICK_BUTTON		2020/06/22  20:03:41	button : ADD CARD selected.
+ERROR: COLLECTION	2020/06/22  20:03:43	edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.DeckControllerException: You only have 1 of this card. Can't have more in a deck
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.DeckController.addCard(DeckController.java:172)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer.addCardToDeck(Administer.java:325)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.CollectionHandler.addCardToDeck(CollectionHandler.java:53)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.CollectionPanel$5.addCard(CollectionPanel.java:161)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.FilterPanel$5.actionPerformed(FilterPanel.java:342)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+CLICK_BUTTON		2020/06/22  20:03:45	button: BACK selected .
+NAVIGATION		2020/06/22  20:03:45	Back to previous panel
+NAVIGATION		2020/06/22  20:03:47	To Shop
+CLICK_BUTTON		2020/06/22  20:03:49	card: POLYMORPH  selected.
+CLICK_BUTTON		2020/06/22  20:03:51	button: BUY selected .
+SHOP		2020/06/22  20:03:53	card: POLYMORPH purchased
+CLICK_BUTTON		2020/06/22  20:03:56	button: BACK selected .
+NAVIGATION		2020/06/22  20:03:56	Back to previous panel
+NAVIGATION		2020/06/22  20:03:58	To Collection
+CLICK_BUTTON		2020/06/22  20:04:00	deck:  MageDefaultDeck  selected .
+CLICK_BUTTON		2020/06/22  20:04:03	card: POLYMORPH  selected.
+CLICK_BUTTON		2020/06/22  20:04:04	button : ADD CARD selected.
+COLLECTION		2020/06/22  20:04:06	POLYMORPH has been added to MageDefaultDeck
+CLICK_BUTTON		2020/06/22  20:04:07	deck:  MageDefaultDeck  selected .
+CLICK_BUTTON		2020/06/22  20:04:27	button: EXIT selected .
+PLAYER		2020/06/22  20:04:29	123456 logged out

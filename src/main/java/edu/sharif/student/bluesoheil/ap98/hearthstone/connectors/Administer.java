@@ -80,25 +80,25 @@ public class Administer {
 
     public void runPlay() {
         if (DeckController.getInstance().getCurrentDeck() == null) {
-            JOptionPane.showMessageDialog(null , "CurrentDeck is not set.\nChoose one deck as your Current one...",
-                    "current deck is not available" , JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "CurrentDeck is not set.\nChoose one deck as your Current one...",
+                    "current deck is not available", JOptionPane.ERROR_MESSAGE);
             runCollection();
-        }else{
+        } else {
             Logger.log(LogTypes.NAVIGATION, "To PassiveSelector");
             GameController.setNewGame();
             GameController gameController = GameController.getInstance();
             InfoPassivePanel passive = new InfoPassivePanel();
             passive.setClickListener(objName -> {
-                Logger.log(LogTypes.PLAY, "passive '"+objName+"' selected");
+                Logger.log(LogTypes.PLAY, "passive '" + objName + "' selected");
                 gameController.setPassive(objName);
-                System.out.println("passive selected  "+objName);
+                System.out.println("passive selected  " + objName);
                 startGame(gameController);
             });
             mainFrame.initFrame(passive);
         }
     }
 
-    private void startGame(GameController gameController){
+    private void startGame(GameController gameController) {
         Logger.log(LogTypes.NAVIGATION, "To Play");
         PlayHandler.setNewHandler(gameController);
         PlayPanel playPanel = new PlayPanel();
@@ -155,7 +155,8 @@ public class Administer {
 
     public GamePanel getPreviousPanel() {
         GamePanel previousPanel;
-        if (recentPanels.size()>1)recentPanels.remove(recentPanels.size() - 1); //i don't know how to explain! it's like closing the last panel...
+        if (recentPanels.size() > 1)
+            recentPanels.remove(recentPanels.size() - 1); //i don't know how to explain! it's like closing the last panel...
         // ... if we don't do this we will have logical errors.....if statement is for when we get back from passivePanel to menu
         previousPanel = recentPanels.get(recentPanels.size() - 1);
         previousPanel.repaint();
@@ -168,8 +169,8 @@ public class Administer {
         CardController.reset();
         DeckController.reset();
         playerController = PlayerController.getInstance();
-        deckController=DeckController.getInstance();
-        cardController=CardController.getInstance();
+        deckController = DeckController.getInstance();
+        cardController = CardController.getInstance();
         Main.main(null);
     }
 
@@ -201,9 +202,10 @@ public class Administer {
         Logger.log(LogTypes.PLAYER, PlayerController.getInstance().getCurrentPlayer().getUserName() + " logged in");
 
     }
+
     //////////////////////
     ////////common/////////
-    public ArrayList<CardShape> getAllCards() {
+    public ArrayList<CardShape> getAllShapesOfCards() {
         ArrayList<CardShape> cardShapes = new ArrayList<>();
         for (Map.Entry<String, BufferedImage> entry : cardController.getCardsAndImagesMap().entrySet()) {
             cardShapes.add(new CardShape(entry.getKey(), entry.getValue(), true));
@@ -256,11 +258,27 @@ public class Administer {
         return getPlayerDecks(deckController.getPlayerDecks().size());
     }
 
-    public ArrayList<String> getDeckCards(String deckName) {
-        ArrayList<Card> cards = deckController.getDeck(deckName).getCards();
-        ArrayList<String> cardNames = new ArrayList<>();
-        for (Card card : cards) cardNames.add(card.getName().toUpperCase());
-        return cardNames;
+    public ArrayList<CardShape> getDeckCards(String deckName) {
+        return getDeckCards(deckController.getDeck(deckName));
+    }
+
+    public ArrayList<CardShape> getDeckCards(Deck deck) {
+        ArrayList<Card> deckCards = deck.getCards();
+        ArrayList<CardShape> allCards = administer.getAllShapesOfCards();
+        ArrayList<CardShape> cardShapes = new ArrayList<>();
+        for (Card card : deckCards) {
+            for (CardShape shape : allCards) {
+                if (shape.getCardName().equals(card.getName().toUpperCase())) {
+                    if (!cardShapes.contains(shape)) {
+                        cardShapes.add(shape);
+                    } else {
+                        cardShapes.add(CardShape.copyCardShape(shape));
+                        //by the line above line we're able to see repeated cards
+                    }
+                }
+            }
+        }
+        return cardShapes;
     }
 
     public void createDeck(String deckName, String hero) throws DeckControllerException {
@@ -288,16 +306,16 @@ public class Administer {
 
     public void addCardToDeck(String selectedDeck, String selectedCard) throws DeckControllerException {
         Card card = cardController.getCard(selectedCard);
-        deckController.addCard(selectedDeck  , card);
+        deckController.addCard(selectedDeck, card);
     }
 
     public void removeCardFromDeck(String selectedDeck, String selectedCard) throws DeckControllerException {
         Card card = cardController.getCard(selectedCard);
-        deckController.removeCard(selectedDeck  , card);
+        deckController.removeCard(selectedDeck, card);
     }
 
     public void renameDeck(String selectedDeck, String newName) throws DeckControllerException {
-        deckController.renameDeck(selectedDeck , newName);
+        deckController.renameDeck(selectedDeck, newName);
     }
 
     public void deleteDeck(String selectedDeck) {
@@ -309,7 +327,7 @@ public class Administer {
     }
 
     public void changeDeckHero(String selectedDeck, HeroTypes heroName) throws DeckControllerException {
-        deckController.changeDeckHero(selectedDeck , heroName);
+        deckController.changeDeckHero(selectedDeck, heroName);
     }
 
     //////////////////////
@@ -317,7 +335,7 @@ public class Administer {
     public ArrayList<CardShape> getPassives() {
         ArrayList<CardShape> passives = new ArrayList<>();
         for (InfoPassive passive : InfoPassive.values()) {
-            passives.add(new CardShape(passive.getName() , passive.getDescription()));
+            passives.add(new CardShape(passive.getName(), passive.getDescription()));
         }
         return passives;
     }

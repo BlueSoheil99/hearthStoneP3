@@ -36,7 +36,7 @@ public class ShopPanel extends GamePanel {
     @Override
     protected void createFields() {
         cardPanel = new CardPanel();
-        cardPanel.setCards(Administer.getInstance().getAllCards());
+        cardPanel.setCards(Administer.getInstance().getAllShapesOfCards());
         cardPanel.setClickListener(selectedCardName -> {
             selectedCard = selectedCardName;
             revalidateController();

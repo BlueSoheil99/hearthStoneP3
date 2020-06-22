@@ -61,20 +61,15 @@ public class CardShape extends JButton {
         }
     }
 
+    public static CardShape copyCardShape(CardShape shape) {
+        return new CardShape(shape.cardName , (BufferedImage) shape.icon.getImage());
+    }
+
     public String getCardName() {
         return cardName;
     }
 
-    public static int getCardWidth() {
-        return CARD_WIDTH;
-    }
-
-    public static int getCardHeight() {
-        return CARD_HEIGHT;
-    }
-
     private BufferedImage colorImage(BufferedImage image) {
-//        BufferedImage image = copyImage(oldImage);
         int width = image.getWidth();
         int height = image.getHeight();
 
@@ -88,7 +83,6 @@ public class CardShape extends JButton {
                 int avg = (r + g + b) / 3;
                 p = (a << 24) | (avg << 16) | (avg << 8) | avg;
                 image.setRGB(xx, yy, p);
-//                image.setRGB();
             }
         }
         return image;

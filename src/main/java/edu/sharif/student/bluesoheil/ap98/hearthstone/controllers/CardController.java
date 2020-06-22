@@ -170,13 +170,14 @@ public class CardController {
             Card card = gameTotalCards.get(cardName);
             int playerCoins = playerController.getPlayerCoins();
             if (playerCoins >= card.getCost()) {
-                if (Collections.frequency(playerTotalCards, card) < 2) {
+                if (Collections.frequency(playerTotalCards, card) < properties.getMaximumNumberOfCard()) {
                     playerTotalCards.add(card);
 
                     playerController.setPlayerCoins(playerCoins - card.getCost());
                     playerController.setPlayerCards(playerTotalCards);//check if it's useful or not
 
-                } else throw new CardControllerException("you can't have more than 2 cards of " + cardName);
+                } else throw new CardControllerException("you can't have more than "+
+                        properties.getMaximumNumberOfCard()+" cards of " + cardName);
             } else throw new CardControllerException("not enough money to buy : " + cardName);
         } else throw new CardControllerException("card( " + cardName + " ) doesn't exist");
 

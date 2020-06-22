@@ -17,6 +17,7 @@ public class CardConfig extends LogicConfig{
     private String[] weaponCards;
     private String[] beastCards;
     private String[] questAndRewardCards;
+    private int maximumNumberOfCard;
 
 
     private CardConfig(){
@@ -42,6 +43,7 @@ public class CardConfig extends LogicConfig{
         minionCards = config.readArrays("minionCards");
         beastCards = config.readArrays("beastCards");
         questAndRewardCards = config.readArrays("questAndRewardCards");
+        maximumNumberOfCard = config.readInt("maximumNumberOfCard");
     }
 
     public static CardConfig getInstance(){
@@ -92,4 +94,6 @@ public class CardConfig extends LogicConfig{
     public String[] getQuestAndRewardCards() {
         return questAndRewardCards;
     }
+
+    public int getMaximumNumberOfCard(){return maximumNumberOfCard ;}
 }

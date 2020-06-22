@@ -1,5 +1,6 @@
 package edu.sharif.student.bluesoheil.ap98.hearthstone.connectors;
 
+import com.google.gson.Gson;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.DeckControllerException;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.CardShape;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Heroes.HeroTypes;
@@ -29,38 +30,31 @@ public class CollectionHandler {
     }
 
     public ArrayList<CardShape> getDeckCards(String deckName) {
-        ArrayList<String> deckCards = administer.getDeckCards(deckName);
-        ArrayList<CardShape> allCards = administer.getAllCards();
-        ArrayList<CardShape> cardShapes = new ArrayList<>();
-
-        for (CardShape shape : allCards) {
-            if (deckCards.contains(shape.getCardName())) cardShapes.add(shape);
-        }
-        return cardShapes;
+        return administer.getDeckCards(deckName);
     }
 
     public HashMap<String, String> getDecks() {
         return administer.getPlayerDecks();
     }
 
-    public void createNewDeck(String newDeckName , String heroName) throws DeckControllerException {
-        administer.createDeck(newDeckName , heroName);
+    public void createNewDeck(String newDeckName, String heroName) throws DeckControllerException {
+        administer.createDeck(newDeckName, heroName);
     }
 
     public void renameDeck(String selectedDeck, String newName) throws DeckControllerException {
-        administer.renameDeck( selectedDeck, newName);
+        administer.renameDeck(selectedDeck, newName);
     }
 
     public void deleteDeck(String selectedDeck) {
         administer.deleteDeck(selectedDeck);
     }
 
-    public void addCardToDeck(String selectedDeck , String selectedCard) throws DeckControllerException {
-        administer.addCardToDeck(selectedDeck , selectedCard );
+    public void addCardToDeck(String selectedDeck, String selectedCard) throws DeckControllerException {
+        administer.addCardToDeck(selectedDeck, selectedCard);
     }
 
     public void removeCardFromDeck(String selectedDeck, String selectedCard) throws DeckControllerException {
-        administer.removeCardFromDeck(selectedDeck , selectedCard);
+        administer.removeCardFromDeck(selectedDeck, selectedCard);
     }
 
     public void setCurrentDeck(String selectedDeck) throws DeckControllerException {
@@ -68,7 +62,7 @@ public class CollectionHandler {
     }
 
     public void changeDeckHero(String selectedDeck, HeroTypes heroName) throws DeckControllerException {
-        administer.changeDeckHero(selectedDeck , heroName);
+        administer.changeDeckHero(selectedDeck, heroName);
     }
 
     public boolean playerHas(String selectedCard) {

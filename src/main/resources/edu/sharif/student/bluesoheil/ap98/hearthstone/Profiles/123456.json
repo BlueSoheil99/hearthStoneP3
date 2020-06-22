@@ -2,7 +2,7 @@
   "userName": "123456",
   "password": "123456",
   "userId": 10,
-  "coins": 41,
+  "coins": 36,
   "profilePath": "src/main/resources/edu/sharif/student/bluesoheil/ap98/hearthstone/Profiles/123456.json",
   "logPath": "src/main/resources/edu/sharif/student/bluesoheil/ap98/hearthstone/Logs/123456-10.log",
   "playerTotalCards": [
@@ -261,6 +261,26 @@
       "rarity": "RARE",
       "description": "N/A",
       "cost": 4
+    },
+    {
+      "value": 0,
+      "name": "Learn Draconic",
+      "manaCost": 1,
+      "type": "SPELL",
+      "heroClass": "NEUTRAL",
+      "rarity": "COMMON",
+      "description": "N/A",
+      "cost": 2
+    },
+    {
+      "value": 0,
+      "name": "Polymorph",
+      "manaCost": 4,
+      "type": "SPELL",
+      "heroClass": "MAGE",
+      "rarity": "RARE",
+      "description": "N/A",
+      "cost": 3
     }
   ],
   "playerDecks": [
@@ -269,8 +289,31 @@
       "gamesPlayed": 0,
       "wins": 0,
       "hero": "MAGE",
-      "cards": [],
-      "cardsUsage": {}
+      "cards": [
+        {
+          "value": 0,
+          "name": "Learn Draconic",
+          "manaCost": 1,
+          "type": "SPELL",
+          "heroClass": "NEUTRAL",
+          "rarity": "COMMON",
+          "description": "N/A",
+          "cost": 2
+        },
+        {
+          "value": 0,
+          "name": "Learn Draconic",
+          "manaCost": 1,
+          "type": "SPELL",
+          "heroClass": "NEUTRAL",
+          "rarity": "COMMON",
+          "description": "N/A",
+          "cost": 2
+        }
+      ],
+      "cardsUsage": {
+        "Learn Draconic": 0
+      }
     },
     {
       "name": "newDeck2",
@@ -492,18 +535,6 @@
       "hero": "WARLOCK",
       "cards": [
         {
-          "inRush": false,
-          "HP": 2,
-          "attack": 4,
-          "name": "Dreadscale",
-          "manaCost": 3,
-          "type": "MINION",
-          "heroClass": "WARLOCK",
-          "rarity": "LEGENDARY",
-          "description": "N/A",
-          "cost": 3
-        },
-        {
           "value": 0,
           "name": "Slam",
           "manaCost": 2,
@@ -638,7 +669,6 @@
         "Sathrovarr": 0,
         "Heavy Axe": 0,
         "Learn Draconic": 0,
-        "Dreadscale": 0,
         "Swarm of Locusts": 0,
         "Curio Collector": 0
       }
@@ -1016,6 +1046,16 @@
           "rarity": "COMMON",
           "description": "N/A",
           "cost": 2
+        },
+        {
+          "value": 0,
+          "name": "Polymorph",
+          "manaCost": 4,
+          "type": "SPELL",
+          "heroClass": "MAGE",
+          "rarity": "RARE",
+          "description": "N/A",
+          "cost": 3
         }
       ],
       "cardsUsage": {

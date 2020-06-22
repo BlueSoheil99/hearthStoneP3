@@ -163,11 +163,13 @@ public class DeckController {
     }
 
     public void addCard(String nameOfDeck, Card card) throws DeckControllerException {
-        for (Deck deck : playerDecks) {
-            if (deck.getName().equals(nameOfDeck)) {
+        Deck deck = getDeck(nameOfDeck);
+        if (deck != null) {
+            int numberOfThisCardInPlayersCards = Collections.frequency(CardController.getInstance().getPlayerTotalCards(), card);
+            int numberOfThisCardInThisDeck = Collections.frequency(deck.getCards(), card);
+            if (numberOfThisCardInPlayersCards > numberOfThisCardInThisDeck) {
                 deck.addCard(card);
-                break;
-            }
+            } else throw new DeckControllerException("You only have "+numberOfThisCardInPlayersCards+" of this card. Can't have more in a deck");
         }
     }
 
