@@ -9,26 +9,27 @@ import edu.sharif.student.bluesoheil.ap98.hearthstone.util.Configuration.GuiConf
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class PlayerPanel extends SidePanel {
 
-    private JButton endTurn , playBtn;
-    private JButton  rightBtn , leftBtn;
+    private JButton endTurn, playBtn;
+    private JButton rightBtn, leftBtn;
     private HeroPanel heroPanel;
     private CardPanel cardPanel;
     private String selectedCard;
     private boolean isOpponent;
 
-    public PlayerPanel(HeroTypes hero, int hp, int startingMana){
+    public PlayerPanel(HeroTypes hero, int hp, int startingMana) {
         super();
-        heroPanel = new HeroPanel(hero , hp , startingMana);
+        heroPanel = new HeroPanel(hero, hp, startingMana);
         create();
         init();
         setPreferredSize(new Dimension(PlayConfig.getInstance().getPlayerPanelWidth()
                 , PlayConfig.getInstance().getPlayerPanelHeight()));
     }
 
-    private void create(){
+    private void create() {
         cardPanel = new CardPanel();
         endTurn = new JButton("End Turn");
         playBtn = new JButton("Play");
@@ -36,43 +37,44 @@ public class PlayerPanel extends SidePanel {
         leftBtn = new JButton("<--");
     }
 
-    private void init(){
+    private void init() {
         setLayout(new GridBagLayout());
         GridBagConstraints gb = new GridBagConstraints();
-        gb.insets = new Insets(5,5,5,5);
+        gb.insets = new Insets(5, 5, 5, 5);
 
-        if (! isOpponent){
-            gb.gridx=1;
-            gb.gridy=0;
-            add(endTurn,gb);
-            gb.gridx=0;
-            gb.gridy=1;
-            add(leftBtn,gb);
-            gb.gridx=1;
-            add(playBtn,gb);
-            gb.gridx=2;
-            add(rightBtn,gb);
+        if (!isOpponent) {
+            gb.gridx = 1;
+            gb.gridy = 0;
+            add(endTurn, gb);
+            gb.gridx = 0;
+            gb.gridy = 1;
+            add(leftBtn, gb);
+            gb.gridx = 1;
+            add(playBtn, gb);
+            gb.gridx = 2;
+            add(rightBtn, gb);
         }
         /////
-        gb.gridy=0;
+        gb.gridy = 0;
         gb.gridx = 3;
-        gb.gridheight=2;
-        add(heroPanel,gb);
+        gb.gridheight = 2;
+        add(heroPanel, gb);
         /////
-        gb.gridy=0;
+        gb.gridy = 0;
         gb.gridx = 4;
-        add(cardPanel,gb);
+        add(cardPanel, gb);
     }
 
-    void updateHand(ArrayList<CardShape> latestHand){
+    void updateHand(ArrayList<CardShape> latestHand, HashMap<String,Integer> latestHeroStates) {
         cardPanel.setCards(latestHand);
+        heroPanel.updateStates(latestHeroStates.get("HP"), latestHeroStates.get("MANA"), latestHeroStates.get("CARDS"));
     }
 
-    void updateHero(){
+    void updateHero() {
 
     }
 
-    void setOpponent(boolean isOpponent){
+    void setOpponent(boolean isOpponent) {
         this.isOpponent = isOpponent;
         init();
         //todo make it correct

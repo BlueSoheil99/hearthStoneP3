@@ -1,6 +1,7 @@
 package edu.sharif.student.bluesoheil.ap98.hearthstone.connectors;
 
 import edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.GameController;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.PlayException;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play.PlayPanel;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play.PlayerPanel;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.CardShape;
@@ -8,6 +9,7 @@ import edu.sharif.student.bluesoheil.ap98.hearthstone.util.log.Logger;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 
 public class PlayHandler {
     private static PlayHandler instance;
@@ -36,7 +38,7 @@ public class PlayHandler {
 //        instance.playPanel = playPanel;
     }
 
-    public static void dismissHandler(){
+    public static void dismissHandler() {
         instance.gameController = null;
     }
 
@@ -57,26 +59,35 @@ public class PlayHandler {
         return threeOnes;
     }
 
+    public void replaceCard(String cardName) throws PlayException {
+        GameController.getInstance().drawHandAgain(cardName);
+    }
+
+
     public ArrayList<String> getEvents() {
         return Logger.getEventLogs();
     }
 
     public PlayerPanel getPlayerPanel() {
-        return new PlayerPanel(gameController.getPlayerHero() ,
-                gameController.getPlayerHP() , gameController.getInitialPlayerMana());
+        return new PlayerPanel(gameController.getPlayerHero(),
+                gameController.getPlayerHP(), gameController.getPlayerMana());
     }
 
     public PlayerPanel getOpponentPanel() {
-        return new PlayerPanel(gameController.getOpponentHero() ,
-                gameController.getOpponentHP() , gameController.getInitialOpponentMana());
+        return new PlayerPanel(gameController.getOpponentHero(),
+                gameController.getOpponentHP(), gameController.getInitialOpponentMana());
     }
 
     public ArrayList<CardShape> getHand() {
-       return administer.getCardShapes(gameController.getPlayerHand());
+        return administer.getCardShapes(GameController.getInstance().getPlayerHand());
     }
 
-    public void playCard(String cardName){
+    public void playCard(String cardName) {
 
+    }
+
+    public HashMap<String, Integer> getHeroStates() {
+        return gameController.getHeroStates();
     }
 
     //

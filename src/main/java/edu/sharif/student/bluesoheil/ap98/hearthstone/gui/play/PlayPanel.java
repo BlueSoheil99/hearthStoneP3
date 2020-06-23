@@ -3,13 +3,9 @@ package edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.PlayHandler;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.GamePanel;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.CardPanel;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Heroes.HeroTypes;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.util.Configuration.ConfigLoader;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.util.Configuration.Configs;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.Configuration.GuiConfigs.PlayConfig;
 
 import javax.swing.*;
-import java.awt.*;
 
 public class PlayPanel extends GamePanel {
 
@@ -30,7 +26,7 @@ public class PlayPanel extends GamePanel {
     protected void createFields() {
         playHandler = PlayHandler.getInstance();
         playerPanel = playHandler.getPlayerPanel();
-        playerPanel.updateHand(playHandler.getHand());
+        playerPanel.updateHand(playHandler.getHand(), playHandler.getHeroStates());
         opponentPanel = playHandler.getOpponentPanel();
         playHandler = PlayHandler.getInstance();
         pauseMenu = PauseMenu.getInstance();

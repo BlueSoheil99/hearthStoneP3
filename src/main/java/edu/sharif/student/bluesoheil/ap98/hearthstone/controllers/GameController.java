@@ -1,6 +1,7 @@
 package edu.sharif.student.bluesoheil.ap98.hearthstone.controllers;
 
 import edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.PlayHandler;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.PlayException;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Deck;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Heroes.Hero;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Heroes.HeroTypes;
@@ -11,27 +12,37 @@ import edu.sharif.student.bluesoheil.ap98.hearthstone.util.Configuration.LogicCo
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.Stack;
 
 public class GameController {
     private static GameController instance;
+    private static final int maximumCardsInHand = 7;
+    private static final int maximumCardsOnBoard = 7;
+
     private PlayLogicConfig properties;
     private InfoPassive passive;
     private PlayerController playerController;
     private DeckController deckController;
     private Player player, opponent;
+    private int playerMana, playerInitialMana;
+    private int turnsPlayerPlayed, numberOfCardsCanBeDrawn;
     private Deck playerDeck, opponentDeck;
     private Hero playerHero, opponentHero;
     private ArrayList<Card> playerHand;
     private Stack<Card> playerCards;
     private boolean playerIsWinner = false;
-
+    private boolean playerTurn = true;
+    private int timesPlayerChangedHisFirstHand;
     {
         opponentDeck = DeckController.getInstance().copyDeck(DeckController.getDefaultDeck(HeroTypes.ROGUE));
     }
 
-    public GameController() {
+    private GameController() {
         properties = PlayLogicConfig.getInstance();
+        timesPlayerChangedHisFirstHand = 0;
+        setInitialMana(1);
+        turnsPlayerPlayed = 0;
         playerController = PlayerController.getInstance();
         deckController = DeckController.getInstance();
         player = playerController.getCurrentPlayer();
@@ -39,7 +50,6 @@ public class GameController {
         //opponent = ...
         //setOpponentProperties();
     }
-
 
     ///////////
     //statics//
@@ -66,9 +76,9 @@ public class GameController {
     /////////////////
     ///non-statics///
     /////////////////
-
     public void setPassive(String objName) {
         passive = InfoPassive.valueOf(objName.toUpperCase());
+        passive.getPassive().run();
     }
 
     private void setPlayerProperties() {
@@ -96,8 +106,8 @@ public class GameController {
         return playerDeck.getHeroType().getHero().getHp();
     }
 
-    public int getInitialPlayerMana() {
-        return 1;
+    public int getPlayerMana() {
+        return playerMana;
     }
 
     //////////
@@ -115,21 +125,66 @@ public class GameController {
         return 1;
     }
 
+    ////////
+    ////////
+    public void setInitialMana(int i) {
+        playerInitialMana = i;
+        playerMana = playerInitialMana;
+    } //for manaJump passive
 
+    public void setNumberOfCardsCanBeDrawn(int numberOfCardsCanBeDrawn) {
+        this.numberOfCardsCanBeDrawn = numberOfCardsCanBeDrawn;
+    } //for twice draw passive
+
+    ////////
+    ////////
     public ArrayList<Card> getPlayerHand() {
         if (playerHand == null) {
             playerHand = new ArrayList<>();
             for (int i = 0; i < 3; i++) {
                 playerHand.add(playerCards.pop());
             }
-        }else {
-            playerHand.add(playerCards.pop());
+        } else {
+            if (turnsPlayerPlayed > 0) {
+                for (int i = 0; i < numberOfCardsCanBeDrawn; i++) {
+                    //todo twiceDraw and 7(?)cards limit should be coded here
+                    playerHand.add(playerCards.pop());
+                }
+            }
         }
         return playerHand;
     }
 
-    public void endTurn() {
+    public ArrayList<Card> drawHandAgain(String cardName) throws PlayException {
+        Card card;
+        for (Card handCard : playerHand) {
+            if (handCard.getName().toUpperCase().equals(cardName)) {
+                if (timesPlayerChangedHisFirstHand < properties.getMaximumStartHints()) {
+                    card = handCard;
+                    playerCards.push(card);
+                    Collections.shuffle(playerCards);
+                    playerHand.set(playerHand.indexOf(card),playerCards.pop());
+                    timesPlayerChangedHisFirstHand++;
+                    break;
+                } else {
+                    throw new PlayException("you can't change your hand more than " + properties.getMaximumStartHints() + " times");
+                }
+            }
+        }
+        return getPlayerHand();
+    }
 
+    public void endTurn() {
+        playerTurn = false;
+        turnsPlayerPlayed++;
+    }
+
+    public HashMap<String, Integer> getHeroStates() {
+        HashMap<String, Integer> states = new HashMap<>();
+        states.put("HP", playerHero.getHp());
+        states.put("MANA", playerMana);
+        states.put("CARDS", playerCards.size());
+        return states;
     }
 
 

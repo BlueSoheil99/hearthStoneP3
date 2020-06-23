@@ -22,8 +22,10 @@ public class HeroPanel extends JPanel {
 
     private JLabel hpLabel = new JLabel("HP : ");
     private JLabel manaLabel = new JLabel("Mana : ");
+    private JLabel remainingCardsLabel = new JLabel("Remaining Cards : ");
     private JLabel hp = new JLabel("");
     private JLabel mana = new JLabel("");
+    private JLabel remainingCards = new JLabel("");
     private JLabel heroIcon;
     private JButton heroPower;
 
@@ -47,16 +49,15 @@ public class HeroPanel extends JPanel {
         setLayout(new GridBagLayout());
         GridBagConstraints gb = new GridBagConstraints();
         gb.insets = new Insets(5, 5, 5, 5);
-        gb.anchor = GridBagConstraints.CENTER;
         gb.fill = GridBagConstraints.BOTH;
         gb.gridx = 0;
         gb.gridy = 0;
-        gb.gridheight = 4;
+        gb.gridheight = 6;
         add(heroPower, gb);
         ////////
         gb.gridy = 0;
         gb.gridx = 1;
-        gb.gridheight = 4;
+        gb.gridheight = 6;
         add(heroIcon, gb);
         ////////
         gb.gridheight = 1;
@@ -66,6 +67,8 @@ public class HeroPanel extends JPanel {
         add(mana, gb);
         add(hpLabel, gb);
         add(hp, gb);
+        add(remainingCardsLabel,gb);
+        add(remainingCards , gb);
     }
 
     void setHp(int newHp) {
@@ -75,6 +78,12 @@ public class HeroPanel extends JPanel {
 
     void setMana(int newMana) {
         mana.setText(Integer.toString(newMana));
+    }
+
+    public void updateStates(int remainingHp , int remainingMana, int remainingCardsInDeck  ) {
+        hp.setText(Integer.toString(remainingHp));
+        mana.setText(Integer.toString(remainingMana));
+        remainingCards.setText(Integer.toString(remainingCardsInDeck));
     }
 
     private class heroLabel {

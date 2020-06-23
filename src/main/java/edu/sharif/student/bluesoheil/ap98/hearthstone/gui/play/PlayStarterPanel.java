@@ -1,6 +1,7 @@
 package edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play;
 
 import edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.PlayHandler;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.PlayException;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.GamePanel;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.CardPanel;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.NavigationPanel;
@@ -15,10 +16,10 @@ import java.awt.event.ActionListener;
 
 public class PlayStarterPanel extends GamePanel {
     private PlayConfig properties;
-    private CardPanel panel;
+    private CardPanel passivePanel , handPanel;
     private JLabel selectLabel;
     private JButton selectBtn , changeBtn;
-    private String selectedPassive;
+    private String selectedPassive , selectedCard;
     private ClickListener clickListener;
 
     public PlayStarterPanel() {
@@ -42,9 +43,13 @@ public class PlayStarterPanel extends GamePanel {
         makeBtnLookBetter(selectBtn ,"Serif",30);
         makeBtnLookBetter(changeBtn ,"Serif",30);
         SetSelectBtnActionListener();
-        panel = new CardPanel();
-        panel.setPassives(PlayHandler.getInstance().get3Passives());
-        panel.setClickListener(objName -> selectedPassive = objName);
+        SetChangeBtnActionListener();
+        passivePanel = new CardPanel();
+        passivePanel.setPassives(PlayHandler.getInstance().get3Passives());
+        passivePanel.setClickListener(objName -> selectedPassive = objName);
+        handPanel = new CardPanel();
+        handPanel.setCards(PlayHandler.getInstance().getHand());
+        handPanel.setClickListener(objName -> selectedCard = objName);
     }
 
     private void makeBtnLookBetter(JButton button , String fontName , int fontSize) {
@@ -64,26 +69,36 @@ public class PlayStarterPanel extends GamePanel {
         });
     }
 
+    private void SetChangeBtnActionListener() {
+        changeBtn.addActionListener(e -> {
+            if(selectedCard ==null){
+                JOptionPane.showMessageDialog(null ,"You Haven't Chosen a Card Yet");
+            }else{
+                try {
+                    PlayHandler.getInstance().replaceCard(selectedCard);
+                    handPanel.setCards(PlayHandler.getInstance().getHand());
+                } catch (PlayException ex) {
+                    JOptionPane.showMessageDialog(null ,ex.getMessage());
+                }
+            }
+        });
+    }
+
 
     @Override
     protected void init() {
-        panel.setMinimumSize(new Dimension(properties.getPassivePanelWidth(), properties.getPassivePanelHeight()));
-
+        passivePanel.setMinimumSize(new Dimension(properties.getPassivePanelWidth(), properties.getPassivePanelHeight()));
         setLayout(new GridBagLayout());
         GridBagConstraints gc = new GridBagConstraints();
-        gc.insets=new Insets(20,0,0,20);
+        gc.insets=new Insets(10,0,0,10);
         gc.gridx=0;
-        gc.gridy=0;
+        gc.gridy=GridBagConstraints.RELATIVE;
         add(selectLabel , gc);
-        gc.gridy++;
-        add(panel , gc);
-        gc.gridy++;
+        add(passivePanel, gc);
         add(selectBtn , gc);
-        gc.gridy++;
+        add(handPanel , gc);
         add(changeBtn , gc);
-        gc.gridy++;
         add(NavigationPanel.getInstance() , gc);
-
     }
 
 

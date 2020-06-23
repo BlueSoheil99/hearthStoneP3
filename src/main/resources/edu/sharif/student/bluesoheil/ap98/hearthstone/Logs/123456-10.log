@@ -1099,3 +1099,50 @@ NAVIGATION		2020/06/23  09:58:59	To PassiveSelector
 CLICK_BUTTON		2020/06/23  10:00:41	button: BACK selected .
 NAVIGATION		2020/06/23  10:00:41	Back to previous panel
 PLAYER		2020/06/23  10:00:47	123456 logged out
+PLAYER		2020/06/23  10:37:09	123456 logged in
+NAVIGATION		2020/06/23  10:37:11	To Collection
+CLICK_BUTTON		2020/06/23  10:37:12	deck:  HunterDefaultDeck  selected .
+CLICK_BUTTON		2020/06/23  10:37:15	button: SET CURRENT DECK selected.
+COLLECTION		2020/06/23  10:37:16	HunterDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/06/23  10:37:18	button: BACK selected .
+NAVIGATION		2020/06/23  10:37:18	Back to previous panel
+NAVIGATION		2020/06/23  10:37:19	To PassiveSelector
+CLICK_BUTTON		2020/06/23  10:38:02	card: SATHROVARR  selected.
+CLICK_BUTTON		2020/06/23  10:38:18	button: EXIT selected .
+PLAYER		2020/06/23  10:38:24	123456 logged out
+PLAYER		2020/06/23  11:00:12	123456 logged in
+NAVIGATION		2020/06/23  11:00:14	To Status
+STATUS		2020/06/23  11:00:17	HunterDefaultDeck states showed .
+CLICK_BUTTON		2020/06/23  11:00:17	deck:  HunterDefaultDeck  selected .
+CLICK_BUTTON		2020/06/23  11:00:19	button: BACK selected .
+NAVIGATION		2020/06/23  11:00:19	Back to previous panel
+NAVIGATION		2020/06/23  11:00:21	To Collection
+CLICK_BUTTON		2020/06/23  11:00:23	deck:  HunterDefaultDeck  selected .
+CLICK_BUTTON		2020/06/23  11:00:50	button: EXIT selected .
+PLAYER		2020/06/23  11:00:51	123456 logged out
+PLAYER		2020/06/23  12:04:29	123456 logged in
+NAVIGATION		2020/06/23  12:04:31	To Collection
+CLICK_BUTTON		2020/06/23  12:04:32	deck:  WarlockDefaultDeck  selected .
+CLICK_BUTTON		2020/06/23  12:04:34	button: SET CURRENT DECK selected.
+COLLECTION		2020/06/23  12:04:34	WarlockDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/06/23  12:04:35	button: BACK selected .
+NAVIGATION		2020/06/23  12:04:35	Back to previous panel
+NAVIGATION		2020/06/23  12:04:36	To PassiveSelector
+CLICK_BUTTON		2020/06/23  12:04:37	card: OMEGA MEDIC  selected.
+CLICK_BUTTON		2020/06/23  12:04:41	card: SLAM  selected.
+CLICK_BUTTON		2020/06/23  12:04:43	card: CURIO COLLECTOR  selected.
+CLICK_BUTTON		2020/06/23  12:04:53	button: EXIT selected .
+PLAYER		2020/06/23  12:04:54	123456 logged out
+PLAYER		2020/06/23  12:07:29	123456 logged in
+NAVIGATION		2020/06/23  12:07:31	To Collection
+CLICK_BUTTON		2020/06/23  12:07:32	deck:  WarlockDefaultDeck  selected .
+CLICK_BUTTON		2020/06/23  12:07:33	button: SET CURRENT DECK selected.
+COLLECTION		2020/06/23  12:07:34	WarlockDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/06/23  12:07:35	button: BACK selected .
+NAVIGATION		2020/06/23  12:07:35	Back to previous panel
+NAVIGATION		2020/06/23  12:07:36	To PassiveSelector
+CLICK_BUTTON		2020/06/23  12:07:37	card: MURLOC TIDEHUNTER  selected.
+CLICK_BUTTON		2020/06/23  12:07:41	card: SWARM OF LOCUSTS  selected.
+CLICK_BUTTON		2020/06/23  12:07:43	card: DREADSCALE  selected.
+CLICK_BUTTON		2020/06/23  12:07:48	button: EXIT selected .
+PLAYER		2020/06/23  12:07:48	123456 logged out
