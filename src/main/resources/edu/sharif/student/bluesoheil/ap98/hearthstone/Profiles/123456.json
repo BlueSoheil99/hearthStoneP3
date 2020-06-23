@@ -793,7 +793,7 @@
     },
     {
       "name": "HunterDefaultDeck",
-      "gamesPlayed": 1,
+      "gamesPlayed": 2,
       "wins": 0,
       "hero": "HUNTER",
       "cards": [
@@ -927,7 +927,7 @@
     },
     {
       "name": "WarlockDefaultDeck",
-      "gamesPlayed": 3,
+      "gamesPlayed": 4,
       "wins": 0,
       "hero": "WARLOCK",
       "cards": [

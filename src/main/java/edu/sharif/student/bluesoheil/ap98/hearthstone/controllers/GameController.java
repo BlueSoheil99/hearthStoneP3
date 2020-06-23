@@ -33,14 +33,15 @@ public class GameController {
     private Stack<Card> playerCards;
     private boolean playerIsWinner = false;
     private boolean playerTurn = true;
-    private int timesPlayerChangedHisFirstHand;
+    private ArrayList<Integer> cardsPlayerChangedForHisFirstHand;
+
     {
         opponentDeck = DeckController.getInstance().copyDeck(DeckController.getDefaultDeck(HeroTypes.ROGUE));
     }
 
     private GameController() {
         properties = PlayLogicConfig.getInstance();
-        timesPlayerChangedHisFirstHand = 0;
+        cardsPlayerChangedForHisFirstHand = new ArrayList<>();
         setInitialMana(1);
         turnsPlayerPlayed = 0;
         playerController = PlayerController.getInstance();
@@ -145,7 +146,7 @@ public class GameController {
                 playerHand.add(playerCards.pop());
             }
         } else {
-            if (turnsPlayerPlayed > 0) {
+            if (turnsPlayerPlayed > 0) { //this works when we change our cards at the beginning or when we want to show our hand for the first time in playPanel
                 for (int i = 0; i < numberOfCardsCanBeDrawn; i++) {
                     //todo twiceDraw and 7(?)cards limit should be coded here
                     playerHand.add(playerCards.pop());
@@ -159,24 +160,21 @@ public class GameController {
         Card card;
         for (Card handCard : playerHand) {
             if (handCard.getName().toUpperCase().equals(cardName)) {
-                if (timesPlayerChangedHisFirstHand < properties.getMaximumStartHints()) {
+                if (cardsPlayerChangedForHisFirstHand.size() < properties.getMaximumStartHints()) {
                     card = handCard;
-                    playerCards.push(card);
-                    Collections.shuffle(playerCards);
-                    playerHand.set(playerHand.indexOf(card),playerCards.pop());
-                    timesPlayerChangedHisFirstHand++;
-                    break;
-                } else {
-                    throw new PlayException("you can't change your hand more than " + properties.getMaximumStartHints() + " times");
-                }
+                    int x = playerHand.indexOf(card);
+                    if (! cardsPlayerChangedForHisFirstHand.contains(x)) {
+                        playerHand.set(playerHand.indexOf(card), playerCards.pop());
+                        playerCards.push(card);
+                        //we push selected card after we changed the card so this card won't be drawn again. but it might be drawn for next attempts
+                        Collections.shuffle(playerCards);
+                        cardsPlayerChangedForHisFirstHand.add(x);
+                        break;
+                    } else    throw new PlayException("you can't change this card again");
+                } else    throw new PlayException("you can't change your hand more than " + properties.getMaximumStartHints() + " times");
             }
         }
         return getPlayerHand();
-    }
-
-    public void endTurn() {
-        playerTurn = false;
-        turnsPlayerPlayed++;
     }
 
     public HashMap<String, Integer> getHeroStates() {
@@ -185,6 +183,11 @@ public class GameController {
         states.put("MANA", playerMana);
         states.put("CARDS", playerCards.size());
         return states;
+    }
+
+    public void endTurn() {
+        playerTurn = false;
+        turnsPlayerPlayed++;
     }
 
 

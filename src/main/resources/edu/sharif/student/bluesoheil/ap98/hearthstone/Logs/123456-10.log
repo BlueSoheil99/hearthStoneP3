@@ -1146,3 +1146,36 @@ CLICK_BUTTON		2020/06/23  12:07:41	card: SWARM OF LOCUSTS  selected.
 CLICK_BUTTON		2020/06/23  12:07:43	card: DREADSCALE  selected.
 CLICK_BUTTON		2020/06/23  12:07:48	button: EXIT selected .
 PLAYER		2020/06/23  12:07:48	123456 logged out
+PLAYER		2020/06/23  13:56:12	123456 logged in
+NAVIGATION		2020/06/23  13:56:15	To Collection
+CLICK_BUTTON		2020/06/23  13:56:16	deck:  HunterDefaultDeck  selected .
+CLICK_BUTTON		2020/06/23  13:56:17	button: SET CURRENT DECK selected.
+COLLECTION		2020/06/23  13:56:17	HunterDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/06/23  13:56:18	button: BACK selected .
+NAVIGATION		2020/06/23  13:56:18	Back to previous panel
+NAVIGATION		2020/06/23  13:56:19	To PassiveSelector
+CLICK_BUTTON		2020/06/23  13:56:20	passive: ManaJump  selected.
+CLICK_BUTTON		2020/06/23  13:56:22	card: SATHROVARR  selected.
+CLICK_BUTTON		2020/06/23  13:56:24	card: HEAVY AXE  selected.
+CLICK_BUTTON		2020/06/23  13:56:27	card: ZILLIAX  selected.
+CLICK_BUTTON		2020/06/23  13:56:30	card: SLAM  selected.
+CLICK_BUTTON		2020/06/23  13:56:34	card: HEAVY AXE  selected.
+CLICK_BUTTON		2020/06/23  13:56:37	card: CURIO COLLECTOR  selected.
+CLICK_BUTTON		2020/06/23  13:56:39	card: MURLOC TIDEHUNTER  selected.
+CLICK_BUTTON		2020/06/23  13:56:54	button: EXIT selected .
+PLAYER		2020/06/23  13:56:55	123456 logged out
+PLAYER		2020/06/23  14:02:14	123456 logged in
+NAVIGATION		2020/06/23  14:02:15	To Collection
+CLICK_BUTTON		2020/06/23  14:02:16	deck:  WarlockDefaultDeck  selected .
+CLICK_BUTTON		2020/06/23  14:02:17	button: SET CURRENT DECK selected.
+COLLECTION		2020/06/23  14:02:18	WarlockDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/06/23  14:02:19	button: BACK selected .
+NAVIGATION		2020/06/23  14:02:19	Back to previous panel
+NAVIGATION		2020/06/23  14:02:20	To PassiveSelector
+CLICK_BUTTON		2020/06/23  14:02:22	card: CURIO COLLECTOR  selected.
+CLICK_BUTTON		2020/06/23  14:02:26	card: OMEGA MEDIC  selected.
+CLICK_BUTTON		2020/06/23  14:02:30	card: SLAM  selected.
+CLICK_BUTTON		2020/06/23  14:02:40	card: SATHROVARR  selected.
+CLICK_BUTTON		2020/06/23  14:02:43	card: HEAVY AXE  selected.
+CLICK_BUTTON		2020/06/23  14:03:09	button: EXIT selected .
+PLAYER		2020/06/23  14:03:11	123456 logged out
