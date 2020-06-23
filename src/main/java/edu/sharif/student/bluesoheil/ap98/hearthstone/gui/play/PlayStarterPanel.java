@@ -13,16 +13,15 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-public class InfoPassivePanel extends GamePanel {
-    //todo change the name into GameStarterPanel
+public class PlayStarterPanel extends GamePanel {
     private PlayConfig properties;
     private CardPanel panel;
     private JLabel selectLabel;
-    private JButton selectBtn;
+    private JButton selectBtn , changeBtn;
     private String selectedPassive;
     private ClickListener clickListener;
 
-    public InfoPassivePanel() {
+    public PlayStarterPanel() {
         super();
         setBackground(new Color(0xA8765E));
         setBorder(BorderFactory.createMatteBorder(30,30,30,30 ,new Color(0x562C1C)));
@@ -37,15 +36,22 @@ public class InfoPassivePanel extends GamePanel {
     protected void createFields() {
         Font font = new Font("serif" , Font.BOLD , 40);
         selectLabel = new JLabel("Select a passive");
-        selectLabel.setFont(font);
         selectBtn = new JButton("Select");
-        selectBtn.setFont(font);
-        selectBtn.setContentAreaFilled(false);
-        selectBtn.setBackground(new Color(192, 135, 107));
+        changeBtn = new JButton("Change");
+        selectLabel.setFont(font);
+        makeBtnLookBetter(selectBtn ,"Serif",30);
+        makeBtnLookBetter(changeBtn ,"Serif",30);
         SetSelectBtnActionListener();
         panel = new CardPanel();
         panel.setPassives(PlayHandler.getInstance().get3Passives());
         panel.setClickListener(objName -> selectedPassive = objName);
+    }
+
+    private void makeBtnLookBetter(JButton button , String fontName , int fontSize) {
+        Font font = new Font(fontName , Font.BOLD , fontSize);
+        button.setFont(font);
+        button.setContentAreaFilled(false);
+        button.setBackground(new Color(192, 135, 107));
     }
 
     private void SetSelectBtnActionListener() {
@@ -73,6 +79,8 @@ public class InfoPassivePanel extends GamePanel {
         add(panel , gc);
         gc.gridy++;
         add(selectBtn , gc);
+        gc.gridy++;
+        add(changeBtn , gc);
         gc.gridy++;
         add(NavigationPanel.getInstance() , gc);
 

@@ -30,6 +30,7 @@ public class PlayPanel extends GamePanel {
     protected void createFields() {
         playHandler = PlayHandler.getInstance();
         playerPanel = playHandler.getPlayerPanel();
+        playerPanel.updateHand(playHandler.getHand());
         opponentPanel = playHandler.getOpponentPanel();
         playHandler = PlayHandler.getInstance();
         pauseMenu = PauseMenu.getInstance();

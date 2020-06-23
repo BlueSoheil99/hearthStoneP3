@@ -7,6 +7,7 @@ import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Heroes.HeroTypes;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.InfoPassives.InfoPassive;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Player;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.cards.Card;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.util.Configuration.LogicConfigs.PlayLogicConfig;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -14,8 +15,10 @@ import java.util.Stack;
 
 public class GameController {
     private static GameController instance;
+    private PlayLogicConfig properties;
     private InfoPassive passive;
     private PlayerController playerController;
+    private DeckController deckController;
     private Player player, opponent;
     private Deck playerDeck, opponentDeck;
     private Hero playerHero, opponentHero;
@@ -28,7 +31,9 @@ public class GameController {
     }
 
     public GameController() {
+        properties = PlayLogicConfig.getInstance();
         playerController = PlayerController.getInstance();
+        deckController = DeckController.getInstance();
         player = playerController.getCurrentPlayer();
         setPlayerProperties();// todo uncomment it
         //opponent = ...
@@ -49,8 +54,8 @@ public class GameController {
     }
 
     public static void endGame() {
-        if (instance.playerIsWinner) DeckController.getInstance().getCurrentDeck().incrementWins();
-        DeckController.getInstance().getCurrentDeck().setCardsUsage(instance.playerDeck.getCardsUsage());
+        if (instance.playerIsWinner) instance.deckController.getCurrentDeck().incrementWins();
+        instance.deckController.getCurrentDeck().setCardsUsage(instance.playerDeck.getCardsUsage());
         instance.playerDeck.getHeroType().resetHero();
         instance.opponentDeck.getHeroType().resetHero();
         PlayHandler.dismissHandler();
@@ -67,10 +72,9 @@ public class GameController {
     }
 
     private void setPlayerProperties() {
-        Deck mainPlayerDeck = DeckController.getInstance().getCurrentDeck();
+        Deck mainPlayerDeck = deckController.getCurrentDeck();
         mainPlayerDeck.incrementGamesPlayed();
-        playerDeck = DeckController.getInstance().copyDeck(
-                DeckController.getInstance().getCurrentDeck());
+        playerDeck = DeckController.getInstance().copyDeck(deckController.getCurrentDeck());
         Collections.shuffle(playerDeck.getCards());
         playerCards = new Stack<>();
         for (int i = 0; i < playerDeck.getNumberOfCards(); i++) {
@@ -118,6 +122,8 @@ public class GameController {
             for (int i = 0; i < 3; i++) {
                 playerHand.add(playerCards.pop());
             }
+        }else {
+            playerHand.add(playerCards.pop());
         }
         return playerHand;
     }

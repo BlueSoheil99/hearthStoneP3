@@ -1074,3 +1074,28 @@ COLLECTION		2020/06/22  20:04:06	POLYMORPH has been added to MageDefaultDeck
 CLICK_BUTTON		2020/06/22  20:04:07	deck:  MageDefaultDeck  selected .
 CLICK_BUTTON		2020/06/22  20:04:27	button: EXIT selected .
 PLAYER		2020/06/22  20:04:29	123456 logged out
+PLAYER		2020/06/22  20:17:39	123456 logged in
+NAVIGATION		2020/06/22  20:17:41	To Collection
+CLICK_BUTTON		2020/06/22  20:17:42	deck:  newDecknew  selected .
+CLICK_BUTTON		2020/06/22  20:17:44	button: EXIT selected .
+PLAYER		2020/06/22  20:17:46	123456 logged out
+PLAYER		2020/06/23  09:54:32	123456 logged in
+NAVIGATION		2020/06/23  09:54:34	To Collection
+CLICK_BUTTON		2020/06/23  09:54:36	deck:  WarlockDefaultDeck  selected .
+CLICK_BUTTON		2020/06/23  09:54:37	button: SET CURRENT DECK selected.
+COLLECTION		2020/06/23  09:54:38	WarlockDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/06/23  09:54:39	button: BACK selected .
+NAVIGATION		2020/06/23  09:54:39	Back to previous panel
+NAVIGATION		2020/06/23  09:54:40	To PassiveSelector
+PLAYER		2020/06/23  09:55:05	123456 logged out
+PLAYER		2020/06/23  09:58:46	123456 logged in
+NAVIGATION		2020/06/23  09:58:48	To Collection
+CLICK_BUTTON		2020/06/23  09:58:49	deck:  WarlockDefaultDeck  selected .
+CLICK_BUTTON		2020/06/23  09:58:56	button: SET CURRENT DECK selected.
+COLLECTION		2020/06/23  09:58:56	WarlockDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/06/23  09:58:58	button: BACK selected .
+NAVIGATION		2020/06/23  09:58:58	Back to previous panel
+NAVIGATION		2020/06/23  09:58:59	To PassiveSelector
+CLICK_BUTTON		2020/06/23  10:00:41	button: BACK selected .
+NAVIGATION		2020/06/23  10:00:41	Back to previous panel
+PLAYER		2020/06/23  10:00:47	123456 logged out

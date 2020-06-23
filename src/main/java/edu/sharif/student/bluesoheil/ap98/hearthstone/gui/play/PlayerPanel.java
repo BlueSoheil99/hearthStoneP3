@@ -1,12 +1,14 @@
 package edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play;
 
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.CardPanel;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.CardShape;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.SidePanel;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Heroes.HeroTypes;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.Configuration.GuiConfigs.PlayConfig;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 public class PlayerPanel extends SidePanel {
 
@@ -60,6 +62,10 @@ public class PlayerPanel extends SidePanel {
         gb.gridy=0;
         gb.gridx = 4;
         add(cardPanel,gb);
+    }
+
+    void updateHand(ArrayList<CardShape> latestHand){
+        cardPanel.setCards(latestHand);
     }
 
     void updateHero(){

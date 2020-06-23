@@ -6,7 +6,7 @@ import edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.DeckControllerE
 import edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.PlayerControllerException;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.*;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.CollectionPanel;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play.InfoPassivePanel;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play.PlayStarterPanel;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play.PlayPanel;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.CardShape;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.starter.LoginPanel;
@@ -87,14 +87,14 @@ public class Administer {
             Logger.log(LogTypes.NAVIGATION, "To PassiveSelector");
             GameController.setNewGame();
             GameController gameController = GameController.getInstance();
-            InfoPassivePanel passive = new InfoPassivePanel();
-            passive.setClickListener(objName -> {
+            PlayStarterPanel playStarterPanel = new PlayStarterPanel();
+            playStarterPanel.setClickListener(objName -> {
                 Logger.log(LogTypes.PLAY, "passive '" + objName + "' selected");
                 gameController.setPassive(objName);
                 System.out.println("passive selected  " + objName);
                 startGame(gameController);
             });
-            mainFrame.initFrame(passive);
+            mainFrame.initFrame(playStarterPanel);
         }
     }
 
@@ -213,6 +213,23 @@ public class Administer {
         return cardShapes;
     }
 
+    public ArrayList<CardShape> getCardShapes(ArrayList<Card> cards){
+        ArrayList<CardShape> allCards = getAllShapesOfCards();
+        ArrayList<CardShape> cardShapes = new ArrayList<>();
+        for (Card card : cards) {
+            for (CardShape shape : allCards) {
+                if (shape.getCardName().equals(card.getName().toUpperCase())) {
+                    if (!cardShapes.contains(shape)) {
+                        cardShapes.add(shape);
+                    } else {
+                        cardShapes.add(CardShape.copyCardShape(shape));
+                        //by the line above line we're able to see repeated cards
+                    }
+                }
+            }
+        }
+        return cardShapes;
+    }
     //////////////////
     //////shop////////
     public int getPlayerCoins() {
@@ -254,31 +271,12 @@ public class Administer {
     /////////////////////////
     ///////collection////////
     public HashMap<String, String> getPlayerDecks() {
-        // returns all decks of player
+        // returns *ALL* decks of player
         return getPlayerDecks(deckController.getPlayerDecks().size());
     }
 
     public ArrayList<CardShape> getDeckCards(String deckName) {
-        return getDeckCards(deckController.getDeck(deckName));
-    }
-
-    public ArrayList<CardShape> getDeckCards(Deck deck) {
-        ArrayList<Card> deckCards = deck.getCards();
-        ArrayList<CardShape> allCards = administer.getAllShapesOfCards();
-        ArrayList<CardShape> cardShapes = new ArrayList<>();
-        for (Card card : deckCards) {
-            for (CardShape shape : allCards) {
-                if (shape.getCardName().equals(card.getName().toUpperCase())) {
-                    if (!cardShapes.contains(shape)) {
-                        cardShapes.add(shape);
-                    } else {
-                        cardShapes.add(CardShape.copyCardShape(shape));
-                        //by the line above line we're able to see repeated cards
-                    }
-                }
-            }
-        }
-        return cardShapes;
+        return getCardShapes(deckController.getDeck(deckName).getCards());
     }
 
     public void createDeck(String deckName, String hero) throws DeckControllerException {

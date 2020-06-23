@@ -71,6 +71,14 @@ public class PlayHandler {
                 gameController.getOpponentHP() , gameController.getInitialOpponentMana());
     }
 
+    public ArrayList<CardShape> getHand() {
+       return administer.getCardShapes(gameController.getPlayerHand());
+    }
+
+    public void playCard(String cardName){
+
+    }
+
     //
     ///
     ////other methods

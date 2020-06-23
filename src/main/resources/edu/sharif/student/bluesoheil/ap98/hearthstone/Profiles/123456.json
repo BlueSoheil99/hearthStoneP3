@@ -530,7 +530,7 @@
     },
     {
       "name": "WarlockDefaultDeck",
-      "gamesPlayed": 0,
+      "gamesPlayed": 1,
       "wins": 0,
       "hero": "WARLOCK",
       "cards": [

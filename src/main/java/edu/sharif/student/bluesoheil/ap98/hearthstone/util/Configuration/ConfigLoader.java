@@ -13,6 +13,7 @@ public class ConfigLoader {
     private Configs addresses;
     private Configs logicConstants;
     private Configs playConfigs;
+    private Configs playLogicConfigs;
     private Configs startPanelConfigs;
     private Configs collectionConfigs;
     private Configs cardConfigs;
@@ -64,6 +65,31 @@ public class ConfigLoader {
                 try {
                     FileReader reader = new FileReader(test);
                     property.load(reader);
+                    if (lowerCase.contains("startpanel")) {
+                        startPanelConfigs = property;
+
+                    } else if (lowerCase.contains("card")) {
+                        cardConfigs = property;
+
+                    } else if (lowerCase.contains("menu")) {
+                        menuConfigs = property;
+
+                    } else if (lowerCase.contains("guiconstants")) {
+                        guiConstants = property;
+
+
+                    } else if (lowerCase.contains("play_logic")) {
+                        playLogicConfigs = property;
+
+                    } else if (lowerCase.contains("play")) {
+                        playConfigs = property;
+
+                    } else if (lowerCase.contains("collection")) {
+                        collectionConfigs = property;
+
+                    } else if (lowerCase.contains("logicconstants")) {
+                        logicConstants = property;
+                    }
 
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
@@ -71,27 +97,6 @@ public class ConfigLoader {
                     e.printStackTrace();
                 }
 
-                if (lowerCase.contains("startpanel")) {
-                    startPanelConfigs = property;
-
-                } else if (lowerCase.contains("card")) {
-                    cardConfigs = property;
-
-                } else if (lowerCase.contains("menu")) {
-                    menuConfigs = property;
-
-                } else if (lowerCase.contains("guiconstants")) {
-                    guiConstants = property;
-
-                } else if (lowerCase.contains("play")) {
-                    playConfigs = property;
-
-                } else if (lowerCase.contains("collection")) {
-                    collectionConfigs = property;
-
-                } else if (lowerCase.contains("logicconstants")) {
-                    logicConstants = property;
-                }
             }
         }
     }
@@ -125,5 +130,7 @@ public class ConfigLoader {
         return collectionConfigs;
     }
 
-
+    public Configs getPlayLogicConfigs() {
+        return playLogicConfigs;
+    }
 }
