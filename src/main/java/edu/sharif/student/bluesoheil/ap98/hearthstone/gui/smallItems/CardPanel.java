@@ -1,5 +1,7 @@
 package edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems;
 
+import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play.ActualCard;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play.MinionActualCard;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.CardClickListener;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.ClickListener;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.Configuration.GuiConfigs.GuiConstants;
@@ -48,7 +50,8 @@ public class CardPanel extends SidePanel implements ActionListener {
     }
 
     public void addCard(CardShape card) {
-        addCard(card, cards.size() - 1);
+        if (cards.size()==0) addCard(card , 0);
+        else addCard(card, cards.size() - 1);
     }
 
     public void setPassives(ArrayList<CardShape> passives) {
@@ -109,10 +112,11 @@ public class CardPanel extends SidePanel implements ActionListener {
         if (clickListener != null || cardClickListener != null) {
             unselectCard();
             selectedCard = (CardShape) e.getSource();
+//            selectedCard = (ActualCard) e.getSource();
             lastBorder = selectedCard.getBorder();
             selectedCard.setBorder(BorderFactory.createMatteBorder(6, 6, 6, 6, new Color(16, 90, 115)));
             if (clickListener != null) clickListener.select(selectedCard.getCardName());
-            if (cardClickListener != null) cardClickListener.selectCard(selectedCard);
+            if (cardClickListener != null) cardClickListener.selectCard((ActualCard) selectedCard);
             if (!isPassive) {
                 Logger.log(LogTypes.CLICK_BUTTON, "card: " + selectedCard.getCardName() + "  selected.");
             } else {

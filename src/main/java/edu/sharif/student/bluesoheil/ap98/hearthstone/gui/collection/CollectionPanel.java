@@ -66,51 +66,39 @@ public class CollectionPanel extends GamePanel {
     }
 
     private void addListenersToPanels() {
-        cardPanel.setClickListener(new ClickListener() {
-            @Override
-            public void select(String objName) {
-                selectedCard = objName;
-                if (selectedDeck != null) filterPanel.isSelectedCardFromDeck(false);
-                deckCardsPanel.unselectCard();
-            }
+        cardPanel.setClickListener(objName -> {
+            selectedCard = objName;
+            if (selectedDeck != null) filterPanel.isSelectedCardFromDeck(false);
+            deckCardsPanel.unselectCard();
         });
         //////////////////////////////
         //////////////////////////////
-        deckCardsPanel.setClickListener(new ClickListener() {
-            @Override
-            public void select(String objName) {
-                selectedCard = objName;
-                if (selectedDeck != null) filterPanel.isSelectedCardFromDeck(true);
-                cardPanel.unselectCard();
-            }
+        deckCardsPanel.setClickListener(objName -> {
+            selectedCard = objName;
+            if (selectedDeck != null) filterPanel.isSelectedCardFromDeck(true);
+            cardPanel.unselectCard();
         });
         //////////////////////////////
         //////////////////////////////
-        deckPanel.setClickListener(new ClickListener() {
-            @Override
-            public void select(String objName) {
-                selectedDeck = objName;
-                selectedCard = null;
-                cardPanel.unselectCard();
-                filterPanel.setDeckHandlerEditable(true);
-                deckCardsPanel.setCards(collectionHandler.getDeckCards(selectedDeck), 20);
-                //20 is maximum of cards in deck
-                revalidate();
-            }
+        deckPanel.setClickListener(objName -> {
+            selectedDeck = objName;
+            selectedCard = null;
+            cardPanel.unselectCard();
+            filterPanel.setDeckHandlerEditable(true);
+            deckCardsPanel.setCards(collectionHandler.getDeckCards(selectedDeck), 20);
+            //20 is maximum of cards in deck
+            revalidate();
         });
         /////////////////////////////
         /////////////////////////////
-        filterPanel.setFilterListener(new FilterListener() {
-            @Override
-            public void filter(FilterEvent filter) {
-                ArrayList<CardShape> cards = collectionHandler.filterCards(filter.getRegex(), filter.isOwned(),
-                        filter.isNotOwned(), filter.getManaCost(), filter.getHero());
+        filterPanel.setFilterListener(filter -> {
+            ArrayList<CardShape> cards = collectionHandler.filterCards(filter.getRegex(), filter.isOwned(),
+                    filter.isNotOwned(), filter.getManaCost(), filter.getHero());
 
-                cardPanel.setCards(cards, properties.getNumberOfCardsInRow());
-                Logger.log(LogTypes.COLLECTION, "cards filtered with {regex,owned,notOwned,manaCost,hero}= {" +
-                        filter.getRegex() + "," + Boolean.toString(filter.isOwned()) + "," + Boolean.toString(filter.isNotOwned())
-                        + "," + Integer.toString(filter.getManaCost()) + "," + filter.getHero() + "}");
-            }
+            cardPanel.setCards(cards, properties.getNumberOfCardsInRow());
+            Logger.log(LogTypes.COLLECTION, "cards filtered with {regex,owned,notOwned,manaCost,hero}= {" +
+                    filter.getRegex() + "," + Boolean.toString(filter.isOwned()) + "," + Boolean.toString(filter.isNotOwned())
+                    + "," + Integer.toString(filter.getManaCost()) + "," + filter.getHero() + "}");
         });
         ////////////////////////////
         ////////////////////////////

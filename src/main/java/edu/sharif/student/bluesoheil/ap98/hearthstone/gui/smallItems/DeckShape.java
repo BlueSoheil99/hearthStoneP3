@@ -21,7 +21,7 @@ public class DeckShape extends JButton {
         GridBagConstraints g = new GridBagConstraints();
         g.insets = new Insets(10, 10, 10, 10);
         g.gridy = 0;
-        g.anchor = GridBagConstraints.WEST;
+        g.anchor = GridBagConstraints.CENTER;
         add(nameLabel, g);
         g.gridy++;
         add(heroLabel, g);
