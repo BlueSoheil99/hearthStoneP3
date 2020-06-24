@@ -16,34 +16,34 @@ public class CardShape extends JButton {
     protected ImageIcon icon;
 
     public CardShape(String cardName, BufferedImage image) {
-        this(cardName , image , true);
+        this(cardName, image, true);
     }
 
-    public CardShape(String cardName, String description){
-        this(cardName , (BufferedImage) null, true);
-        setMinimumSize(new Dimension(2*CARD_WIDTH , 2*CARD_HEIGHT));
+    public CardShape(String cardName, String description) {
+        this(cardName, (BufferedImage) null, true);
+        setMinimumSize(new Dimension(2 * CARD_WIDTH, 2 * CARD_HEIGHT));
         setBackground(new Color(192, 135, 107));
-        setBorder(BorderFactory.createMatteBorder(2,2,2,2,new Color(62, 164, 176)));
-        JLabel name =new JLabel(cardName);
-        JLabel des = new JLabel( "<html>"+description.replaceAll("\n", "<br/>") + "</html>");
+        setBorder(BorderFactory.createMatteBorder(2, 2, 2, 2, new Color(62, 164, 176)));
+        JLabel name = new JLabel(cardName);
+        JLabel des = new JLabel("<html>" + description.replaceAll("\n", "<br/>") + "</html>");
         setLayout(new GridBagLayout());
         GridBagConstraints gc = new GridBagConstraints();
-        gc.gridy=0;
-        gc.weighty=1;
+        gc.gridy = 0;
+        gc.weighty = 1;
         add(name, gc);
         gc.gridy++;
-        gc.weighty=2;
+        gc.weighty = 2;
         add(des, gc);
     }
 
     public CardShape(String cardName, BufferedImage image, boolean owned) {
         this.cardName = cardName;
         if (image != null) icon = new ImageIcon(image);
-        setPreferredSize(new Dimension(CARD_WIDTH , CARD_HEIGHT));
+        setPreferredSize(new Dimension(CARD_WIDTH, CARD_HEIGHT));
         //i manually changed my images dimensions so we don't need methods below
 //        Image img = icon.getImage().getScaledInstance(CARD_WIDTH, CARD_HEIGHT, Image.SCALE_SMOOTH);
 //        icon = new ImageIcon( icon.getImage().getScaledInstance(CARD_WIDTH, CARD_HEIGHT, Image.SCALE_SMOOTH));
-        setIcon(icon);
+        if (icon != null) setIcon(icon);
         setOpaque(false);
         setContentAreaFilled(false);
         if (!owned) {
@@ -62,7 +62,7 @@ public class CardShape extends JButton {
     }
 
     public static CardShape copyCardShape(CardShape shape) {
-        return new CardShape(shape.cardName , (BufferedImage) shape.icon.getImage());
+        return new CardShape(shape.cardName, (BufferedImage) shape.icon.getImage());
     }
 
     public String getCardName() {
