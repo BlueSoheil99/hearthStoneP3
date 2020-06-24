@@ -12,6 +12,8 @@ import java.awt.image.WritableRaster;
 public class CardShape extends JButton {
     private static final int CARD_WIDTH = GuiConstants.getInstance().getCardWidth();
     private static final int CARD_HEIGHT = GuiConstants.getInstance().getCardHeight();
+    private static final int PASSIVE_WIDTH = GuiConstants.getInstance().getPassiveWidth();
+    private static final int PASSIVE_HEIGHT = GuiConstants.getInstance().getPassiveHeight();
     private String cardName;
     protected ImageIcon icon;
 
@@ -19,9 +21,9 @@ public class CardShape extends JButton {
         this(cardName, image, true);
     }
 
-    public CardShape(String cardName, String description) {
+    public CardShape(String cardName, String description) { //this constructor is used for creating passives
         this(cardName, (BufferedImage) null, true);
-        setMinimumSize(new Dimension(2 * CARD_WIDTH, 2 * CARD_HEIGHT));
+        setPreferredSize(new Dimension(PASSIVE_WIDTH, PASSIVE_HEIGHT));
         setBackground(new Color(192, 135, 107));
         setBorder(BorderFactory.createMatteBorder(2, 2, 2, 2, new Color(62, 164, 176)));
         JLabel name = new JLabel(cardName);

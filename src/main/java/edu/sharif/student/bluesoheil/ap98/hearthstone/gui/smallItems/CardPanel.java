@@ -95,15 +95,22 @@ public class CardPanel extends SidePanel implements ActionListener {
     }
 
     public void setCardClickListener(CardClickListener cardClickListener) {
+        this.cardClickListener = cardClickListener;
+    }
+    public void disableClickListener(){
+        clickListener=null;
+    }
+    public void disableCardClickListener(){
+        cardClickListener=null;
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        unselectCard();
-        selectedCard = (CardShape) e.getSource();
-        lastBorder = selectedCard.getBorder();
-        selectedCard.setBorder(BorderFactory.createMatteBorder(6, 6, 6, 6, new Color(16, 90, 115)));
         if (clickListener != null || cardClickListener != null) {
+            unselectCard();
+            selectedCard = (CardShape) e.getSource();
+            lastBorder = selectedCard.getBorder();
+            selectedCard.setBorder(BorderFactory.createMatteBorder(6, 6, 6, 6, new Color(16, 90, 115)));
             if (clickListener != null) clickListener.select(selectedCard.getCardName());
             if (cardClickListener != null) cardClickListener.selectCard(selectedCard);
             if (!isPassive) {

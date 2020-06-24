@@ -6,7 +6,7 @@ import edu.sharif.student.bluesoheil.ap98.hearthstone.util.Configuration.Configs
 public class GuiConstants extends GuiConfig {
     private static GuiConstants instance;
     private Configs properties;
-    private int gameWidth, gameHeight, cardWidth, cardHeight;
+    private int gameWidth, gameHeight, cardWidth, cardHeight , passiveWidth, passiveHeight;
     private int numberOfCardsInRow , numberOfCardsInRow_collection;
     private String exitIconPath, backIconPath, filterIconPath, coinsIconPath , logOutPath;
 
@@ -30,6 +30,8 @@ public class GuiConstants extends GuiConfig {
         gameWidth = properties.readInt("gameWidth");
         cardHeight = properties.readInt("cardHeight");
         cardWidth = properties.readInt("cardWidth");
+        passiveHeight = properties.readInt("passiveHeight");
+        passiveWidth = properties.readInt("passiveWidth");
         numberOfCardsInRow = properties.readInt("numberOfCardsInRow");
         coinsIconPath = properties.getProperty("coinsURL");
         exitIconPath = properties.getProperty("exitURL");
@@ -54,6 +56,14 @@ public class GuiConstants extends GuiConfig {
 
     public int getCardHeight() {
         return cardHeight;
+    }
+
+    public int getPassiveHeight() {
+        return passiveHeight;
+    }
+
+    public int getPassiveWidth() {
+        return passiveWidth;
     }
 
     public int getNumberOfCardsInRow() {

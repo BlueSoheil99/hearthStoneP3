@@ -89,8 +89,8 @@ public class Administer {
             GameController gameController = GameController.getInstance();
             PlayStarterPanel playStarterPanel = new PlayStarterPanel();
             playStarterPanel.setClickListener(objName -> {
-                Logger.log(LogTypes.PLAY, "passive '" + objName + "' selected");
                 gameController.setPassive(objName);
+                Logger.log(LogTypes.PLAY, "passive '" + objName + "' selected");
                 System.out.println("passive selected  " + objName);
                 startGame(gameController);
             });
@@ -140,9 +140,9 @@ public class Administer {
         int ans = JOptionPane.showConfirmDialog(null, "Are You Sure You Want to Exit?",
                 "Confirm Exit", JOptionPane.YES_NO_OPTION);
         if (ans == JOptionPane.YES_OPTION) {
+            playerController.logOut();
+            System.exit(0);
         }
-        playerController.logOut();
-        System.exit(0);
     }
 
     public void back() {
