@@ -36,8 +36,8 @@ public class WeaponActualCard extends ActualCard {
 
     @Override
     protected void createLabels() {
-        cardName = new CardLabel(card.getName(),new Font("Helvetica", Font.BOLD , 15));
-        description = new CardLabel("",new Font("Helvetica", Font.PLAIN , 15));
+        cardName = new CardLabel(card.getName(),new Font("Helvetica", Font.PLAIN , 15));
+        description = new CardLabel("",new Font("Helvetica", Font.ITALIC , 15));
         attackLabel = new JLabel("", cardIcons.get("attack"), JLabel.CENTER);
         durabilityLabel = new JLabel("", cardIcons.get("durability"), JLabel.CENTER);
         attack = new CardLabel("");
@@ -60,7 +60,7 @@ public class WeaponActualCard extends ActualCard {
     @Override
     protected void setupGraphics() {
         super.setupGraphics();
-        cardName.setBounds(FIELD_WIDTH-FIELD_WIDTH/2,2*FIELD_HEIGHT , 3*FIELD_WIDTH,FIELD_HEIGHT);
+        cardName.setBounds(0,2*FIELD_HEIGHT , 4*FIELD_WIDTH,FIELD_HEIGHT);
         add(cardName);
         ///////
         attackLabel.setBounds(0,3*FIELD_HEIGHT , FIELD_WIDTH,FIELD_HEIGHT);

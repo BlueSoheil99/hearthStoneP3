@@ -4,7 +4,7 @@ import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Deck;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Heroes.HeroPowers.HeroPower;
 
 public abstract class Hero {
-    protected static int initialHp=30;
+    private static int initialHp=30;
     protected Deck deck;
     protected HeroPower heroPower;
     protected int hp;

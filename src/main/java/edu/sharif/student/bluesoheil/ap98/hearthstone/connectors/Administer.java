@@ -280,7 +280,6 @@ public class Administer {
     }
 
     public void createDeck(String deckName, String hero) throws DeckControllerException {
-        HeroTypes heroType;
         switch (hero.toUpperCase()) {
             case ("MAGE"):
                 deckController.createDeck(deckName, HeroTypes.MAGE);
@@ -337,4 +336,5 @@ public class Administer {
         }
         return passives;
     }
+
 }

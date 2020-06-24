@@ -1319,3 +1319,43 @@ NAVIGATION		2020/06/24  13:21:03	To PassiveSelector
 CLICK_BUTTON		2020/06/24  13:21:28	passive: ManaJump  selected.
 CLICK_BUTTON		2020/06/24  13:21:32	button: EXIT selected .
 PLAYER		2020/06/24  13:21:34	123456 logged out
+PLAYER		2020/06/24  15:59:01	123456 logged in
+NAVIGATION		2020/06/24  15:59:04	To Collection
+CLICK_BUTTON		2020/06/24  15:59:06	deck:  MageDefaultDeck  selected .
+CLICK_BUTTON		2020/06/24  15:59:11	button : NEW DECK selected.
+COLLECTION		2020/06/24  15:59:15	lnjm is now available with mage
+CLICK_BUTTON		2020/06/24  15:59:22	deck:  WarlockDefaultDeck  selected .
+CLICK_BUTTON		2020/06/24  15:59:26	button: SET CURRENT DECK selected.
+COLLECTION		2020/06/24  15:59:27	WarlockDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/06/24  15:59:45	button: EXIT selected .
+CLICK_BUTTON		2020/06/24  15:59:49	deck:  lnjm  selected .
+CLICK_BUTTON		2020/06/24  15:59:52	button : DELETE DECK selected.
+CLICK_BUTTON		2020/06/24  15:59:53	delete confirmed
+COLLECTION		2020/06/24  15:59:53	lnjm has been deleted from player's decks
+CLICK_BUTTON		2020/06/24  15:59:57	button: EXIT selected .
+PLAYER		2020/06/24  15:59:57	123456 logged out
+PLAYER		2020/06/24  16:05:52	123456 logged in
+NAVIGATION		2020/06/24  16:05:53	To Collection
+CLICK_BUTTON		2020/06/24  16:06:04	button : NEW DECK selected.
+COLLECTION		2020/06/24  16:06:09	jnm., is now available with mage
+CLICK_BUTTON		2020/06/24  16:06:15	deck:  jnm.,  selected .
+CLICK_BUTTON		2020/06/24  16:06:17	deck:  MageDefaultDeck  selected .
+CLICK_BUTTON		2020/06/24  16:06:18	deck:  RogueDefaultDeck  selected .
+CLICK_BUTTON		2020/06/24  16:06:21	button : CANCEL selected.
+CLICK_BUTTON		2020/06/24  16:06:34	button: EXIT selected .
+PLAYER		2020/06/24  16:06:36	123456 logged out
+PLAYER		2020/06/24  16:10:09	123456 logged in
+NAVIGATION		2020/06/24  16:10:10	To Collection
+CLICK_BUTTON		2020/06/24  16:11:08	button: EXIT selected .
+PLAYER		2020/06/24  16:11:09	123456 logged out
+PLAYER		2020/06/24  16:08:48	123456 logged in
+NAVIGATION		2020/06/24  16:08:49	To Status
+CLICK_BUTTON		2020/06/24  16:08:52	button: BACK selected .
+NAVIGATION		2020/06/24  16:08:52	Back to previous panel
+NAVIGATION		2020/06/24  16:08:53	To Collection
+CLICK_BUTTON		2020/06/24  16:08:59	deck:  jnm.,  selected .
+CLICK_BUTTON		2020/06/24  16:09:02	button : DELETE DECK selected.
+CLICK_BUTTON		2020/06/24  16:09:02	delete confirmed
+COLLECTION		2020/06/24  16:09:03	jnm., has been deleted from player's decks
+CLICK_BUTTON		2020/06/24  16:11:13	button: EXIT selected .
+PLAYER		2020/06/24  16:11:13	123456 logged out

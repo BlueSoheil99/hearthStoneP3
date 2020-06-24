@@ -112,7 +112,6 @@ public class CardPanel extends SidePanel implements ActionListener {
         if (clickListener != null || cardClickListener != null) {
             unselectCard();
             selectedCard = (CardShape) e.getSource();
-//            selectedCard = (ActualCard) e.getSource();
             lastBorder = selectedCard.getBorder();
             selectedCard.setBorder(BorderFactory.createMatteBorder(6, 6, 6, 6, new Color(16, 90, 115)));
             if (clickListener != null) clickListener.select(selectedCard.getCardName());

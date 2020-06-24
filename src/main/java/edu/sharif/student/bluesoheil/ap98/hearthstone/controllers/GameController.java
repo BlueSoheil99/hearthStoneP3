@@ -22,19 +22,21 @@ public class GameController {
     private static final int maximumCardsOnBoard = 7;
 
     private PlayLogicConfig properties;
-    private InfoPassive passive;
+    private InfoPassive passive; //todo you can make it local
     private PlayerController playerController;
     private DeckController deckController;
+
+    private boolean isWarriorsEnabled,isNurseEnabled,isOffCardsEnabled;
     private Player player, opponent;
     private int playerMana, playerInitialMana;
     private int turnsPlayerPlayed, numberOfCardsCanBeDrawn;
     private Deck playerDeck, opponentDeck;
     private Hero playerHero, opponentHero;
-    private ArrayList<Card> playerHand;
+    private ArrayList<Card> playerHand,playerMinions;
+    private Card playerWeapon;
     private Stack<Card> playerCards;
     private boolean playerIsWinner = false;
     private boolean playerTurn = true;
-    private boolean isWarriorsEnabled,isNurseEnabled,isOffCardsEnabled;
     private ArrayList<Integer> cardsPlayerChangedForHisFirstHand;
 
     {
@@ -55,7 +57,9 @@ public class GameController {
     }
 
     ///////////
-    //statics//
+    /////////////////
+    ///statics//////////
+    /////////////////
     ///////////
     public static GameController getInstance() {
         if (instance == null) setNewGame();
@@ -75,10 +79,11 @@ public class GameController {
         instance = null;
     }
 
-
+    ///////////
     /////////////////
-    ///non-statics///
+    ///non-statics//////
     /////////////////
+    ///////////
     public void setPassive(String objName) {
         passive = InfoPassive.valueOf(objName.toUpperCase());
         passive.getPassive().run();
@@ -105,12 +110,12 @@ public class GameController {
         return playerDeck.getHeroType();
     }
 
-    public int getPlayerHP() {
-        return playerDeck.getHeroType().getHero().getHp();
-    }
-
-    public int getPlayerMana() {
-        return playerMana;
+    public HashMap<String, Integer> getHeroStates() {
+        HashMap<String, Integer> states = new HashMap<>();
+        states.put("HP", playerHero.getHp());
+        states.put("MANA", playerMana);
+        states.put("CARDS", playerCards.size());
+        return states;
     }
 
     //////////
@@ -128,8 +133,8 @@ public class GameController {
         return 1;
     }
 
-    ////////
-    ////////
+    ////////////////////
+    ///////passives/////
     public void setInitialMana(int i) {
         playerInitialMana = i;
         playerMana = playerInitialMana;
@@ -149,8 +154,8 @@ public class GameController {
         isOffCardsEnabled = enabling;
     }
 
-    ////////
-    ////////
+    ///////////////////
+    ///////////////////
     public ArrayList<Card> getPlayerHand() {
         if (playerHand == null) {
             playerHand = new ArrayList<>();
@@ -187,12 +192,13 @@ public class GameController {
         return getPlayerHand();
     }
 
-    public HashMap<String, Integer> getHeroStates() {
-        HashMap<String, Integer> states = new HashMap<>();
-        states.put("HP", playerHero.getHp());
-        states.put("MANA", playerMana);
-        states.put("CARDS", playerCards.size());
-        return states;
+    public Card getCard(Card playerSelectedCard) {
+        for (Card card: playerHand)  if(card.getName().toUpperCase().equals(playerSelectedCard.getName())) return card;
+        return null;
+    }
+    public Card getCard(String playerSelectedCard) {
+        for (Card card: playerHand)  if(card.getName().toUpperCase().equals(playerSelectedCard)) return card;
+        return null;
     }
 
     public void endTurn() {
@@ -200,9 +206,4 @@ public class GameController {
         turnsPlayerPlayed++;
     }
 
-
-    public Card getHandCard(CardShape playerSelectedCard) {
-        for (Card card: playerHand)  if(card.getName().toUpperCase().equals(playerSelectedCard.getCardName())) return card;
-        return null;
-    }
 }

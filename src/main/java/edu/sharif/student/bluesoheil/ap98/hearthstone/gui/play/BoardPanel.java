@@ -19,9 +19,11 @@ public class BoardPanel extends SidePanel  {
     BoardPanel(){
         playerPanel = new CardPanel();
         opponentPanel = new CardPanel();
-        setLayout(new BorderLayout());
-        add(new JScrollPane(playerPanel) , BorderLayout.SOUTH);
-        add(new JScrollPane(opponentPanel) , BorderLayout.NORTH);
+        setLayout(new BoxLayout(this , BoxLayout.Y_AXIS));
+        add(new JScrollPane(opponentPanel) );
+        add(new JScrollPane(playerPanel) );
+//        add((opponentPanel) );
+//        add((playerPanel) );
     }
 
     void setPlayerCardClickListeners(CardClickListener cardClickListener) {

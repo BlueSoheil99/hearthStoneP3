@@ -2,10 +2,14 @@ package edu.sharif.student.bluesoheil.ap98.hearthstone.connectors;
 
 import edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.GameController;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.PlayException;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play.ActualCard;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play.MinionActualCard;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play.PlayPanel;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play.PlayerPanel;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.CardShape;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.PlayActionListener;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.cards.Card;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.models.cards.Minion;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.log.Logger;
 
 import java.util.ArrayList;
@@ -71,7 +75,7 @@ public class PlayHandler {
 
     public PlayerPanel getPlayerPanel() {
         return new PlayerPanel(gameController.getPlayerHero(),
-                gameController.getPlayerHP(), gameController.getPlayerMana());
+                gameController.getHeroStates().get("HP"), gameController.getHeroStates().get("MANA"));
     }
 
     public PlayerPanel getOpponentPanel() {
@@ -83,18 +87,43 @@ public class PlayHandler {
         return administer.getCardShapes(GameController.getInstance().getPlayerHand());
     }
 
-    public void playCard(String cardName) {
-
-    }
-
     public HashMap<String, Integer> getHeroStates() {
         return gameController.getHeroStates();
     }
 
-    public CardShape getCard(CardShape playerSelectedCard) {
-        Card card = gameController.getHandCard(playerSelectedCard);
+    public Card.CardType getCardType(String playerSelectedCard) {
+        return gameController.getCard(playerSelectedCard).getType();
+    }
+
+    public void summonMinion(String playerSelectedCardInHand, PlayPanel playPanel) {
+        System.out.println("minion is played: "+playerSelectedCardInHand);
+        //todo check mana
+        Minion minion = (Minion) gameController.getCard(playerSelectedCardInHand);
+        playPanel.summonMinion(new MinionActualCard( minion,null));
+    }
+
+
+    public void summonWeapon(String playerSelectedCardInHand, PlayPanel playPanel) {
+        System.out.println("weapon is played: "+playerSelectedCardInHand);
+
+    }
+
+    public void playQuestAndReward(String playerSelectedCardInHand, PlayPanel playPanel) {
+    }
+
+    public void playSpell(String playerSelectedCardInHand, PlayPanel playPanel) {
+    }
+
+    public void getCard(CardShape playerSelectedCard) {
+//        Card card = gameController.getHandCard(playerSelectedCard.ca);
 //        return new CardShape(card);
-        return null;
+    }
+
+    public void playHandCard(String cardName) {
+//        gameController.d
+    }
+
+    public void playCard(ActualCard playerSelectedCard) {
     }
 
     //

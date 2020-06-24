@@ -2,14 +2,14 @@ package edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play;
 
 import edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.PlayHandler;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.GamePanel;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.CardPanel;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.CardShape;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.CardClickListener;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.ClickListener;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.PlayActionListener;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.models.cards.Card;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.Configuration.GuiConfigs.PlayConfig;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.*;
 
 public class PlayPanel extends GamePanel {
@@ -20,7 +20,7 @@ public class PlayPanel extends GamePanel {
     private JButton pauseBtn;
     private PlayerPanel playerPanel, opponentPanel;
     private BoardPanel board;
-    private CardShape playerSelectedCard, opponentSelectedCard;
+    private ActualCard playerSelectedCard, opponentSelectedCard;
     private String playerSelectedCardInHand, opponentSelectedCardInHand;
 
 
@@ -38,12 +38,31 @@ public class PlayPanel extends GamePanel {
         playHandler = PlayHandler.getInstance();
         setupPausePanel();
         board = new BoardPanel();
-        board.setPlayerCardClickListeners(selectedCard -> playerSelectedCard = selectedCard);
-        board.setOpponentCardClickListeners(selectedCard -> opponentSelectedCard = selectedCard);
+        board.setPlayerCardClickListeners(new CardClickListener() {
+            @Override
+            public void selectCard(ActualCard selectedCard) {
+                playerSelectedCard = selectedCard;
+            }
+            @Override
+            public void selectCard(CardShape selectedCard) {
+            }
+        });
+        board.setOpponentCardClickListeners(new CardClickListener() {
+            @Override
+            public void selectCard(ActualCard selectedCard) {
+                opponentSelectedCard = selectedCard;
+            }
+            @Override
+            public void selectCard(CardShape selectedCard) {
+            }
+        });
     }
 
     @Override
     protected void init() {
+        opponentPanel.setPreferredSize(new Dimension(getWidth() , getHeight()/7*2));
+        playerPanel.setPreferredSize(new Dimension(getWidth() , getHeight()/7*2));
+        board.setPreferredSize(new Dimension(getWidth() , getHeight()/7*3));
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         add(opponentPanel);
         add(board);
@@ -90,7 +109,14 @@ public class PlayPanel extends GamePanel {
             @Override
             public void play() {
                 if (playerSelectedCardInHand !=null){
-                    board.addCardForPlayer(playHandler.getCard(playerSelectedCard));
+                    Card.CardType type = playHandler.getCardType(playerSelectedCardInHand);
+                    if (type.equals(Card.CardType.MINION)||type.equals(Card.CardType.BEAST)) playHandler.summonMinion(playerSelectedCardInHand , PlayPanel.this);
+                    //todo for now we display beast and minion like each other . create an actual card class for beast later
+                    if (type.equals(Card.CardType.WEAPON)) playHandler.summonWeapon(playerSelectedCardInHand,PlayPanel.this);
+                    if (type.equals(Card.CardType.QUESTANDREWARD)) playHandler.playQuestAndReward(playerSelectedCardInHand,PlayPanel.this);
+                    if (type.equals(Card.CardType.SPELL)) playHandler.playSpell(playerSelectedCardInHand,PlayPanel.this);
+                }else if (playerSelectedCard !=null) {
+                    playHandler.playCard(playerSelectedCard);
                 }else{
                     JOptionPane.showMessageDialog(null,"You suck:/");
                 }
@@ -114,4 +140,8 @@ public class PlayPanel extends GamePanel {
         });
     }
 
+    public void summonMinion(MinionActualCard card) {
+        board.addCardForPlayer(card);
+        System.out.println("added");
+    }
 }

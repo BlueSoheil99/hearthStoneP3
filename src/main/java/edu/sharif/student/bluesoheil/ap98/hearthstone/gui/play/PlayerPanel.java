@@ -16,6 +16,7 @@ import java.util.HashMap;
 
 public class PlayerPanel extends SidePanel {
 
+    //todo show quest&rewards progress
     private JButton endTurnBtn, playBtn;
     private JButton rightBtn, leftBtn;
     private HeroPanel heroPanel;
