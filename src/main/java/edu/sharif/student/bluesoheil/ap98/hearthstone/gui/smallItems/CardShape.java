@@ -13,7 +13,7 @@ public class CardShape extends JButton {
     private static final int CARD_WIDTH = GuiConstants.getInstance().getCardWidth();
     private static final int CARD_HEIGHT = GuiConstants.getInstance().getCardHeight();
     private String cardName;
-    private ImageIcon icon;
+    protected ImageIcon icon;
 
     public CardShape(String cardName, BufferedImage image) {
         this(cardName , image , true);
@@ -88,12 +88,12 @@ public class CardShape extends JButton {
         return image;
     }
 
-    public BufferedImage copyImage(BufferedImage coverImage) {
+    private BufferedImage copyImage(BufferedImage coverImage) {
         ColorModel colorModel = coverImage.getColorModel();
         boolean isAlphaPremultiplied = coverImage.isAlphaPremultiplied();
         WritableRaster raster = coverImage.copyData(null);
-        BufferedImage newImage = new BufferedImage(colorModel, raster,
+        return new BufferedImage(colorModel, raster,
                 isAlphaPremultiplied, null);
-        return newImage;
     }
+
 }

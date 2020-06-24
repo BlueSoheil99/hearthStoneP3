@@ -5,6 +5,7 @@ import edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.PlayException;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play.PlayPanel;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play.PlayerPanel;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.CardShape;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.models.cards.Card;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.log.Logger;
 
 import java.util.ArrayList;
@@ -88,6 +89,12 @@ public class PlayHandler {
 
     public HashMap<String, Integer> getHeroStates() {
         return gameController.getHeroStates();
+    }
+
+    public CardShape getCard(CardShape playerSelectedCard) {
+        Card card = gameController.getHandCard(playerSelectedCard);
+//        return new CardShape(card);
+        return null;
     }
 
     //

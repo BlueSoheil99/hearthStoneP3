@@ -3,6 +3,9 @@ package edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.CardPanel;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.CardShape;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.SidePanel;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.CardClickListener;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.ClickListener;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.PlayActionListener;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Heroes.HeroTypes;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.Configuration.GuiConfigs.PlayConfig;
 
@@ -13,12 +16,14 @@ import java.util.HashMap;
 
 public class PlayerPanel extends SidePanel {
 
-    private JButton endTurn, playBtn;
+    private JButton endTurnBtn, playBtn;
     private JButton rightBtn, leftBtn;
     private HeroPanel heroPanel;
     private CardPanel cardPanel;
     private String selectedCard;
     private boolean isOpponent;
+    private ClickListener clickListener;
+    private PlayActionListener playActionListener;
 
     public PlayerPanel(HeroTypes hero, int hp, int startingMana) {
         super();
@@ -31,10 +36,12 @@ public class PlayerPanel extends SidePanel {
 
     private void create() {
         cardPanel = new CardPanel();
-        endTurn = new JButton("End Turn");
+        endTurnBtn = new JButton("End Turn");
+        endTurnBtn.setBackground(Color.GREEN);
         playBtn = new JButton("Play");
         rightBtn = new JButton("-->");
         leftBtn = new JButton("<--");
+        setActionListeners();
     }
 
     private void init() {
@@ -45,7 +52,7 @@ public class PlayerPanel extends SidePanel {
         if (!isOpponent) {
             gb.gridx = 1;
             gb.gridy = 0;
-            add(endTurn, gb);
+            add(endTurnBtn, gb);
             gb.gridx = 0;
             gb.gridy = 1;
             add(leftBtn, gb);
@@ -70,8 +77,17 @@ public class PlayerPanel extends SidePanel {
         heroPanel.updateStates(latestHeroStates.get("HP"), latestHeroStates.get("MANA"), latestHeroStates.get("CARDS"));
     }
 
-    void updateHero() {
-
+    void endTurn(){
+        endTurnBtn.setEnabled(false);
+        playBtn.setEnabled(false);
+        rightBtn.setEnabled(false);
+        leftBtn.setEnabled(false);
+    }
+    void startTurn(){
+        endTurnBtn.setEnabled(true);
+        playBtn.setEnabled(true);
+        rightBtn.setEnabled(true);
+        leftBtn.setEnabled(true);
     }
 
     void setOpponent(boolean isOpponent) {
@@ -79,4 +95,39 @@ public class PlayerPanel extends SidePanel {
         init();
         //todo make it correct
     }
+
+    void setClickListenerForCards(ClickListener clickListener) {
+        cardPanel.setClickListener(clickListener);
+    }
+
+    void setClickListenerForActions(PlayActionListener playActionListener) {
+        this.playActionListener = playActionListener;
+    }
+
+    private void setActionListeners() {
+        endTurnBtn.addActionListener(e -> {
+            if (playActionListener != null) playActionListener.endTurn();
+        });
+
+        playBtn.addActionListener(e -> {
+            if (playActionListener != null) playActionListener.play();
+        });
+
+        rightBtn.addActionListener(e -> {
+            if (playActionListener != null) playActionListener.goRight();
+        });
+
+        leftBtn.addActionListener(e -> {
+            if (playActionListener != null) playActionListener.goLeft();
+        });
+    }
+
+
+//    void setSelectMode(boolean isAnyCardSelected) {
+//        cardPanel.unselectCard();
+//        playBtn.setEnabled(isAnyCardSelected);
+//        rightBtn.setEnabled(true);
+//        leftBtn.setEnabled(true);
+//
+//    }
 }

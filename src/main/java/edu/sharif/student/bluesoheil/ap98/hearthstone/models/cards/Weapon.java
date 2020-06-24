@@ -31,4 +31,8 @@ public class Weapon extends Card{
     public void setDurability(int durability) {
         this.durability = durability;
     }
+
+    public int getDurability() {
+        return durability;
+    }
 }

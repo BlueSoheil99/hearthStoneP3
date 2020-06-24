@@ -1,5 +1,7 @@
 package edu.sharif.student.bluesoheil.ap98.hearthstone.models.InfoPassives;
 
+import edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.GameController;
+
 public class Warriors extends Passive{
     public static Warriors instance;
 
@@ -12,6 +14,6 @@ public class Warriors extends Passive{
     }
     @Override
     public void run() {
-
+        GameController.getInstance().setWarriorsEnabled(true);
     }
 }

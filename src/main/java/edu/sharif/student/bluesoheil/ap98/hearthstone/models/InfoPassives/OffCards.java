@@ -1,5 +1,7 @@
 package edu.sharif.student.bluesoheil.ap98.hearthstone.models.InfoPassives;
 
+import edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.GameController;
+
 public class OffCards extends Passive {
     private static OffCards instance;
 
@@ -13,6 +15,6 @@ public class OffCards extends Passive {
 
     @Override
     public void run() {
-
+        GameController.getInstance().setOffCardsEnable(true);
     }
 }

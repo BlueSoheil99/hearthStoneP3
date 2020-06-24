@@ -2,6 +2,7 @@ package edu.sharif.student.bluesoheil.ap98.hearthstone.controllers;
 
 import edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.PlayHandler;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.PlayException;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.CardShape;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Deck;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Heroes.Hero;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Heroes.HeroTypes;
@@ -33,6 +34,7 @@ public class GameController {
     private Stack<Card> playerCards;
     private boolean playerIsWinner = false;
     private boolean playerTurn = true;
+    private boolean isWarriorsEnabled,isNurseEnabled,isOffCardsEnabled;
     private ArrayList<Integer> cardsPlayerChangedForHisFirstHand;
 
     {
@@ -137,14 +139,22 @@ public class GameController {
         this.numberOfCardsCanBeDrawn = numberOfCardsCanBeDrawn;
     } //for twice draw passive
 
+    public void setWarriorsEnabled(boolean enabling){
+        isWarriorsEnabled=enabling;
+    }
+    public void setNurseEnable(boolean enabling){
+        isNurseEnabled = enabling;
+    }
+    public void setOffCardsEnable(boolean enabling){
+        isOffCardsEnabled = enabling;
+    }
+
     ////////
     ////////
     public ArrayList<Card> getPlayerHand() {
         if (playerHand == null) {
             playerHand = new ArrayList<>();
-            for (int i = 0; i < 3; i++) {
-                playerHand.add(playerCards.pop());
-            }
+            for (int i = 0; i < 3; i++)   playerHand.add(playerCards.pop());
         } else {
             if (turnsPlayerPlayed > 0) { //this works when we change our cards at the beginning or when we want to show our hand for the first time in playPanel
                 for (int i = 0; i < numberOfCardsCanBeDrawn; i++) {
@@ -191,4 +201,8 @@ public class GameController {
     }
 
 
+    public Card getHandCard(CardShape playerSelectedCard) {
+        for (Card card: playerHand)  if(card.getName().toUpperCase().equals(playerSelectedCard.getCardName())) return card;
+        return null;
+    }
 }

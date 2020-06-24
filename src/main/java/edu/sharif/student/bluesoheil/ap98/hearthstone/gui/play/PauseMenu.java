@@ -46,7 +46,6 @@ public class PauseMenu extends SidePanel {
         add(endGame, g);
         g.gridy++;
         add(exitGame, g);
-
     }
 
 

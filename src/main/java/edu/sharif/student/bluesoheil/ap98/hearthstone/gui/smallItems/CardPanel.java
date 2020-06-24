@@ -1,8 +1,7 @@
 package edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems;
 
+import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.CardClickListener;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.ClickListener;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.CardShape;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.SidePanel;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.Configuration.GuiConfigs.GuiConstants;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.log.LogTypes;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.log.Logger;
@@ -20,12 +19,17 @@ public class CardPanel extends SidePanel implements ActionListener {
     private CardShape selectedCard;
     private Border lastBorder;
     private ClickListener clickListener;
+    private CardClickListener cardClickListener;
     private boolean isPassive;
 
     public CardPanel() {
         super();
         setBorder(BorderFactory.createMatteBorder(5, 5, 5, 5, new Color(0x562C1C)));
+        cards = new ArrayList<>();
+    }
 
+    public ArrayList<CardShape> getCards() {
+        return cards;
     }
 
     public void setCards(ArrayList<CardShape> cardShapes, int cardsInRow) {
@@ -38,7 +42,16 @@ public class CardPanel extends SidePanel implements ActionListener {
         setCards(cardShapes, GuiConstants.getInstance().getNumberOfCardsInRow());
     }
 
-    public void setPassives(ArrayList<CardShape> passives){
+    public void addCard(CardShape card, int index) {
+        cards.add(index, card);
+        setCards(cards);
+    }
+
+    public void addCard(CardShape card) {
+        addCard(card, cards.size() - 1);
+    }
+
+    public void setPassives(ArrayList<CardShape> passives) {
         setCards(passives);
         isPassive = true;
     }
@@ -53,7 +66,7 @@ public class CardPanel extends SidePanel implements ActionListener {
         GridBagConstraints gc = new GridBagConstraints();
         gc.gridy = 0;
         gc.gridx = 0;
-        gc.insets = new Insets(1,1,1,1);
+        gc.insets = new Insets(1, 1, 1, 1);
         int x = 0;
         for (CardShape cardShape : cards) {
             if (x > numberOfCardsInRow - 1) {
@@ -73,27 +86,31 @@ public class CardPanel extends SidePanel implements ActionListener {
         repaint();
     }
 
-    public void unselectCard(){
-        if (lastBorder!=null)  selectedCard.setBorder(lastBorder);
+    public void unselectCard() {
+        if (lastBorder != null) selectedCard.setBorder(lastBorder);
     }
 
     public void setClickListener(ClickListener listener) {
         this.clickListener = listener;
+    }
 
+    public void setCardClickListener(CardClickListener cardClickListener) {
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (clickListener != null) {
-            unselectCard();
-            selectedCard = (CardShape) e.getSource();
-            lastBorder = selectedCard.getBorder();
-            selectedCard.setBorder(
-                    BorderFactory.createMatteBorder(6,6,6,6,new Color(16, 90, 115)));
-            clickListener.select(selectedCard.getCardName());
-
-            if (isPassive)Logger.log(LogTypes.CLICK_BUTTON, "passive: " + selectedCard.getCardName() + "  selected.");
-            else Logger.log(LogTypes.CLICK_BUTTON, "card: " + selectedCard.getCardName() + "  selected.");
+        unselectCard();
+        selectedCard = (CardShape) e.getSource();
+        lastBorder = selectedCard.getBorder();
+        selectedCard.setBorder(BorderFactory.createMatteBorder(6, 6, 6, 6, new Color(16, 90, 115)));
+        if (clickListener != null || cardClickListener != null) {
+            if (clickListener != null) clickListener.select(selectedCard.getCardName());
+            if (cardClickListener != null) cardClickListener.selectCard(selectedCard);
+            if (!isPassive) {
+                Logger.log(LogTypes.CLICK_BUTTON, "card: " + selectedCard.getCardName() + "  selected.");
+            } else {
+                Logger.log(LogTypes.CLICK_BUTTON, "passive: " + selectedCard.getCardName() + "  selected.");
+            }
         }
 
     }
