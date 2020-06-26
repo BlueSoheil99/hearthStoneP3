@@ -135,7 +135,7 @@ public class DeckController {
     public String[] getDeckStates(String deckName) {
         Deck deck = getDeck(deckName);
         String[] states = new String[]{deck.getName(), deck.getHeroType().toString(), Float.toString(deck.getWinRatio())
-                , Integer.toString(deck.getGamesPlayed()), Float.toString(deck.getManaAverage()), deck.getMostUsedCard()};
+                , Integer.toString(deck.getWins()),Integer.toString(deck.getGamesPlayed()), Float.toString(deck.getManaAverage()), deck.getMostUsedCard()};
         return states;
     }
 
