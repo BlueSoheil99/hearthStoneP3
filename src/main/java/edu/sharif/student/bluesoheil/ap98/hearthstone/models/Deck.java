@@ -76,9 +76,9 @@ public class Deck implements Cloneable{
                 .sorted(minionComp)
                 .sorted(Comparator.comparing(Card::getManaCost))
                 .sorted(Comparator.comparing(Card::getRarity))
-                .sorted(Comparator.comparingInt(o -> -cardsUsage.get(o.getName()))) // - is for sorting descending
+//                .sorted(Comparator.comparingInt(o -> -cardsUsage.get(o.getName()))) // - is for sorting descending
                 .forEach(copyCards::add);
-
+        Collections.reverse(copyCards);
         return copyCards.get(0).getName();
     }
 
