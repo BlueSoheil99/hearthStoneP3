@@ -7,6 +7,7 @@ import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Heroes.HeroTypes;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 /**
  * this class is created to have no method definitions related to logic in Collection panel
@@ -33,7 +34,7 @@ public class CollectionHandler {
         return administer.getDeckCards(deckName);
     }
 
-    public HashMap<String, String> getDecks() {
+    public LinkedHashMap<String, String> getDecks() {
         return administer.getPlayerDecks();
     }
 

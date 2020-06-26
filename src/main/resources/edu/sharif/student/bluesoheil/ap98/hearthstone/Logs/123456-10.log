@@ -1359,3 +1359,63 @@ CLICK_BUTTON		2020/06/24  16:09:02	delete confirmed
 COLLECTION		2020/06/24  16:09:03	jnm., has been deleted from player's decks
 CLICK_BUTTON		2020/06/24  16:11:13	button: EXIT selected .
 PLAYER		2020/06/24  16:11:13	123456 logged out
+PLAYER		2020/06/26  12:56:46	123456 logged in
+NAVIGATION		2020/06/26  12:56:48	To Status
+STATUS		2020/06/26  12:56:51	newDecknew states showed .
+CLICK_BUTTON		2020/06/26  12:56:51	deck:  newDecknew  selected .
+STATUS		2020/06/26  12:56:53	newDeck2 states showed .
+CLICK_BUTTON		2020/06/26  12:56:53	deck:  newDeck2  selected .
+STATUS		2020/06/26  12:56:54	newDeck states showed .
+CLICK_BUTTON		2020/06/26  12:56:54	deck:  newDeck  selected .
+STATUS		2020/06/26  12:56:56	MageDefaultDeck states showed .
+CLICK_BUTTON		2020/06/26  12:56:56	deck:  MageDefaultDeck  selected .
+STATUS		2020/06/26  12:56:57	RogueDefaultDeck states showed .
+CLICK_BUTTON		2020/06/26  12:56:57	deck:  RogueDefaultDeck  selected .
+STATUS		2020/06/26  12:56:59	PriestDefaultDeck states showed .
+CLICK_BUTTON		2020/06/26  12:56:59	deck:  PriestDefaultDeck  selected .
+STATUS		2020/06/26  12:57:02	PriestDefaultDeck states showed .
+CLICK_BUTTON		2020/06/26  12:57:02	deck:  PriestDefaultDeck  selected .
+STATUS		2020/06/26  12:57:05	PriestDefaultDeck states showed .
+CLICK_BUTTON		2020/06/26  12:57:05	deck:  PriestDefaultDeck  selected .
+STATUS		2020/06/26  12:57:06	HunterDefaultDeck states showed .
+CLICK_BUTTON		2020/06/26  12:57:06	deck:  HunterDefaultDeck  selected .
+STATUS		2020/06/26  12:57:10	HunterDefaultDeck states showed .
+CLICK_BUTTON		2020/06/26  12:57:10	deck:  HunterDefaultDeck  selected .
+STATUS		2020/06/26  12:57:23	HunterDefaultDeck states showed .
+CLICK_BUTTON		2020/06/26  12:57:23	deck:  HunterDefaultDeck  selected .
+STATUS		2020/06/26  12:57:27	HunterDefaultDeck states showed .
+CLICK_BUTTON		2020/06/26  12:57:27	deck:  HunterDefaultDeck  selected .
+STATUS		2020/06/26  12:57:28	PriestDefaultDeck states showed .
+CLICK_BUTTON		2020/06/26  12:57:28	deck:  PriestDefaultDeck  selected .
+STATUS		2020/06/26  12:57:30	RogueDefaultDeck states showed .
+CLICK_BUTTON		2020/06/26  12:57:30	deck:  RogueDefaultDeck  selected .
+STATUS		2020/06/26  12:57:45	PriestDefaultDeck states showed .
+CLICK_BUTTON		2020/06/26  12:57:45	deck:  PriestDefaultDeck  selected .
+STATUS		2020/06/26  12:57:47	HunterDefaultDeck states showed .
+CLICK_BUTTON		2020/06/26  12:57:47	deck:  HunterDefaultDeck  selected .
+STATUS		2020/06/26  12:57:55	HunterDefaultDeck states showed .
+CLICK_BUTTON		2020/06/26  12:57:55	deck:  HunterDefaultDeck  selected .
+STATUS		2020/06/26  12:58:03	PriestDefaultDeck states showed .
+CLICK_BUTTON		2020/06/26  12:58:03	deck:  PriestDefaultDeck  selected .
+STATUS		2020/06/26  12:58:04	RogueDefaultDeck states showed .
+CLICK_BUTTON		2020/06/26  12:58:04	deck:  RogueDefaultDeck  selected .
+STATUS		2020/06/26  12:58:05	MageDefaultDeck states showed .
+CLICK_BUTTON		2020/06/26  12:58:05	deck:  MageDefaultDeck  selected .
+STATUS		2020/06/26  12:58:07	RogueDefaultDeck states showed .
+CLICK_BUTTON		2020/06/26  12:58:07	deck:  RogueDefaultDeck  selected .
+STATUS		2020/06/26  12:58:08	PriestDefaultDeck states showed .
+CLICK_BUTTON		2020/06/26  12:58:08	deck:  PriestDefaultDeck  selected .
+STATUS		2020/06/26  12:58:12	HunterDefaultDeck states showed .
+CLICK_BUTTON		2020/06/26  12:58:12	deck:  HunterDefaultDeck  selected .
+STATUS		2020/06/26  12:58:15	PriestDefaultDeck states showed .
+CLICK_BUTTON		2020/06/26  12:58:15	deck:  PriestDefaultDeck  selected .
+STATUS		2020/06/26  12:58:16	MageDefaultDeck states showed .
+CLICK_BUTTON		2020/06/26  12:58:16	deck:  MageDefaultDeck  selected .
+STATUS		2020/06/26  12:58:17	newDeck states showed .
+CLICK_BUTTON		2020/06/26  12:58:17	deck:  newDeck  selected .
+CLICK_BUTTON		2020/06/26  12:58:19	button: BACK selected .
+NAVIGATION		2020/06/26  12:58:19	Back to previous panel
+NAVIGATION		2020/06/26  12:58:21	To Collection
+CLICK_BUTTON		2020/06/26  12:58:25	deck:  newDecknew  selected .
+CLICK_BUTTON		2020/06/26  12:58:31	button: EXIT selected .
+PLAYER		2020/06/26  12:58:43	123456 logged out

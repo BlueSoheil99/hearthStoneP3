@@ -11,6 +11,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class DeckPanel extends SidePanel implements ActionListener {
@@ -24,7 +25,7 @@ public class DeckPanel extends SidePanel implements ActionListener {
         super(width, height);
     }
 
-    public void setDecks(HashMap<String, String> decksToShow) {
+    public void setDecks(LinkedHashMap<String, String> decksToShow) {
         this.decks = new ArrayList<>();
 
         for (Map.Entry<String, String> entry : decksToShow.entrySet())

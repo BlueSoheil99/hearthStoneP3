@@ -24,6 +24,7 @@ import javax.swing.*;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class Administer {
@@ -250,13 +251,12 @@ public class Administer {
 
     //////////////////
     /////status///////
-    public HashMap<String, String> getPlayerDecks(int numberOfDecks) {
-        HashMap<String, String> decksInfo = new HashMap<>();
+    public LinkedHashMap<String, String> getPlayerDecks(int numberOfDecks) {
+        LinkedHashMap<String, String> decksInfo = new LinkedHashMap<>();
         int x = 0;
         ArrayList<Deck> playerDecks = deckController.getPlayerDecks();
         for (Deck deck : playerDecks) {
             if (x < numberOfDecks) {
-                //todo this line redistributes our sorted decks and mess things up
                 decksInfo.put(deck.getName(), deck.getHeroType().toString());
                 x++;
             }
@@ -270,7 +270,7 @@ public class Administer {
 
     /////////////////////////
     ///////collection////////
-    public HashMap<String, String> getPlayerDecks() {
+    public LinkedHashMap<String, String> getPlayerDecks() {
         // returns *ALL* decks of player
         return getPlayerDecks(deckController.getPlayerDecks().size());
     }

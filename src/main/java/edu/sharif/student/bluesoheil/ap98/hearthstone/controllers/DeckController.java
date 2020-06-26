@@ -125,9 +125,11 @@ public class DeckController {
     private void sortDecks() {
         //https://www.baeldung.com/java-comparator-comparable
         Collections.sort(playerDecks, Comparator.comparing(Deck::getManaAverage));
+        Collections.reverse(playerDecks);
         Collections.sort(playerDecks, Comparator.comparing(Deck::getGamesPlayed));
         Collections.sort(playerDecks, Comparator.comparing(Deck::getWins));
         Collections.sort(playerDecks, Comparator.comparing(Deck::getWinRatio));
+        Collections.reverse(playerDecks);
     }
 
     public String[] getDeckStates(String deckName) {
