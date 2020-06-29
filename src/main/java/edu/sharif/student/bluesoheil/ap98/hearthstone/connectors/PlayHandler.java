@@ -95,7 +95,6 @@ public class PlayHandler {
     }
 
     public MinionActualCard summonAndGetMinion(String playerSelectedCardInHand) {
-        System.out.println("minion is played: "+playerSelectedCardInHand);
         //todo check mana
         Minion minion = (Minion) gameController.getCard(playerSelectedCardInHand);
         gameController.removeCard(minion);
@@ -103,9 +102,7 @@ public class PlayHandler {
         return new MinionActualCard( minion,null);
     }
 
-
     public WeaponActualCard summonAndGetWeapon(String playerSelectedCardInHand) {
-        System.out.println("weapon is played: "+playerSelectedCardInHand);
         //todo check mana
         Weapon weapon = (Weapon) gameController.getCard(playerSelectedCardInHand);
         gameController.removeCard(weapon);
@@ -113,20 +110,15 @@ public class PlayHandler {
         return new WeaponActualCard( weapon,null);
     }
 
-    public void playQuestAndReward(String playerSelectedCardInHand, PlayPanel playPanel) {
-        System.out.println("Q&R is played: "+playerSelectedCardInHand);
+    public void playSpell(String playerSelectedCardInHand) {
         //todo check mana
-//        Minion minion = (Minion) gameController.getCard(playerSelectedCardInHand);
-//        gameController.removeCard(minion);
-//        playPanel.summonMinion(new MinionActualCard( minion,null));
+        gameController.removeCard(gameController.getCard(playerSelectedCardInHand));
+        Logger.log(LogTypes.PLAY , gameController.getPlayingSide()+" played the "+playerSelectedCardInHand + " spell");
     }
 
-    public void playSpell(String playerSelectedCardInHand, PlayPanel playPanel) {
-        System.out.println("spell is played: "+playerSelectedCardInHand);
+    public void playQuestAndReward(String playerSelectedCardInHand) {
+        System.out.println("Q&R is played: "+playerSelectedCardInHand);
         //todo check mana
-//        Minion minion = (Minion) gameController.getCard(playerSelectedCardInHand);
-//        gameController.removeCard(minion);
-//        playPanel.summonMinion(new MinionActualCard( minion,null));
     }
 
     public void getCard(CardShape playerSelectedCard) {

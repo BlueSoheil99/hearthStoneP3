@@ -53,7 +53,7 @@ public class PlayPanel extends GamePanel {
         add(opponentPanel);
         add(board);
         add(playerPanel);
-        add(new JScrollPane(eventBox));// todo see if there's a way to delete up scrol
+        add(new JScrollPane(eventBox));// todo see if there's a way to delete up scroll
     }
 
     private void setupBoardPanel() {
@@ -99,10 +99,7 @@ public class PlayPanel extends GamePanel {
         playerPanel.updateHand(playHandler.getHand(), playHandler.getHeroStates());
 //        playerPanel.setSelectMode(false);
         ////setListeners////
-        playerPanel.setClickListenerForCards(objName -> {
-            playerSelectedCardInHand = objName;
-            System.out.println(objName + " selected");
-        });
+        playerPanel.setClickListenerForCards(objName -> playerSelectedCardInHand = objName);
         playerPanel.setClickListenerForActions(new PlayActionListener() {
             @Override
             public void endTurn() {
@@ -113,68 +110,65 @@ public class PlayPanel extends GamePanel {
             @Override
             public void play() {
                 if (playerSelectedCardInHand != null) {
-                    Card.CardType type = playHandler.getCardType(playerSelectedCardInHand);
-                    switch (type) {
-                        //todo for now we display beast and minion like each other . create an actual card class for beast later
-                        case WEAPON:
-                            summonWeapon(playerSelectedCardInHand);
-                            break;
-                        case BEAST:
-                            summonBeast(playerSelectedCardInHand);
-                            break;
-                        case MINION:
-                            summonMinion(playerSelectedCardInHand);
-                            break;
-                        case QUESTANDREWARD:
-                            playHandler.playQuestAndReward(playerSelectedCardInHand, PlayPanel.this);
-                            break;
-                        case SPELL:
-                            playHandler.playSpell(playerSelectedCardInHand, PlayPanel.this);
-                            playerPanel.setWeaponCard(null);//this line is for test , must be deleted!
-                            break;
-                    }
-                    playerPanel.updateHand(playHandler.getHand(), playHandler.getHeroStates());
+                    doHandCardAction();
+                    playerSelectedCardInHand = null;
                 } else if (playerSelectedCard != null) {
                     playHandler.playCard(playerSelectedCard);
                 } else {
-                    JOptionPane.showMessageDialog(null, "You suck:/");
+                    JOptionPane.showMessageDialog(null, "select a card you DumbAss :/");
                 }
                 eventBox.update();
             }
 
             @Override
-            public void summonCard() {
-
-            }
-
-            @Override
             public void goRight() {
-
             }
 
             @Override
             public void goLeft() {
-
             }
-
         });
     }
 
-    void summonMinion(String cardName) {
-        MinionActualCard cardToSummon = playHandler.summonAndGetMinion(cardName);
-        board.addCardForPlayer(cardToSummon);
-        System.out.println("added");
+    private void doHandCardAction() {
+        switch (playHandler.getCardType(playerSelectedCardInHand)) {
+            case BEAST:
+//                summonBeast(playerSelectedCardInHand);
+//                break;
+            case WEAPON:
+                summonWeapon(playerSelectedCardInHand);
+                break;
+            case MINION:
+                summonMinion(playerSelectedCardInHand);
+                break;
+            case QUESTANDREWARD:
+                playQuestAndReward(playerSelectedCardInHand);
+                break;
+            case SPELL:
+                playSpell(playerSelectedCardInHand);
+                break;
+        }
+        playerPanel.updateHand(playHandler.getHand(), playHandler.getHeroStates());
     }
 
-    void summonWeapon(String cardName) {
-        WeaponActualCard weaponToSummon = playHandler.summonAndGetWeapon(cardName);
-        playerPanel.setWeaponCard(weaponToSummon);
-        System.out.println(cardName + " added");
-    }
-    void summonBeast(String cardName) {
+    private void summonMinion(String cardName) {
+        //todo have a minionCard and show possible arranges of cards in board before calling summonAndGetCard method in playHandler\
+        //todo is there any need to have a different method for beasts?
         MinionActualCard cardToSummon = playHandler.summonAndGetMinion(cardName);
         board.addCardForPlayer(cardToSummon);
-        System.out.println(cardName + " added");
+    }
+
+    private void summonWeapon(String cardName) {
+        WeaponActualCard weaponToSummon = playHandler.summonAndGetWeapon(cardName);
+        playerPanel.setWeaponCard(weaponToSummon);
+    }
+
+    private void playSpell(String spellName) {
+        playHandler.playSpell(spellName);
+    }
+
+    private void playQuestAndReward(String QRName) {
+        playHandler.playQuestAndReward(QRName);
     }
 
 }
