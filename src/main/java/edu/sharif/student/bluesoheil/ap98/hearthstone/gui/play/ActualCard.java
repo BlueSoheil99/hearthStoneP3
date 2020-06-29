@@ -36,12 +36,14 @@ public abstract class ActualCard extends CardShape {
         setIcon(null);
         loadIcons();
         setCard(card);
-        setPreferredSize(new Dimension(CARD_WIDTH, CARD_HEIGHT));
+        setPreferredSize(new Dimension(CARD_WIDTH, CARD_HEIGHT));//this helps you to summon a minion
+        setSize(new Dimension(CARD_WIDTH, CARD_HEIGHT)); // this help you to place a weapon beside hero
         createLabels();
         setStates();
         setContentAreaFilled(true);
         setupBackground();
         setupGraphics();
+
     }
 
     protected abstract void loadIcons();

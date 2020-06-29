@@ -197,8 +197,16 @@ public class GameController {
         return null;
     }
     public Card getCard(String playerSelectedCard) {
-        for (Card card: playerHand)  if(card.getName().toUpperCase().equals(playerSelectedCard)) return card;
+        for (Card card: playerHand) {
+            if(card.getName().toUpperCase().equals(playerSelectedCard)){
+                return card;
+            }
+        }
         return null;
+    }
+
+    public void removeCard(Card card){
+        if (playerHand.contains(card)) playerHand.remove(card);
     }
 
     public void endTurn() {

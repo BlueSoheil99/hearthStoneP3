@@ -2,14 +2,12 @@ package edu.sharif.student.bluesoheil.ap98.hearthstone.connectors;
 
 import edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.GameController;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.PlayException;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play.ActualCard;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play.MinionActualCard;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play.PlayPanel;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play.PlayerPanel;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play.*;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.CardShape;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.PlayActionListener;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.cards.Card;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.cards.Minion;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.models.cards.Weapon;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.log.Logger;
 
 import java.util.ArrayList;
@@ -95,23 +93,37 @@ public class PlayHandler {
         return gameController.getCard(playerSelectedCard).getType();
     }
 
-    public void summonMinion(String playerSelectedCardInHand, PlayPanel playPanel) {
+    public MinionActualCard summonAndGetMinion(String playerSelectedCardInHand) {
         System.out.println("minion is played: "+playerSelectedCardInHand);
         //todo check mana
         Minion minion = (Minion) gameController.getCard(playerSelectedCardInHand);
-        playPanel.summonMinion(new MinionActualCard( minion,null));
+        gameController.removeCard(minion);
+        return new MinionActualCard( minion,null);
     }
 
 
-    public void summonWeapon(String playerSelectedCardInHand, PlayPanel playPanel) {
+    public WeaponActualCard summonAndGetWeapon(String playerSelectedCardInHand) {
         System.out.println("weapon is played: "+playerSelectedCardInHand);
-
+        //todo check mana
+        Weapon weapon = (Weapon) gameController.getCard(playerSelectedCardInHand);
+        gameController.removeCard(weapon);
+        return new WeaponActualCard( weapon,null);
     }
 
     public void playQuestAndReward(String playerSelectedCardInHand, PlayPanel playPanel) {
+        System.out.println("Q&R is played: "+playerSelectedCardInHand);
+        //todo check mana
+//        Minion minion = (Minion) gameController.getCard(playerSelectedCardInHand);
+//        gameController.removeCard(minion);
+//        playPanel.summonMinion(new MinionActualCard( minion,null));
     }
 
     public void playSpell(String playerSelectedCardInHand, PlayPanel playPanel) {
+        System.out.println("spell is played: "+playerSelectedCardInHand);
+        //todo check mana
+//        Minion minion = (Minion) gameController.getCard(playerSelectedCardInHand);
+//        gameController.removeCard(minion);
+//        playPanel.summonMinion(new MinionActualCard( minion,null));
     }
 
     public void getCard(CardShape playerSelectedCard) {

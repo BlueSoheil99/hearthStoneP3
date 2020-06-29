@@ -6,8 +6,5 @@
   "heroClass": "PRIEST",
   "rarity": "RARE",
   "description": "kills all minions with 1 or 2 hp",
-  "cost": 9,
-  "HP": 0,
-  "attack": 0,
-  "durability": 0
+  "cost": 9
 }

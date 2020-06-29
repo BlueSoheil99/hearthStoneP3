@@ -43,6 +43,7 @@ public class PlayPanel extends GamePanel {
             public void selectCard(ActualCard selectedCard) {
                 playerSelectedCard = selectedCard;
             }
+
             @Override
             public void selectCard(CardShape selectedCard) {
             }
@@ -52,6 +53,7 @@ public class PlayPanel extends GamePanel {
             public void selectCard(ActualCard selectedCard) {
                 opponentSelectedCard = selectedCard;
             }
+
             @Override
             public void selectCard(CardShape selectedCard) {
             }
@@ -60,9 +62,9 @@ public class PlayPanel extends GamePanel {
 
     @Override
     protected void init() {
-        opponentPanel.setPreferredSize(new Dimension(getWidth() , getHeight()/7*2));
-        playerPanel.setPreferredSize(new Dimension(getWidth() , getHeight()/7*2));
-        board.setPreferredSize(new Dimension(getWidth() , getHeight()/7*3));
+        opponentPanel.setPreferredSize(new Dimension(getWidth(), getHeight() / 7 * 2));
+        playerPanel.setPreferredSize(new Dimension(getWidth(), getHeight() / 7 * 2));
+        board.setPreferredSize(new Dimension(getWidth(), getHeight() / 7 * 3));
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         add(opponentPanel);
         add(board);
@@ -108,17 +110,30 @@ public class PlayPanel extends GamePanel {
 
             @Override
             public void play() {
-                if (playerSelectedCardInHand !=null){
+                if (playerSelectedCardInHand != null) {
                     Card.CardType type = playHandler.getCardType(playerSelectedCardInHand);
-                    if (type.equals(Card.CardType.MINION)||type.equals(Card.CardType.BEAST)) playHandler.summonMinion(playerSelectedCardInHand , PlayPanel.this);
-                    //todo for now we display beast and minion like each other . create an actual card class for beast later
-                    if (type.equals(Card.CardType.WEAPON)) playHandler.summonWeapon(playerSelectedCardInHand,PlayPanel.this);
-                    if (type.equals(Card.CardType.QUESTANDREWARD)) playHandler.playQuestAndReward(playerSelectedCardInHand,PlayPanel.this);
-                    if (type.equals(Card.CardType.SPELL)) playHandler.playSpell(playerSelectedCardInHand,PlayPanel.this);
-                }else if (playerSelectedCard !=null) {
+                    switch (type) {
+                        //todo for now we display beast and minion like each other . create an actual card class for beast later
+                        case WEAPON:
+                            summonWeapon(playerSelectedCardInHand);
+                            break;
+                        case BEAST:
+                        case MINION:
+                            summonMinion(playerSelectedCardInHand);
+                            break;
+                        case QUESTANDREWARD:
+                            playHandler.playQuestAndReward(playerSelectedCardInHand, PlayPanel.this);
+                            break;
+                        case SPELL:
+                            playHandler.playSpell(playerSelectedCardInHand, PlayPanel.this);
+                            playerPanel.setWeaponCard(null);//this line is for test , must be deleted!
+                            break;
+                    }
+                    playerPanel.updateHand(playHandler.getHand(), playHandler.getHeroStates());
+                } else if (playerSelectedCard != null) {
                     playHandler.playCard(playerSelectedCard);
-                }else{
-                    JOptionPane.showMessageDialog(null,"You suck:/");
+                } else {
+                    JOptionPane.showMessageDialog(null, "You suck:/");
                 }
             }
 
@@ -140,8 +155,16 @@ public class PlayPanel extends GamePanel {
         });
     }
 
-    public void summonMinion(MinionActualCard card) {
-        board.addCardForPlayer(card);
+    void summonMinion(String cardName) {
+        MinionActualCard cardToSummon = playHandler.summonAndGetMinion(cardName);
+        board.addCardForPlayer(cardToSummon);
         System.out.println("added");
     }
+
+    void summonWeapon(String cardName) {
+        WeaponActualCard weaponToSummon = playHandler.summonAndGetWeapon(cardName);
+        playerPanel.setWeaponCard(weaponToSummon);
+        System.out.println(cardName + " added");
+    }
+
 }

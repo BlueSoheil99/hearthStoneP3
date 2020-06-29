@@ -83,6 +83,7 @@ public class PlayerPanel extends SidePanel {
         playBtn.setEnabled(false);
         rightBtn.setEnabled(false);
         leftBtn.setEnabled(false);
+        //todo card ha barAx shan va card haye tu board disabled shan
     }
     void startTurn(){
         endTurnBtn.setEnabled(true);
@@ -103,6 +104,10 @@ public class PlayerPanel extends SidePanel {
 
     void setClickListenerForActions(PlayActionListener playActionListener) {
         this.playActionListener = playActionListener;
+    }
+
+    void setWeaponCard(WeaponActualCard weaponCard) {
+        heroPanel.setWeaponBtn(weaponCard);
     }
 
     private void setActionListeners() {
