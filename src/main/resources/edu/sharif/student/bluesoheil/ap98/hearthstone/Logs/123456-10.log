@@ -1359,3 +1359,14 @@ CLICK_BUTTON		2020/06/24  16:09:02	delete confirmed
 COLLECTION		2020/06/24  16:09:03	jnm., has been deleted from player's decks
 CLICK_BUTTON		2020/06/24  16:11:13	button: EXIT selected .
 PLAYER		2020/06/24  16:11:13	123456 logged out
+PLAYER		2020/06/29  16:25:19	123456 logged in
+NAVIGATION		2020/06/29  16:25:26	To Collection
+CLICK_BUTTON		2020/06/29  16:25:43	deck:  newDecknew  selected .
+CLICK_BUTTON		2020/06/29  16:25:45	deck:  HunterDefaultDeck  selected .
+CLICK_BUTTON		2020/06/29  16:25:48	button: SET CURRENT DECK selected.
+COLLECTION		2020/06/29  16:25:48	HunterDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/06/29  16:25:50	button: BACK selected .
+NAVIGATION		2020/06/29  16:25:50	Back to previous panel
+NAVIGATION		2020/06/29  16:25:51	To PassiveSelector
+CLICK_BUTTON		2020/06/29  16:25:53	button: EXIT selected .
+PLAYER		2020/06/29  16:25:54	123456 logged out

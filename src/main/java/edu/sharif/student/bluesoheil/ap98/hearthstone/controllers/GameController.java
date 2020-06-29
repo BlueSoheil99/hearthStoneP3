@@ -214,4 +214,7 @@ public class GameController {
         turnsPlayerPlayed++;
     }
 
+    public String getPlayingSide() {
+        return "you";
+    }
 }

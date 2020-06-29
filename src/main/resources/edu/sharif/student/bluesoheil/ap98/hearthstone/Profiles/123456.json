@@ -164,10 +164,11 @@
       "cost": 4
     },
     {
-      "value": 0,
+      "attack": 3,
+      "durability": 2,
       "name": "Stormhammer",
       "manaCost": 3,
-      "type": "SPELL",
+      "type": "WEAPON",
       "heroClass": "NEUTRAL",
       "rarity": "EPIC",
       "description": "N/A",
@@ -431,10 +432,11 @@
           "cost": 4
         },
         {
-          "value": 0,
+          "attack": 3,
+          "durability": 2,
           "name": "Stormhammer",
           "manaCost": 3,
-          "type": "SPELL",
+          "type": "WEAPON",
           "heroClass": "NEUTRAL",
           "rarity": "EPIC",
           "description": "N/A",
@@ -932,7 +934,7 @@
     },
     {
       "name": "HunterDefaultDeck",
-      "gamesPlayed": 6,
+      "gamesPlayed": 7,
       "wins": 0,
       "hero": "HUNTER",
       "cards": [

@@ -8,6 +8,7 @@ import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.PlayActionList
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.cards.Card;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.cards.Minion;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.cards.Weapon;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.util.log.LogTypes;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.log.Logger;
 
 import java.util.ArrayList;
@@ -98,6 +99,7 @@ public class PlayHandler {
         //todo check mana
         Minion minion = (Minion) gameController.getCard(playerSelectedCardInHand);
         gameController.removeCard(minion);
+        Logger.log(LogTypes.PLAY , gameController.getPlayingSide()+" summoned "+playerSelectedCardInHand);
         return new MinionActualCard( minion,null);
     }
 
@@ -107,6 +109,7 @@ public class PlayHandler {
         //todo check mana
         Weapon weapon = (Weapon) gameController.getCard(playerSelectedCardInHand);
         gameController.removeCard(weapon);
+        Logger.log(LogTypes.PLAY , gameController.getPlayingSide()+" set weapon to "+playerSelectedCardInHand);
         return new WeaponActualCard( weapon,null);
     }
 

@@ -15,18 +15,18 @@ public class EventBox extends JTextArea {
         super();
         playHandler=PlayHandler.getInstance();
         setPreferredSize(new Dimension(getWidth(), PlayConfig.getInstance().getEventHeight()));
-        setBorder(BorderFactory.createMatteBorder(5,5,5,5,new Color(16, 90, 115)));
+        setBorder(BorderFactory.createMatteBorder(3,6,3,6,new Color(199, 210, 9)));
         setBackground(new Color(168, 118, 94));
         setEditable(false);
         update();
     }
     public void update(){
         ArrayList<String> events = playHandler.getEvents();
-        String boxText = "EVENTS:  ";
+        String boxText = "EVENTS ~~~>>  ";
         for (String event: events){
-            boxText += event+" | ";
+            boxText += event+" ~> ";
         }
         setText(boxText);
-        setFont(new Font("Arial" , Font.BOLD , 20));
+        setFont(new Font("Arial" , Font.ITALIC , 15));
     }
 }

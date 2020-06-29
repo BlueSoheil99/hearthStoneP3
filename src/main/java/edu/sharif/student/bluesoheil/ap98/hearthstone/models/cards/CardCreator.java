@@ -62,12 +62,12 @@ public class CardCreator{
 //        saveCard(VoodooDoctor);
 //
 //        Spell Consecration = new Spell("Consecration" , 4 , Card.Rarity.RARE , Card.HeroClass.NEUTRAL, "N/A",2 );
-        Weapon Stormhammer = new Weapon("Stormhammer" , 3 , Card.Rarity.EPIC , Card.HeroClass.NEUTRAL, "N/A",4 ,3,2);
+//        Weapon Stormhammer = new Weapon("Stormhammer" , 3 , Card.Rarity.EPIC , Card.HeroClass.NEUTRAL, "N/A",4 ,3,2);
 //        Spell Slam  = new Spell("Slam" , 2 , Card.Rarity.COMMON , Card.HeroClass.NEUTRAL, "N/A",1);
 //        Spell Humility   = new Spell("Humility" , 1 , Card.Rarity.COMMON , Card.HeroClass.NEUTRAL, "N/A",2);
 //        Spell Innervate = new Spell("Innervate" , 0 , Card.Rarity.RARE , Card.HeroClass.NEUTRAL, "N/A"  , 2);
 //        saveCard(Consecration);
-        saveCard(Stormhammer);
+//        saveCard(Stormhammer);
 //        saveCard(Slam);
 //        saveCard(Humility);
 //        saveCard(Innervate);

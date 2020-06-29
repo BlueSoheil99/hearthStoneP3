@@ -2,12 +2,9 @@
   "value": 0,
   "name": "Strength in Numbers",
   "manaCost": 1,
-  "type": "SPELL",
+  "type": "QUESTANDREWARD",
   "heroClass": "NEUTRAL",
   "rarity": "COMMON",
   "description": "N/A",
-  "cost": 2,
-  "HP": 0,
-  "attack": 0,
-  "durability": 0
+  "cost": 2
 }

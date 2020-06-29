@@ -1,13 +1,12 @@
 {
-  "isInRush": false,
+  "inRush": false,
+  "HP": 5,
+  "attack": 4,
   "name": "Mole",
   "manaCost": 5,
-  "type": "MINION",
+  "type": "BEAST",
   "heroClass": "ROGUE",
   "rarity": "EPIC",
   "description": "Randomly attacks to one of enemy minions",
-  "cost": 4,
-  "HP": 5,
-  "attack": 4,
-  "durability": 0
+  "cost": 4
 }

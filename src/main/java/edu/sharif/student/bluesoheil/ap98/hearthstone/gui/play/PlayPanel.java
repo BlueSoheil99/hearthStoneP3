@@ -7,6 +7,8 @@ import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.CardClickListe
 import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.PlayActionListener;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.cards.Card;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.Configuration.GuiConfigs.PlayConfig;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.util.log.LogTypes;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.util.log.Logger;
 
 import javax.swing.*;
 import java.awt.*;
@@ -19,6 +21,7 @@ public class PlayPanel extends GamePanel {
     private PauseMenu pauseMenu;
     private JButton pauseBtn;
     private PlayerPanel playerPanel, opponentPanel;
+    private EventBox eventBox;
     private BoardPanel board;
     private ActualCard playerSelectedCard, opponentSelectedCard;
     private String playerSelectedCardInHand, opponentSelectedCardInHand;
@@ -37,27 +40,7 @@ public class PlayPanel extends GamePanel {
         opponentPanel.endTurn();
         playHandler = PlayHandler.getInstance();
         setupPausePanel();
-        board = new BoardPanel();
-        board.setPlayerCardClickListeners(new CardClickListener() {
-            @Override
-            public void selectCard(ActualCard selectedCard) {
-                playerSelectedCard = selectedCard;
-            }
-
-            @Override
-            public void selectCard(CardShape selectedCard) {
-            }
-        });
-        board.setOpponentCardClickListeners(new CardClickListener() {
-            @Override
-            public void selectCard(ActualCard selectedCard) {
-                opponentSelectedCard = selectedCard;
-            }
-
-            @Override
-            public void selectCard(CardShape selectedCard) {
-            }
-        });
+        setupBoardPanel();
     }
 
     @Override
@@ -65,11 +48,30 @@ public class PlayPanel extends GamePanel {
         opponentPanel.setPreferredSize(new Dimension(getWidth(), getHeight() / 7 * 2));
         playerPanel.setPreferredSize(new Dimension(getWidth(), getHeight() / 7 * 2));
         board.setPreferredSize(new Dimension(getWidth(), getHeight() / 7 * 3));
+        eventBox = new EventBox();
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         add(opponentPanel);
         add(board);
         add(playerPanel);
-        add(new JScrollPane(new EventBox()));
+        add(new JScrollPane(eventBox));// todo see if there's a way to delete up scrol
+    }
+
+    private void setupBoardPanel() {
+        board = new BoardPanel();
+        board.setPlayerCardClickListeners(new CardClickListener() {
+            @Override
+            public void selectCard(ActualCard selectedCard) {
+                playerSelectedCard = selectedCard;
+            }
+            //todo complete it
+        });
+        board.setOpponentCardClickListeners(new CardClickListener() {
+            @Override
+            public void selectCard(ActualCard selectedCard) {
+                opponentSelectedCard = selectedCard;
+            }
+            //todo complete it
+        });
     }
 
     private void setupPausePanel() {
@@ -118,6 +120,8 @@ public class PlayPanel extends GamePanel {
                             summonWeapon(playerSelectedCardInHand);
                             break;
                         case BEAST:
+                            summonBeast(playerSelectedCardInHand);
+                            break;
                         case MINION:
                             summonMinion(playerSelectedCardInHand);
                             break;
@@ -135,6 +139,7 @@ public class PlayPanel extends GamePanel {
                 } else {
                     JOptionPane.showMessageDialog(null, "You suck:/");
                 }
+                eventBox.update();
             }
 
             @Override
@@ -164,6 +169,11 @@ public class PlayPanel extends GamePanel {
     void summonWeapon(String cardName) {
         WeaponActualCard weaponToSummon = playHandler.summonAndGetWeapon(cardName);
         playerPanel.setWeaponCard(weaponToSummon);
+        System.out.println(cardName + " added");
+    }
+    void summonBeast(String cardName) {
+        MinionActualCard cardToSummon = playHandler.summonAndGetMinion(cardName);
+        board.addCardForPlayer(cardToSummon);
         System.out.println(cardName + " added");
     }
 
