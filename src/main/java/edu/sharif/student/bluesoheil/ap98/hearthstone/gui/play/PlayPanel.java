@@ -22,6 +22,7 @@ public class PlayPanel extends GamePanel {
     private BoardPanel board;
     private ActualCard playerSelectedCard, opponentSelectedCard;
     private String playerSelectedCardInHand, opponentSelectedCardInHand;
+    private boolean myTurn = true;
 //   todo private Players currentTurn;
 //    private enum Players {
 //        ME,
@@ -43,6 +44,7 @@ public class PlayPanel extends GamePanel {
         setupPlayerPanel();
         opponentPanel = playHandler.getOpponentPanel();
         opponentPanel.endTurn();
+        setupOpponentPanel();
         playHandler = PlayHandler.getInstance();
         setupPausePanel();
         setupBoardPanel();
@@ -134,13 +136,46 @@ public class PlayPanel extends GamePanel {
         });
     }
 
+    private void setupOpponentPanel() {
+        opponentPanel.setClickListenerForActions(new PlayActionListener() {
+            @Override
+            public void endTurn() {
+                changeTurn();
+            }
+
+            @Override
+            public void play() {
+
+            }
+
+            @Override
+            public void goRight() {
+
+            }
+
+            @Override
+            public void goLeft() {
+
+            }
+        });
+    }
+
     private void changeTurn() {
 //        todo if (currentTurn.equals(Players.ME)) {
 //            currentTurn=Players.OPPONENT;
 //            playHandler.changeTurns();
 //        }
-        playerPanel.endTurn();
-        opponentPanel.startTurn();
+        playHandler.changeTurns();
+        if (myTurn) {
+            myTurn=false;
+            playerPanel.endTurn();
+            opponentPanel.startTurn();
+        } else {
+            myTurn=true;
+            playerPanel.startTurn();
+            playerPanel.updateHand(playHandler.getHand() , playHandler.getHeroStates());
+            opponentPanel.endTurn();
+        }
     }
 
     private void doHandCardAction() {
@@ -172,7 +207,7 @@ public class PlayPanel extends GamePanel {
             cardToSummon = playHandler.summonAndGetMinion(cardName);
             board.addCardForPlayer(cardToSummon);
         } catch (PlayException e) {
-            JOptionPane.showMessageDialog(null , e.getMessage(),"Error in card selection" , JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, e.getMessage(), "Error in card selection", JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -182,7 +217,7 @@ public class PlayPanel extends GamePanel {
             weaponToSummon = playHandler.summonAndGetWeapon(cardName);
             playerPanel.setWeaponCard(weaponToSummon);
         } catch (PlayException e) {
-            JOptionPane.showMessageDialog(null , e.getMessage(),"Error in card selection" , JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, e.getMessage(), "Error in card selection", JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -190,7 +225,7 @@ public class PlayPanel extends GamePanel {
         try {
             playHandler.playSpell(spellName);
         } catch (PlayException e) {
-            JOptionPane.showMessageDialog(null , e.getMessage(),"Error in card selection" , JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, e.getMessage(), "Error in card selection", JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -198,7 +233,7 @@ public class PlayPanel extends GamePanel {
         try {
             playHandler.playQuestAndReward(QRName);
         } catch (PlayException e) {
-            JOptionPane.showMessageDialog(null , e.getMessage(),"Error in card selection" , JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, e.getMessage(), "Error in card selection", JOptionPane.ERROR_MESSAGE);
         }
     }
 

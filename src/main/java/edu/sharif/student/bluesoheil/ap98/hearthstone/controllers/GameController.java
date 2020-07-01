@@ -213,7 +213,7 @@ public class GameController {
         return null;
     }
 
-    public Card getCard(String playerSelectedCard)  {
+    public Card getCard(String playerSelectedCard) {
         Card selectedCard = null;
         for (Card card : playerHand) {
             if (card.getName().toUpperCase().equals(playerSelectedCard)) {
@@ -236,9 +236,18 @@ public class GameController {
         if (playerHand.contains(card)) playerHand.remove(card);
     }
 
-    public void endTurn() {
-        playerTurn = false;
-        turnsPlayerPlayed++;
+    public void changeTurns() {
+        if (playerTurn) {
+            playerTurn = false;
+            turnsPlayerPlayed++;
+        } else {
+            playerTurn = true;
+            increaseMana();
+        }
+    }
+    private void increaseMana(){
+        playerMana = playerInitialMana + turnsPlayerPlayed;
+        if (playerMana>properties.getMaximumMana()) playerMana=properties.getMaximumMana();
     }
 
     public String getPlayingSide() {

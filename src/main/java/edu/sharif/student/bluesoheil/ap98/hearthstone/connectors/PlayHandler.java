@@ -128,6 +128,7 @@ public class PlayHandler {
     }
 
     public void changeTurns() {
+        gameController.changeTurns();
     }
 
     //
