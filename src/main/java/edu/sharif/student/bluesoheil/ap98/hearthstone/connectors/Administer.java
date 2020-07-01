@@ -92,7 +92,7 @@ public class Administer {
                 gameController.setPassive(objName);
                 Logger.log(LogTypes.PLAY, "passive '" + objName + "' selected");
                 System.out.println("passive selected  " + objName);
-//                selectOpponent(gameController); //todo uncomment this line later and move the line below to selectOpponent method
+//                selectOpponent(gameController); //todo uncomment this line for phase3 and move the line below to selectOpponent method
                 startGame(gameController);
             });
             mainFrame.initFrame(playStarterPanel);

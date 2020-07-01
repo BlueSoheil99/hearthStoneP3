@@ -5,9 +5,7 @@ import edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.PlayException;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play.*;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.CardShape;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.PlayActionListener;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.models.cards.Card;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.models.cards.Minion;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.models.cards.Weapon;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.models.cards.*;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.log.LogTypes;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.log.Logger;
 
@@ -67,7 +65,6 @@ public class PlayHandler {
         GameController.getInstance().drawHandAgain(cardName);
     }
 
-
     public ArrayList<String> getEvents() {
         return Logger.getEventLogs();
     }
@@ -94,43 +91,43 @@ public class PlayHandler {
         return gameController.getCard(playerSelectedCard).getType();
     }
 
-    public MinionActualCard summonAndGetMinion(String playerSelectedCardInHand) {
-        //todo check mana
-        Minion minion = (Minion) gameController.getCard(playerSelectedCardInHand);
-        gameController.removeCard(minion);
-        Logger.log(LogTypes.PLAY , gameController.getPlayingSide()+" summoned "+playerSelectedCardInHand);
-        return new MinionActualCard( minion,null);
+    ////////////
+    ////////////
+
+    public MinionActualCard summonAndGetMinion(String playerSelectedCardInHand) throws PlayException {
+        Minion minion = (Minion) getCardFromController(playerSelectedCardInHand);
+        Logger.log(LogTypes.PLAY, gameController.getPlayingSide() + " summoned " + playerSelectedCardInHand);
+        return new MinionActualCard(minion, null);
     }
 
-    public WeaponActualCard summonAndGetWeapon(String playerSelectedCardInHand) {
-        //todo check mana
-        Weapon weapon = (Weapon) gameController.getCard(playerSelectedCardInHand);
-        gameController.removeCard(weapon);
-        Logger.log(LogTypes.PLAY , gameController.getPlayingSide()+" set weapon to "+playerSelectedCardInHand);
-        return new WeaponActualCard( weapon,null);
+    public WeaponActualCard summonAndGetWeapon(String playerSelectedCardInHand) throws PlayException {
+        Weapon weapon = (Weapon) getCardFromController(playerSelectedCardInHand);
+        Logger.log(LogTypes.PLAY, gameController.getPlayingSide() + " set weapon to " + playerSelectedCardInHand);
+        return new WeaponActualCard(weapon, null);
     }
 
-    public void playSpell(String playerSelectedCardInHand) {
-        //todo check mana
-        gameController.removeCard(gameController.getCard(playerSelectedCardInHand));
-        Logger.log(LogTypes.PLAY , gameController.getPlayingSide()+" played the "+playerSelectedCardInHand + " spell");
+    public void playSpell(String playerSelectedCardInHand) throws PlayException {
+        Spell spell = (Spell) getCardFromController(playerSelectedCardInHand);
+        Logger.log(LogTypes.PLAY, gameController.getPlayingSide() + " played the " + playerSelectedCardInHand + " spell");
     }
 
-    public void playQuestAndReward(String playerSelectedCardInHand) {
-        System.out.println("Q&R is played: "+playerSelectedCardInHand);
-        //todo check mana
+    public void playQuestAndReward(String playerSelectedCardInHand) throws PlayException {
+        QuestAndReward qAndR = (QuestAndReward) getCardFromController(playerSelectedCardInHand);
+        Logger.log(LogTypes.PLAY, gameController.getPlayingSide() + " played the " + playerSelectedCardInHand + " Q&R");
     }
 
-    public void getCard(CardShape playerSelectedCard) {
-//        Card card = gameController.getHandCard(playerSelectedCard.ca);
-//        return new CardShape(card);
+    private Card getCardFromController(String playerSelectedCardInHand) throws PlayException {
+        Card card = gameController.getCard(playerSelectedCardInHand);
+        gameController.purchaseCard(card);
+        gameController.removeCard(card);
+        return card;
     }
 
-    public void playHandCard(String cardName) {
-//        gameController.d
-    }
 
     public void playCard(ActualCard playerSelectedCard) {
+    }
+
+    public void changeTurns() {
     }
 
     //

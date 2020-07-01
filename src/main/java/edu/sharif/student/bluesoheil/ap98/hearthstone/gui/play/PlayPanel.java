@@ -1,14 +1,11 @@
 package edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play;
 
 import edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.PlayHandler;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.PlayException;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.GamePanel;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.CardShape;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.CardClickListener;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.PlayActionListener;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.models.cards.Card;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.Configuration.GuiConfigs.PlayConfig;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.util.log.LogTypes;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.util.log.Logger;
 
 import javax.swing.*;
 import java.awt.*;
@@ -25,7 +22,15 @@ public class PlayPanel extends GamePanel {
     private BoardPanel board;
     private ActualCard playerSelectedCard, opponentSelectedCard;
     private String playerSelectedCardInHand, opponentSelectedCardInHand;
-
+//   todo private Players currentTurn;
+//    private enum Players {
+//        ME,
+//        OPPONENT;
+//        private PlayerPanel playerPanel;
+//        void setPlayerPanel(PlayerPanel playerPanel) {
+//            this.playerPanel = playerPanel;
+//        }
+//    }
 
     @Override
     protected void loadConfig() {
@@ -103,8 +108,7 @@ public class PlayPanel extends GamePanel {
         playerPanel.setClickListenerForActions(new PlayActionListener() {
             @Override
             public void endTurn() {
-                playerPanel.endTurn();
-                opponentPanel.startTurn();
+                changeTurn();
             }
 
             @Override
@@ -128,6 +132,15 @@ public class PlayPanel extends GamePanel {
             public void goLeft() {
             }
         });
+    }
+
+    private void changeTurn() {
+//        todo if (currentTurn.equals(Players.ME)) {
+//            currentTurn=Players.OPPONENT;
+//            playHandler.changeTurns();
+//        }
+        playerPanel.endTurn();
+        opponentPanel.startTurn();
     }
 
     private void doHandCardAction() {
@@ -154,21 +167,39 @@ public class PlayPanel extends GamePanel {
     private void summonMinion(String cardName) {
         //todo have a minionCard and show possible arranges of cards in board before calling summonAndGetCard method in playHandler\
         //todo is there any need to have a different method for beasts?
-        MinionActualCard cardToSummon = playHandler.summonAndGetMinion(cardName);
-        board.addCardForPlayer(cardToSummon);
+        MinionActualCard cardToSummon = null;
+        try {
+            cardToSummon = playHandler.summonAndGetMinion(cardName);
+            board.addCardForPlayer(cardToSummon);
+        } catch (PlayException e) {
+            JOptionPane.showMessageDialog(null , e.getMessage(),"Error in card selection" , JOptionPane.ERROR_MESSAGE);
+        }
     }
 
     private void summonWeapon(String cardName) {
-        WeaponActualCard weaponToSummon = playHandler.summonAndGetWeapon(cardName);
-        playerPanel.setWeaponCard(weaponToSummon);
+        WeaponActualCard weaponToSummon = null;
+        try {
+            weaponToSummon = playHandler.summonAndGetWeapon(cardName);
+            playerPanel.setWeaponCard(weaponToSummon);
+        } catch (PlayException e) {
+            JOptionPane.showMessageDialog(null , e.getMessage(),"Error in card selection" , JOptionPane.ERROR_MESSAGE);
+        }
     }
 
     private void playSpell(String spellName) {
-        playHandler.playSpell(spellName);
+        try {
+            playHandler.playSpell(spellName);
+        } catch (PlayException e) {
+            JOptionPane.showMessageDialog(null , e.getMessage(),"Error in card selection" , JOptionPane.ERROR_MESSAGE);
+        }
     }
 
     private void playQuestAndReward(String QRName) {
-        playHandler.playQuestAndReward(QRName);
+        try {
+            playHandler.playQuestAndReward(QRName);
+        } catch (PlayException e) {
+            JOptionPane.showMessageDialog(null , e.getMessage(),"Error in card selection" , JOptionPane.ERROR_MESSAGE);
+        }
     }
 
 }

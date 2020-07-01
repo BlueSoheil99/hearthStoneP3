@@ -26,13 +26,13 @@ public class GameController {
     private PlayerController playerController;
     private DeckController deckController;
 
-    private boolean isWarriorsEnabled,isNurseEnabled,isOffCardsEnabled;
+    private boolean isWarriorsEnabled, isNurseEnabled, isOffCardsEnabled;
     private Player player, opponent;
     private int playerMana, playerInitialMana;
     private int turnsPlayerPlayed, numberOfCardsCanBeDrawn;
     private Deck playerDeck, opponentDeck;
     private Hero playerHero, opponentHero;
-    private ArrayList<Card> playerHand,playerMinions;
+    private ArrayList<Card> playerHand, playerMinions;
     private Card playerWeapon;
     private Stack<Card> playerCards;
     private boolean playerIsWinner = false;
@@ -42,6 +42,18 @@ public class GameController {
     {
         opponentDeck = DeckController.getInstance().copyDeck(DeckController.getDefaultDeck(HeroTypes.ROGUE));
     }
+
+//    todo private enum Players {
+//        ME,
+//        OPPONENT;
+//        private GamePlayer player;
+//        Players() {
+//        }
+//        void setPlayer(GamePlayer player) {
+//            this.player = player;
+//        }
+//    }
+
 
     private GameController() {
         properties = PlayLogicConfig.getInstance();
@@ -84,11 +96,6 @@ public class GameController {
     ///non-statics//////
     /////////////////
     ///////////
-    public void setPassive(String objName) {
-        passive = InfoPassive.valueOf(objName.toUpperCase());
-        passive.getPassive().run();
-    }
-
     private void setPlayerProperties() {
         Deck mainPlayerDeck = deckController.getCurrentDeck();
         mainPlayerDeck.incrementGamesPlayed();
@@ -118,9 +125,9 @@ public class GameController {
         return states;
     }
 
-    //////////
-    //////////
 
+    //////////
+    //////////
     public HeroTypes getOpponentHero() {
         return opponentDeck.getHeroType();
     }
@@ -135,6 +142,12 @@ public class GameController {
 
     ////////////////////
     ///////passives/////
+
+    public void setPassive(String objName) {
+        passive = InfoPassive.valueOf(objName.toUpperCase());
+        passive.getPassive().run();
+    }
+
     public void setInitialMana(int i) {
         playerInitialMana = i;
         playerMana = playerInitialMana;
@@ -144,13 +157,15 @@ public class GameController {
         this.numberOfCardsCanBeDrawn = numberOfCardsCanBeDrawn;
     } //for twice draw passive
 
-    public void setWarriorsEnabled(boolean enabling){
-        isWarriorsEnabled=enabling;
+    public void setWarriorsEnabled(boolean enabling) {
+        isWarriorsEnabled = enabling;
     }
-    public void setNurseEnable(boolean enabling){
+
+    public void setNurseEnable(boolean enabling) {
         isNurseEnabled = enabling;
     }
-    public void setOffCardsEnable(boolean enabling){
+
+    public void setOffCardsEnable(boolean enabling) {
         isOffCardsEnabled = enabling;
     }
 
@@ -159,11 +174,11 @@ public class GameController {
     public ArrayList<Card> getPlayerHand() {
         if (playerHand == null) {
             playerHand = new ArrayList<>();
-            for (int i = 0; i < 3; i++)   playerHand.add(playerCards.pop());
+            for (int i = 0; i < 3; i++) playerHand.add(playerCards.pop());
         } else {
             if (turnsPlayerPlayed > 0) { //this works when we change our cards at the beginning or when we want to show our hand for the first time in playPanel
-                for (int i = 0; i < numberOfCardsCanBeDrawn; i++) {
-                    //todo twiceDraw and 7(?)cards limit should be coded here
+                for (int i = 0; i < numberOfCardsCanBeDrawn; i++) { //numberOfCardsCanBeDrawn is for twiceDraw
+                    //todo  7(?)cards limit should be coded here
                     playerHand.add(playerCards.pop());
                 }
             }
@@ -178,34 +193,46 @@ public class GameController {
                 if (cardsPlayerChangedForHisFirstHand.size() < properties.getMaximumStartHints()) {
                     card = handCard;
                     int x = playerHand.indexOf(card);
-                    if (! cardsPlayerChangedForHisFirstHand.contains(x)) {
+                    if (!cardsPlayerChangedForHisFirstHand.contains(x)) {
                         playerHand.set(playerHand.indexOf(card), playerCards.pop());
                         playerCards.push(card);
                         //we push selected card after we changed the card so this card won't be drawn again. but it might be drawn for next attempts
                         Collections.shuffle(playerCards);
                         cardsPlayerChangedForHisFirstHand.add(x);
                         break;
-                    } else    throw new PlayException("you can't change this card again");
-                } else    throw new PlayException("you can't change your hand more than " + properties.getMaximumStartHints() + " times");
+                    } else throw new PlayException("you can't change this card again");
+                } else
+                    throw new PlayException("you can't change your hand more than " + properties.getMaximumStartHints() + " times");
             }
         }
         return getPlayerHand();
     }
 
     public Card getCard(Card playerSelectedCard) {
-        for (Card card: playerHand)  if(card.getName().toUpperCase().equals(playerSelectedCard.getName())) return card;
-        return null;
-    }
-    public Card getCard(String playerSelectedCard) {
-        for (Card card: playerHand) {
-            if(card.getName().toUpperCase().equals(playerSelectedCard)){
-                return card;
-            }
-        }
+        for (Card card : playerHand) if (card.getName().toUpperCase().equals(playerSelectedCard.getName())) return card;
         return null;
     }
 
-    public void removeCard(Card card){
+    public Card getCard(String playerSelectedCard)  {
+        Card selectedCard = null;
+        for (Card card : playerHand) {
+            if (card.getName().toUpperCase().equals(playerSelectedCard)) {
+                selectedCard = card;
+                break;
+            }
+        }
+        return selectedCard;
+    }
+
+    public void purchaseCard(Card card) throws PlayException {
+        if (playerMana >= card.getManaCost()) { //todo implement offCards passive here
+            playerMana -= card.getManaCost();
+        } else {
+            throw new PlayException("You Don't Have Enough Mana");
+        }
+    }
+
+    public void removeCard(Card card) {
         if (playerHand.contains(card)) playerHand.remove(card);
     }
 
