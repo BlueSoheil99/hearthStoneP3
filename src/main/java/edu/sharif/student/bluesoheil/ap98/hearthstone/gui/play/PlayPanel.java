@@ -41,6 +41,7 @@ public class PlayPanel extends GamePanel {
         playHandler = PlayHandler.getInstance();
         setupPlayerPanel();
         opponentPanel = playHandler.getOpponentPanel();
+        opponentPanel.updateHand(playHandler.getOpponentHand(), playHandler.getOpponentHeroStates());
         opponentPanel.endTurn();
         setupOpponentPanel();
         playHandler = PlayHandler.getInstance();

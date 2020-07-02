@@ -88,12 +88,20 @@ public class PlayHandler {
     }
 
     public PlayerPanel getOpponentPanel() {
-        return new PlayerPanel(gameController.getOpponentHero(),
+
+        PlayerPanel panel = new PlayerPanel (gameController.getOpponentHero(),
                 gameController.getOpponentHP(), gameController.getInitialOpponentMana());
+        return panel;
+    }
+    public HashMap<String, Integer> getOpponentHeroStates() {
+        return gameController.getHeroStates(false);
     }
 
     public ArrayList<CardShape> getHand() {
         return administer.getCardShapes(GameController.getInstance().getPlayerHand());
+    }
+    public ArrayList<CardShape> getOpponentHand() {
+        return administer.getCardShapes(GameController.getInstance().getPlayerHand(false));
     }
 
     public HashMap<String, Integer> getHeroStates() {

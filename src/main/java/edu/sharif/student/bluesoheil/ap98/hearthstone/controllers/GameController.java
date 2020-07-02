@@ -2,7 +2,6 @@ package edu.sharif.student.bluesoheil.ap98.hearthstone.controllers;
 
 import edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.PlayHandler;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.PlayException;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.CardShape;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Deck;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Heroes.Hero;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Heroes.HeroTypes;
@@ -38,21 +37,13 @@ public class GameController {
     private boolean playerIsWinner = false;
     private boolean playerTurn = true;
     private ArrayList<Integer> cardsPlayerChangedForHisFirstHand;
+    private Players currentPlayer=Players.ME;
 
-    {
-        opponentDeck = DeckController.getInstance().copyDeck(DeckController.getDefaultDeck(HeroTypes.ROGUE));
+    public enum Players {
+        ME,
+        OPPONENT;
+        private GamePlayer gamePlayer;
     }
-
-//    todo private enum Players {
-//        ME,
-//        OPPONENT;
-//        private GamePlayer player;
-//        Players() {
-//        }
-//        void setPlayer(GamePlayer player) {
-//            this.player = player;
-//        }
-//    }
 
 
     private GameController() {
@@ -64,9 +55,7 @@ public class GameController {
         playerController = PlayerController.getInstance();
         deckController = DeckController.getInstance();
         player = playerController.getCurrentPlayer();
-        setPlayerProperties();// todo uncomment it
-        //opponent = ...
-        //setOpponentProperties();
+        setPlayer();
     }
 
     ///////////
@@ -97,8 +86,9 @@ public class GameController {
     ///non-statics//////
     /////////////////
     ///////////
-    private void setPlayerProperties() {
+    private void setPlayer() {
         Deck mainPlayerDeck = deckController.getCurrentDeck();
+        Players.ME.gamePlayer = new GamePlayer(deckController.getCurrentDeck());
         mainPlayerDeck.incrementGamesPlayed();
         playerDeck = DeckController.getInstance().copyDeck(deckController.getCurrentDeck());
         Collections.shuffle(playerDeck.getCards());
@@ -109,13 +99,8 @@ public class GameController {
         playerHero = playerDeck.getHeroType().getHero();
     }
 
-    private void setOpponentProperties() {
-//        deck1 = DeckController.getInstance().getCurrentDeck();
-//        hero1 = deck1.getHero().getHero();
-    }
-
     public HeroTypes getPlayerHero() {
-        return playerDeck.getHeroType();
+        return getPlayer(true).getHeroType();
     }
 
     public HashMap<String, Integer> getHeroStates() {
@@ -125,24 +110,33 @@ public class GameController {
         states.put("CARDS", playerCards.size());
         return states;
     }
-
+    public HashMap<String, Integer> getHeroStates(boolean isMe) {
+        if (isMe) return getPlayer(true).getHeroStates();
+        return getPlayer(false).getHeroStates();
+    }
 
     //////////
     //////////
+    GamePlayer getOpponent(){
+        return Players.OPPONENT.gamePlayer;
+    }
+    private GamePlayer getPlayer(boolean isME){
+        if (isME) return Players.ME.gamePlayer;
+        else return Players.OPPONENT.gamePlayer;
+    }
     public void setOpponent(String deckName) {
-        Deck deck = deckController.getDeck(deckName);
-        //todo setup opponent here
+        Players.OPPONENT.gamePlayer = new GamePlayer(deckController.getDeck(deckName));
     }
     public HeroTypes getOpponentHero() {
-        return opponentDeck.getHeroType();
+        return getPlayer(false).getHeroType();
     }
 
     public int getOpponentHP() {
-        return opponentDeck.getHeroType().getHero().getHp();
+        return  getPlayer(false).getHp();
     }
 
     public int getInitialOpponentMana() {
-        return 1;
+        return  getPlayer(false).getInitialMana();
     }
 
     ////////////////////
@@ -176,12 +170,15 @@ public class GameController {
 
     ///////////////////
     ///////////////////
-    public ArrayList<Card> getPlayerHand() {
+    public ArrayList<Card> getPlayerHand() { //todo delete it
         if (playerHand == null) {
             playerHand = new ArrayList<>();
             for (int i = 0; i < 3; i++) playerHand.add(playerCards.pop());
         }
         return playerHand;
+    }
+    public ArrayList<Card> getPlayerHand(boolean isMe) {
+        return getPlayer(isMe).getHand();
     }
 
     public void updateHand() {
@@ -266,8 +263,8 @@ public class GameController {
     }
 
     public String getPlayingSide() {
-        return "you";
+        if (currentPlayer.equals(Players.ME)) return "you";
+        else return "opponent";
     }
-
 
 }
