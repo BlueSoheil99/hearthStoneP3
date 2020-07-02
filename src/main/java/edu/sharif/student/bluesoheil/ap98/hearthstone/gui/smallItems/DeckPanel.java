@@ -10,7 +10,6 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -20,9 +19,12 @@ public class DeckPanel extends SidePanel implements ActionListener {
     private ArrayList<DeckShape> decks;
     private Border lastBorder;
     private DeckShape selectedDeck;
+    private int width, height;
 
     public DeckPanel(int width, int height) {
         super(width, height);
+        this.width = width;
+        this.height = height;
     }
 
     public void setDecks(LinkedHashMap<String, String> decksToShow) {
@@ -37,24 +39,23 @@ public class DeckPanel extends SidePanel implements ActionListener {
     }
 
     private void paintDecksInPanel() {
-        //todo this is not working properly with decks more...it's because its height is set on 1080 and so it doesn't resize height
         setEmpty();
-        setLayout(new BoxLayout(this , BoxLayout.Y_AXIS));
+        setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         for (DeckShape deckShape : decks) {
             add(deckShape);
         }
+        setPreferredSize(new Dimension(width, decks.size() * 130));
         repaint();
-
     }
 
-    private void setEmpty(){
+    private void setEmpty() {
         removeAll();
         revalidate();
         repaint();
     }
 
-    public void unselectDeck(){
-        if (lastBorder!=null)selectedDeck.setBorder(lastBorder);
+    public void unselectDeck() {
+        if (lastBorder != null) selectedDeck.setBorder(lastBorder);
     }
 
     public void setClickListener(ClickListener listener) {
@@ -68,7 +69,7 @@ public class DeckPanel extends SidePanel implements ActionListener {
             selectedDeck = (DeckShape) e.getSource();
             lastBorder = selectedDeck.getBorder();
             selectedDeck.setBorder(
-                    BorderFactory.createMatteBorder(4,4,4,4,new Color(16, 90, 115)));
+                    BorderFactory.createMatteBorder(4, 4, 4, 4, new Color(16, 90, 115)));
             listener.select(selectedDeck.getDeckName());
             Logger.log(LogTypes.CLICK_BUTTON, "deck:  " + selectedDeck.getDeckName() + "  selected .");
         }

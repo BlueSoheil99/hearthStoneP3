@@ -6,7 +6,7 @@ import edu.sharif.student.bluesoheil.ap98.hearthstone.models.cards.Card;
 
 import java.util.*;
 
-public class Deck implements Cloneable{
+public class Deck implements Cloneable {
     //TODO use configuration here.....think about how to manage the same cards we have
     private static final int MAXIMUM_NUMBER_OF_CARDS = 15;
     private static final int MINIMUM_NUMBER_OF_CARDS = 5;
@@ -68,18 +68,20 @@ public class Deck implements Cloneable{
     }
 
     public String getMostUsedCard() {
-        //todo check this sorting .. take a look at status panel description( phase 2 doc)
-        // visit last episode of javaCup java tutorial
-
-        ArrayList<Card> copyCards = new ArrayList<>();
-        cards.stream()
-                .sorted(minionComp)
-                .sorted(Comparator.comparing(Card::getManaCost))
-                .sorted(Comparator.comparing(Card::getRarity))
+        if (cards.size() > 0) {
+            ArrayList<Card> copyCards = new ArrayList<>();
+            cards.stream()
+                    .sorted(minionComp)
+                    .sorted(Comparator.comparing(Card::getManaCost))
+                    .sorted(Comparator.comparing(Card::getRarity))
 //                .sorted(Comparator.comparingInt(o -> -cardsUsage.get(o.getName()))) // - is for sorting descending
-                .forEach(copyCards::add);
-        Collections.reverse(copyCards);
-        return copyCards.get(0).getName();
+                    //todo line above is not operating well for warlock deck
+                    .forEach(copyCards::add);
+            Collections.reverse(copyCards);
+            return copyCards.get(0).getName();
+        } else {
+            return "has no cards";
+        }
     }
 
     public float getManaAverage() {
@@ -96,7 +98,7 @@ public class Deck implements Cloneable{
     }
 
     public void incrementGamesPlayed() {
-        gamesPlayed++ ;
+        gamesPlayed++;
     }
 
     public int getWins() {
@@ -104,7 +106,7 @@ public class Deck implements Cloneable{
     }
 
     public void incrementWins() {
-        wins++ ;
+        wins++;
     }
 
     public float getWinRatio() {
@@ -160,10 +162,6 @@ public class Deck implements Cloneable{
         int usage = cardsUsage.get(card.getName());
         cardsUsage.replace(card.getName(), usage - 1);
     }
-
-
-
-
 
 
 }

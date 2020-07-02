@@ -59,7 +59,9 @@ public class CollectionPanel extends GamePanel {
         add(new JScrollPane(cardPanel), BorderLayout.CENTER);
         add(new JScrollPane(deckCardsPanel), BorderLayout.SOUTH);
         add(filterPanel, BorderLayout.WEST);
-        add(new JScrollPane(deckPanel), BorderLayout.EAST);
+        JScrollPane jScrollPane = new JScrollPane(deckPanel);
+        jScrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        add(jScrollPane, BorderLayout.EAST);
         //todo code above work fine but ugly after canceling a deck...but the code below works wrong (in more than 7 decks) but beautiful !
 //        add(deckPanel, BorderLayout.EAST);
 

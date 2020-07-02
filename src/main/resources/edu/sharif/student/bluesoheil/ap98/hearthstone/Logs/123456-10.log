@@ -1588,3 +1588,200 @@ STATUS		2020/06/26  14:12:27	newDecknew states showed .
 CLICK_BUTTON		2020/06/26  14:12:27	deck:  newDecknew  selected .
 CLICK_BUTTON		2020/06/26  14:12:31	button: EXIT selected .
 PLAYER		2020/06/26  14:12:33	123456 logged out
+PLAYER		2020/07/02  15:00:26	123456 logged in
+NAVIGATION		2020/07/02  15:00:28	To Status
+STATUS		2020/07/02  15:00:29	HunterDefaultDeck states showed .
+CLICK_BUTTON		2020/07/02  15:00:29	deck:  HunterDefaultDeck  selected .
+STATUS		2020/07/02  15:00:30	RogueDefaultDeck states showed .
+CLICK_BUTTON		2020/07/02  15:00:30	deck:  RogueDefaultDeck  selected .
+STATUS		2020/07/02  15:00:31	newDecknew states showed .
+CLICK_BUTTON		2020/07/02  15:00:31	deck:  newDecknew  selected .
+STATUS		2020/07/02  15:00:32	newDeck states showed .
+CLICK_BUTTON		2020/07/02  15:00:32	deck:  newDeck  selected .
+STATUS		2020/07/02  15:00:33	newDeck states showed .
+CLICK_BUTTON		2020/07/02  15:00:33	deck:  newDeck  selected .
+STATUS		2020/07/02  15:00:34	MageDefaultDeck states showed .
+CLICK_BUTTON		2020/07/02  15:00:34	deck:  MageDefaultDeck  selected .
+STATUS		2020/07/02  15:00:36	newDeck2 states showed .
+CLICK_BUTTON		2020/07/02  15:00:36	deck:  newDeck2  selected .
+STATUS		2020/07/02  15:00:37	PriestDefaultDeck states showed .
+CLICK_BUTTON		2020/07/02  15:00:37	deck:  PriestDefaultDeck  selected .
+STATUS		2020/07/02  15:00:39	RogueDefaultDeck states showed .
+CLICK_BUTTON		2020/07/02  15:00:39	deck:  RogueDefaultDeck  selected .
+STATUS		2020/07/02  15:00:41	PriestDefaultDeck states showed .
+CLICK_BUTTON		2020/07/02  15:00:41	deck:  PriestDefaultDeck  selected .
+STATUS		2020/07/02  15:00:42	RogueDefaultDeck states showed .
+CLICK_BUTTON		2020/07/02  15:00:42	deck:  RogueDefaultDeck  selected .
+STATUS		2020/07/02  15:00:43	HunterDefaultDeck states showed .
+CLICK_BUTTON		2020/07/02  15:00:43	deck:  HunterDefaultDeck  selected .
+STATUS		2020/07/02  15:00:44	WarlockDefaultDeck states showed .
+CLICK_BUTTON		2020/07/02  15:00:44	deck:  WarlockDefaultDeck  selected .
+STATUS		2020/07/02  15:00:47	HunterDefaultDeck states showed .
+CLICK_BUTTON		2020/07/02  15:00:47	deck:  HunterDefaultDeck  selected .
+STATUS		2020/07/02  15:00:48	RogueDefaultDeck states showed .
+CLICK_BUTTON		2020/07/02  15:00:48	deck:  RogueDefaultDeck  selected .
+STATUS		2020/07/02  15:00:49	WarlockDefaultDeck states showed .
+CLICK_BUTTON		2020/07/02  15:00:49	deck:  WarlockDefaultDeck  selected .
+STATUS		2020/07/02  15:00:52	HunterDefaultDeck states showed .
+CLICK_BUTTON		2020/07/02  15:00:52	deck:  HunterDefaultDeck  selected .
+STATUS		2020/07/02  15:00:53	WarlockDefaultDeck states showed .
+CLICK_BUTTON		2020/07/02  15:00:53	deck:  WarlockDefaultDeck  selected .
+CLICK_BUTTON		2020/07/02  15:01:01	button: BACK selected .
+NAVIGATION		2020/07/02  15:01:01	Back to previous panel
+NAVIGATION		2020/07/02  15:01:03	To Collection
+CLICK_BUTTON		2020/07/02  15:01:07	button : NEW DECK selected.
+COLLECTION		2020/07/02  15:01:18	testDeck is now available with warlock
+CLICK_BUTTON		2020/07/02  15:01:23	deck:  testDeck  selected .
+CLICK_BUTTON		2020/07/02  15:01:26	card: CURIO COLLECTOR  selected.
+CLICK_BUTTON		2020/07/02  15:01:27	button : ADD CARD selected.
+COLLECTION		2020/07/02  15:01:29	CURIO COLLECTOR has been added to testDeck
+CLICK_BUTTON		2020/07/02  15:01:33	card: CURIO COLLECTOR  selected.
+CLICK_BUTTON		2020/07/02  15:01:36	deck:  testDeck  selected .
+CLICK_BUTTON		2020/07/02  15:01:39	card: SWARM OF LOCUSTS  selected.
+CLICK_BUTTON		2020/07/02  15:01:44	card: LEARN DRACONIC  selected.
+CLICK_BUTTON		2020/07/02  15:01:46	button : ADD CARD selected.
+COLLECTION		2020/07/02  15:01:47	LEARN DRACONIC has been added to testDeck
+CLICK_BUTTON		2020/07/02  15:01:50	card: LEARN DRACONIC  selected.
+CLICK_BUTTON		2020/07/02  15:01:54	deck:  testDeck  selected .
+CLICK_BUTTON		2020/07/02  15:01:56	card: LEARN DRACONIC  selected.
+CLICK_BUTTON		2020/07/02  15:01:57	button: SET CURRENT DECK selected.
+ERROR: COLLECTION	2020/07/02  15:01:58	edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.DeckControllerException: You should atLeast have 5cards in currentDeck
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.DeckController.setCurrentDeck(DeckController.java:91)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer.setCurrentDeck(Administer.java:323)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.CollectionHandler.setCurrentDeck(CollectionHandler.java:62)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.CollectionPanel$1.setCurrentDeck(CollectionPanel.java:174)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.FilterPanel$7.actionPerformed(FilterPanel.java:360)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+CLICK_BUTTON		2020/07/02  15:02:00	button : ADD CARD selected.
+ERROR: COLLECTION	2020/07/02  15:02:05	edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.DeckControllerException: You only have 1 of this card. Can't have more in a deck
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.DeckController.addCard(DeckController.java:174)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer.addCardToDeck(Administer.java:306)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.CollectionHandler.addCardToDeck(CollectionHandler.java:54)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.CollectionPanel$1.addCard(CollectionPanel.java:151)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.FilterPanel$5.actionPerformed(FilterPanel.java:342)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+CLICK_BUTTON		2020/07/02  15:02:09	card: POLYMORPH  selected.
+CLICK_BUTTON		2020/07/02  15:02:11	button : ADD CARD selected.
+ERROR: COLLECTION	2020/07/02  15:02:12	edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.DeckControllerException: this card is not valid for this hero
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.models.Deck.addCard(Deck.java:142)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.DeckController.addCard(DeckController.java:173)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer.addCardToDeck(Administer.java:306)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.CollectionHandler.addCardToDeck(CollectionHandler.java:54)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.CollectionPanel$1.addCard(CollectionPanel.java:151)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.FilterPanel$5.actionPerformed(FilterPanel.java:342)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+CLICK_BUTTON		2020/07/02  15:02:13	card: VOODOO DOCTOR  selected.
+CLICK_BUTTON		2020/07/02  15:02:14	button : ADD CARD selected.
+COLLECTION		2020/07/02  15:02:15	VOODOO DOCTOR has been added to testDeck
+CLICK_BUTTON		2020/07/02  15:02:18	deck:  testDeck  selected .
+CLICK_BUTTON		2020/07/02  15:02:22	button: BACK selected .
+NAVIGATION		2020/07/02  15:02:22	Back to previous panel
+PLAYER		2020/07/02  15:02:26	123456 logged out

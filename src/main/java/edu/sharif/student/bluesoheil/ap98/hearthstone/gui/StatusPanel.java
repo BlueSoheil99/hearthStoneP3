@@ -1,7 +1,6 @@
 package edu.sharif.student.bluesoheil.ap98.hearthstone.gui;
 
 import edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.ClickListener;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.DeckPanel;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.NavigationPanel;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.SidePanel;
@@ -46,7 +45,9 @@ public class StatusPanel extends GamePanel {
     protected void init() {
         setLayout(new BorderLayout());
         add(statesPanel, BorderLayout.CENTER);
-        add(new JScrollPane(deckPanel), BorderLayout.EAST);
+        JScrollPane jScrollPane = new JScrollPane(deckPanel);
+        jScrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        add(jScrollPane, BorderLayout.EAST);
 
     }
 
@@ -75,7 +76,6 @@ public class StatusPanel extends GamePanel {
         selectedManaAverage = createStatusLabel("", font2);
         selectedHero = createStatusLabel("", font2);
         selectedMostUsedCard = createStatusLabel("", font2);
-
     }
 
     private JLabel createStatusLabel(String name, Font font) {
