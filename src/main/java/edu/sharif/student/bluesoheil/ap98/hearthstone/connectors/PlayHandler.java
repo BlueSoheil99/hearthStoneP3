@@ -4,7 +4,6 @@ import edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.GameController
 import edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.PlayException;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play.*;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.CardShape;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.PlayActionListener;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.cards.*;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.log.LogTypes;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.log.Logger;
@@ -17,7 +16,6 @@ public class PlayHandler {
     private static PlayHandler instance;
     private Administer administer;
     private GameController gameController;
-    private PlayPanel playPanel;
 
     /**
      * this class works as a connection between gui and logic(administer + gameController)
@@ -44,13 +42,23 @@ public class PlayHandler {
         instance.gameController = null;
     }
 
+
     //////////////////////////////
     /////////non-statics//////////
+    //todo exiting and forfeiting macth must have a penalty(loosing or etc.)
+    public void exitGame() {
+        administer.runExit();
+    }
 
+    public void forfeitMatch() {
+        Logger.log(LogTypes.PLAY, gameController.getPlayingSide() + " forfeited the fight");
+        administer.back();
+    }
     //
     ///
     ////getters and setters
     ///
+
     //
 
     public ArrayList<CardShape> get3Passives() {
@@ -90,7 +98,6 @@ public class PlayHandler {
     public Card.CardType getCardType(String playerSelectedCard) {
         return gameController.getCard(playerSelectedCard).getType();
     }
-
     ////////////
     ////////////
 

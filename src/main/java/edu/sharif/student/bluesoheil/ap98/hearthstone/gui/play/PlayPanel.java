@@ -3,20 +3,17 @@ package edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.PlayHandler;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.PlayException;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.GamePanel;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.CardClickListener;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.PlayActionListener;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.Configuration.GuiConfigs.PlayConfig;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
 
 public class PlayPanel extends GamePanel {
 
     private PlayConfig properties;
     private PlayHandler playHandler;
     private PauseMenu pauseMenu;
-    private JButton pauseBtn;
     private PlayerPanel playerPanel, opponentPanel;
     private EventBox eventBox;
     private BoardPanel board;
@@ -56,10 +53,10 @@ public class PlayPanel extends GamePanel {
         opponentPanel.setPreferredSize(new Dimension(getWidth(), getHeight() / 7 * 2));
         board.setPreferredSize(new Dimension(getWidth(), getHeight() / 7 * 3));
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+        add(pauseMenu);
         add(opponentPanel);
         add(board);
         add(playerPanel);
-
         JScrollPane scrollPane = new JScrollPane(eventBox);
         scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
         scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
@@ -76,23 +73,8 @@ public class PlayPanel extends GamePanel {
     }
 
     private void setupPausePanel() {
-        //todo you can also use JMenu
         pauseMenu = PauseMenu.getInstance();
-        setFocusable(true);
-//        pauseBtn = new JButton();
-//        pauseBtn.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                System.out.println("pausssssse");
-//            }
-//        });
-//        pauseBtn.setMnemonic(KeyEvent.VK_ESCAPE);
-        addKeyListener(new KeyAdapter() {
-            @Override
-            public void keyPressed(KeyEvent e) {
-                System.out.println("pause");
-            }
-        });
+        pauseMenu.setVisible(true);
     }
 
     private void setupPlayerPanel() {
@@ -114,7 +96,7 @@ public class PlayPanel extends GamePanel {
                 } else if (playerSelectedCard != null) {
                     playHandler.playCard(playerSelectedCard);
                 } else {
-                    JOptionPane.showMessageDialog(null, "select a card you DumbAss :/");
+                    JOptionPane.showMessageDialog(null, "select a card :/");
                 }
                 eventBox.update();
             }

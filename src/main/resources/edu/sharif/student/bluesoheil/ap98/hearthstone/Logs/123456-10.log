@@ -1391,3 +1391,93 @@ NAVIGATION		2020/07/02  12:26:47	To Status
 CLICK_BUTTON		2020/07/02  12:27:02	button: BACK selected .
 NAVIGATION		2020/07/02  12:27:02	Back to previous panel
 PLAYER		2020/07/02  12:27:05	123456 logged out
+PLAYER		2020/07/02  19:55:18	123456 logged in
+NAVIGATION		2020/07/02  19:55:20	To Collection
+CLICK_BUTTON		2020/07/02  19:55:23	deck:  HunterDefaultDeck  selected .
+CLICK_BUTTON		2020/07/02  19:55:25	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/02  19:55:25	HunterDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/07/02  19:55:27	button: BACK selected .
+NAVIGATION		2020/07/02  19:55:27	Back to previous panel
+NAVIGATION		2020/07/02  19:55:28	To PassiveSelector
+CLICK_BUTTON		2020/07/02  19:55:29	passive: ManaJump  selected.
+PLAY		2020/07/02  19:55:35	passive 'ManaJump' selected
+NAVIGATION		2020/07/02  19:55:35	To Play
+NAVIGATION		2020/07/02  19:55:40	Back to previous panel
+NAVIGATION		2020/07/02  19:55:43	To PassiveSelector
+CLICK_BUTTON		2020/07/02  19:55:47	button: BACK selected .
+NAVIGATION		2020/07/02  19:55:47	Back to previous panel
+NAVIGATION		2020/07/02  19:55:49	To PassiveSelector
+CLICK_BUTTON		2020/07/02  19:55:53	passive: Warriors  selected.
+PLAY		2020/07/02  19:55:57	passive 'Warriors' selected
+NAVIGATION		2020/07/02  19:55:57	To Play
+NAVIGATION		2020/07/02  19:56:01	Back to previous panel
+NAVIGATION		2020/07/02  19:56:03	To PassiveSelector
+CLICK_BUTTON		2020/07/02  19:56:04	passive: OffCards  selected.
+PLAY		2020/07/02  19:56:07	passive 'OffCards' selected
+NAVIGATION		2020/07/02  19:56:07	To Play
+PLAYER		2020/07/02  19:56:10	123456 logged out
+PLAYER		2020/07/02  20:04:55	123456 logged in
+NAVIGATION		2020/07/02  20:04:56	To Collection
+CLICK_BUTTON		2020/07/02  20:04:58	deck:  HunterDefaultDeck  selected .
+CLICK_BUTTON		2020/07/02  20:04:59	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/02  20:04:59	HunterDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/07/02  20:05:01	button: BACK selected .
+NAVIGATION		2020/07/02  20:05:01	Back to previous panel
+NAVIGATION		2020/07/02  20:05:01	To PassiveSelector
+CLICK_BUTTON		2020/07/02  20:05:03	passive: ManaJump  selected.
+PLAY		2020/07/02  20:05:05	passive 'ManaJump' selected
+NAVIGATION		2020/07/02  20:05:05	To Play
+PLAY		2020/07/02  20:05:13	you forfeited the fight
+NAVIGATION		2020/07/02  20:05:13	Back to previous panel
+NAVIGATION		2020/07/02  20:05:14	To Status
+STATUS		2020/07/02  20:05:16	PriestDefaultDeck states showed .
+CLICK_BUTTON		2020/07/02  20:05:16	deck:  PriestDefaultDeck  selected .
+STATUS		2020/07/02  20:05:18	HunterDefaultDeck states showed .
+CLICK_BUTTON		2020/07/02  20:05:18	deck:  HunterDefaultDeck  selected .
+STATUS		2020/07/02  20:05:22	MageDefaultDeck states showed .
+CLICK_BUTTON		2020/07/02  20:05:22	deck:  MageDefaultDeck  selected .
+STATUS		2020/07/02  20:05:24	RogueDefaultDeck states showed .
+CLICK_BUTTON		2020/07/02  20:05:24	deck:  RogueDefaultDeck  selected .
+STATUS		2020/07/02  20:05:26	HunterDefaultDeck states showed .
+CLICK_BUTTON		2020/07/02  20:05:26	deck:  HunterDefaultDeck  selected .
+STATUS		2020/07/02  20:05:27	PriestDefaultDeck states showed .
+CLICK_BUTTON		2020/07/02  20:05:27	deck:  PriestDefaultDeck  selected .
+CLICK_BUTTON		2020/07/02  20:05:28	button: BACK selected .
+NAVIGATION		2020/07/02  20:05:28	Back to previous panel
+NAVIGATION		2020/07/02  20:05:30	To Collection
+CLICK_BUTTON		2020/07/02  20:05:32	deck:  MageDefaultDeck  selected .
+CLICK_BUTTON		2020/07/02  20:05:34	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/02  20:05:35	MageDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/07/02  20:05:36	button: BACK selected .
+NAVIGATION		2020/07/02  20:05:36	Back to previous panel
+NAVIGATION		2020/07/02  20:05:37	To PassiveSelector
+CLICK_BUTTON		2020/07/02  20:05:38	passive: ManaJump  selected.
+PLAY		2020/07/02  20:05:40	passive 'ManaJump' selected
+NAVIGATION		2020/07/02  20:05:40	To Play
+PLAY		2020/07/02  20:05:44	you forfeited the fight
+NAVIGATION		2020/07/02  20:05:44	Back to previous panel
+NAVIGATION		2020/07/02  20:05:54	To Status
+STATUS		2020/07/02  20:05:56	MageDefaultDeck states showed .
+CLICK_BUTTON		2020/07/02  20:05:56	deck:  MageDefaultDeck  selected .
+CLICK_BUTTON		2020/07/02  20:05:59	button: BACK selected .
+NAVIGATION		2020/07/02  20:05:59	Back to previous panel
+NAVIGATION		2020/07/02  20:06:01	To PassiveSelector
+CLICK_BUTTON		2020/07/02  20:06:01	passive: TwiceDraw  selected.
+PLAY		2020/07/02  20:06:03	passive 'TwiceDraw' selected
+NAVIGATION		2020/07/02  20:06:03	To Play
+PLAY		2020/07/02  20:06:06	you forfeited the fight
+NAVIGATION		2020/07/02  20:06:06	Back to previous panel
+NAVIGATION		2020/07/02  20:06:07	To Status
+STATUS		2020/07/02  20:06:09	MageDefaultDeck states showed .
+CLICK_BUTTON		2020/07/02  20:06:09	deck:  MageDefaultDeck  selected .
+STATUS		2020/07/02  20:06:34	newDecknew states showed .
+CLICK_BUTTON		2020/07/02  20:06:34	deck:  newDecknew  selected .
+STATUS		2020/07/02  20:06:34	RogueDefaultDeck states showed .
+CLICK_BUTTON		2020/07/02  20:06:34	deck:  RogueDefaultDeck  selected .
+CLICK_BUTTON		2020/07/02  20:06:44	button: BACK selected .
+NAVIGATION		2020/07/02  20:06:44	Back to previous panel
+NAVIGATION		2020/07/02  20:06:45	To Collection
+CLICK_BUTTON		2020/07/02  20:06:46	deck:  512  selected .
+CLICK_BUTTON		2020/07/02  20:06:47	deck:  newDecknew  selected .
+CLICK_BUTTON		2020/07/02  20:06:50	button: EXIT selected .
+PLAYER		2020/07/02  20:06:51	123456 logged out
