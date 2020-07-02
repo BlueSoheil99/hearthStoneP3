@@ -62,6 +62,10 @@ public class CollectionHandler {
         administer.setCurrentDeck(selectedDeck);
     }
 
+    public String getCurrentDeck() {
+        return administer.getCurrentDeck();
+    }
+
     public void changeDeckHero(String selectedDeck, HeroTypes heroName) throws DeckControllerException {
         administer.changeDeckHero(selectedDeck, heroName);
     }

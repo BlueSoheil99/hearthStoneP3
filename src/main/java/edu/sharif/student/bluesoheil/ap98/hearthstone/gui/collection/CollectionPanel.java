@@ -3,9 +3,7 @@ package edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.GamePanel;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.CardPanel;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.ClickListener;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.DeckHandlerListener;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.FilterListener;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.CollectionHandler;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.CardShape;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.DeckPanel;
@@ -48,7 +46,7 @@ public class CollectionPanel extends GamePanel {
         deckCardsPanel = new CardPanel();
         cardPanel.setCards(collectionHandler.filterCards("", true, true, -1, "All")
                 , properties.getNumberOfCardsInRow());
-        deckPanel.setDecks(collectionHandler.getDecks());
+        deckPanel.setDecks(collectionHandler.getDecks() , collectionHandler.getCurrentDeck());
         filterPanel.setDeckHandlerEditable(false);
         addListenersToPanels();
     }
@@ -99,8 +97,8 @@ public class CollectionPanel extends GamePanel {
 
             cardPanel.setCards(cards, properties.getNumberOfCardsInRow());
             Logger.log(LogTypes.COLLECTION, "cards filtered with {regex,owned,notOwned,manaCost,hero}= {" +
-                    filter.getRegex() + "," + Boolean.toString(filter.isOwned()) + "," + Boolean.toString(filter.isNotOwned())
-                    + "," + Integer.toString(filter.getManaCost()) + "," + filter.getHero() + "}");
+                    filter.getRegex() + "," + (filter.isOwned()) + "," + (filter.isNotOwned())
+                    + "," + (filter.getManaCost()) + "," + filter.getHero() + "}");
         });
         ////////////////////////////
         ////////////////////////////
@@ -175,7 +173,6 @@ public class CollectionPanel extends GamePanel {
                     JOptionPane.showMessageDialog(null, selectedDeck + " has been set as current deck"
                             , "Done!", JOptionPane.INFORMATION_MESSAGE);
                     Logger.log(LogTypes.COLLECTION ,selectedDeck + " has been set as current deck");
-                    //todo make a way to show current deck like changing backGround to gold
                     revalidateSelections();
                 } catch (Exception e) {
                     handleException(e);
@@ -223,7 +220,7 @@ public class CollectionPanel extends GamePanel {
         deckCardsPanel.unselectCard();
         selectedDeck = null;
         deckCardsPanel.setEmpty();
-        deckPanel.setDecks(collectionHandler.getDecks());
+        deckPanel.setDecks(collectionHandler.getDecks() , collectionHandler.getCurrentDeck());
     }
 
     private void handleException(Exception e) {

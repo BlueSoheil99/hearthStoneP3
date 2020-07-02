@@ -322,6 +322,11 @@ public class Administer {
     public void setCurrentDeck(String selectedDeck) throws DeckControllerException {
         deckController.setCurrentDeck(selectedDeck);
     }
+    public String getCurrentDeck() {
+        if (deckController.getCurrentDeck() == null) return null;
+        return deckController.getCurrentDeck().getName();
+    }
+
 
     public void changeDeckHero(String selectedDeck, HeroTypes heroName) throws DeckControllerException {
         deckController.changeDeckHero(selectedDeck, heroName);

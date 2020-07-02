@@ -32,7 +32,7 @@ public class StatusPanel extends GamePanel {
     @Override
     protected void createFields() {
         deckPanel = new DeckPanel(this.getWidth() / 5, this.getHeight());
-        deckPanel.setDecks(Administer.getInstance().getPlayerDecks(10));
+        deckPanel.setDecks(Administer.getInstance().getPlayerDecks(10) , Administer.getInstance().getCurrentDeck());
         deckPanel.setClickListener(objName -> {
             selectedDeck = objName;
             revalidateDeckStates();

@@ -20,6 +20,7 @@ public class DeckPanel extends SidePanel implements ActionListener {
     private Border lastBorder;
     private DeckShape selectedDeck;
     private int width, height;
+    private String currentDeck;
 
     public DeckPanel(int width, int height) {
         super(width, height);
@@ -27,14 +28,13 @@ public class DeckPanel extends SidePanel implements ActionListener {
         this.height = height;
     }
 
-    public void setDecks(LinkedHashMap<String, String> decksToShow) {
+    public void setDecks(LinkedHashMap<String, String> decksToShow, String currentDeckName) {
         this.decks = new ArrayList<>();
-
-        for (Map.Entry<String, String> entry : decksToShow.entrySet())
+        this.currentDeck = currentDeckName;
+        for (Map.Entry<String, String> entry : decksToShow.entrySet()) {
             decks.add(new DeckShape(entry.getKey(), entry.getValue()));
-
+        }
         paintDecksInPanel();
-
         for (DeckShape deckShape : decks) deckShape.addActionListener(this);
     }
 
@@ -42,10 +42,16 @@ public class DeckPanel extends SidePanel implements ActionListener {
         setEmpty();
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         for (DeckShape deckShape : decks) {
+            if (deckShape.getDeckName().equals(currentDeck)) setDeckToCurrent(deckShape);
             add(deckShape);
         }
         setPreferredSize(new Dimension(width, decks.size() * 130));
         repaint();
+    }
+
+    private void setDeckToCurrent(DeckShape currentDeck) {
+        currentDeck.setBorder(
+                BorderFactory.createMatteBorder(4, 4, 4, 4, new Color(199, 210, 9)));
     }
 
     private void setEmpty() {

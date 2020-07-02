@@ -1785,3 +1785,34 @@ CLICK_BUTTON		2020/07/02  15:02:18	deck:  testDeck  selected .
 CLICK_BUTTON		2020/07/02  15:02:22	button: BACK selected .
 NAVIGATION		2020/07/02  15:02:22	Back to previous panel
 PLAYER		2020/07/02  15:02:26	123456 logged out
+PLAYER		2020/07/02  15:20:28	123456 logged in
+NAVIGATION		2020/07/02  15:20:30	To Status
+STATUS		2020/07/02  15:20:31	PriestDefaultDeck states showed .
+CLICK_BUTTON		2020/07/02  15:20:31	deck:  PriestDefaultDeck  selected .
+CLICK_BUTTON		2020/07/02  15:20:33	button: BACK selected .
+NAVIGATION		2020/07/02  15:20:33	Back to previous panel
+NAVIGATION		2020/07/02  15:20:34	To Collection
+CLICK_BUTTON		2020/07/02  15:20:36	deck:  HunterDefaultDeck  selected .
+CLICK_BUTTON		2020/07/02  15:20:38	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/02  15:20:39	HunterDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/07/02  15:20:41	button: BACK selected .
+NAVIGATION		2020/07/02  15:20:41	Back to previous panel
+NAVIGATION		2020/07/02  15:20:42	To Status
+CLICK_BUTTON		2020/07/02  15:20:50	button: BACK selected .
+NAVIGATION		2020/07/02  15:20:50	Back to previous panel
+NAVIGATION		2020/07/02  15:20:51	To Collection
+CLICK_BUTTON		2020/07/02  15:20:56	deck:  PriestDefaultDeck  selected .
+CLICK_BUTTON		2020/07/02  15:20:58	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/02  15:20:59	PriestDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/07/02  15:21:03	button: BACK selected .
+NAVIGATION		2020/07/02  15:21:03	Back to previous panel
+PLAYER		2020/07/02  15:21:05	123456 logged out
+PLAYER		2020/07/02  15:23:53	123456 logged in
+NAVIGATION		2020/07/02  15:23:56	To Collection
+CLICK_BUTTON		2020/07/02  15:24:00	button: BACK selected .
+NAVIGATION		2020/07/02  15:24:00	Back to previous panel
+NAVIGATION		2020/07/02  15:24:02	To Collection
+CLICK_BUTTON		2020/07/02  15:24:06	button: FILTER selected.
+COLLECTION		2020/07/02  15:24:06	cards filtered with {regex,owned,notOwned,manaCost,hero}= {,true,true,-1,Mage}
+CLICK_BUTTON		2020/07/02  15:24:09	button: EXIT selected .
+PLAYER		2020/07/02  15:24:10	123456 logged out
