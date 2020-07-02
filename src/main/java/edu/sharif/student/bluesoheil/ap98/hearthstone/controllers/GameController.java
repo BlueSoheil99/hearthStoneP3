@@ -129,6 +129,10 @@ public class GameController {
 
     //////////
     //////////
+    public void setOpponent(String deckName) {
+        Deck deck = deckController.getDeck(deckName);
+        //todo setup opponent here
+    }
     public HeroTypes getOpponentHero() {
         return opponentDeck.getHeroType();
     }
@@ -264,4 +268,6 @@ public class GameController {
     public String getPlayingSide() {
         return "you";
     }
+
+
 }

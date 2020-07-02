@@ -16,16 +16,14 @@ public class PlayStarterPanel extends GamePanel {
     private PlayConfig properties;
     private CardPanel passivePanel, handPanel;
     private JLabel selectLabel;
-    private JButton selectBtn, changeBtn, playButton;
+    private JButton selectBtn, changeBtn, nextBtn;
     private String selectedPassive, selectedCard;
     private ClickListener clickListener;
-    //TODO first selectBtn must be clicked. then changeBtn and then another Btn named PLAY.
-    //      they should get enabled one by one
 
     public PlayStarterPanel() {
         super();
         setBackground(new Color(0xA8765E));
-        setBorder(BorderFactory.createMatteBorder(30, 30, 30, 30, new Color(0x562C1C)));
+        setBorder(BorderFactory.createMatteBorder(20, 20, 20, 20, new Color(0x562C1C)));
     }
 
     @Override
@@ -35,16 +33,17 @@ public class PlayStarterPanel extends GamePanel {
 
     @Override
     protected void createFields() {
-        Font font = new Font("serif", Font.BOLD, 40);
-        selectLabel = new JLabel("Select a passive");
+        Font font = new Font("serif", Font.ITALIC, 30);
+        selectLabel = new JLabel("Select a passive and edit first hand for your currentDeck");
+        selectLabel.setFont(font);
         selectBtn = new JButton("Select");
         changeBtn = new JButton("Change");
-        playButton = new JButton(" PLAY ");
+        nextBtn = new JButton(" Next ");
         changeBtn.setEnabled(false);
-        playButton.setEnabled(false);
+        nextBtn.setEnabled(false);
         makeBtnLookBetter(selectBtn, "Serif", 30, false);
         makeBtnLookBetter(changeBtn, "Serif", 30, false);
-        makeBtnLookBetter(playButton, "Tahoma", 40, true);
+        makeBtnLookBetter(nextBtn, "Tahoma", 40, true);
         SetSelectBtnActionListener();
         SetChangeBtnActionListener();
         SetPlayBtnActionListener();
@@ -72,7 +71,7 @@ public class PlayStarterPanel extends GamePanel {
                 JOptionPane.showMessageDialog(null, "You Haven't Chosen a Passive Yet");
             } else {
                 changeBtn.setEnabled(true);
-                playButton.setEnabled(true);
+                nextBtn.setEnabled(true);
                 selectBtn.setEnabled(false);
                 handPanel.setClickListener(objName -> selectedCard = objName);
                 passivePanel.disableClickListener();
@@ -96,7 +95,7 @@ public class PlayStarterPanel extends GamePanel {
     }
 
     private void SetPlayBtnActionListener() {
-        playButton.addActionListener(e -> {
+        nextBtn.addActionListener(e -> {
             clickListener.select(selectedPassive);
 
         });
@@ -116,7 +115,7 @@ public class PlayStarterPanel extends GamePanel {
         add(selectBtn, gc);
         add(handPanel, gc);
         add(changeBtn, gc);
-        add(playButton, gc);
+        add(nextBtn, gc);
         add(NavigationPanel.getInstance(), gc);
     }
 

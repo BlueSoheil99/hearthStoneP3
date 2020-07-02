@@ -11,6 +11,7 @@ import edu.sharif.student.bluesoheil.ap98.hearthstone.util.log.Logger;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 public class PlayHandler {
     private static PlayHandler instance;
@@ -82,6 +83,10 @@ public class PlayHandler {
                 gameController.getHeroStates().get("HP"), gameController.getHeroStates().get("MANA"));
     }
 
+    public LinkedHashMap<String, String> getAvailableDecks() {
+        return administer.getAvailableDecks();
+    }
+
     public PlayerPanel getOpponentPanel() {
         return new PlayerPanel(gameController.getOpponentHero(),
                 gameController.getOpponentHP(), gameController.getInitialOpponentMana());
@@ -94,11 +99,11 @@ public class PlayHandler {
     public HashMap<String, Integer> getHeroStates() {
         return gameController.getHeroStates();
     }
-
     public Card.CardType getCardType(String playerSelectedCard) {
         return gameController.getCard(playerSelectedCard).getType();
     }
     ////////////
+
     ////////////
 
     public MinionActualCard summonAndGetMinion(String playerSelectedCardInHand) throws PlayException {

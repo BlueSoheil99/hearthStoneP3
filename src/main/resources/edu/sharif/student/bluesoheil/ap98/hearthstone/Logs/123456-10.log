@@ -1499,3 +1499,147 @@ CLICK_BUTTON		2020/07/02  20:12:42	passive: Warriors  selected.
 PLAY		2020/07/02  20:12:45	passive 'Warriors' selected
 NAVIGATION		2020/07/02  20:12:45	To Play
 PLAYER		2020/07/02  20:12:55	123456 logged out
+PLAYER		2020/07/02  20:32:03	123456 logged in
+NAVIGATION		2020/07/02  20:32:05	To Collection
+CLICK_BUTTON		2020/07/02  20:32:06	deck:  WarlockDefaultDeck  selected .
+CLICK_BUTTON		2020/07/02  20:32:08	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/02  20:32:08	WarlockDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/07/02  20:32:09	button: BACK selected .
+NAVIGATION		2020/07/02  20:32:09	Back to previous panel
+NAVIGATION		2020/07/02  20:32:10	To PassiveSelector
+CLICK_BUTTON		2020/07/02  20:32:56	passive: ManaJump  selected.
+PLAY		2020/07/02  20:33:01	passive 'ManaJump' selected
+NAVIGATION		2020/07/02  20:33:01	To Play
+PLAY		2020/07/02  20:33:04	you forfeited the fight
+NAVIGATION		2020/07/02  20:33:04	Back to previous panel
+PLAYER		2020/07/02  20:33:06	123456 logged out
+PLAYER		2020/07/02  20:34:52	123456 logged in
+NAVIGATION		2020/07/02  20:34:54	To Collection
+CLICK_BUTTON		2020/07/02  20:34:55	deck:  MageDefaultDeck  selected .
+CLICK_BUTTON		2020/07/02  20:34:57	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/02  20:34:59	MageDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/07/02  20:35:00	button: BACK selected .
+NAVIGATION		2020/07/02  20:35:00	Back to previous panel
+NAVIGATION		2020/07/02  20:35:01	To PassiveSelector
+CLICK_BUTTON		2020/07/02  20:35:27	button: EXIT selected .
+CLICK_BUTTON		2020/07/02  20:35:32	passive: ManaJump  selected.
+PLAY		2020/07/02  20:35:34	passive 'ManaJump' selected
+NAVIGATION		2020/07/02  20:35:34	To Play
+PLAYER		2020/07/02  20:35:41	123456 logged out
+PLAYER		2020/07/02  20:54:15	123456 logged in
+NAVIGATION		2020/07/02  20:54:16	To Collection
+CLICK_BUTTON		2020/07/02  20:54:17	deck:  MageDefaultDeck  selected .
+CLICK_BUTTON		2020/07/02  20:54:19	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/02  20:54:19	MageDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/07/02  20:54:20	button: BACK selected .
+NAVIGATION		2020/07/02  20:54:20	Back to previous panel
+NAVIGATION		2020/07/02  20:54:21	To PlayStarter
+CLICK_BUTTON		2020/07/02  20:54:22	passive: TwiceDraw  selected.
+PLAY		2020/07/02  20:54:25	passive 'TwiceDraw' selected
+NAVIGATION		2020/07/02  20:54:27	To Play
+PLAY		2020/07/02  20:54:31	you forfeited the fight
+NAVIGATION		2020/07/02  20:54:31	Back to previous panel
+NAVIGATION		2020/07/02  20:54:33	To PlayStarter
+CLICK_BUTTON		2020/07/02  20:54:34	passive: nurse  selected.
+PLAY		2020/07/02  20:54:35	passive 'nurse' selected
+CLICK_BUTTON		2020/07/02  20:54:42	button: EXIT selected .
+PLAYER		2020/07/02  20:54:54	123456 logged out
+PLAYER		2020/07/02  21:27:40	123456 logged in
+NAVIGATION		2020/07/02  21:27:42	To Collection
+CLICK_BUTTON		2020/07/02  21:27:43	deck:  WarlockDefaultDeck  selected .
+CLICK_BUTTON		2020/07/02  21:27:45	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/02  21:27:46	WarlockDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/07/02  21:27:47	button: BACK selected .
+NAVIGATION		2020/07/02  21:27:47	Back to previous panel
+NAVIGATION		2020/07/02  21:27:48	To PlayStarter
+CLICK_BUTTON		2020/07/02  21:27:49	passive: OffCards  selected.
+PLAY		2020/07/02  21:27:52	passive 'OffCards' selected
+CLICK_BUTTON		2020/07/02  21:27:59	button: EXIT selected .
+PLAYER		2020/07/02  21:28:01	123456 logged out
+PLAYER		2020/07/02  21:40:25	123456 logged in
+NAVIGATION		2020/07/02  21:40:27	To Collection
+CLICK_BUTTON		2020/07/02  21:40:28	deck:  WarlockDefaultDeck  selected .
+CLICK_BUTTON		2020/07/02  21:40:29	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/02  21:40:30	WarlockDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/07/02  21:40:32	button: BACK selected .
+NAVIGATION		2020/07/02  21:40:32	Back to previous panel
+NAVIGATION		2020/07/02  21:40:33	To PlayStarter
+CLICK_BUTTON		2020/07/02  21:40:36	passive: ManaJump  selected.
+PLAY		2020/07/02  21:40:38	passive 'ManaJump' selected
+NAVIGATION		2020/07/02  21:40:55	To Play
+PLAYER		2020/07/02  21:41:01	123456 logged out
+PLAYER		2020/07/02  21:48:13	123456 logged in
+NAVIGATION		2020/07/02  21:48:15	To Collection
+CLICK_BUTTON		2020/07/02  21:48:16	deck:  WarlockDefaultDeck  selected .
+CLICK_BUTTON		2020/07/02  21:48:18	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/02  21:48:18	WarlockDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/07/02  21:48:19	button: BACK selected .
+NAVIGATION		2020/07/02  21:48:19	Back to previous panel
+NAVIGATION		2020/07/02  21:48:22	To PlayStarter
+CLICK_BUTTON		2020/07/02  21:48:23	passive: ManaJump  selected.
+PLAY		2020/07/02  21:48:25	passive 'ManaJump' selected
+CLICK_BUTTON		2020/07/02  21:48:50	button: BACK selected .
+NAVIGATION		2020/07/02  21:48:50	Back to previous panel
+NAVIGATION		2020/07/02  21:48:51	To Collection
+CLICK_BUTTON		2020/07/02  21:48:53	deck:  PriestDefaultDeck  selected .
+CLICK_BUTTON		2020/07/02  21:48:54	deck:  512  selected .
+CLICK_BUTTON		2020/07/02  21:48:56	button: SET CURRENT DECK selected.
+ERROR: COLLECTION	2020/07/02  21:48:57	edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.DeckControllerException: You should atLeast have 5cards in currentDeck
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.DeckController.setCurrentDeck(DeckController.java:91)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer.setCurrentDeck(Administer.java:332)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.CollectionHandler.setCurrentDeck(CollectionHandler.java:62)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.CollectionPanel$1.setCurrentDeck(CollectionPanel.java:172)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.FilterPanel$7.actionPerformed(FilterPanel.java:360)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+CLICK_BUTTON		2020/07/02  21:49:00	deck:  RogueDefaultDeck  selected .
+CLICK_BUTTON		2020/07/02  21:49:02	button: EXIT selected .
+PLAYER		2020/07/02  21:49:03	123456 logged out
+PLAYER		2020/07/02  22:04:41	123456 logged in
+NAVIGATION		2020/07/02  22:06:22	To Collection
+CLICK_BUTTON		2020/07/02  22:06:23	deck:  MageDefaultDeck  selected .
+CLICK_BUTTON		2020/07/02  22:06:24	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/02  22:06:25	MageDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/07/02  22:06:26	button: BACK selected .
+NAVIGATION		2020/07/02  22:06:26	Back to previous panel
+NAVIGATION		2020/07/02  22:06:27	To PlayStarter
+CLICK_BUTTON		2020/07/02  22:06:29	passive: OffCards  selected.
+PLAY		2020/07/02  22:06:31	passive 'OffCards' selected
+CLICK_BUTTON		2020/07/02  22:06:32	deck:  HunterDefaultDeck  selected .
+NAVIGATION		2020/07/02  22:06:33	To Play
+PLAYER		2020/07/02  22:06:38	123456 logged out

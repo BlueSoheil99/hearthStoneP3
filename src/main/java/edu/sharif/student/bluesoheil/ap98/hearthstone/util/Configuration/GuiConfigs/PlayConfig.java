@@ -6,7 +6,7 @@ import edu.sharif.student.bluesoheil.ap98.hearthstone.util.Configuration.Configs
 public class PlayConfig extends GuiConfig {
     private static PlayConfig instance;
     private Configs properties;
-    private int pauseWidth, pauseHeight, eventHeight,passivePanelWidth,passivePanelHeight;
+    private int  eventHeight,passivePanelWidth,passivePanelHeight , deckPanelWidth , deckPanelHeight;
     private int playerPanelHeight , playerPanelWidth;
     private int cardWidth , cardHeight;
     private String heroIconsPath , cardIconsPath;
@@ -23,8 +23,6 @@ public class PlayConfig extends GuiConfig {
 
     @Override
     protected void initialize() {
-        pauseWidth = properties.readInt("pauseWidth");
-        pauseHeight = properties.readInt("pauseHeight");
         eventHeight = properties.readInt("eventHeight");
         passivePanelHeight = properties.readInt("passivePanelHeight");
         passivePanelWidth = properties.readInt("passivePanelWidth");
@@ -34,6 +32,8 @@ public class PlayConfig extends GuiConfig {
         cardIconsPath = properties.getProperty("cardIconsPath");
         cardHeight=properties.readInt("cardHeight");
         cardWidth=properties.readInt("cardWidth");
+        deckPanelHeight = properties.readInt("deckPanelHeight");
+        deckPanelWidth = properties.readInt("deckPanelWidth");
     }
 
     public String getHeroIconsPath() {
@@ -70,5 +70,13 @@ public class PlayConfig extends GuiConfig {
 
     public int getCardHeight() {
         return cardHeight;
+    }
+
+    public int getDeckPanelHeight() {
+        return deckPanelHeight;
+    }
+
+    public int getDeckPanelWidth() {
+        return deckPanelWidth;
     }
 }

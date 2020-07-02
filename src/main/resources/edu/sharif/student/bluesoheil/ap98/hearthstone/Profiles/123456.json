@@ -418,7 +418,7 @@
     },
     {
       "name": "WarlockDefaultDeck",
-      "gamesPlayed": 7,
+      "gamesPlayed": 11,
       "wins": 0,
       "hero": "WARLOCK",
       "cards": [
@@ -562,7 +562,7 @@
     },
     {
       "name": "MageDefaultDeck",
-      "gamesPlayed": 2,
+      "gamesPlayed": 6,
       "wins": 0,
       "hero": "MAGE",
       "cards": [

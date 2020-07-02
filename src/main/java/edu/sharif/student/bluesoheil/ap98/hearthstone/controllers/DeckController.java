@@ -85,7 +85,7 @@ public class DeckController {
     }
 
     public void setCurrentDeck(String currentDeck) throws DeckControllerException {
-        if (Deck.getMinimumCardsInDeck() <= getDeck(currentDeck).getNumberOfCards()) {
+        if (deckIsAvailable(getDeck(currentDeck))) {
             this.currentDeck = getDeck(currentDeck);
         } else
             throw new DeckControllerException("You should atLeast have " + Deck.getMinimumCardsInDeck() + "cards in currentDeck");
@@ -135,7 +135,7 @@ public class DeckController {
     public String[] getDeckStates(String deckName) {
         Deck deck = getDeck(deckName);
         String[] states = new String[]{deck.getName(), deck.getHeroType().toString(), Float.toString(deck.getWinRatio())
-                , Integer.toString(deck.getWins()),Integer.toString(deck.getGamesPlayed()), Float.toString(deck.getManaAverage()), deck.getMostUsedCard()};
+                , Integer.toString(deck.getWins()), Integer.toString(deck.getGamesPlayed()), Float.toString(deck.getManaAverage()), deck.getMostUsedCard()};
         return states;
     }
 
@@ -171,7 +171,8 @@ public class DeckController {
             int numberOfThisCardInThisDeck = Collections.frequency(deck.getCards(), card);
             if (numberOfThisCardInPlayersCards > numberOfThisCardInThisDeck) {
                 deck.addCard(card);
-            } else throw new DeckControllerException("You only have "+numberOfThisCardInPlayersCards+" of this card. Can't have more in a deck");
+            } else
+                throw new DeckControllerException("You only have " + numberOfThisCardInPlayersCards + " of this card. Can't have more in a deck");
         }
     }
 
@@ -235,5 +236,9 @@ public class DeckController {
 
     public void updateCardUsages(Deck outDatedDeck, HashMap<String, Integer> newCardUsage) {
         outDatedDeck.setCardsUsage(newCardUsage);
+    }
+
+    public boolean deckIsAvailable(Deck deck) {
+        return Deck.getMinimumCardsInDeck() <= deck.getNumberOfCards();
     }
 }

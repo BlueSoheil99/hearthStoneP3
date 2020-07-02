@@ -6,12 +6,14 @@ import edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.DeckControllerE
 import edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.PlayerControllerException;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.*;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.CollectionPanel;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play.OpponentSelectionPanel;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play.PlayStarterPanel;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play.PlayPanel;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.CardShape;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.starter.LoginPanel;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.starter.SignUpPanel;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.*;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.ClickListener;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Deck;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Heroes.HeroTypes;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.InfoPassives.InfoPassive;
@@ -85,7 +87,7 @@ public class Administer {
                     "current deck is not available", JOptionPane.ERROR_MESSAGE);
             runCollection();
         } else {
-            Logger.log(LogTypes.NAVIGATION, "To PassiveSelector");
+            Logger.log(LogTypes.NAVIGATION, "To PlayStarter");
             GameController.setNewGame();
             GameController gameController = GameController.getInstance();
             PlayStarterPanel playStarterPanel = new PlayStarterPanel();
@@ -93,15 +95,21 @@ public class Administer {
                 gameController.setPassive(objName);
                 Logger.log(LogTypes.PLAY, "passive '" + objName + "' selected");
                 System.out.println("passive selected  " + objName);
-//                selectOpponent(gameController); //todo uncomment this line for phase3 and move the line below to selectOpponent method
-                startGame(gameController);
+                selectOpponent(gameController);
             });
             mainFrame.initFrame(playStarterPanel);
         }
     }
 
-    private void selectOpponent(GameController gameController){
-        //this load up a panel with different Options for opponent. for now it will just show other decks that are available
+    private void selectOpponent(GameController gameController) {
+        OpponentSelectionPanel opponentSelectionPanel = new OpponentSelectionPanel();
+        opponentSelectionPanel.setClickListener(objName -> {
+            gameController.setOpponent(objName);
+            System.out.println(objName + " is selected");//todo log
+            startGame(gameController);
+        });
+
+        mainFrame.initFrame(opponentSelectionPanel);
     }
 
     private void startGame(GameController gameController) {
@@ -219,7 +227,7 @@ public class Administer {
         return cardShapes;
     }
 
-    public ArrayList<CardShape> getCardShapes(ArrayList<Card> cards){
+    public ArrayList<CardShape> getCardShapes(ArrayList<Card> cards) {
         ArrayList<CardShape> allCards = getAllShapesOfCards();
         ArrayList<CardShape> cardShapes = new ArrayList<>();
         for (Card card : cards) {
@@ -236,6 +244,7 @@ public class Administer {
         }
         return cardShapes;
     }
+
     //////////////////
     //////shop////////
     public int getPlayerCoins() {
@@ -327,6 +336,7 @@ public class Administer {
     public void setCurrentDeck(String selectedDeck) throws DeckControllerException {
         deckController.setCurrentDeck(selectedDeck);
     }
+
     public String getCurrentDeck() {
         if (deckController.getCurrentDeck() == null) return null;
         return deckController.getCurrentDeck().getName();
@@ -347,4 +357,16 @@ public class Administer {
         return passives;
     }
 
+    public LinkedHashMap<String, String> getAvailableDecks() {
+        LinkedHashMap<String, String> decks = getPlayerDecks();
+        LinkedHashMap<String, String> availableDecks = new LinkedHashMap<>();
+        for (String deckName : decks.keySet()) {
+            if (!deckName.equals(deckController.getCurrentDeck().getName())) {
+                if (deckController.deckIsAvailable(deckController.getDeck(deckName))) {
+                    availableDecks.put(deckName, decks.get(deckName));
+                }
+            }
+        }
+        return availableDecks;
+    }
 }
