@@ -59,6 +59,7 @@ public class GameController {
         properties = PlayLogicConfig.getInstance();
         cardsPlayerChangedForHisFirstHand = new ArrayList<>();
         setInitialMana(1);
+        setNumberOfCardsCanBeDrawn(1);
         turnsPlayerPlayed = 0;
         playerController = PlayerController.getInstance();
         deckController = DeckController.getInstance();
@@ -175,15 +176,24 @@ public class GameController {
         if (playerHand == null) {
             playerHand = new ArrayList<>();
             for (int i = 0; i < 3; i++) playerHand.add(playerCards.pop());
-        } else {
-            if (turnsPlayerPlayed > 0) { //this works when we change our cards at the beginning or when we want to show our hand for the first time in playPanel
-                for (int i = 0; i < numberOfCardsCanBeDrawn; i++) { //numberOfCardsCanBeDrawn is for twiceDraw
-                    //todo  7(?)cards limit should be coded here
-                    playerHand.add(playerCards.pop());
-                }
-            }
         }
         return playerHand;
+    }
+
+    public void updateHand() {
+        if (turnsPlayerPlayed > 0) { //this works when we change our cards at the beginning or when we want to show our hand for the first time in playPanel
+            for (int i = 0; i < numberOfCardsCanBeDrawn; i++) {//numberOfCardsCanBeDrawn is for twiceDraw
+                if (playerCards.size() > 0) playerHand.add(playerCards.pop());
+            }
+            checkHandLimit();
+        }
+    }
+
+    private void checkHandLimit() {
+        if (playerHand.size() > properties.getMaximumCardsInHand()) {
+            playerHand.remove(playerHand.size() - 1);
+            checkHandLimit();
+        }
     }
 
     public ArrayList<Card> drawHandAgain(String cardName) throws PlayException {
@@ -245,9 +255,10 @@ public class GameController {
             increaseMana();
         }
     }
-    private void increaseMana(){
+
+    private void increaseMana() {
         playerMana = playerInitialMana + turnsPlayerPlayed;
-        if (playerMana>properties.getMaximumMana()) playerMana=properties.getMaximumMana();
+        if (playerMana > properties.getMaximumMana()) playerMana = properties.getMaximumMana();
     }
 
     public String getPlayingSide() {

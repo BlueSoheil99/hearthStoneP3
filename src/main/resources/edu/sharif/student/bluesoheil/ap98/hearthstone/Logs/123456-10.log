@@ -1370,3 +1370,24 @@ NAVIGATION		2020/06/29  16:25:50	Back to previous panel
 NAVIGATION		2020/06/29  16:25:51	To PassiveSelector
 CLICK_BUTTON		2020/06/29  16:25:53	button: EXIT selected .
 PLAYER		2020/06/29  16:25:54	123456 logged out
+PLAYER		2020/07/02  12:17:49	123456 logged in
+NAVIGATION		2020/07/02  12:17:50	To Status
+CLICK_BUTTON		2020/07/02  12:17:55	button: BACK selected .
+NAVIGATION		2020/07/02  12:17:55	Back to previous panel
+NAVIGATION		2020/07/02  12:17:58	To Collection
+CLICK_BUTTON		2020/07/02  12:17:59	button: BACK selected .
+NAVIGATION		2020/07/02  12:17:59	Back to previous panel
+CLICK_BUTTON		2020/07/02  12:18:00	button: LOGOUT  selected.
+PLAYER		2020/07/02  12:18:02	123456 logged out
+PLAYER		2020/07/02  12:19:04	123456 logged in
+NAVIGATION		2020/07/02  12:19:05	To Collection
+CLICK_BUTTON		2020/07/02  12:19:06	deck:  HunterDefaultDeck  selected .
+CLICK_BUTTON		2020/07/02  12:19:19	button : NEW DECK selected.
+COLLECTION		2020/07/02  12:19:26	512 is now available with mage
+CLICK_BUTTON		2020/07/02  12:19:49	button: EXIT selected .
+PLAYER		2020/07/02  12:19:50	123456 logged out
+PLAYER		2020/07/02  12:26:45	123456 logged in
+NAVIGATION		2020/07/02  12:26:47	To Status
+CLICK_BUTTON		2020/07/02  12:27:02	button: BACK selected .
+NAVIGATION		2020/07/02  12:27:02	Back to previous panel
+PLAYER		2020/07/02  12:27:05	123456 logged out

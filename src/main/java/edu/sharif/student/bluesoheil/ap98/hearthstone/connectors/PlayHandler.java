@@ -131,6 +131,10 @@ public class PlayHandler {
         gameController.changeTurns();
     }
 
+    public void updateHand() {
+        gameController.updateHand();
+    }
+
     //
     ///
     ////other methods

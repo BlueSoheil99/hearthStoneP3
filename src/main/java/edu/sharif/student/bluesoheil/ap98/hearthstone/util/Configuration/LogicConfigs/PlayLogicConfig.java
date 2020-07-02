@@ -6,7 +6,7 @@ import edu.sharif.student.bluesoheil.ap98.hearthstone.util.Configuration.Configs
 public class PlayLogicConfig extends LogicConfig {
     private static PlayLogicConfig instance;
     private Configs config;
-    private int maximumStartHints , maximumMana;
+    private int maximumStartHints , maximumMana, maximumCardsInHand;
 
     @Override
     protected void setProperties() {
@@ -17,6 +17,7 @@ public class PlayLogicConfig extends LogicConfig {
     protected void initialize() {
         maximumStartHints = config.readInt("maximumStartHints");
         maximumMana = config.readInt("maximumMana");
+        maximumCardsInHand = config.readInt("maximumCardsInHand");
     }
 
     public static PlayLogicConfig getInstance(){
@@ -30,5 +31,9 @@ public class PlayLogicConfig extends LogicConfig {
 
     public int getMaximumMana() {
         return maximumMana;
+    }
+
+    public int getMaximumCardsInHand() {
+        return maximumCardsInHand;
     }
 }

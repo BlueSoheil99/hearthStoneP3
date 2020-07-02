@@ -15,7 +15,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class PlayerPanel extends SidePanel {
-
+    private static int cardPanelWidth =1000;
+    private static int cardPanelHeight = 250;
     //todo show quest&rewards progress
     private JButton endTurnBtn, playBtn;
     private JButton rightBtn, leftBtn;
@@ -37,11 +38,12 @@ public class PlayerPanel extends SidePanel {
 
     private void create() {
         cardPanel = new CardPanel();
+        cardPanel.setPreferredSize(new Dimension(cardPanelWidth,cardPanelHeight));
         endTurnBtn = new JButton("End Turn");
         endTurnBtn.setBackground(Color.GREEN);
         playBtn = new JButton("Play");
-        rightBtn = new JButton("-->");
-        leftBtn = new JButton("<--");
+        rightBtn = new JButton("~>");
+        leftBtn = new JButton("<~");
         setActionListeners();
     }
 
@@ -70,11 +72,13 @@ public class PlayerPanel extends SidePanel {
         /////
         gb.gridy = 0;
         gb.gridx = 4;
-        add(cardPanel, gb);
+        gb.gridwidth=3;
+        add(new JScrollPane(cardPanel), gb);
     }
 
     void updateHand(ArrayList<CardShape> latestHand, HashMap<String,Integer> latestHeroStates) {
-        cardPanel.setCards(latestHand);
+        cardPanel.setCards(latestHand,latestHand.size());
+
         heroPanel.updateStates(latestHeroStates.get("HP"), latestHeroStates.get("MANA"), latestHeroStates.get("CARDS"));
     }
 
