@@ -6,7 +6,6 @@ import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.GamePanel;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.CardClickListener;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.PlayActionListener;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.Configuration.GuiConfigs.PlayConfig;
-import javafx.scene.control.ScrollBar;
 
 import javax.swing.*;
 import java.awt.*;
@@ -41,6 +40,7 @@ public class PlayPanel extends GamePanel {
 
     @Override
     protected void createFields() {
+        eventBox = new EventBox();
         playHandler = PlayHandler.getInstance();
         setupPlayerPanel();
         opponentPanel = playHandler.getOpponentPanel();
@@ -54,39 +54,25 @@ public class PlayPanel extends GamePanel {
     @Override
     protected void init() {
         opponentPanel.setPreferredSize(new Dimension(getWidth(), getHeight() / 7 * 2));
-//        playerPanel.setPreferredSize(new Dimension(getWidth(), getHeight() / 7 * 2));
         board.setPreferredSize(new Dimension(getWidth(), getHeight() / 7 * 3));
-        eventBox = new EventBox();
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         add(opponentPanel);
         add(board);
-//        JScrollPane scrollPane1 = new JScrollPane(playerPanel);
-//        scrollPane1.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
-////        scrollPane1.setHorizontalScrollBarPolicy(ScrollPaneConstants.H);
         add(playerPanel);
 
-        JScrollPane scrollPane2 = new JScrollPane(eventBox);
-//        scrollPane2.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
-//        scrollPane2.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-        add(scrollPane2);
+        JScrollPane scrollPane = new JScrollPane(eventBox);
+        scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+        scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        scrollPane.setPreferredSize(new Dimension(getWidth(), PlayConfig.getInstance().getEventHeight()));
+        add(scrollPane);
     }
 
     private void setupBoardPanel() {
         board = new BoardPanel();
-        board.setPlayerCardClickListeners(new CardClickListener() {
-            @Override
-            public void selectCard(ActualCard selectedCard) {
-                playerSelectedCard = selectedCard;
-            }
-            //todo complete it
-        });
-        board.setOpponentCardClickListeners(new CardClickListener() {
-            @Override
-            public void selectCard(ActualCard selectedCard) {
-                opponentSelectedCard = selectedCard;
-            }
-            //todo complete it
-        });
+        //todo complete it
+        board.setPlayerCardClickListeners(selectedCard -> playerSelectedCard = selectedCard);
+        //todo complete it
+        board.setOpponentCardClickListeners(selectedCard -> opponentSelectedCard = selectedCard);
     }
 
     private void setupPausePanel() {
@@ -112,7 +98,6 @@ public class PlayPanel extends GamePanel {
     private void setupPlayerPanel() {
         playerPanel = playHandler.getPlayerPanel();
         playerPanel.updateHand(playHandler.getHand(), playHandler.getHeroStates());
-//        playerPanel.setSelectMode(false);
         ////setListeners////
         playerPanel.setClickListenerForCards(objName -> playerSelectedCardInHand = objName);
         playerPanel.setClickListenerForActions(new PlayActionListener() {
@@ -215,13 +200,13 @@ public class PlayPanel extends GamePanel {
     private void summonMinion(String cardName) throws PlayException {
         //todo have a minionCard and show possible arranges of cards in board before calling summonAndGetCard method in playHandler\
         //todo is there any need to have a different method for beasts?
-        MinionActualCard cardToSummon = null;
+        MinionActualCard cardToSummon;
         cardToSummon = playHandler.summonAndGetMinion(cardName);
         board.addCardForPlayer(cardToSummon);
     }
 
     private void summonWeapon(String cardName) throws PlayException {
-        WeaponActualCard weaponToSummon = null;
+        WeaponActualCard weaponToSummon;
         weaponToSummon = playHandler.summonAndGetWeapon(cardName);
         playerPanel.setWeaponCard(weaponToSummon);
     }

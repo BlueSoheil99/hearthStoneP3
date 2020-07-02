@@ -15,8 +15,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class PlayerPanel extends SidePanel {
-    private static int cardPanelWidth =1000;
-    private static int cardPanelHeight = 250;
+    private static int cardPanelWidth = 1000;
+    private static int cardPanelHeight = 280;
     //todo show quest&rewards progress
     private JButton endTurnBtn, playBtn;
     private JButton rightBtn, leftBtn;
@@ -29,6 +29,7 @@ public class PlayerPanel extends SidePanel {
 
     public PlayerPanel(HeroTypes hero, int hp, int startingMana) {
         super();
+        setBorder(BorderFactory.createMatteBorder(5, 5, 5, 5, new Color(0x562C1C)));
         heroPanel = new HeroPanel(hero, hp, startingMana);
         create();
         init();
@@ -38,7 +39,6 @@ public class PlayerPanel extends SidePanel {
 
     private void create() {
         cardPanel = new CardPanel();
-        cardPanel.setPreferredSize(new Dimension(cardPanelWidth,cardPanelHeight));
         endTurnBtn = new JButton("End Turn");
         endTurnBtn.setBackground(Color.GREEN);
         playBtn = new JButton("Play");
@@ -50,20 +50,18 @@ public class PlayerPanel extends SidePanel {
     private void init() {
         setLayout(new GridBagLayout());
         GridBagConstraints gb = new GridBagConstraints();
-        gb.insets = new Insets(5, 5, 5, 5);
+        gb.insets = new Insets(0, 5, 0, 5);
 
-        if (!isOpponent) {
-            gb.gridx = 1;
-            gb.gridy = 0;
-            add(endTurnBtn, gb);
-            gb.gridx = 0;
-            gb.gridy = 1;
-            add(leftBtn, gb);
-            gb.gridx = 1;
-            add(playBtn, gb);
-            gb.gridx = 2;
-            add(rightBtn, gb);
-        }
+        gb.gridx = 1;
+        gb.gridy = 0;
+        add(endTurnBtn, gb);
+        gb.gridx = 0;
+        gb.gridy = 1;
+        add(leftBtn, gb);
+        gb.gridx = 1;
+        add(playBtn, gb);
+        gb.gridx = 2;
+        add(rightBtn, gb);
         /////
         gb.gridy = 0;
         gb.gridx = 3;
@@ -72,34 +70,31 @@ public class PlayerPanel extends SidePanel {
         /////
         gb.gridy = 0;
         gb.gridx = 4;
-        gb.gridwidth=3;
-        add(new JScrollPane(cardPanel), gb);
+        gb.gridwidth = 3;
+        JScrollPane jScrollPane = new JScrollPane(cardPanel);
+        jScrollPane.setPreferredSize(new Dimension(cardPanelWidth, cardPanelHeight));
+        jScrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+        add(jScrollPane, gb);
     }
 
-    void updateHand(ArrayList<CardShape> latestHand, HashMap<String,Integer> latestHeroStates) {
-        cardPanel.setCards(latestHand,latestHand.size());
-
+    void updateHand(ArrayList<CardShape> latestHand, HashMap<String, Integer> latestHeroStates) {
+        cardPanel.setCards(latestHand, latestHand.size());
         heroPanel.updateStates(latestHeroStates.get("HP"), latestHeroStates.get("MANA"), latestHeroStates.get("CARDS"));
     }
 
-    void endTurn(){
+    void endTurn() {
         endTurnBtn.setEnabled(false);
         playBtn.setEnabled(false);
         rightBtn.setEnabled(false);
         leftBtn.setEnabled(false);
         //todo card ha barAx shan va card haye tu board disabled shan
     }
-    void startTurn(){
+
+    void startTurn() {
         endTurnBtn.setEnabled(true);
         playBtn.setEnabled(true);
         rightBtn.setEnabled(true);
         leftBtn.setEnabled(true);
-    }
-
-    void setOpponent(boolean isOpponent) {
-        this.isOpponent = isOpponent;
-        init();
-        //todo make it correct
     }
 
     void setClickListenerForCards(ClickListener clickListener) {
@@ -132,12 +127,4 @@ public class PlayerPanel extends SidePanel {
         });
     }
 
-
-//    void setSelectMode(boolean isAnyCardSelected) {
-//        cardPanel.unselectCard();
-//        playBtn.setEnabled(isAnyCardSelected);
-//        rightBtn.setEnabled(true);
-//        leftBtn.setEnabled(true);
-//
-//    }
 }
