@@ -1,6 +1,7 @@
 package edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems;
 
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.Configuration.GuiConfigs.GuiConstants;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.util.ImageLoader;
 
 import javax.swing.*;
 import java.awt.*;
@@ -8,12 +9,17 @@ import java.awt.image.BufferedImage;
 import java.awt.image.ColorModel;
 import java.awt.image.WritableRaster;
 
-//todo change JButton to something less complicated
+//todo change JButton to something less complicated. phase4 inshalla !
 public class CardShape extends JButton {
     private static final int CARD_WIDTH = GuiConstants.getInstance().getCardWidth();
     private static final int CARD_HEIGHT = GuiConstants.getInstance().getCardHeight();
     private static final int PASSIVE_WIDTH = GuiConstants.getInstance().getPassiveWidth();
     private static final int PASSIVE_HEIGHT = GuiConstants.getInstance().getPassiveHeight();
+    // todo cards must have a backCover and this can be changed in settings
+//    private static ImageIcon backCover = new ImageIcon(ImageLoader.loadImage(GuiConstants.getInstance().getDefaultBackCover));
+//    public static void setBackCover(ImageIcon backCover){
+//        CardShape.backCover = backCover;
+//    }
     private String cardName;
     protected ImageIcon icon;
 

@@ -36,8 +36,8 @@ public class WeaponActualCard extends ActualCard {
 
     @Override
     protected void createLabels() {
-        cardName = new CardLabel(card.getName(),new Font("Helvetica", Font.PLAIN , 15));
-        description = new CardLabel("",new Font("Helvetica", Font.ITALIC , 15));
+        cardName = new CardLabel(card.getName(), new Font("Helvetica", Font.PLAIN, 15));
+        description = new CardLabel("", new Font("Helvetica", Font.ITALIC, 15));
         attackLabel = new JLabel("", cardIcons.get("attack"), JLabel.CENTER);
         durabilityLabel = new JLabel("", cardIcons.get("durability"), JLabel.CENTER);
         attack = new CardLabel("");
@@ -60,16 +60,16 @@ public class WeaponActualCard extends ActualCard {
     @Override
     protected void setupGraphics() {
         super.setupGraphics();
-        cardName.setBounds(0,2*FIELD_HEIGHT , 4*FIELD_WIDTH,FIELD_HEIGHT);
+        cardName.setBounds(5, 2 * FIELD_HEIGHT, CARD_WIDTH - 10, FIELD_HEIGHT);
         add(cardName);
         ///////
-        attackLabel.setBounds(0,3*FIELD_HEIGHT , FIELD_WIDTH,FIELD_HEIGHT);
-        attack.setBounds(10,3*FIELD_HEIGHT , FIELD_WIDTH,FIELD_HEIGHT);
+        attackLabel.setBounds(0, 3 * FIELD_HEIGHT, FIELD_WIDTH, FIELD_HEIGHT);
+        attack.setBounds(10, 3 * FIELD_HEIGHT, FIELD_WIDTH, FIELD_HEIGHT);
         add(attack);
         add(attackLabel);
         ///////
-        durabilityLabel.setBounds(3*FIELD_WIDTH,3*FIELD_HEIGHT , FIELD_WIDTH,FIELD_HEIGHT);
-        durability.setBounds(3*FIELD_WIDTH+10,3*FIELD_HEIGHT , FIELD_WIDTH,FIELD_HEIGHT);
+        durabilityLabel.setBounds(3 * FIELD_WIDTH, 3 * FIELD_HEIGHT, FIELD_WIDTH, FIELD_HEIGHT);
+        durability.setBounds(3 * FIELD_WIDTH + 10, 3 * FIELD_HEIGHT, FIELD_WIDTH, FIELD_HEIGHT);
         add(durability);
         add(durabilityLabel);
         ////////
@@ -79,7 +79,7 @@ public class WeaponActualCard extends ActualCard {
         this.attack.setText(String.valueOf(attack));
     }
 
-    void setDurability(int durability){
+    void setDurability(int durability) {
         this.durability.setText(String.valueOf(durability));
     }
 

@@ -1359,460 +1359,125 @@ CLICK_BUTTON		2020/06/24  16:09:02	delete confirmed
 COLLECTION		2020/06/24  16:09:03	jnm., has been deleted from player's decks
 CLICK_BUTTON		2020/06/24  16:11:13	button: EXIT selected .
 PLAYER		2020/06/24  16:11:13	123456 logged out
-PLAYER		2020/06/26  12:56:46	123456 logged in
-NAVIGATION		2020/06/26  12:56:48	To Status
-STATUS		2020/06/26  12:56:51	newDecknew states showed .
-CLICK_BUTTON		2020/06/26  12:56:51	deck:  newDecknew  selected .
-STATUS		2020/06/26  12:56:53	newDeck2 states showed .
-CLICK_BUTTON		2020/06/26  12:56:53	deck:  newDeck2  selected .
-STATUS		2020/06/26  12:56:54	newDeck states showed .
-CLICK_BUTTON		2020/06/26  12:56:54	deck:  newDeck  selected .
-STATUS		2020/06/26  12:56:56	MageDefaultDeck states showed .
-CLICK_BUTTON		2020/06/26  12:56:56	deck:  MageDefaultDeck  selected .
-STATUS		2020/06/26  12:56:57	RogueDefaultDeck states showed .
-CLICK_BUTTON		2020/06/26  12:56:57	deck:  RogueDefaultDeck  selected .
-STATUS		2020/06/26  12:56:59	PriestDefaultDeck states showed .
-CLICK_BUTTON		2020/06/26  12:56:59	deck:  PriestDefaultDeck  selected .
-STATUS		2020/06/26  12:57:02	PriestDefaultDeck states showed .
-CLICK_BUTTON		2020/06/26  12:57:02	deck:  PriestDefaultDeck  selected .
-STATUS		2020/06/26  12:57:05	PriestDefaultDeck states showed .
-CLICK_BUTTON		2020/06/26  12:57:05	deck:  PriestDefaultDeck  selected .
-STATUS		2020/06/26  12:57:06	HunterDefaultDeck states showed .
-CLICK_BUTTON		2020/06/26  12:57:06	deck:  HunterDefaultDeck  selected .
-STATUS		2020/06/26  12:57:10	HunterDefaultDeck states showed .
-CLICK_BUTTON		2020/06/26  12:57:10	deck:  HunterDefaultDeck  selected .
-STATUS		2020/06/26  12:57:23	HunterDefaultDeck states showed .
-CLICK_BUTTON		2020/06/26  12:57:23	deck:  HunterDefaultDeck  selected .
-STATUS		2020/06/26  12:57:27	HunterDefaultDeck states showed .
-CLICK_BUTTON		2020/06/26  12:57:27	deck:  HunterDefaultDeck  selected .
-STATUS		2020/06/26  12:57:28	PriestDefaultDeck states showed .
-CLICK_BUTTON		2020/06/26  12:57:28	deck:  PriestDefaultDeck  selected .
-STATUS		2020/06/26  12:57:30	RogueDefaultDeck states showed .
-CLICK_BUTTON		2020/06/26  12:57:30	deck:  RogueDefaultDeck  selected .
-STATUS		2020/06/26  12:57:45	PriestDefaultDeck states showed .
-CLICK_BUTTON		2020/06/26  12:57:45	deck:  PriestDefaultDeck  selected .
-STATUS		2020/06/26  12:57:47	HunterDefaultDeck states showed .
-CLICK_BUTTON		2020/06/26  12:57:47	deck:  HunterDefaultDeck  selected .
-STATUS		2020/06/26  12:57:55	HunterDefaultDeck states showed .
-CLICK_BUTTON		2020/06/26  12:57:55	deck:  HunterDefaultDeck  selected .
-STATUS		2020/06/26  12:58:03	PriestDefaultDeck states showed .
-CLICK_BUTTON		2020/06/26  12:58:03	deck:  PriestDefaultDeck  selected .
-STATUS		2020/06/26  12:58:04	RogueDefaultDeck states showed .
-CLICK_BUTTON		2020/06/26  12:58:04	deck:  RogueDefaultDeck  selected .
-STATUS		2020/06/26  12:58:05	MageDefaultDeck states showed .
-CLICK_BUTTON		2020/06/26  12:58:05	deck:  MageDefaultDeck  selected .
-STATUS		2020/06/26  12:58:07	RogueDefaultDeck states showed .
-CLICK_BUTTON		2020/06/26  12:58:07	deck:  RogueDefaultDeck  selected .
-STATUS		2020/06/26  12:58:08	PriestDefaultDeck states showed .
-CLICK_BUTTON		2020/06/26  12:58:08	deck:  PriestDefaultDeck  selected .
-STATUS		2020/06/26  12:58:12	HunterDefaultDeck states showed .
-CLICK_BUTTON		2020/06/26  12:58:12	deck:  HunterDefaultDeck  selected .
-STATUS		2020/06/26  12:58:15	PriestDefaultDeck states showed .
-CLICK_BUTTON		2020/06/26  12:58:15	deck:  PriestDefaultDeck  selected .
-STATUS		2020/06/26  12:58:16	MageDefaultDeck states showed .
-CLICK_BUTTON		2020/06/26  12:58:16	deck:  MageDefaultDeck  selected .
-STATUS		2020/06/26  12:58:17	newDeck states showed .
-CLICK_BUTTON		2020/06/26  12:58:17	deck:  newDeck  selected .
-CLICK_BUTTON		2020/06/26  12:58:19	button: BACK selected .
-NAVIGATION		2020/06/26  12:58:19	Back to previous panel
-NAVIGATION		2020/06/26  12:58:21	To Collection
-CLICK_BUTTON		2020/06/26  12:58:25	deck:  newDecknew  selected .
-CLICK_BUTTON		2020/06/26  12:58:31	button: EXIT selected .
-PLAYER		2020/06/26  12:58:43	123456 logged out
-PLAYER		2020/06/26  14:10:59	123456 logged in
-NAVIGATION		2020/06/26  14:11:02	To Status
-STATUS		2020/06/26  14:11:04	MageDefaultDeck states showed .
-CLICK_BUTTON		2020/06/26  14:11:04	deck:  MageDefaultDeck  selected .
-STATUS		2020/06/26  14:11:05	newDeck states showed .
-CLICK_BUTTON		2020/06/26  14:11:05	deck:  newDeck  selected .
-STATUS		2020/06/26  14:11:06	newDeck states showed .
-CLICK_BUTTON		2020/06/26  14:11:06	deck:  newDeck  selected .
-STATUS		2020/06/26  14:11:07	newDeck2 states showed .
-CLICK_BUTTON		2020/06/26  14:11:07	deck:  newDeck2  selected .
-STATUS		2020/06/26  14:11:08	newDecknew states showed .
-CLICK_BUTTON		2020/06/26  14:11:08	deck:  newDecknew  selected .
-STATUS		2020/06/26  14:11:10	PriestDefaultDeck states showed .
-CLICK_BUTTON		2020/06/26  14:11:10	deck:  PriestDefaultDeck  selected .
-STATUS		2020/06/26  14:11:11	RogueDefaultDeck states showed .
-CLICK_BUTTON		2020/06/26  14:11:11	deck:  RogueDefaultDeck  selected .
-STATUS		2020/06/26  14:11:13	HunterDefaultDeck states showed .
-CLICK_BUTTON		2020/06/26  14:11:13	deck:  HunterDefaultDeck  selected .
-STATUS		2020/06/26  14:11:15	WarlockDefaultDeck states showed .
-CLICK_BUTTON		2020/06/26  14:11:15	deck:  WarlockDefaultDeck  selected .
-STATUS		2020/06/26  14:11:17	HunterDefaultDeck states showed .
-CLICK_BUTTON		2020/06/26  14:11:17	deck:  HunterDefaultDeck  selected .
-STATUS		2020/06/26  14:11:18	WarlockDefaultDeck states showed .
-CLICK_BUTTON		2020/06/26  14:11:18	deck:  WarlockDefaultDeck  selected .
-STATUS		2020/06/26  14:11:20	RogueDefaultDeck states showed .
-CLICK_BUTTON		2020/06/26  14:11:20	deck:  RogueDefaultDeck  selected .
-STATUS		2020/06/26  14:11:21	PriestDefaultDeck states showed .
-CLICK_BUTTON		2020/06/26  14:11:21	deck:  PriestDefaultDeck  selected .
-STATUS		2020/06/26  14:11:21	newDecknew states showed .
-CLICK_BUTTON		2020/06/26  14:11:21	deck:  newDecknew  selected .
-STATUS		2020/06/26  14:11:22	newDeck2 states showed .
-CLICK_BUTTON		2020/06/26  14:11:22	deck:  newDeck2  selected .
-STATUS		2020/06/26  14:11:23	newDeck states showed .
-CLICK_BUTTON		2020/06/26  14:11:23	deck:  newDeck  selected .
-STATUS		2020/06/26  14:11:24	MageDefaultDeck states showed .
-CLICK_BUTTON		2020/06/26  14:11:24	deck:  MageDefaultDeck  selected .
-CLICK_BUTTON		2020/06/26  14:11:26	button: BACK selected .
-NAVIGATION		2020/06/26  14:11:26	Back to previous panel
-NAVIGATION		2020/06/26  14:11:27	To Collection
-CLICK_BUTTON		2020/06/26  14:11:30	deck:  newDecknew  selected .
-CLICK_BUTTON		2020/06/26  14:11:34	card: ABOMINATION  selected.
-CLICK_BUTTON		2020/06/26  14:11:37	button : ADD CARD selected.
-COLLECTION		2020/06/26  14:11:38	ABOMINATION has been added to newDecknew
-CLICK_BUTTON		2020/06/26  14:11:39	button: BACK selected .
-NAVIGATION		2020/06/26  14:11:39	Back to previous panel
-NAVIGATION		2020/06/26  14:11:42	To Status
-STATUS		2020/06/26  14:11:45	newDecknew states showed .
-CLICK_BUTTON		2020/06/26  14:11:45	deck:  newDecknew  selected .
-STATUS		2020/06/26  14:11:46	newDeck2 states showed .
-CLICK_BUTTON		2020/06/26  14:11:46	deck:  newDeck2  selected .
-STATUS		2020/06/26  14:11:48	newDeck states showed .
-CLICK_BUTTON		2020/06/26  14:11:48	deck:  newDeck  selected .
-STATUS		2020/06/26  14:11:51	newDecknew states showed .
-CLICK_BUTTON		2020/06/26  14:11:51	deck:  newDecknew  selected .
-STATUS		2020/06/26  14:11:55	newDeck states showed .
-CLICK_BUTTON		2020/06/26  14:11:55	deck:  newDeck  selected .
-STATUS		2020/06/26  14:11:56	newDeck2 states showed .
-CLICK_BUTTON		2020/06/26  14:11:56	deck:  newDeck2  selected .
-CLICK_BUTTON		2020/06/26  14:11:57	button: BACK selected .
-NAVIGATION		2020/06/26  14:11:57	Back to previous panel
-NAVIGATION		2020/06/26  14:11:59	To Collection
-CLICK_BUTTON		2020/06/26  14:12:01	deck:  newDecknew  selected .
-CLICK_BUTTON		2020/06/26  14:12:02	card: HIGH PRIEST AMET  selected.
-CLICK_BUTTON		2020/06/26  14:12:05	button : ADD CARD selected.
-ERROR: COLLECTION	2020/06/26  14:12:06	edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.DeckControllerException: this card is not valid for this hero
-	at edu.sharif.student.bluesoheil.ap98.hearthstone.models.Deck.addCard(Deck.java:140)
-	at edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.DeckController.addCard(DeckController.java:173)
-	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer.addCardToDeck(Administer.java:306)
-	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.CollectionHandler.addCardToDeck(CollectionHandler.java:54)
-	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.CollectionPanel$1.addCard(CollectionPanel.java:149)
-	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.FilterPanel$5.actionPerformed(FilterPanel.java:342)
-	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
-	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
-	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
-	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
-	at java.awt.Component.processMouseEvent(Component.java:6539)
-	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
-	at java.awt.Component.processEvent(Component.java:6304)
-	at java.awt.Container.processEvent(Container.java:2239)
-	at java.awt.Component.dispatchEventImpl(Component.java:4889)
-	at java.awt.Container.dispatchEventImpl(Container.java:2297)
-	at java.awt.Component.dispatchEvent(Component.java:4711)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
-	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
-	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
-	at java.awt.Container.dispatchEventImpl(Container.java:2283)
-	at java.awt.Window.dispatchEventImpl(Window.java:2746)
-	at java.awt.Component.dispatchEvent(Component.java:4711)
-	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
-	at java.awt.EventQueue.access$500(EventQueue.java:97)
-	at java.awt.EventQueue$3.run(EventQueue.java:709)
-	at java.awt.EventQueue$3.run(EventQueue.java:703)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
-	at java.awt.EventQueue$4.run(EventQueue.java:733)
-	at java.awt.EventQueue$4.run(EventQueue.java:731)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
-	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
-	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
-
-CLICK_BUTTON		2020/06/26  14:12:08	card: DREADSCALE  selected.
-CLICK_BUTTON		2020/06/26  14:12:09	button : ADD CARD selected.
-ERROR: COLLECTION	2020/06/26  14:12:11	edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.DeckControllerException: this card is not valid for this hero
-	at edu.sharif.student.bluesoheil.ap98.hearthstone.models.Deck.addCard(Deck.java:140)
-	at edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.DeckController.addCard(DeckController.java:173)
-	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer.addCardToDeck(Administer.java:306)
-	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.CollectionHandler.addCardToDeck(CollectionHandler.java:54)
-	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.CollectionPanel$1.addCard(CollectionPanel.java:149)
-	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.FilterPanel$5.actionPerformed(FilterPanel.java:342)
-	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
-	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
-	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
-	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
-	at java.awt.Component.processMouseEvent(Component.java:6539)
-	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
-	at java.awt.Component.processEvent(Component.java:6304)
-	at java.awt.Container.processEvent(Container.java:2239)
-	at java.awt.Component.dispatchEventImpl(Component.java:4889)
-	at java.awt.Container.dispatchEventImpl(Container.java:2297)
-	at java.awt.Component.dispatchEvent(Component.java:4711)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
-	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
-	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
-	at java.awt.Container.dispatchEventImpl(Container.java:2283)
-	at java.awt.Window.dispatchEventImpl(Window.java:2746)
-	at java.awt.Component.dispatchEvent(Component.java:4711)
-	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
-	at java.awt.EventQueue.access$500(EventQueue.java:97)
-	at java.awt.EventQueue$3.run(EventQueue.java:709)
-	at java.awt.EventQueue$3.run(EventQueue.java:703)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
-	at java.awt.EventQueue$4.run(EventQueue.java:733)
-	at java.awt.EventQueue$4.run(EventQueue.java:731)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
-	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
-	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
-
-CLICK_BUTTON		2020/06/26  14:12:12	card: STORMHAMMER  selected.
-CLICK_BUTTON		2020/06/26  14:12:14	button : ADD CARD selected.
-COLLECTION		2020/06/26  14:12:15	STORMHAMMER has been added to newDecknew
-CLICK_BUTTON		2020/06/26  14:12:19	deck:  newDecknew  selected .
-CLICK_BUTTON		2020/06/26  14:12:20	button: BACK selected .
-NAVIGATION		2020/06/26  14:12:20	Back to previous panel
-NAVIGATION		2020/06/26  14:12:22	To Status
-STATUS		2020/06/26  14:12:23	newDecknew states showed .
-CLICK_BUTTON		2020/06/26  14:12:23	deck:  newDecknew  selected .
-STATUS		2020/06/26  14:12:25	newDeck2 states showed .
-CLICK_BUTTON		2020/06/26  14:12:25	deck:  newDeck2  selected .
-STATUS		2020/06/26  14:12:27	newDecknew states showed .
-CLICK_BUTTON		2020/06/26  14:12:27	deck:  newDecknew  selected .
-CLICK_BUTTON		2020/06/26  14:12:31	button: EXIT selected .
-PLAYER		2020/06/26  14:12:33	123456 logged out
-PLAYER		2020/07/02  15:00:26	123456 logged in
-NAVIGATION		2020/07/02  15:00:28	To Status
-STATUS		2020/07/02  15:00:29	HunterDefaultDeck states showed .
-CLICK_BUTTON		2020/07/02  15:00:29	deck:  HunterDefaultDeck  selected .
-STATUS		2020/07/02  15:00:30	RogueDefaultDeck states showed .
-CLICK_BUTTON		2020/07/02  15:00:30	deck:  RogueDefaultDeck  selected .
-STATUS		2020/07/02  15:00:31	newDecknew states showed .
-CLICK_BUTTON		2020/07/02  15:00:31	deck:  newDecknew  selected .
-STATUS		2020/07/02  15:00:32	newDeck states showed .
-CLICK_BUTTON		2020/07/02  15:00:32	deck:  newDeck  selected .
-STATUS		2020/07/02  15:00:33	newDeck states showed .
-CLICK_BUTTON		2020/07/02  15:00:33	deck:  newDeck  selected .
-STATUS		2020/07/02  15:00:34	MageDefaultDeck states showed .
-CLICK_BUTTON		2020/07/02  15:00:34	deck:  MageDefaultDeck  selected .
-STATUS		2020/07/02  15:00:36	newDeck2 states showed .
-CLICK_BUTTON		2020/07/02  15:00:36	deck:  newDeck2  selected .
-STATUS		2020/07/02  15:00:37	PriestDefaultDeck states showed .
-CLICK_BUTTON		2020/07/02  15:00:37	deck:  PriestDefaultDeck  selected .
-STATUS		2020/07/02  15:00:39	RogueDefaultDeck states showed .
-CLICK_BUTTON		2020/07/02  15:00:39	deck:  RogueDefaultDeck  selected .
-STATUS		2020/07/02  15:00:41	PriestDefaultDeck states showed .
-CLICK_BUTTON		2020/07/02  15:00:41	deck:  PriestDefaultDeck  selected .
-STATUS		2020/07/02  15:00:42	RogueDefaultDeck states showed .
-CLICK_BUTTON		2020/07/02  15:00:42	deck:  RogueDefaultDeck  selected .
-STATUS		2020/07/02  15:00:43	HunterDefaultDeck states showed .
-CLICK_BUTTON		2020/07/02  15:00:43	deck:  HunterDefaultDeck  selected .
-STATUS		2020/07/02  15:00:44	WarlockDefaultDeck states showed .
-CLICK_BUTTON		2020/07/02  15:00:44	deck:  WarlockDefaultDeck  selected .
-STATUS		2020/07/02  15:00:47	HunterDefaultDeck states showed .
-CLICK_BUTTON		2020/07/02  15:00:47	deck:  HunterDefaultDeck  selected .
-STATUS		2020/07/02  15:00:48	RogueDefaultDeck states showed .
-CLICK_BUTTON		2020/07/02  15:00:48	deck:  RogueDefaultDeck  selected .
-STATUS		2020/07/02  15:00:49	WarlockDefaultDeck states showed .
-CLICK_BUTTON		2020/07/02  15:00:49	deck:  WarlockDefaultDeck  selected .
-STATUS		2020/07/02  15:00:52	HunterDefaultDeck states showed .
-CLICK_BUTTON		2020/07/02  15:00:52	deck:  HunterDefaultDeck  selected .
-STATUS		2020/07/02  15:00:53	WarlockDefaultDeck states showed .
-CLICK_BUTTON		2020/07/02  15:00:53	deck:  WarlockDefaultDeck  selected .
-CLICK_BUTTON		2020/07/02  15:01:01	button: BACK selected .
-NAVIGATION		2020/07/02  15:01:01	Back to previous panel
-NAVIGATION		2020/07/02  15:01:03	To Collection
-CLICK_BUTTON		2020/07/02  15:01:07	button : NEW DECK selected.
-COLLECTION		2020/07/02  15:01:18	testDeck is now available with warlock
-CLICK_BUTTON		2020/07/02  15:01:23	deck:  testDeck  selected .
-CLICK_BUTTON		2020/07/02  15:01:26	card: CURIO COLLECTOR  selected.
-CLICK_BUTTON		2020/07/02  15:01:27	button : ADD CARD selected.
-COLLECTION		2020/07/02  15:01:29	CURIO COLLECTOR has been added to testDeck
-CLICK_BUTTON		2020/07/02  15:01:33	card: CURIO COLLECTOR  selected.
-CLICK_BUTTON		2020/07/02  15:01:36	deck:  testDeck  selected .
-CLICK_BUTTON		2020/07/02  15:01:39	card: SWARM OF LOCUSTS  selected.
-CLICK_BUTTON		2020/07/02  15:01:44	card: LEARN DRACONIC  selected.
-CLICK_BUTTON		2020/07/02  15:01:46	button : ADD CARD selected.
-COLLECTION		2020/07/02  15:01:47	LEARN DRACONIC has been added to testDeck
-CLICK_BUTTON		2020/07/02  15:01:50	card: LEARN DRACONIC  selected.
-CLICK_BUTTON		2020/07/02  15:01:54	deck:  testDeck  selected .
-CLICK_BUTTON		2020/07/02  15:01:56	card: LEARN DRACONIC  selected.
-CLICK_BUTTON		2020/07/02  15:01:57	button: SET CURRENT DECK selected.
-ERROR: COLLECTION	2020/07/02  15:01:58	edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.DeckControllerException: You should atLeast have 5cards in currentDeck
-	at edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.DeckController.setCurrentDeck(DeckController.java:91)
-	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer.setCurrentDeck(Administer.java:323)
-	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.CollectionHandler.setCurrentDeck(CollectionHandler.java:62)
-	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.CollectionPanel$1.setCurrentDeck(CollectionPanel.java:174)
-	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.FilterPanel$7.actionPerformed(FilterPanel.java:360)
-	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
-	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
-	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
-	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
-	at java.awt.Component.processMouseEvent(Component.java:6539)
-	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
-	at java.awt.Component.processEvent(Component.java:6304)
-	at java.awt.Container.processEvent(Container.java:2239)
-	at java.awt.Component.dispatchEventImpl(Component.java:4889)
-	at java.awt.Container.dispatchEventImpl(Container.java:2297)
-	at java.awt.Component.dispatchEvent(Component.java:4711)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
-	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
-	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
-	at java.awt.Container.dispatchEventImpl(Container.java:2283)
-	at java.awt.Window.dispatchEventImpl(Window.java:2746)
-	at java.awt.Component.dispatchEvent(Component.java:4711)
-	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
-	at java.awt.EventQueue.access$500(EventQueue.java:97)
-	at java.awt.EventQueue$3.run(EventQueue.java:709)
-	at java.awt.EventQueue$3.run(EventQueue.java:703)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
-	at java.awt.EventQueue$4.run(EventQueue.java:733)
-	at java.awt.EventQueue$4.run(EventQueue.java:731)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
-	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
-	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
-
-CLICK_BUTTON		2020/07/02  15:02:00	button : ADD CARD selected.
-ERROR: COLLECTION	2020/07/02  15:02:05	edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.DeckControllerException: You only have 1 of this card. Can't have more in a deck
-	at edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.DeckController.addCard(DeckController.java:174)
-	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer.addCardToDeck(Administer.java:306)
-	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.CollectionHandler.addCardToDeck(CollectionHandler.java:54)
-	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.CollectionPanel$1.addCard(CollectionPanel.java:151)
-	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.FilterPanel$5.actionPerformed(FilterPanel.java:342)
-	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
-	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
-	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
-	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
-	at java.awt.Component.processMouseEvent(Component.java:6539)
-	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
-	at java.awt.Component.processEvent(Component.java:6304)
-	at java.awt.Container.processEvent(Container.java:2239)
-	at java.awt.Component.dispatchEventImpl(Component.java:4889)
-	at java.awt.Container.dispatchEventImpl(Container.java:2297)
-	at java.awt.Component.dispatchEvent(Component.java:4711)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
-	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
-	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
-	at java.awt.Container.dispatchEventImpl(Container.java:2283)
-	at java.awt.Window.dispatchEventImpl(Window.java:2746)
-	at java.awt.Component.dispatchEvent(Component.java:4711)
-	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
-	at java.awt.EventQueue.access$500(EventQueue.java:97)
-	at java.awt.EventQueue$3.run(EventQueue.java:709)
-	at java.awt.EventQueue$3.run(EventQueue.java:703)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
-	at java.awt.EventQueue$4.run(EventQueue.java:733)
-	at java.awt.EventQueue$4.run(EventQueue.java:731)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
-	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
-	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
-
-CLICK_BUTTON		2020/07/02  15:02:09	card: POLYMORPH  selected.
-CLICK_BUTTON		2020/07/02  15:02:11	button : ADD CARD selected.
-ERROR: COLLECTION	2020/07/02  15:02:12	edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.DeckControllerException: this card is not valid for this hero
-	at edu.sharif.student.bluesoheil.ap98.hearthstone.models.Deck.addCard(Deck.java:142)
-	at edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.DeckController.addCard(DeckController.java:173)
-	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer.addCardToDeck(Administer.java:306)
-	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.CollectionHandler.addCardToDeck(CollectionHandler.java:54)
-	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.CollectionPanel$1.addCard(CollectionPanel.java:151)
-	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.FilterPanel$5.actionPerformed(FilterPanel.java:342)
-	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
-	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
-	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
-	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
-	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
-	at java.awt.Component.processMouseEvent(Component.java:6539)
-	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
-	at java.awt.Component.processEvent(Component.java:6304)
-	at java.awt.Container.processEvent(Container.java:2239)
-	at java.awt.Component.dispatchEventImpl(Component.java:4889)
-	at java.awt.Container.dispatchEventImpl(Container.java:2297)
-	at java.awt.Component.dispatchEvent(Component.java:4711)
-	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
-	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
-	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
-	at java.awt.Container.dispatchEventImpl(Container.java:2283)
-	at java.awt.Window.dispatchEventImpl(Window.java:2746)
-	at java.awt.Component.dispatchEvent(Component.java:4711)
-	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
-	at java.awt.EventQueue.access$500(EventQueue.java:97)
-	at java.awt.EventQueue$3.run(EventQueue.java:709)
-	at java.awt.EventQueue$3.run(EventQueue.java:703)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
-	at java.awt.EventQueue$4.run(EventQueue.java:733)
-	at java.awt.EventQueue$4.run(EventQueue.java:731)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
-	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
-	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
-
-CLICK_BUTTON		2020/07/02  15:02:13	card: VOODOO DOCTOR  selected.
-CLICK_BUTTON		2020/07/02  15:02:14	button : ADD CARD selected.
-COLLECTION		2020/07/02  15:02:15	VOODOO DOCTOR has been added to testDeck
-CLICK_BUTTON		2020/07/02  15:02:18	deck:  testDeck  selected .
-CLICK_BUTTON		2020/07/02  15:02:22	button: BACK selected .
-NAVIGATION		2020/07/02  15:02:22	Back to previous panel
-PLAYER		2020/07/02  15:02:26	123456 logged out
-PLAYER		2020/07/02  15:20:28	123456 logged in
-NAVIGATION		2020/07/02  15:20:30	To Status
-STATUS		2020/07/02  15:20:31	PriestDefaultDeck states showed .
-CLICK_BUTTON		2020/07/02  15:20:31	deck:  PriestDefaultDeck  selected .
-CLICK_BUTTON		2020/07/02  15:20:33	button: BACK selected .
-NAVIGATION		2020/07/02  15:20:33	Back to previous panel
-NAVIGATION		2020/07/02  15:20:34	To Collection
-CLICK_BUTTON		2020/07/02  15:20:36	deck:  HunterDefaultDeck  selected .
-CLICK_BUTTON		2020/07/02  15:20:38	button: SET CURRENT DECK selected.
-COLLECTION		2020/07/02  15:20:39	HunterDefaultDeck has been set as current deck
-CLICK_BUTTON		2020/07/02  15:20:41	button: BACK selected .
-NAVIGATION		2020/07/02  15:20:41	Back to previous panel
-NAVIGATION		2020/07/02  15:20:42	To Status
-CLICK_BUTTON		2020/07/02  15:20:50	button: BACK selected .
-NAVIGATION		2020/07/02  15:20:50	Back to previous panel
-NAVIGATION		2020/07/02  15:20:51	To Collection
-CLICK_BUTTON		2020/07/02  15:20:56	deck:  PriestDefaultDeck  selected .
-CLICK_BUTTON		2020/07/02  15:20:58	button: SET CURRENT DECK selected.
-COLLECTION		2020/07/02  15:20:59	PriestDefaultDeck has been set as current deck
-CLICK_BUTTON		2020/07/02  15:21:03	button: BACK selected .
-NAVIGATION		2020/07/02  15:21:03	Back to previous panel
-PLAYER		2020/07/02  15:21:05	123456 logged out
-PLAYER		2020/07/02  15:23:53	123456 logged in
-NAVIGATION		2020/07/02  15:23:56	To Collection
-CLICK_BUTTON		2020/07/02  15:24:00	button: BACK selected .
-NAVIGATION		2020/07/02  15:24:00	Back to previous panel
-NAVIGATION		2020/07/02  15:24:02	To Collection
-CLICK_BUTTON		2020/07/02  15:24:06	button: FILTER selected.
-COLLECTION		2020/07/02  15:24:06	cards filtered with {regex,owned,notOwned,manaCost,hero}= {,true,true,-1,Mage}
-CLICK_BUTTON		2020/07/02  15:24:09	button: EXIT selected .
-PLAYER		2020/07/02  15:24:10	123456 logged out
+PLAYER		2020/06/29  16:25:19	123456 logged in
+NAVIGATION		2020/06/29  16:25:26	To Collection
+CLICK_BUTTON		2020/06/29  16:25:43	deck:  newDecknew  selected .
+CLICK_BUTTON		2020/06/29  16:25:45	deck:  HunterDefaultDeck  selected .
+CLICK_BUTTON		2020/06/29  16:25:48	button: SET CURRENT DECK selected.
+COLLECTION		2020/06/29  16:25:48	HunterDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/06/29  16:25:50	button: BACK selected .
+NAVIGATION		2020/06/29  16:25:50	Back to previous panel
+NAVIGATION		2020/06/29  16:25:51	To PassiveSelector
+CLICK_BUTTON		2020/06/29  16:25:53	button: EXIT selected .
+PLAYER		2020/06/29  16:25:54	123456 logged out
+PLAYER		2020/07/02  12:17:49	123456 logged in
+NAVIGATION		2020/07/02  12:17:50	To Status
+CLICK_BUTTON		2020/07/02  12:17:55	button: BACK selected .
+NAVIGATION		2020/07/02  12:17:55	Back to previous panel
+NAVIGATION		2020/07/02  12:17:58	To Collection
+CLICK_BUTTON		2020/07/02  12:17:59	button: BACK selected .
+NAVIGATION		2020/07/02  12:17:59	Back to previous panel
+CLICK_BUTTON		2020/07/02  12:18:00	button: LOGOUT  selected.
+PLAYER		2020/07/02  12:18:02	123456 logged out
+PLAYER		2020/07/02  12:19:04	123456 logged in
+NAVIGATION		2020/07/02  12:19:05	To Collection
+CLICK_BUTTON		2020/07/02  12:19:06	deck:  HunterDefaultDeck  selected .
+CLICK_BUTTON		2020/07/02  12:19:19	button : NEW DECK selected.
+COLLECTION		2020/07/02  12:19:26	512 is now available with mage
+CLICK_BUTTON		2020/07/02  12:19:49	button: EXIT selected .
+PLAYER		2020/07/02  12:19:50	123456 logged out
+PLAYER		2020/07/02  12:26:45	123456 logged in
+NAVIGATION		2020/07/02  12:26:47	To Status
+CLICK_BUTTON		2020/07/02  12:27:02	button: BACK selected .
+NAVIGATION		2020/07/02  12:27:02	Back to previous panel
+PLAYER		2020/07/02  12:27:05	123456 logged out
+PLAYER		2020/07/02  19:55:18	123456 logged in
+NAVIGATION		2020/07/02  19:55:20	To Collection
+CLICK_BUTTON		2020/07/02  19:55:23	deck:  HunterDefaultDeck  selected .
+CLICK_BUTTON		2020/07/02  19:55:25	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/02  19:55:25	HunterDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/07/02  19:55:27	button: BACK selected .
+NAVIGATION		2020/07/02  19:55:27	Back to previous panel
+NAVIGATION		2020/07/02  19:55:28	To PassiveSelector
+CLICK_BUTTON		2020/07/02  19:55:29	passive: ManaJump  selected.
+PLAY		2020/07/02  19:55:35	passive 'ManaJump' selected
+NAVIGATION		2020/07/02  19:55:35	To Play
+NAVIGATION		2020/07/02  19:55:40	Back to previous panel
+NAVIGATION		2020/07/02  19:55:43	To PassiveSelector
+CLICK_BUTTON		2020/07/02  19:55:47	button: BACK selected .
+NAVIGATION		2020/07/02  19:55:47	Back to previous panel
+NAVIGATION		2020/07/02  19:55:49	To PassiveSelector
+CLICK_BUTTON		2020/07/02  19:55:53	passive: Warriors  selected.
+PLAY		2020/07/02  19:55:57	passive 'Warriors' selected
+NAVIGATION		2020/07/02  19:55:57	To Play
+NAVIGATION		2020/07/02  19:56:01	Back to previous panel
+NAVIGATION		2020/07/02  19:56:03	To PassiveSelector
+CLICK_BUTTON		2020/07/02  19:56:04	passive: OffCards  selected.
+PLAY		2020/07/02  19:56:07	passive 'OffCards' selected
+NAVIGATION		2020/07/02  19:56:07	To Play
+PLAYER		2020/07/02  19:56:10	123456 logged out
+PLAYER		2020/07/02  20:04:55	123456 logged in
+NAVIGATION		2020/07/02  20:04:56	To Collection
+CLICK_BUTTON		2020/07/02  20:04:58	deck:  HunterDefaultDeck  selected .
+CLICK_BUTTON		2020/07/02  20:04:59	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/02  20:04:59	HunterDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/07/02  20:05:01	button: BACK selected .
+NAVIGATION		2020/07/02  20:05:01	Back to previous panel
+NAVIGATION		2020/07/02  20:05:01	To PassiveSelector
+CLICK_BUTTON		2020/07/02  20:05:03	passive: ManaJump  selected.
+PLAY		2020/07/02  20:05:05	passive 'ManaJump' selected
+NAVIGATION		2020/07/02  20:05:05	To Play
+PLAY		2020/07/02  20:05:13	you forfeited the fight
+NAVIGATION		2020/07/02  20:05:13	Back to previous panel
+NAVIGATION		2020/07/02  20:05:14	To Status
+STATUS		2020/07/02  20:05:16	PriestDefaultDeck states showed .
+CLICK_BUTTON		2020/07/02  20:05:16	deck:  PriestDefaultDeck  selected .
+STATUS		2020/07/02  20:05:18	HunterDefaultDeck states showed .
+CLICK_BUTTON		2020/07/02  20:05:18	deck:  HunterDefaultDeck  selected .
+STATUS		2020/07/02  20:05:22	MageDefaultDeck states showed .
+CLICK_BUTTON		2020/07/02  20:05:22	deck:  MageDefaultDeck  selected .
+STATUS		2020/07/02  20:05:24	RogueDefaultDeck states showed .
+CLICK_BUTTON		2020/07/02  20:05:24	deck:  RogueDefaultDeck  selected .
+STATUS		2020/07/02  20:05:26	HunterDefaultDeck states showed .
+CLICK_BUTTON		2020/07/02  20:05:26	deck:  HunterDefaultDeck  selected .
+STATUS		2020/07/02  20:05:27	PriestDefaultDeck states showed .
+CLICK_BUTTON		2020/07/02  20:05:27	deck:  PriestDefaultDeck  selected .
+CLICK_BUTTON		2020/07/02  20:05:28	button: BACK selected .
+NAVIGATION		2020/07/02  20:05:28	Back to previous panel
+NAVIGATION		2020/07/02  20:05:30	To Collection
+CLICK_BUTTON		2020/07/02  20:05:32	deck:  MageDefaultDeck  selected .
+CLICK_BUTTON		2020/07/02  20:05:34	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/02  20:05:35	MageDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/07/02  20:05:36	button: BACK selected .
+NAVIGATION		2020/07/02  20:05:36	Back to previous panel
+NAVIGATION		2020/07/02  20:05:37	To PassiveSelector
+CLICK_BUTTON		2020/07/02  20:05:38	passive: ManaJump  selected.
+PLAY		2020/07/02  20:05:40	passive 'ManaJump' selected
+NAVIGATION		2020/07/02  20:05:40	To Play
+PLAY		2020/07/02  20:05:44	you forfeited the fight
+NAVIGATION		2020/07/02  20:05:44	Back to previous panel
+NAVIGATION		2020/07/02  20:05:54	To Status
+STATUS		2020/07/02  20:05:56	MageDefaultDeck states showed .
+CLICK_BUTTON		2020/07/02  20:05:56	deck:  MageDefaultDeck  selected .
+CLICK_BUTTON		2020/07/02  20:05:59	button: BACK selected .
+NAVIGATION		2020/07/02  20:05:59	Back to previous panel
+NAVIGATION		2020/07/02  20:06:01	To PassiveSelector
+CLICK_BUTTON		2020/07/02  20:06:01	passive: TwiceDraw  selected.
+PLAY		2020/07/02  20:06:03	passive 'TwiceDraw' selected
+NAVIGATION		2020/07/02  20:06:03	To Play
+PLAY		2020/07/02  20:06:06	you forfeited the fight
+NAVIGATION		2020/07/02  20:06:06	Back to previous panel
+NAVIGATION		2020/07/02  20:06:07	To Status
+STATUS		2020/07/02  20:06:09	MageDefaultDeck states showed .
+CLICK_BUTTON		2020/07/02  20:06:09	deck:  MageDefaultDeck  selected .
+STATUS		2020/07/02  20:06:34	newDecknew states showed .
+CLICK_BUTTON		2020/07/02  20:06:34	deck:  newDecknew  selected .
+STATUS		2020/07/02  20:06:34	RogueDefaultDeck states showed .
+CLICK_BUTTON		2020/07/02  20:06:34	deck:  RogueDefaultDeck  selected .
+CLICK_BUTTON		2020/07/02  20:06:44	button: BACK selected .
+NAVIGATION		2020/07/02  20:06:44	Back to previous panel
+NAVIGATION		2020/07/02  20:06:45	To Collection
+CLICK_BUTTON		2020/07/02  20:06:46	deck:  512  selected .
+CLICK_BUTTON		2020/07/02  20:06:47	deck:  newDecknew  selected .
+CLICK_BUTTON		2020/07/02  20:06:50	button: EXIT selected .
+PLAYER		2020/07/02  20:06:51	123456 logged out

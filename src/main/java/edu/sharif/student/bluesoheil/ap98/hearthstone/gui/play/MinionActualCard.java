@@ -35,8 +35,8 @@ public class MinionActualCard extends ActualCard {
 
     @Override
     protected void createLabels() {
-        cardName = new CardLabel(card.getName(),new Font("Helvetica", Font.PLAIN , 15));
-        description = new CardLabel("",new Font("Helvetica", Font.ITALIC , 15));
+        cardName = new CardLabel(card.getName(), new Font("Helvetica", Font.PLAIN, 15));
+        description = new CardLabel("", new Font("Helvetica", Font.ITALIC, 15));
         attackLabel = new JLabel("", cardIcons.get("attack"), JLabel.CENTER);
         hpLabel = new JLabel("", cardIcons.get("hp"), JLabel.CENTER);
         attack = new CardLabel("");
@@ -52,23 +52,24 @@ public class MinionActualCard extends ActualCard {
 
     @Override
     protected void setupBackground() {
-        setBackground(colorDictionary.get(Card.CardType.MINION));
-        setBorder(BorderFactory.createLineBorder(Color.GREEN));
+        setBackground(colorDictionary.get(card.getType()));
+        if (card.getType().equals(Card.CardType.MINION)) setBorder(BorderFactory.createLineBorder(Color.GREEN));
+        else setBorder(BorderFactory.createLineBorder(Color.orange));
     }
 
     @Override
     protected void setupGraphics() {
         super.setupGraphics();
-        cardName.setBounds(0,2*FIELD_HEIGHT , 4*FIELD_WIDTH,FIELD_HEIGHT);
+        cardName.setBounds(5, 2 * FIELD_HEIGHT, CARD_WIDTH - 10, FIELD_HEIGHT);
         add(cardName);
         ///////
-        attackLabel.setBounds(0,3*FIELD_HEIGHT , FIELD_WIDTH,FIELD_HEIGHT);
-        attack.setBounds(15,3*FIELD_HEIGHT , FIELD_WIDTH,FIELD_HEIGHT);
+        attackLabel.setBounds(0, 3 * FIELD_HEIGHT, FIELD_WIDTH, FIELD_HEIGHT);
+        attack.setBounds(15, 3 * FIELD_HEIGHT, FIELD_WIDTH, FIELD_HEIGHT);
         add(attack);
         add(attackLabel);
         ////////
-        hpLabel.setBounds(3*FIELD_WIDTH,3*FIELD_HEIGHT , FIELD_WIDTH,FIELD_HEIGHT);
-        hp.setBounds(3*FIELD_WIDTH+10,3*FIELD_HEIGHT , FIELD_WIDTH,FIELD_HEIGHT);
+        hpLabel.setBounds(3 * FIELD_WIDTH, 3 * FIELD_HEIGHT, FIELD_WIDTH, FIELD_HEIGHT);
+        hp.setBounds(3 * FIELD_WIDTH + 10, 3 * FIELD_HEIGHT, FIELD_WIDTH, FIELD_HEIGHT);
         add(hp);
         add(hpLabel);
     }
@@ -77,7 +78,7 @@ public class MinionActualCard extends ActualCard {
         this.hp.setText(String.valueOf(hp));
     }
 
-    void setAttack(int attack){
+    void setAttack(int attack) {
         this.attack.setText(String.valueOf(attack));
     }
 }

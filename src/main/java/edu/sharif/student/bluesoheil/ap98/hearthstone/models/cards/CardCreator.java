@@ -32,14 +32,14 @@ public class CardCreator{
 //        Spell ArcaneExplosion= new Spell("Arcane explosion" , 2 , Card.Rarity.COMMON , Card.HeroClass.MAGE, "N/A"  , 3);
 //        Beast Dreadscale= new Beast("Dreadscale" , 3 , Card.Rarity.LEGENDARY , Card.HeroClass.WARLOCK, "N/A",4 , 2,3);
 //            //// new ones
-        Beast Mole= new Beast("Mole" , 5 , Card.Rarity.EPIC , Card.HeroClass.ROGUE, "Randomly attacks to one of enemy minions",4,5,4 );
-        Spell ConcreteShield= new Spell("Concrete Shield" , 4 , Card.Rarity.EPIC , Card.HeroClass.WARLOCK, "Adds 10 defence to hero",4 );
+//        Beast Mole= new Beast("Mole" , 5 , Card.Rarity.EPIC , Card.HeroClass.ROGUE, "Randomly attacks to one of enemy minions",4,5,4 );
+//        Spell ConcreteShield= new Spell("Concrete Shield" , 4 , Card.Rarity.EPIC , Card.HeroClass.WARLOCK, "Adds 10 defence to hero",4 );
 //        saveCard(FriendlySmith);
 //        saveCard(Polymorph);
 //        saveCard(ArcaneExplosion);
 //        saveCard(Dreadscale);
-        saveCard(ConcreteShield);
-        saveCard(Mole);
+//        saveCard(ConcreteShield);
+//        saveCard(Mole);
 //
 //        Spell ShadowMadness = new Spell("Shadow Madness" , 3, Card.Rarity.RARE , Card.HeroClass.NEUTRAL, "N/A",2 );//its for priest
 //        Weapon SuperCollider  = new Weapon("Super Collider" , 5 , Card.Rarity.EPIC , Card.HeroClass.NEUTRAL, "N/A",2 ,1,3);//warrior's
@@ -62,7 +62,7 @@ public class CardCreator{
 //        saveCard(VoodooDoctor);
 //
 //        Spell Consecration = new Spell("Consecration" , 4 , Card.Rarity.RARE , Card.HeroClass.NEUTRAL, "N/A",2 );
-//        Spell Stormhammer = new Spell("Stormhammer" , 3 , Card.Rarity.EPIC , Card.HeroClass.NEUTRAL, "N/A",4 );
+//        Weapon Stormhammer = new Weapon("Stormhammer" , 3 , Card.Rarity.EPIC , Card.HeroClass.NEUTRAL, "N/A",4 ,3,2);
 //        Spell Slam  = new Spell("Slam" , 2 , Card.Rarity.COMMON , Card.HeroClass.NEUTRAL, "N/A",1);
 //        Spell Humility   = new Spell("Humility" , 1 , Card.Rarity.COMMON , Card.HeroClass.NEUTRAL, "N/A",2);
 //        Spell Innervate = new Spell("Innervate" , 0 , Card.Rarity.RARE , Card.HeroClass.NEUTRAL, "N/A"  , 2);
@@ -81,7 +81,7 @@ public class CardCreator{
 //        Minion c4= new Minion("Tomb Warden" , 8 , Card.Rarity.RARE , Card.HeroClass.NEUTRAL, "N/A",3 , 6,4);//warrior actually
 //        Spell c5= new Spell("Sprint" , 7 , Card.Rarity.RARE , Card.HeroClass.NEUTRAL, "N/A",4 );//its for rogue actually
 //        Spell c6= new Spell("Swarm of Locusts" , 6 , Card.Rarity.RARE , Card.HeroClass.NEUTRAL, "N/A",4 ); //hunter actually
-        Spell c7= new Spell("Pharaoh's Blessing" , 6 , Card.Rarity.RARE , Card.HeroClass.NEUTRAL, "N/A",4 );//paladin actually
+//        Spell c7= new Spell("Pharaoh's Blessing" , 6 , Card.Rarity.RARE , Card.HeroClass.NEUTRAL, "N/A",4 );//paladin actually
 //        Spell c8= new Spell("Book of Specters" , 2 , Card.Rarity.EPIC , Card.HeroClass.NEUTRAL, "N/A",4 );
 //        QuestAndReward c9= new QuestAndReward("Strength in Numbers" , 1 , Card.Rarity.COMMON , Card.HeroClass.NEUTRAL, "N/A",2);//its not really neutral
 //        QuestAndReward c10= new QuestAndReward("Learn Draconic" , 1, Card.Rarity.COMMON , Card.HeroClass.NEUTRAL, "N/A",2 );// its for mage actually
@@ -94,7 +94,7 @@ public class CardCreator{
 //        saveCard(c4);
 //        saveCard(c5);
 //        saveCard(c6);
-        saveCard(c7);
+//        saveCard(c7);
 //        saveCard(c8);
 //        saveCard(c9);
 //        saveCard(c10);
@@ -106,10 +106,10 @@ public class CardCreator{
 //        Minion c15= new Minion("High Priest Amet" , 4 , Card.Rarity.LEGENDARY , Card.HeroClass.PRIEST, "N/A",2 , 7,8);
 //        saveCard(c14);
 //        saveCard(c15);
-        Spell c16= new Spell("Covid" , 4 , Card.Rarity.RARE , Card.HeroClass.PRIEST, "kills all minions with 1 or 2 hp",9);
-        Beast c17= new Beast("Eagle" , 4 , Card.Rarity.EPIC , Card.HeroClass.HUNTER, "Attacks opponent beasts at the start of your turn",4, 5,8);
-        saveCard(c16);
-        saveCard(c17);
+//        Spell c16= new Spell("Covid" , 4 , Card.Rarity.RARE , Card.HeroClass.PRIEST, "kills all minions with 1 or 2 hp",9);
+//        Beast c17= new Beast("Eagle" , 4 , Card.Rarity.EPIC , Card.HeroClass.HUNTER, "Attacks opponent beasts at the start of your turn",4, 5,8);
+//        saveCard(c16);
+//        saveCard(c17);
 
     }
 }

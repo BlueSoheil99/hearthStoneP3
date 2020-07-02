@@ -1,13 +1,12 @@
 {
-  "isInRush": false,
+  "inRush": false,
+  "HP": 5,
+  "attack": 4,
   "name": "Eagle",
   "manaCost": 4,
-  "type": "MINION",
+  "type": "BEAST",
   "heroClass": "HUNTER",
   "rarity": "EPIC",
   "description": "Attacks opponent beasts at the start of your turn",
-  "cost": 8,
-  "HP": 5,
-  "attack": 4,
-  "durability": 0
+  "cost": 8
 }

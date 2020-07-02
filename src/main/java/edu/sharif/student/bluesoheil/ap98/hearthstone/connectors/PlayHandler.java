@@ -2,14 +2,10 @@ package edu.sharif.student.bluesoheil.ap98.hearthstone.connectors;
 
 import edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.GameController;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.PlayException;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play.ActualCard;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play.MinionActualCard;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play.PlayPanel;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play.PlayerPanel;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play.*;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.CardShape;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.PlayActionListener;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.models.cards.Card;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.models.cards.Minion;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.models.cards.*;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.util.log.LogTypes;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.log.Logger;
 
 import java.util.ArrayList;
@@ -20,7 +16,6 @@ public class PlayHandler {
     private static PlayHandler instance;
     private Administer administer;
     private GameController gameController;
-    private PlayPanel playPanel;
 
     /**
      * this class works as a connection between gui and logic(administer + gameController)
@@ -47,13 +42,23 @@ public class PlayHandler {
         instance.gameController = null;
     }
 
+
     //////////////////////////////
     /////////non-statics//////////
+    //todo exiting and forfeiting macth must have a penalty(loosing or etc.)
+    public void exitGame() {
+        administer.runExit();
+    }
 
+    public void forfeitMatch() {
+        Logger.log(LogTypes.PLAY, gameController.getPlayingSide() + " forfeited the fight");
+        administer.back();
+    }
     //
     ///
     ////getters and setters
     ///
+
     //
 
     public ArrayList<CardShape> get3Passives() {
@@ -67,7 +72,6 @@ public class PlayHandler {
     public void replaceCard(String cardName) throws PlayException {
         GameController.getInstance().drawHandAgain(cardName);
     }
-
 
     public ArrayList<String> getEvents() {
         return Logger.getEventLogs();
@@ -94,36 +98,48 @@ public class PlayHandler {
     public Card.CardType getCardType(String playerSelectedCard) {
         return gameController.getCard(playerSelectedCard).getType();
     }
+    ////////////
+    ////////////
 
-    public void summonMinion(String playerSelectedCardInHand, PlayPanel playPanel) {
-        System.out.println("minion is played: "+playerSelectedCardInHand);
-        //todo check mana
-        Minion minion = (Minion) gameController.getCard(playerSelectedCardInHand);
-        playPanel.summonMinion(new MinionActualCard( minion,null));
+    public MinionActualCard summonAndGetMinion(String playerSelectedCardInHand) throws PlayException {
+        Minion minion = (Minion) getCardFromController(playerSelectedCardInHand);
+        Logger.log(LogTypes.PLAY, gameController.getPlayingSide() + " summoned " + playerSelectedCardInHand);
+        return new MinionActualCard(minion, null);
     }
 
-
-    public void summonWeapon(String playerSelectedCardInHand, PlayPanel playPanel) {
-        System.out.println("weapon is played: "+playerSelectedCardInHand);
-
+    public WeaponActualCard summonAndGetWeapon(String playerSelectedCardInHand) throws PlayException {
+        Weapon weapon = (Weapon) getCardFromController(playerSelectedCardInHand);
+        Logger.log(LogTypes.PLAY, gameController.getPlayingSide() + " set weapon to " + playerSelectedCardInHand);
+        return new WeaponActualCard(weapon, null);
     }
 
-    public void playQuestAndReward(String playerSelectedCardInHand, PlayPanel playPanel) {
+    public void playSpell(String playerSelectedCardInHand) throws PlayException {
+        Spell spell = (Spell) getCardFromController(playerSelectedCardInHand);
+        Logger.log(LogTypes.PLAY, gameController.getPlayingSide() + " played the " + playerSelectedCardInHand + " spell");
     }
 
-    public void playSpell(String playerSelectedCardInHand, PlayPanel playPanel) {
+    public void playQuestAndReward(String playerSelectedCardInHand) throws PlayException {
+        QuestAndReward qAndR = (QuestAndReward) getCardFromController(playerSelectedCardInHand);
+        Logger.log(LogTypes.PLAY, gameController.getPlayingSide() + " played the " + playerSelectedCardInHand + " Q&R");
     }
 
-    public void getCard(CardShape playerSelectedCard) {
-//        Card card = gameController.getHandCard(playerSelectedCard.ca);
-//        return new CardShape(card);
+    private Card getCardFromController(String playerSelectedCardInHand) throws PlayException {
+        Card card = gameController.getCard(playerSelectedCardInHand);
+        gameController.purchaseCard(card);
+        gameController.removeCard(card);
+        return card;
     }
 
-    public void playHandCard(String cardName) {
-//        gameController.d
-    }
 
     public void playCard(ActualCard playerSelectedCard) {
+    }
+
+    public void changeTurns() {
+        gameController.changeTurns();
+    }
+
+    public void updateHand() {
+        gameController.updateHand();
     }
 
     //

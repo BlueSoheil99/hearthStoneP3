@@ -55,7 +55,7 @@
       "attack": 9,
       "name": "Swamp King Dred",
       "manaCost": 7,
-      "type": "MINION",
+      "type": "BEAST",
       "heroClass": "HUNTER",
       "rarity": "LEGENDARY",
       "description": "N/A",
@@ -123,7 +123,7 @@
       "attack": 4,
       "name": "Dreadscale",
       "manaCost": 3,
-      "type": "MINION",
+      "type": "BEAST",
       "heroClass": "WARLOCK",
       "rarity": "LEGENDARY",
       "description": "N/A",
@@ -164,10 +164,11 @@
       "cost": 4
     },
     {
-      "value": 0,
+      "attack": 3,
+      "durability": 2,
       "name": "Stormhammer",
       "manaCost": 3,
-      "type": "SPELL",
+      "type": "WEAPON",
       "heroClass": "NEUTRAL",
       "rarity": "EPIC",
       "description": "N/A",
@@ -224,7 +225,7 @@
       "value": 0,
       "name": "Learn Draconic",
       "manaCost": 1,
-      "type": "SPELL",
+      "type": "QUESTANDREWARD",
       "heroClass": "NEUTRAL",
       "rarity": "COMMON",
       "description": "N/A",
@@ -264,7 +265,7 @@
       "value": 0,
       "name": "Learn Draconic",
       "manaCost": 1,
-      "type": "SPELL",
+      "type": "QUESTANDREWARD",
       "heroClass": "NEUTRAL",
       "rarity": "COMMON",
       "description": "N/A",
@@ -283,44 +284,51 @@
   ],
   "playerDecks": [
     {
-      "name": "WarlockDefaultDeck",
-      "gamesPlayed": 6,
+      "name": "512",
+      "gamesPlayed": 0,
+      "wins": 0,
+      "hero": "MAGE",
+      "cards": [],
+      "cardsUsage": {}
+    },
+    {
+      "name": "newDecknew",
+      "gamesPlayed": 0,
+      "wins": 0,
+      "hero": "MAGE",
+      "cards": [
+        {
+          "value": 0,
+          "name": "Learn Draconic",
+          "manaCost": 1,
+          "type": "QUESTANDREWARD",
+          "heroClass": "NEUTRAL",
+          "rarity": "COMMON",
+          "description": "N/A",
+          "cost": 2
+        },
+        {
+          "value": 0,
+          "name": "Learn Draconic",
+          "manaCost": 1,
+          "type": "QUESTANDREWARD",
+          "heroClass": "NEUTRAL",
+          "rarity": "COMMON",
+          "description": "N/A",
+          "cost": 2
+        }
+      ],
+      "cardsUsage": {
+        "Learn Draconic": 0
+      }
+    },
+    {
+      "name": "newDeck2",
+      "gamesPlayed": 0,
       "wins": 0,
       "hero": "WARLOCK",
       "cards": [
         {
-          "value": 0,
-          "name": "Slam",
-          "manaCost": 2,
-          "type": "SPELL",
-          "heroClass": "NEUTRAL",
-          "rarity": "COMMON",
-          "description": "N/A",
-          "cost": 1
-        },
-        {
-          "value": 0,
-          "name": "Swarm of Locusts",
-          "manaCost": 6,
-          "type": "SPELL",
-          "heroClass": "NEUTRAL",
-          "rarity": "RARE",
-          "description": "N/A",
-          "cost": 4
-        },
-        {
-          "inRush": false,
-          "HP": 2,
-          "attack": 3,
-          "name": "Zilliax",
-          "manaCost": 5,
-          "type": "MINION",
-          "heroClass": "NEUTRAL",
-          "rarity": "LEGENDARY",
-          "description": "N/A",
-          "cost": 2
-        },
-        {
           "inRush": false,
           "HP": 1,
           "attack": 2,
@@ -331,129 +339,18 @@
           "rarity": "COMMON",
           "description": "N/A",
           "cost": 1
-        },
-        {
-          "inRush": false,
-          "HP": 5,
-          "attack": 5,
-          "name": "Sathrovarr",
-          "manaCost": 9,
-          "type": "MINION",
-          "heroClass": "NEUTRAL",
-          "rarity": "LEGENDARY",
-          "description": "N/A",
-          "cost": 6
-        },
-        {
-          "inRush": false,
-          "HP": 4,
-          "attack": 4,
-          "name": "Curio Collector",
-          "manaCost": 5,
-          "type": "MINION",
-          "heroClass": "NEUTRAL",
-          "rarity": "RARE",
-          "description": "N/A",
-          "cost": 3
-        },
-        {
-          "inRush": false,
-          "HP": 4,
-          "attack": 3,
-          "name": "Omega Medic",
-          "manaCost": 3,
-          "type": "MINION",
-          "heroClass": "NEUTRAL",
-          "rarity": "RARE",
-          "description": "N/A",
-          "cost": 2
-        },
-        {
-          "attack": 1,
-          "durability": 3,
-          "name": "Heavy Axe",
-          "manaCost": 1,
-          "type": "WEAPON",
-          "heroClass": "NEUTRAL",
-          "rarity": "COMMON",
-          "description": "N/A",
-          "cost": 2
-        },
-        {
-          "value": 0,
-          "name": "Learn Draconic",
-          "manaCost": 1,
-          "type": "SPELL",
-          "heroClass": "NEUTRAL",
-          "rarity": "COMMON",
-          "description": "N/A",
-          "cost": 2
-        },
-        {
-          "inRush": false,
-          "HP": 2,
-          "attack": 4,
-          "name": "Dreadscale",
-          "manaCost": 3,
-          "type": "MINION",
-          "heroClass": "WARLOCK",
-          "rarity": "LEGENDARY",
-          "description": "N/A",
-          "cost": 3
-        },
-        {
-          "inRush": false,
-          "HP": 2,
-          "attack": 4,
-          "name": "Dreadscale",
-          "manaCost": 3,
-          "type": "MINION",
-          "heroClass": "WARLOCK",
-          "rarity": "LEGENDARY",
-          "description": "N/A",
-          "cost": 3
         }
       ],
       "cardsUsage": {
-        "Slam": 0,
-        "Omega Medic": 0,
-        "Zilliax": 0,
-        "Murloc Tidehunter": 0,
-        "Sathrovarr": 0,
-        "Heavy Axe": 0,
-        "Learn Draconic": 0,
-        "Swarm of Locusts": 0,
-        "Curio Collector": 0
+        "Murloc Tidehunter": 0
       }
     },
     {
-      "name": "HunterDefaultDeck",
-      "gamesPlayed": 6,
+      "name": "newDeck",
+      "gamesPlayed": 0,
       "wins": 0,
-      "hero": "HUNTER",
+      "hero": "MAGE",
       "cards": [
-        {
-          "inRush": false,
-          "HP": 9,
-          "attack": 9,
-          "name": "Swamp King Dred",
-          "manaCost": 7,
-          "type": "MINION",
-          "heroClass": "HUNTER",
-          "rarity": "LEGENDARY",
-          "description": "N/A",
-          "cost": 10
-        },
-        {
-          "value": 0,
-          "name": "Slam",
-          "manaCost": 2,
-          "type": "SPELL",
-          "heroClass": "NEUTRAL",
-          "rarity": "COMMON",
-          "description": "N/A",
-          "cost": 1
-        },
         {
           "value": 0,
           "name": "Swarm of Locusts",
@@ -463,18 +360,6 @@
           "rarity": "RARE",
           "description": "N/A",
           "cost": 4
-        },
-        {
-          "inRush": false,
-          "HP": 2,
-          "attack": 3,
-          "name": "Zilliax",
-          "manaCost": 5,
-          "type": "MINION",
-          "heroClass": "NEUTRAL",
-          "rarity": "LEGENDARY",
-          "description": "N/A",
-          "cost": 2
         },
         {
           "inRush": false,
@@ -490,73 +375,32 @@
         },
         {
           "inRush": false,
-          "HP": 5,
-          "attack": 5,
-          "name": "Sathrovarr",
-          "manaCost": 9,
+          "HP": 1,
+          "attack": 2,
+          "name": "Murloc Tidehunter",
+          "manaCost": 2,
           "type": "MINION",
-          "heroClass": "NEUTRAL",
-          "rarity": "LEGENDARY",
-          "description": "N/A",
-          "cost": 6
-        },
-        {
-          "inRush": false,
-          "HP": 4,
-          "attack": 4,
-          "name": "Curio Collector",
-          "manaCost": 5,
-          "type": "MINION",
-          "heroClass": "NEUTRAL",
-          "rarity": "RARE",
-          "description": "N/A",
-          "cost": 3
-        },
-        {
-          "inRush": false,
-          "HP": 4,
-          "attack": 3,
-          "name": "Omega Medic",
-          "manaCost": 3,
-          "type": "MINION",
-          "heroClass": "NEUTRAL",
-          "rarity": "RARE",
-          "description": "N/A",
-          "cost": 2
-        },
-        {
-          "attack": 1,
-          "durability": 3,
-          "name": "Heavy Axe",
-          "manaCost": 1,
-          "type": "WEAPON",
           "heroClass": "NEUTRAL",
           "rarity": "COMMON",
           "description": "N/A",
-          "cost": 2
+          "cost": 1
         },
         {
-          "value": 0,
-          "name": "Learn Draconic",
-          "manaCost": 1,
-          "type": "SPELL",
+          "inRush": false,
+          "HP": 1,
+          "attack": 2,
+          "name": "Murloc Tidehunter",
+          "manaCost": 2,
+          "type": "MINION",
           "heroClass": "NEUTRAL",
           "rarity": "COMMON",
           "description": "N/A",
-          "cost": 2
+          "cost": 1
         }
       ],
       "cardsUsage": {
-        "Slam": 0,
-        "Omega Medic": 0,
-        "Zilliax": 0,
         "Murloc Tidehunter": 0,
-        "Sathrovarr": 0,
-        "Heavy Axe": 0,
-        "Learn Draconic": 0,
-        "Swarm of Locusts": 0,
-        "Swamp King Dred": 0,
-        "Curio Collector": 0
+        "Swarm of Locusts": 0
       }
     },
     {
@@ -670,7 +514,7 @@
           "value": 0,
           "name": "Learn Draconic",
           "manaCost": 1,
-          "type": "SPELL",
+          "type": "QUESTANDREWARD",
           "heroClass": "NEUTRAL",
           "rarity": "COMMON",
           "description": "N/A",
@@ -803,7 +647,7 @@
           "value": 0,
           "name": "Learn Draconic",
           "manaCost": 1,
-          "type": "SPELL",
+          "type": "QUESTANDREWARD",
           "heroClass": "NEUTRAL",
           "rarity": "COMMON",
           "description": "N/A",
@@ -824,191 +668,8 @@
       }
     },
     {
-      "name": "newDeck2",
-      "gamesPlayed": 0,
-      "wins": 0,
-      "hero": "WARLOCK",
-      "cards": [
-        {
-          "inRush": false,
-          "HP": 1,
-          "attack": 2,
-          "name": "Murloc Tidehunter",
-          "manaCost": 2,
-          "type": "MINION",
-          "heroClass": "NEUTRAL",
-          "rarity": "COMMON",
-          "description": "N/A",
-          "cost": 1
-        }
-      ],
-      "cardsUsage": {
-        "Murloc Tidehunter": 0
-      }
-    },
-    {
-      "name": "newDecknew",
-      "gamesPlayed": 0,
-      "wins": 0,
-      "hero": "MAGE",
-      "cards": [
-        {
-          "value": 0,
-          "name": "Learn Draconic",
-          "manaCost": 1,
-          "type": "SPELL",
-          "heroClass": "NEUTRAL",
-          "rarity": "COMMON",
-          "description": "N/A",
-          "cost": 2
-        },
-        {
-          "value": 0,
-          "name": "Learn Draconic",
-          "manaCost": 1,
-          "type": "SPELL",
-          "heroClass": "NEUTRAL",
-          "rarity": "COMMON",
-          "description": "N/A",
-          "cost": 2
-        },
-        {
-          "inRush": false,
-          "HP": 4,
-          "attack": 4,
-          "name": "Abomination",
-          "manaCost": 4,
-          "type": "MINION",
-          "heroClass": "NEUTRAL",
-          "rarity": "RARE",
-          "description": "N/A",
-          "cost": 3
-        },
-        {
-          "value": 0,
-          "name": "Stormhammer",
-          "manaCost": 3,
-          "type": "SPELL",
-          "heroClass": "NEUTRAL",
-          "rarity": "EPIC",
-          "description": "N/A",
-          "cost": 4
-        }
-      ],
-      "cardsUsage": {
-        "Learn Draconic": 0,
-        "Stormhammer": 0,
-        "Abomination": 0
-      }
-    },
-    {
-      "name": "testDeck",
-      "gamesPlayed": 0,
-      "wins": 0,
-      "hero": "WARLOCK",
-      "cards": [
-        {
-          "inRush": false,
-          "HP": 4,
-          "attack": 4,
-          "name": "Curio Collector",
-          "manaCost": 5,
-          "type": "MINION",
-          "heroClass": "NEUTRAL",
-          "rarity": "RARE",
-          "description": "N/A",
-          "cost": 3
-        },
-        {
-          "value": 0,
-          "name": "Learn Draconic",
-          "manaCost": 1,
-          "type": "SPELL",
-          "heroClass": "NEUTRAL",
-          "rarity": "COMMON",
-          "description": "N/A",
-          "cost": 2
-        },
-        {
-          "inRush": false,
-          "HP": 1,
-          "attack": 2,
-          "name": "Voodoo doctor",
-          "manaCost": 1,
-          "type": "MINION",
-          "heroClass": "NEUTRAL",
-          "rarity": "COMMON",
-          "description": "N/A",
-          "cost": 2
-        }
-      ],
-      "cardsUsage": {
-        "Learn Draconic": 0,
-        "Voodoo doctor": 0,
-        "Curio Collector": 0
-      }
-    },
-    {
-      "name": "newDeck",
-      "gamesPlayed": 0,
-      "wins": 0,
-      "hero": "MAGE",
-      "cards": [
-        {
-          "value": 0,
-          "name": "Swarm of Locusts",
-          "manaCost": 6,
-          "type": "SPELL",
-          "heroClass": "NEUTRAL",
-          "rarity": "RARE",
-          "description": "N/A",
-          "cost": 4
-        },
-        {
-          "inRush": false,
-          "HP": 1,
-          "attack": 2,
-          "name": "Murloc Tidehunter",
-          "manaCost": 2,
-          "type": "MINION",
-          "heroClass": "NEUTRAL",
-          "rarity": "COMMON",
-          "description": "N/A",
-          "cost": 1
-        },
-        {
-          "inRush": false,
-          "HP": 1,
-          "attack": 2,
-          "name": "Murloc Tidehunter",
-          "manaCost": 2,
-          "type": "MINION",
-          "heroClass": "NEUTRAL",
-          "rarity": "COMMON",
-          "description": "N/A",
-          "cost": 1
-        },
-        {
-          "inRush": false,
-          "HP": 1,
-          "attack": 2,
-          "name": "Murloc Tidehunter",
-          "manaCost": 2,
-          "type": "MINION",
-          "heroClass": "NEUTRAL",
-          "rarity": "COMMON",
-          "description": "N/A",
-          "cost": 1
-        }
-      ],
-      "cardsUsage": {
-        "Murloc Tidehunter": 0,
-        "Swarm of Locusts": 0
-      }
-    },
-    {
       "name": "MageDefaultDeck",
-      "gamesPlayed": 0,
+      "gamesPlayed": 2,
       "wins": 0,
       "hero": "MAGE",
       "cards": [
@@ -1043,10 +704,11 @@
           "cost": 4
         },
         {
-          "value": 0,
+          "attack": 3,
+          "durability": 2,
           "name": "Stormhammer",
           "manaCost": 3,
-          "type": "SPELL",
+          "type": "WEAPON",
           "heroClass": "NEUTRAL",
           "rarity": "EPIC",
           "description": "N/A",
@@ -1131,6 +793,283 @@
         "Stormhammer": 0,
         "Polymorph": 0,
         "Swarm of Locusts": 0,
+        "Curio Collector": 0
+      }
+    },
+    {
+      "name": "WarlockDefaultDeck",
+      "gamesPlayed": 6,
+      "wins": 0,
+      "hero": "WARLOCK",
+      "cards": [
+        {
+          "value": 0,
+          "name": "Slam",
+          "manaCost": 2,
+          "type": "SPELL",
+          "heroClass": "NEUTRAL",
+          "rarity": "COMMON",
+          "description": "N/A",
+          "cost": 1
+        },
+        {
+          "value": 0,
+          "name": "Swarm of Locusts",
+          "manaCost": 6,
+          "type": "SPELL",
+          "heroClass": "NEUTRAL",
+          "rarity": "RARE",
+          "description": "N/A",
+          "cost": 4
+        },
+        {
+          "inRush": false,
+          "HP": 2,
+          "attack": 3,
+          "name": "Zilliax",
+          "manaCost": 5,
+          "type": "MINION",
+          "heroClass": "NEUTRAL",
+          "rarity": "LEGENDARY",
+          "description": "N/A",
+          "cost": 2
+        },
+        {
+          "inRush": false,
+          "HP": 1,
+          "attack": 2,
+          "name": "Murloc Tidehunter",
+          "manaCost": 2,
+          "type": "MINION",
+          "heroClass": "NEUTRAL",
+          "rarity": "COMMON",
+          "description": "N/A",
+          "cost": 1
+        },
+        {
+          "inRush": false,
+          "HP": 5,
+          "attack": 5,
+          "name": "Sathrovarr",
+          "manaCost": 9,
+          "type": "MINION",
+          "heroClass": "NEUTRAL",
+          "rarity": "LEGENDARY",
+          "description": "N/A",
+          "cost": 6
+        },
+        {
+          "inRush": false,
+          "HP": 4,
+          "attack": 4,
+          "name": "Curio Collector",
+          "manaCost": 5,
+          "type": "MINION",
+          "heroClass": "NEUTRAL",
+          "rarity": "RARE",
+          "description": "N/A",
+          "cost": 3
+        },
+        {
+          "inRush": false,
+          "HP": 4,
+          "attack": 3,
+          "name": "Omega Medic",
+          "manaCost": 3,
+          "type": "MINION",
+          "heroClass": "NEUTRAL",
+          "rarity": "RARE",
+          "description": "N/A",
+          "cost": 2
+        },
+        {
+          "attack": 1,
+          "durability": 3,
+          "name": "Heavy Axe",
+          "manaCost": 1,
+          "type": "WEAPON",
+          "heroClass": "NEUTRAL",
+          "rarity": "COMMON",
+          "description": "N/A",
+          "cost": 2
+        },
+        {
+          "value": 0,
+          "name": "Learn Draconic",
+          "manaCost": 1,
+          "type": "QUESTANDREWARD",
+          "heroClass": "NEUTRAL",
+          "rarity": "COMMON",
+          "description": "N/A",
+          "cost": 2
+        },
+        {
+          "inRush": false,
+          "HP": 2,
+          "attack": 4,
+          "name": "Dreadscale",
+          "manaCost": 3,
+          "type": "BEAST",
+          "heroClass": "WARLOCK",
+          "rarity": "LEGENDARY",
+          "description": "N/A",
+          "cost": 3
+        },
+        {
+          "inRush": false,
+          "HP": 2,
+          "attack": 4,
+          "name": "Dreadscale",
+          "manaCost": 3,
+          "type": "BEAST",
+          "heroClass": "WARLOCK",
+          "rarity": "LEGENDARY",
+          "description": "N/A",
+          "cost": 3
+        }
+      ],
+      "cardsUsage": {
+        "Slam": 0,
+        "Omega Medic": 0,
+        "Zilliax": 0,
+        "Murloc Tidehunter": 0,
+        "Sathrovarr": 0,
+        "Heavy Axe": 0,
+        "Learn Draconic": 0,
+        "Swarm of Locusts": 0,
+        "Curio Collector": 0
+      }
+    },
+    {
+      "name": "HunterDefaultDeck",
+      "gamesPlayed": 12,
+      "wins": 0,
+      "hero": "HUNTER",
+      "cards": [
+        {
+          "inRush": false,
+          "HP": 9,
+          "attack": 9,
+          "name": "Swamp King Dred",
+          "manaCost": 7,
+          "type": "BEAST",
+          "heroClass": "HUNTER",
+          "rarity": "LEGENDARY",
+          "description": "N/A",
+          "cost": 10
+        },
+        {
+          "value": 0,
+          "name": "Slam",
+          "manaCost": 2,
+          "type": "SPELL",
+          "heroClass": "NEUTRAL",
+          "rarity": "COMMON",
+          "description": "N/A",
+          "cost": 1
+        },
+        {
+          "value": 0,
+          "name": "Swarm of Locusts",
+          "manaCost": 6,
+          "type": "SPELL",
+          "heroClass": "NEUTRAL",
+          "rarity": "RARE",
+          "description": "N/A",
+          "cost": 4
+        },
+        {
+          "inRush": false,
+          "HP": 2,
+          "attack": 3,
+          "name": "Zilliax",
+          "manaCost": 5,
+          "type": "MINION",
+          "heroClass": "NEUTRAL",
+          "rarity": "LEGENDARY",
+          "description": "N/A",
+          "cost": 2
+        },
+        {
+          "inRush": false,
+          "HP": 1,
+          "attack": 2,
+          "name": "Murloc Tidehunter",
+          "manaCost": 2,
+          "type": "MINION",
+          "heroClass": "NEUTRAL",
+          "rarity": "COMMON",
+          "description": "N/A",
+          "cost": 1
+        },
+        {
+          "inRush": false,
+          "HP": 5,
+          "attack": 5,
+          "name": "Sathrovarr",
+          "manaCost": 9,
+          "type": "MINION",
+          "heroClass": "NEUTRAL",
+          "rarity": "LEGENDARY",
+          "description": "N/A",
+          "cost": 6
+        },
+        {
+          "inRush": false,
+          "HP": 4,
+          "attack": 4,
+          "name": "Curio Collector",
+          "manaCost": 5,
+          "type": "MINION",
+          "heroClass": "NEUTRAL",
+          "rarity": "RARE",
+          "description": "N/A",
+          "cost": 3
+        },
+        {
+          "inRush": false,
+          "HP": 4,
+          "attack": 3,
+          "name": "Omega Medic",
+          "manaCost": 3,
+          "type": "MINION",
+          "heroClass": "NEUTRAL",
+          "rarity": "RARE",
+          "description": "N/A",
+          "cost": 2
+        },
+        {
+          "attack": 1,
+          "durability": 3,
+          "name": "Heavy Axe",
+          "manaCost": 1,
+          "type": "WEAPON",
+          "heroClass": "NEUTRAL",
+          "rarity": "COMMON",
+          "description": "N/A",
+          "cost": 2
+        },
+        {
+          "value": 0,
+          "name": "Learn Draconic",
+          "manaCost": 1,
+          "type": "QUESTANDREWARD",
+          "heroClass": "NEUTRAL",
+          "rarity": "COMMON",
+          "description": "N/A",
+          "cost": 2
+        }
+      ],
+      "cardsUsage": {
+        "Slam": 0,
+        "Omega Medic": 0,
+        "Zilliax": 0,
+        "Murloc Tidehunter": 0,
+        "Sathrovarr": 0,
+        "Heavy Axe": 0,
+        "Learn Draconic": 0,
+        "Swarm of Locusts": 0,
+        "Swamp King Dred": 0,
         "Curio Collector": 0
       }
     }

@@ -17,6 +17,7 @@ public class BoardPanel extends SidePanel  {
 
 
     BoardPanel(){
+        setBorder(BorderFactory.createMatteBorder(5, 5, 5, 5, new Color(0x562C1C)));
         playerPanel = new CardPanel();
         opponentPanel = new CardPanel();
         setLayout(new BoxLayout(this , BoxLayout.Y_AXIS));

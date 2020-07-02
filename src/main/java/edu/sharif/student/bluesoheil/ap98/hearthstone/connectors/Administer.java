@@ -93,10 +93,15 @@ public class Administer {
                 gameController.setPassive(objName);
                 Logger.log(LogTypes.PLAY, "passive '" + objName + "' selected");
                 System.out.println("passive selected  " + objName);
+//                selectOpponent(gameController); //todo uncomment this line for phase3 and move the line below to selectOpponent method
                 startGame(gameController);
             });
             mainFrame.initFrame(playStarterPanel);
         }
+    }
+
+    private void selectOpponent(GameController gameController){
+        //this load up a panel with different Options for opponent. for now it will just show other decks that are available
     }
 
     private void startGame(GameController gameController) {
