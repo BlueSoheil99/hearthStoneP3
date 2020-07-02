@@ -1481,3 +1481,21 @@ CLICK_BUTTON		2020/07/02  20:06:46	deck:  512  selected .
 CLICK_BUTTON		2020/07/02  20:06:47	deck:  newDecknew  selected .
 CLICK_BUTTON		2020/07/02  20:06:50	button: EXIT selected .
 PLAYER		2020/07/02  20:06:51	123456 logged out
+PLAYER		2020/07/02  20:12:16	123456 logged in
+NAVIGATION		2020/07/02  20:12:19	To Collection
+CLICK_BUTTON		2020/07/02  20:12:21	deck:  WarlockDefaultDeck  selected .
+CLICK_BUTTON		2020/07/02  20:12:23	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/02  20:12:23	WarlockDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/07/02  20:12:24	button: BACK selected .
+NAVIGATION		2020/07/02  20:12:24	Back to previous panel
+NAVIGATION		2020/07/02  20:12:27	To Status
+CLICK_BUTTON		2020/07/02  20:12:30	button: BACK selected .
+NAVIGATION		2020/07/02  20:12:30	Back to previous panel
+NAVIGATION		2020/07/02  20:12:31	To Setting
+CLICK_BUTTON		2020/07/02  20:12:39	button: BACK selected .
+NAVIGATION		2020/07/02  20:12:39	Back to previous panel
+NAVIGATION		2020/07/02  20:12:41	To PassiveSelector
+CLICK_BUTTON		2020/07/02  20:12:42	passive: Warriors  selected.
+PLAY		2020/07/02  20:12:45	passive 'Warriors' selected
+NAVIGATION		2020/07/02  20:12:45	To Play
+PLAYER		2020/07/02  20:12:55	123456 logged out
