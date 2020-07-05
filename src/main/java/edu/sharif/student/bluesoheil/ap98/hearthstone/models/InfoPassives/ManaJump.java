@@ -1,6 +1,6 @@
 package edu.sharif.student.bluesoheil.ap98.hearthstone.models.InfoPassives;
 
-import edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.GameController;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.GamePlayer;
 
 public class ManaJump extends Passive {
 //    private static ManaJump instance;
@@ -15,7 +15,7 @@ public class ManaJump extends Passive {
 //    }
 
     @Override
-    public void run() {
-        GameController.getInstance().setInitialMana(2);
+    public void run(GamePlayer player) {
+        player.setInitialMana(2);
     }
 }

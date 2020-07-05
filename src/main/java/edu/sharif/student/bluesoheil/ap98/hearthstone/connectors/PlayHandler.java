@@ -59,7 +59,6 @@ public class PlayHandler {
     ///
     ////getters and setters
     ///
-
     //
 
     public ArrayList<CardShape> get3Passives() {
@@ -98,7 +97,7 @@ public class PlayHandler {
     }
 
     public ArrayList<CardShape> getHand() {
-        return administer.getCardShapes(GameController.getInstance().getPlayerHand());
+        return administer.getCardShapes(GameController.getInstance().getPlayerHand(true));
     }
     public ArrayList<CardShape> getOpponentHand() {
         return administer.getCardShapes(GameController.getInstance().getPlayerHand(false));
@@ -110,8 +109,20 @@ public class PlayHandler {
     public Card.CardType getCardType(String playerSelectedCard) {
         return gameController.getCard(playerSelectedCard).getType();
     }
+
+
+    ////////////
     ////////////
 
+    public void changeTurns() {
+        gameController.changeTurns();
+    }
+
+    public void updateHand() {
+        gameController.updateHand();
+    }
+
+    ////////////
     ////////////
 
     public MinionActualCard summonAndGetMinion(String playerSelectedCardInHand) throws PlayException {
@@ -145,14 +156,6 @@ public class PlayHandler {
 
 
     public void playCard(ActualCard playerSelectedCard) {
-    }
-
-    public void changeTurns() {
-        gameController.changeTurns();
-    }
-
-    public void updateHand() {
-        gameController.updateHand();
     }
 
     //

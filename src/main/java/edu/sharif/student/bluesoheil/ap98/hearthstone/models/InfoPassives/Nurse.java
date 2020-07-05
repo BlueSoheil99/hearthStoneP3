@@ -1,6 +1,7 @@
 package edu.sharif.student.bluesoheil.ap98.hearthstone.models.InfoPassives;
 
 import edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.GameController;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.GamePlayer;
 
 public class Nurse extends Passive {
     private static Nurse instance;
@@ -13,7 +14,7 @@ public class Nurse extends Passive {
         return instance;
     }
     @Override
-    public void run() {
-        GameController.getInstance().setNurseEnable(true);
+    public void run(GamePlayer player) {
+        player.setNurseEnable(true);
     }
 }

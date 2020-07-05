@@ -1,6 +1,6 @@
 package edu.sharif.student.bluesoheil.ap98.hearthstone.models.InfoPassives;
 
-import edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.GameController;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.GamePlayer;
 
 public class TwiceDraw extends Passive {
     public static TwiceDraw instance;
@@ -13,7 +13,7 @@ public class TwiceDraw extends Passive {
     }
 
     @Override
-    public void run() {
-        GameController.getInstance().setNumberOfCardsCanBeDrawn(2);
+    public void run(GamePlayer player) {
+        player.setNumberOfCardsCanBeDrawn(2);
     }
 }
