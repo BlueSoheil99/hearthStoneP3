@@ -1,17 +1,21 @@
 package edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play;
 
+import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.HeroActionListener;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Heroes.HeroTypes;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.Configuration.GuiConfigs.PlayConfig;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.ImageLoader;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.util.HashMap;
 
 public class HeroPanel extends JPanel {
 
     private static HashMap<HeroTypes, BufferedImage> heroImages = new HashMap<>();
+    private HeroActionListener heroActionListener;
     private JLabel hpLabel = new JLabel("HP : ");
     private JLabel manaLabel = new JLabel("Mana : ");
     private JLabel remainingCardsLabel = new JLabel("Remaining Cards : ");
@@ -29,6 +33,7 @@ public class HeroPanel extends JPanel {
         heroIcon.setIcon(new ImageIcon(heroImages.get(hero)));
         createHeroPower();
         makeWeaponBtnDefault();
+        setActionListeners();
         this.hp.setText(Integer.toString(hp));
         mana.setText(Integer.toString(startingMana));
         init();
@@ -99,12 +104,35 @@ public class HeroPanel extends JPanel {
             makeWeaponBtnDefault();
         }else{
             this.weaponBtn = weaponBtn;
+            setActionListeners();
             Dimension size = weaponBtn.getSize();
             this.weaponBtn.setMinimumSize(size);
             this.weaponBtn.setEnabled(true);
         }
         removeAll();
         init();
+    }
+
+    //todo setListener for hero panel for playing weapon or heroPower
+
+    public void setHeroActionListener(HeroActionListener heroActionListener) {
+        this.heroActionListener = heroActionListener;
+    }
+    public void disableHeroActionListener() {
+        heroActionListener = null;
+    }
+
+    private void setActionListeners() {
+        heroPower.addActionListener(e -> {
+            if (heroActionListener != null){
+                heroActionListener.playHeroPower();
+            }
+        });
+        weaponBtn.addActionListener(e -> {
+            if (heroActionListener != null){
+                heroActionListener.playWeapon((WeaponActualCard) weaponBtn);
+            }
+        });
     }
 
 

@@ -3,8 +3,8 @@ package edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.CardPanel;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.CardShape;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.SidePanel;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.CardClickListener;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.ClickListener;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.HeroActionListener;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.PlayActionListener;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Heroes.HeroTypes;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.Configuration.GuiConfigs.PlayConfig;
@@ -82,31 +82,45 @@ public class PlayerPanel extends SidePanel {
         heroPanel.updateStates(latestHeroStates.get("HP"), latestHeroStates.get("MANA"), latestHeroStates.get("CARDS"));
     }
 
+    void setWeaponCard(WeaponActualCard weaponCard) {
+        heroPanel.setWeaponBtn(weaponCard);
+    }
+
     void endTurn() {
         endTurnBtn.setEnabled(false);
         playBtn.setEnabled(false);
         rightBtn.setEnabled(false);
         leftBtn.setEnabled(false);
+        cardPanel.disableClickListener();
+//        heroPanel.disableClickListener();
+        disableClickListenerForActions();
         //todo card ha barAx shan va card haye tu board disabled shan
     }
 
-    void startTurn() {
+    void startTurn(ClickListener clickListenerForCards, PlayActionListener clickListenerForActions, HeroActionListener clickListenerForHero) {
         endTurnBtn.setEnabled(true);
         playBtn.setEnabled(true);
         rightBtn.setEnabled(true);
         leftBtn.setEnabled(true);
+        setClickListenerForCards(clickListenerForCards);
+        setClickListenerForActions(clickListenerForActions);
+        setClickListenerForHero(clickListenerForHero);
     }
 
-    void setClickListenerForCards(ClickListener clickListener) {
+    private void setClickListenerForCards(ClickListener clickListener) {
         cardPanel.setClickListener(clickListener);
     }
 
-    void setClickListenerForActions(PlayActionListener playActionListener) {
+    private void setClickListenerForHero(HeroActionListener heroActionListener) {
+        heroPanel.setHeroActionListener(heroActionListener);
+    }
+
+    private void setClickListenerForActions(PlayActionListener playActionListener) {
         this.playActionListener = playActionListener;
     }
 
-    void setWeaponCard(WeaponActualCard weaponCard) {
-        heroPanel.setWeaponBtn(weaponCard);
+    private void disableClickListenerForActions() {
+        playActionListener = null;
     }
 
     private void setActionListeners() {
