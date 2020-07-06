@@ -68,7 +68,7 @@ public class PlayStarterPanel extends GamePanel {
     private void SetSelectBtnActionListener() {
         selectBtn.addActionListener(e -> {
             if (selectedPassive == null) {
-                JOptionPane.showMessageDialog(null, "You Haven't Chosen a Passive Yet");
+                JOptionPane.showMessageDialog(null, "You Haven't Chosen a Passive Yet","match setup error",JOptionPane.ERROR_MESSAGE);
             } else {
                 changeBtn.setEnabled(true);
                 nextBtn.setEnabled(true);
@@ -82,13 +82,13 @@ public class PlayStarterPanel extends GamePanel {
     private void SetChangeBtnActionListener() {
         changeBtn.addActionListener(e -> {
             if (selectedCard == null) {
-                JOptionPane.showMessageDialog(null, "You Haven't Chosen a Card Yet");
+                JOptionPane.showMessageDialog(null, "You Haven't Chosen a Card Yet","match setup error",JOptionPane.ERROR_MESSAGE);
             } else {
                 try {
                     PlayHandler.getInstance().replaceCard(selectedCard);
                     handPanel.setCards(PlayHandler.getInstance().getHand());
                 } catch (PlayException ex) {
-                    JOptionPane.showMessageDialog(null, ex.getMessage());
+                    JOptionPane.showMessageDialog(null, ex.getMessage(),"match setup error",JOptionPane.ERROR_MESSAGE);
                 }
             }
         });

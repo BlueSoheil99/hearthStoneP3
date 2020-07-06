@@ -83,14 +83,18 @@ public class GamePlayer {
 
     public void setWarriorsEnabled(boolean enabling) {
         isWarriorsEnabled = enabling;
-    }
+    } //todo enable it
 
     public void setNurseEnable(boolean enabling) {
         isNurseEnabled = enabling;
-    }
+    } //todo enable it
 
-    public void setOffCardsEnable(boolean enabling) {
-        isOffCardsEnabled = enabling;
+    public void setOffCardsEnable(boolean enabled) {
+        if (enabled){
+            for (Card card : playerCards) card.setManaCost(card.getManaCost() - 1);
+            for (Card card : playerHand) card.setManaCost(card.getManaCost() - 1);
+            //todo because of this passive, some weapons can't  be displayed well...WTF ??
+        }
     }
 
     //////////////////////////////

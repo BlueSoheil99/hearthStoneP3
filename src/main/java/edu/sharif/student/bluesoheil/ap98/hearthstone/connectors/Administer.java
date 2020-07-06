@@ -87,12 +87,12 @@ public class Administer {
         } else {
             Logger.log(LogTypes.NAVIGATION, "To PlayStarter");
             GameController.setNewGame();
+            Logger.restartRecording();
             GameController gameController = GameController.getInstance();
             PlayStarterPanel playStarterPanel = new PlayStarterPanel();
             playStarterPanel.setClickListener(objName -> {
                 gameController.setPassiveForUser(objName);
                 Logger.log(LogTypes.PLAY, "passive '" + objName + "' selected");
-                System.out.println("passive selected  " + objName);
                 selectOpponent(gameController);
             });
             mainFrame.initFrame(playStarterPanel);
@@ -103,7 +103,7 @@ public class Administer {
         OpponentSelectionPanel opponentSelectionPanel = new OpponentSelectionPanel();
         opponentSelectionPanel.setClickListener(objName -> {
             gameController.setOpponent(objName);
-            System.out.println(objName + " is selected");//todo log
+            Logger.log(LogTypes.PLAY , objName+" is selected as opponent");
             startGame(gameController);
         });
 

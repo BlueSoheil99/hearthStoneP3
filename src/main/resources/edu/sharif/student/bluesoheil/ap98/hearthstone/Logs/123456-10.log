@@ -1716,3 +1716,42 @@ CLICK_BUTTON		2020/07/06  10:07:21	deck:  RogueDefaultDeck  selected .
 NAVIGATION		2020/07/06  10:07:23	To Play
 CLICK_BUTTON		2020/07/06  10:07:29	card: CURIO COLLECTOR  selected.
 PLAYER		2020/07/06  10:07:43	123456 logged out
+PLAYER		2020/07/06  13:11:51	123456 logged in
+NAVIGATION		2020/07/06  13:11:52	To Collection
+CLICK_BUTTON		2020/07/06  13:11:54	deck:  WarlockDefaultDeck  selected .
+CLICK_BUTTON		2020/07/06  13:11:55	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/06  13:11:55	WarlockDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/07/06  13:11:56	button: BACK selected .
+NAVIGATION		2020/07/06  13:11:56	Back to previous panel
+NAVIGATION		2020/07/06  13:11:57	To PlayStarter
+CLICK_BUTTON		2020/07/06  13:11:58	passive: Warriors  selected.
+CLICK_BUTTON		2020/07/06  13:12:00	card: CURIO COLLECTOR  selected.
+PLAY		2020/07/06  13:12:02	passive 'Warriors' selected
+CLICK_BUTTON		2020/07/06  13:12:04	deck:  HunterDefaultDeck  selected .
+PLAY		2020/07/06  13:12:05	HunterDefaultDeck is selected as opponent
+NAVIGATION		2020/07/06  13:12:05	To Play
+PLAY		2020/07/06  13:12:15	you forfeited the fight
+NAVIGATION		2020/07/06  13:12:15	Back to previous panel
+NAVIGATION		2020/07/06  13:12:16	To PlayStarter
+CLICK_BUTTON		2020/07/06  13:12:22	passive: OffCards  selected.
+CLICK_BUTTON		2020/07/06  13:12:24	card: ZILLIAX  selected.
+PLAY		2020/07/06  13:12:26	passive 'OffCards' selected
+CLICK_BUTTON		2020/07/06  13:12:28	deck:  HunterDefaultDeck  selected .
+PLAY		2020/07/06  13:12:30	HunterDefaultDeck is selected as opponent
+NAVIGATION		2020/07/06  13:12:30	To Play
+CLICK_BUTTON		2020/07/06  13:12:31	card: DREADSCALE  selected.
+CLICK_BUTTON		2020/07/06  13:12:37	card: MURLOC TIDEHUNTER  selected.
+PLAY		2020/07/06  13:12:38	you summoned MURLOC TIDEHUNTER
+CLICK_BUTTON		2020/07/06  13:12:46	card: DREADSCALE  selected.
+PLAY		2020/07/06  13:12:47	you summoned DREADSCALE
+PLAY		2020/07/06  13:12:53	you forfeited the fight
+NAVIGATION		2020/07/06  13:12:53	Back to previous panel
+NAVIGATION		2020/07/06  13:12:55	To PlayStarter
+CLICK_BUTTON		2020/07/06  13:12:55	passive: OffCards  selected.
+CLICK_BUTTON		2020/07/06  13:12:57	card: SLAM  selected.
+CLICK_BUTTON		2020/07/06  13:12:58	card: CURIO COLLECTOR  selected.
+PLAY		2020/07/06  13:13:00	passive 'OffCards' selected
+CLICK_BUTTON		2020/07/06  13:13:02	deck:  RogueDefaultDeck  selected .
+PLAY		2020/07/06  13:13:03	RogueDefaultDeck is selected as opponent
+NAVIGATION		2020/07/06  13:13:03	To Play
+PLAYER		2020/07/06  13:13:10	123456 logged out

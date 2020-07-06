@@ -75,15 +75,13 @@ public class Logger {
 
             String inputStr = inputBuffer.toString();
             FileWriter writer = new FileWriter(player.getLogPath());
-            PrintWriter printer =new PrintWriter(writer);
+            PrintWriter printer = new PrintWriter(writer);
             for (String x : inputStr.split("\n"))
                 printer.println(x);
             printer.close();
-
         } catch (Exception e) {
             System.err.println(e.getMessage());
         }
-
     }
 
     public static void log(LogTypes event, String description) {
@@ -91,8 +89,6 @@ public class Logger {
                 LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy/MM/dd  HH:mm:ss")) +
                 "\t" + description);
         logger.recentLogs.add(new Log(event, description));
-
-
     }
 
     //todo maybe you need to make a new method for gui exception errors
@@ -107,6 +103,10 @@ public class Logger {
         logger.recentLogs.add(new Log(event, exceptionAsString));
     }
 
+    public static void restartRecording(){
+        logger.recentLogs = new ArrayList<>();
+    }
+
     public static ArrayList<String> getEventLogs() {
         ArrayList<String> playEvents = new ArrayList<>();
         for (Log log: logger.recentLogs){
@@ -114,6 +114,7 @@ public class Logger {
         }
         return playEvents;
     }
+
 
 }
 

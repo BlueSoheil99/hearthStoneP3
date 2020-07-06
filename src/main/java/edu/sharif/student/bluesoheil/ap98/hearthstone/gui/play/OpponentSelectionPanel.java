@@ -67,7 +67,9 @@ public class OpponentSelectionPanel extends GamePanel {
 
     private void SetPlayBtnActionListener() {
         playBtn.addActionListener(e -> {
-            clickListener.select(selectedDeck);
+            if (selectedDeck == null){
+                JOptionPane.showMessageDialog(null , "Choose an opponent first ","match setup error" , JOptionPane.ERROR_MESSAGE);
+            }else clickListener.select(selectedDeck);
         });
     }
 
