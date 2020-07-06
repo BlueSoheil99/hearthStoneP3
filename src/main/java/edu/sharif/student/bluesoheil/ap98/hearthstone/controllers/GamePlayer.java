@@ -14,19 +14,21 @@ import java.util.HashMap;
 import java.util.Stack;
 
 public class GamePlayer {
-    private final PlayLogicConfig properties;
+    private static final PlayLogicConfig properties = PlayLogicConfig.getInstance();
+    private static final int maximumCardsInHand = properties.getMaximumCardsInHand();
+    private static final int maximumCardsOnBoard = 7;
+
     private InfoPassive passive;
     private Deck deck;
     private Hero hero;
     private Stack<Card> playerCards;
     private Card playerWeapon;
-    private ArrayList<Card> playerHand , summonedMinions;
+    private ArrayList<Card> playerHand, summonedMinions;
     private ArrayList<Integer> cardsPlayerChangedForHisFirstHand;
     private int initialMana, turnsPlayerPlayed, numberOfCardsCanBeDrawn, playerMana;
     private boolean isWarriorsEnabled, isNurseEnabled, isOffCardsEnabled;
 
     GamePlayer(Deck playerDeck) {
-        properties = PlayLogicConfig.getInstance();
         //todo increment numbers of deck being played
         deck = DeckController.getInstance().copyDeck(playerDeck);
         hero = deck.getHeroType().getHero();
@@ -94,11 +96,11 @@ public class GamePlayer {
     //////////////////////////////
     ///////turn changing//////////
 
-    void newTurn(){
+    void newTurn() {
         increaseMana();
     }
 
-    void endTurn(){
+    void endTurn() {
         turnsPlayerPlayed++;
     }
 
@@ -136,12 +138,14 @@ public class GamePlayer {
     }
 
     private void checkHandLimit() {
-        if (playerHand.size() > properties.getMaximumCardsInHand()) {
+        if (playerHand.size() > maximumCardsInHand) {
             playerHand.remove(playerHand.size() - 1);
+            //todo you can show a message for hand overFlow
             checkHandLimit();
         }
     }
-    ArrayList<Card> drawHandAgain(String cardName) throws PlayException {
+
+    void drawHandAgain(String cardName) throws PlayException {
         Card card;
         for (Card handCard : playerHand) {
             if (handCard.getName().toUpperCase().equals(cardName)) {
@@ -160,7 +164,6 @@ public class GamePlayer {
                     throw new PlayException("you can't change your hand more than " + properties.getMaximumStartHints() + " times");
             }
         }
-        return getHand();
     }
 
     //////////////////////////////
@@ -187,7 +190,7 @@ public class GamePlayer {
 
     void removeCard(Card card) {
         if (playerHand.contains(card)) {
-            if (card.getType() == Card.CardType.MINION) summonedMinions.add(card);
+            if (card.getType() == Card.CardType.MINION) summonedMinions.add(card); // todo check is it ok or not
             playerHand.remove(card);
         }
     }

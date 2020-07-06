@@ -1,6 +1,5 @@
 package edu.sharif.student.bluesoheil.ap98.hearthstone.controllers;
 
-
 import edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.PlayException;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Heroes.HeroTypes;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.cards.Card;
@@ -11,8 +10,6 @@ import java.util.HashMap;
 
 public class GameController {
     private static GameController instance;
-    private static final int maximumCardsInHand = 7;
-    private static final int maximumCardsOnBoard = 7;
 
     private PlayLogicConfig properties;
     private DeckController deckController;
@@ -24,7 +21,6 @@ public class GameController {
         OPPONENT;
         private GamePlayer gamePlayer;
     }
-
 
     private GameController() {
         properties = PlayLogicConfig.getInstance();
@@ -63,72 +59,57 @@ public class GameController {
     ///non-statics//////
     /////////////////
     ///////////
+
     private void setPlayer() {
         Players.ME.gamePlayer = new GamePlayer(deckController.getCurrentDeck());
-    }
-
-    public HeroTypes getPlayerHero() {
-        return getPlayer(true).getHeroType();
-    }
-
-    public HashMap<String, Integer> getHeroStates() {
-        return currentPlayer.gamePlayer.getHeroStates();
-    }
-
-    public HashMap<String, Integer> getHeroStates(boolean isMe) {
-        if (isMe) return getPlayer(true).getHeroStates();
-        return getPlayer(false).getHeroStates();
-    }
-
-    //////////
-    //////////
-    GamePlayer getOpponent() {
-        return Players.OPPONENT.gamePlayer;
-    }
-
-    private GamePlayer getPlayer(boolean isME) {
-        if (isME) return Players.ME.gamePlayer;
-        else return Players.OPPONENT.gamePlayer;
     }
 
     public void setOpponent(String deckName) {
         Players.OPPONENT.gamePlayer = new GamePlayer(deckController.getDeck(deckName));
     }
 
-    public HeroTypes getOpponentHero() {
-        return getPlayer(false).getHeroType();
+    //***********************//
+    private GamePlayer getPlayer(boolean isME) {
+        if (isME) return Players.ME.gamePlayer;
+        else return Players.OPPONENT.gamePlayer;
     }
 
-    public int getOpponentHP() {
-        return getPlayer(false).getHp();
-    }
-
-    public int getInitialOpponentMana() {
-        return getPlayer(false).getInitialMana();
-    }
-
-    ////////////////////
-    ///////passives/////
-
-    public void setPassive(String passiveName) {
+    //***********************//
+    public void setPassiveForUser(String passiveName) {
         Players.ME.gamePlayer.setPassive(passiveName);
     }
 
-    ///////////////////
-    ///////////////////
+    //***********************//
+    public HeroTypes getPlayerHero() {
+        return currentPlayer.gamePlayer.getHeroType();
+    }
 
+    public HeroTypes getPlayerHero(boolean isMe) {
+        return getPlayer(isMe).getHeroType();
+    }
 
+    //***********************//
+    public HashMap<String, Integer> getHeroStates() {
+        return currentPlayer.gamePlayer.getHeroStates();
+    }
+
+    public HashMap<String, Integer> getHeroStates(boolean isMe) {
+        return getPlayer(isMe).getHeroStates();
+    }
+
+    //***********************//
     public ArrayList<Card> getPlayerHand(boolean isMe) {
         return getPlayer(isMe).getHand();
     }
 
-    public void updateHand() {
-        currentPlayer.gamePlayer.updateHand();
+    public ArrayList<Card> getPlayerHand() {
+        return currentPlayer.gamePlayer.getHand();
     }
 
+    //***********************//
 
-    public ArrayList<Card> drawHandAgain(String cardName) throws PlayException {
-        return currentPlayer.gamePlayer.drawHandAgain(cardName);
+    public void drawHandAgain(String cardName) throws PlayException {
+        currentPlayer.gamePlayer.drawHandAgain(cardName);
     }
 
     //////////////
@@ -155,6 +136,10 @@ public class GameController {
         } else {
             setCurrentPlayer(Players.ME);
         }
+        updateHand();
+    }
+    private void updateHand() {
+        currentPlayer.gamePlayer.updateHand();
     }
 
     private void setCurrentPlayer(Players opponent) {

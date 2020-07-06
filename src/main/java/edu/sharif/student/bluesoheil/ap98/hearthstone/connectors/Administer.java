@@ -13,7 +13,6 @@ import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.CardShape;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.starter.LoginPanel;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.starter.SignUpPanel;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.*;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.ClickListener;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Deck;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Heroes.HeroTypes;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.InfoPassives.InfoPassive;
@@ -25,7 +24,6 @@ import edu.sharif.student.bluesoheil.ap98.hearthstone.util.log.Logger;
 import javax.swing.*;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -92,7 +90,7 @@ public class Administer {
             GameController gameController = GameController.getInstance();
             PlayStarterPanel playStarterPanel = new PlayStarterPanel();
             playStarterPanel.setClickListener(objName -> {
-                gameController.setPassive(objName);
+                gameController.setPassiveForUser(objName);
                 Logger.log(LogTypes.PLAY, "passive '" + objName + "' selected");
                 System.out.println("passive selected  " + objName);
                 selectOpponent(gameController);

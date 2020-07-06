@@ -13,17 +13,18 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 
+/**
+ * this class works as a connection between gui and logic(administer + gameController)
+ */
 public class PlayHandler {
-    private static PlayHandler instance;
-    private Administer administer;
-    private GameController gameController;
 
-    /**
-     * this class works as a connection between gui and logic(administer + gameController)
-     */
     private PlayHandler() {
         administer = Administer.getInstance();
     }
+
+    private static PlayHandler instance;
+    private Administer administer;
+    private GameController gameController;
 
     ///////////////////////////////
     ///////////statics/////////////
@@ -46,15 +47,7 @@ public class PlayHandler {
 
     //////////////////////////////
     /////////non-statics//////////
-    //todo exiting and forfeiting macth must have a penalty(loosing or etc.)
-    public void exitGame() {
-        administer.runExit();
-    }
 
-    public void forfeitMatch() {
-        Logger.log(LogTypes.PLAY, gameController.getPlayingSide() + " forfeited the fight");
-        administer.back();
-    }
     //
     ///
     ////getters and setters
@@ -69,61 +62,87 @@ public class PlayHandler {
         return threeOnes;
     }
 
-    public void replaceCard(String cardName) throws PlayException {
-        GameController.getInstance().drawHandAgain(cardName);
+    public LinkedHashMap<String, String> getAvailableDecks() {
+        return administer.getAvailableDecks();
     }
 
     public ArrayList<String> getEvents() {
         return Logger.getEventLogs();
     }
 
-    public PlayerPanel getPlayerPanel() {
-        return new PlayerPanel(gameController.getPlayerHero(),
-                gameController.getHeroStates().get("HP"), gameController.getHeroStates().get("MANA"));
+
+    public PlayerPanel getPlayerPanel(boolean isMe) {
+        return new PlayerPanel(gameController.getPlayerHero(isMe),
+                gameController.getHeroStates(isMe).get("HP"), gameController.getHeroStates(isMe).get("MANA"));
     }
 
-    public LinkedHashMap<String, String> getAvailableDecks() {
-        return administer.getAvailableDecks();
-    }
-
-    public PlayerPanel getOpponentPanel() {
-
-        PlayerPanel panel = new PlayerPanel (gameController.getOpponentHero(),
-                gameController.getOpponentHP(), gameController.getInitialOpponentMana());
-        return panel;
-    }
-    public HashMap<String, Integer> getOpponentHeroStates() {
-        return gameController.getHeroStates(false);
-    }
-
-    public ArrayList<CardShape> getHand() {
-        return administer.getCardShapes(GameController.getInstance().getPlayerHand(true));
-    }
-    public ArrayList<CardShape> getOpponentHand() {
-        return administer.getCardShapes(GameController.getInstance().getPlayerHand(false));
-    }
-
-    public HashMap<String, Integer> getHeroStates() {
-        return gameController.getHeroStates();
-    }
     public Card.CardType getCardType(String playerSelectedCard) {
         return gameController.getCard(playerSelectedCard).getType();
     }
 
+    public void replaceCard(String cardName) throws PlayException {
+        GameController.getInstance().drawHandAgain(cardName);
+    }
 
-    ////////////
-    ////////////
+    //***********************//
+
+    /**
+     * it returns hand of a specific player
+     */
+    public ArrayList<CardShape> getHand(boolean isMe) {
+        return administer.getCardShapes(GameController.getInstance().getPlayerHand(isMe));
+    }
+
+    /**
+     * it returns hand of the player with turn(currentPlayer)
+     */
+    public ArrayList<CardShape> getHand() {
+        return administer.getCardShapes(GameController.getInstance().getPlayerHand());
+    }
+
+    //***********************//
+
+    /**
+     * it returns states of  a specific player
+     */
+    public HashMap<String, Integer> getHeroStates(boolean isMe) {
+        return gameController.getHeroStates(isMe);
+    }
+
+    /**
+     * it returns states of the player with turn
+     */
+    public HashMap<String, Integer> getHeroStates() {
+        return gameController.getHeroStates();
+    }
+    //***********************//
+
+    //
+    ///
+    ////general settings
+    ///
+    //
 
     public void changeTurns() {
         gameController.changeTurns();
     }
 
-    public void updateHand() {
-        gameController.updateHand();
+    //todo exiting and forfeiting match must have a penalty(loosing or etc.)
+
+    public void exitGame() {
+        administer.runExit();
     }
 
-    ////////////
-    ////////////
+    public void forfeitMatch() {
+        Logger.log(LogTypes.PLAY, gameController.getPlayingSide() + " forfeited the fight");
+        administer.back();
+    }
+
+    //
+    ///
+    //// card playing methods
+    ///
+    //
 
     public MinionActualCard summonAndGetMinion(String playerSelectedCardInHand) throws PlayException {
         Minion minion = (Minion) getCardFromController(playerSelectedCardInHand);
@@ -154,14 +173,13 @@ public class PlayHandler {
         return card;
     }
 
+    ////////////
+    ////////////
 
     public void playCard(ActualCard playerSelectedCard) {
+
     }
 
-    //
-    ///
-    ////other methods
-    ///
-    //
+
 
 }

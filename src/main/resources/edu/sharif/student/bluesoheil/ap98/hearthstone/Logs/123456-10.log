@@ -1666,3 +1666,53 @@ PLAY		2020/07/05  23:39:04	you summoned MURLOC TIDEHUNTER
 PLAY		2020/07/05  23:39:28	you forfeited the fight
 NAVIGATION		2020/07/05  23:39:28	Back to previous panel
 PLAYER		2020/07/05  23:39:30	123456 logged out
+PLAYER		2020/07/06  00:43:22	123456 logged in
+NAVIGATION		2020/07/06  00:43:24	To Collection
+CLICK_BUTTON		2020/07/06  00:43:25	deck:  HunterDefaultDeck  selected .
+CLICK_BUTTON		2020/07/06  00:43:27	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/06  00:43:28	HunterDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/07/06  00:43:29	button: BACK selected .
+NAVIGATION		2020/07/06  00:43:29	Back to previous panel
+NAVIGATION		2020/07/06  00:43:30	To PlayStarter
+CLICK_BUTTON		2020/07/06  00:43:34	passive: Warriors  selected.
+CLICK_BUTTON		2020/07/06  00:43:36	card: SLAM  selected.
+PLAY		2020/07/06  00:43:38	passive 'Warriors' selected
+CLICK_BUTTON		2020/07/06  00:43:40	deck:  PriestDefaultDeck  selected .
+NAVIGATION		2020/07/06  00:43:41	To Play
+CLICK_BUTTON		2020/07/06  00:43:54	card: HEAVY AXE  selected.
+PLAY		2020/07/06  00:43:56	you set weapon to HEAVY AXE
+PLAYER		2020/07/06  00:44:53	123456 logged out
+PLAYER		2020/07/06  09:56:46	123456 logged in
+NAVIGATION		2020/07/06  09:56:49	To Collection
+CLICK_BUTTON		2020/07/06  09:56:51	deck:  WarlockDefaultDeck  selected .
+CLICK_BUTTON		2020/07/06  09:56:52	deck:  RogueDefaultDeck  selected .
+CLICK_BUTTON		2020/07/06  09:56:54	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/06  09:56:54	RogueDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/07/06  09:56:55	button: BACK selected .
+NAVIGATION		2020/07/06  09:56:55	Back to previous panel
+NAVIGATION		2020/07/06  09:56:56	To PlayStarter
+CLICK_BUTTON		2020/07/06  09:56:58	passive: ManaJump  selected.
+CLICK_BUTTON		2020/07/06  09:57:00	card: SATHROVARR  selected.
+PLAY		2020/07/06  09:57:05	passive 'ManaJump' selected
+CLICK_BUTTON		2020/07/06  09:57:06	deck:  MageDefaultDeck  selected .
+NAVIGATION		2020/07/06  09:57:07	To Play
+CLICK_BUTTON		2020/07/06  09:57:53	card: HEAVY AXE  selected.
+PLAY		2020/07/06  09:57:55	you set weapon to HEAVY AXE
+CLICK_BUTTON		2020/07/06  09:57:58	card: OMEGA MEDIC  selected.
+PLAYER		2020/07/06  10:00:45	123456 logged out
+PLAYER		2020/07/06  10:06:56	123456 logged in
+NAVIGATION		2020/07/06  10:06:58	To Collection
+CLICK_BUTTON		2020/07/06  10:06:59	deck:  MageDefaultDeck  selected .
+CLICK_BUTTON		2020/07/06  10:07:01	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/06  10:07:09	MageDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/07/06  10:07:11	button: BACK selected .
+NAVIGATION		2020/07/06  10:07:11	Back to previous panel
+NAVIGATION		2020/07/06  10:07:12	To PlayStarter
+CLICK_BUTTON		2020/07/06  10:07:14	passive: Warriors  selected.
+CLICK_BUTTON		2020/07/06  10:07:14	passive: TwiceDraw  selected.
+CLICK_BUTTON		2020/07/06  10:07:16	card: SATHROVARR  selected.
+PLAY		2020/07/06  10:07:18	passive 'TwiceDraw' selected
+CLICK_BUTTON		2020/07/06  10:07:21	deck:  RogueDefaultDeck  selected .
+NAVIGATION		2020/07/06  10:07:23	To Play
+CLICK_BUTTON		2020/07/06  10:07:29	card: CURIO COLLECTOR  selected.
+PLAYER		2020/07/06  10:07:43	123456 logged out

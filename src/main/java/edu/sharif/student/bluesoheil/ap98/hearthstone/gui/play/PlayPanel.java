@@ -40,12 +40,9 @@ public class PlayPanel extends GamePanel {
         eventBox = new EventBox();
         playHandler = PlayHandler.getInstance();
         setupPlayerPanel();
-        opponentPanel = playHandler.getOpponentPanel();
-        opponentPanel.updateHand(playHandler.getOpponentHand(), playHandler.getOpponentHeroStates());
-        opponentPanel.endTurn();
         setupOpponentPanel();
         playHandler = PlayHandler.getInstance();
-        setupPausePanel();
+        setupPauseMenu();
         setupBoardPanel();
     }
 
@@ -73,14 +70,14 @@ public class PlayPanel extends GamePanel {
         board.setOpponentCardClickListeners(selectedCard -> opponentSelectedCard = selectedCard);
     }
 
-    private void setupPausePanel() {
+    private void setupPauseMenu() {
         pauseMenu = PauseMenu.getInstance();
         pauseMenu.setVisible(true);
     }
 
     private void setupPlayerPanel() {
-        playerPanel = playHandler.getPlayerPanel();
-        playerPanel.updateHand(playHandler.getHand(), playHandler.getHeroStates());
+        playerPanel = playHandler.getPlayerPanel(true);
+        playerPanel.updateHand(playHandler.getHand(true), playHandler.getHeroStates(true));
         ////setListeners////
         playerPanel.setClickListenerForCards(objName -> playerSelectedCardInHand = objName);
         playerPanel.setClickListenerForActions(new PlayActionListener() {
@@ -113,6 +110,11 @@ public class PlayPanel extends GamePanel {
     }
 
     private void setupOpponentPanel() {
+
+        opponentPanel = playHandler.getPlayerPanel(false);
+        opponentPanel.updateHand(playHandler.getHand(false), playHandler.getHeroStates(false));
+        opponentPanel.endTurn();
+
         opponentPanel.setClickListenerForActions(new PlayActionListener() {
             @Override
             public void endTurn() {
@@ -146,11 +148,12 @@ public class PlayPanel extends GamePanel {
             myTurn = false;
             playerPanel.endTurn();
             opponentPanel.startTurn();
+            opponentPanel.updateHand(playHandler.getHand(false), playHandler.getHeroStates(false));
+
         } else {
             myTurn = true;
             playerPanel.startTurn();
-            playHandler.updateHand();
-            playerPanel.updateHand(playHandler.getHand(), playHandler.getHeroStates());
+            playerPanel.updateHand(playHandler.getHand(true), playHandler.getHeroStates(true));
             opponentPanel.endTurn();
         }
     }
@@ -174,7 +177,7 @@ public class PlayPanel extends GamePanel {
                     playSpell(playerSelectedCardInHand);
                     break;
             }
-            playerPanel.updateHand(playHandler.getHand(), playHandler.getHeroStates());
+            playerPanel.updateHand(playHandler.getHand(), playHandler.getHeroStates(true));
         } catch (PlayException e) {
             JOptionPane.showMessageDialog(null, e.getMessage(), "Error in card selection", JOptionPane.ERROR_MESSAGE);
         }
