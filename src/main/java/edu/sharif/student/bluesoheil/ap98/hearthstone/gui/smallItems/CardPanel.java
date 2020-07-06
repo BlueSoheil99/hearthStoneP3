@@ -1,7 +1,6 @@
 package edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems;
 
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play.ActualCard;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play.MinionActualCard;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.CardClickListener;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.ClickListener;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.Configuration.GuiConfigs.GuiConstants;
@@ -50,7 +49,7 @@ public class CardPanel extends SidePanel implements ActionListener {
     }
 
     public void addCard(CardShape card) {
-        if (cards.size()==0) addCard(card , 0);
+        if (cards.size() == 0) addCard(card, 0);
         else addCard(card, cards.size() - 1);
     }
 
@@ -89,6 +88,10 @@ public class CardPanel extends SidePanel implements ActionListener {
         repaint();
     }
 
+    public void setCardsBackward(boolean enable) {
+        for (CardShape card : cards) card.showBackOfCard(enable);
+    }
+
     public void unselectCard() {
         if (lastBorder != null) selectedCard.setBorder(lastBorder);
     }
@@ -100,11 +103,15 @@ public class CardPanel extends SidePanel implements ActionListener {
     public void setCardClickListener(CardClickListener cardClickListener) {
         this.cardClickListener = cardClickListener;
     }
-    public void disableClickListener(){
-        clickListener=null;
+
+    public void disableClickListener() {
+        clickListener = null;
+        unselectCard();
     }
-    public void disableCardClickListener(){
-        cardClickListener=null;
+
+    public void disableCardClickListener() {
+        cardClickListener = null;
+        unselectCard();
     }
 
     @Override
@@ -124,4 +131,5 @@ public class CardPanel extends SidePanel implements ActionListener {
         }
 
     }
+
 }

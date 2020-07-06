@@ -15,14 +15,14 @@ public class CardShape extends JButton {
     private static final int CARD_HEIGHT = GuiConstants.getInstance().getCardHeight();
     private static final int PASSIVE_WIDTH = GuiConstants.getInstance().getPassiveWidth();
     private static final int PASSIVE_HEIGHT = GuiConstants.getInstance().getPassiveHeight();
-    // todo cards must have a backCover and this can be changed in settings
-//    private static ImageIcon backCover = new ImageIcon(ImageLoader.loadImage(GuiConstants.getInstance().getDefaultBackCover));
-//    public static void setBackCover(ImageIcon backCover){
-//        CardShape.backCover = backCover;
-//    }
-    private String cardName;
-    protected ImageIcon icon;
 
+    private static ImageIcon backCover;
+    static {
+        backCover = new ImageIcon(ImageLoader.loadImage(GuiConstants.getInstance().getDefaultBackCoverPath()));
+    }
+    private String cardName;
+
+    protected ImageIcon icon;
     public CardShape(String cardName, BufferedImage image) {
         this(cardName, image, true);
     }
@@ -75,6 +75,18 @@ public class CardShape extends JButton {
 
     public String getCardName() {
         return cardName;
+    }
+
+    public static void setBackCover(ImageIcon backCover){
+        CardShape.backCover = backCover;
+    }
+
+    public void showBackOfCard(boolean showBack){
+        if (showBack){
+            setIcon(backCover);
+        }else {
+            setIcon(icon);
+        }
     }
 
     private BufferedImage colorImage(BufferedImage image) {

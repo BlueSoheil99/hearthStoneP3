@@ -22,9 +22,6 @@ public class PlayerPanel extends SidePanel {
     private JButton rightBtn, leftBtn;
     private HeroPanel heroPanel;
     private CardPanel cardPanel;
-    private String selectedCard;
-    private boolean isOpponent;
-    private ClickListener clickListener;
     private PlayActionListener playActionListener;
 
     public PlayerPanel(HeroTypes hero, int hp, int startingMana) {
@@ -91,10 +88,10 @@ public class PlayerPanel extends SidePanel {
         playBtn.setEnabled(false);
         rightBtn.setEnabled(false);
         leftBtn.setEnabled(false);
+        cardPanel.setCardsBackward(true);
         cardPanel.disableClickListener();
-//        heroPanel.disableClickListener();
+        heroPanel.disableHeroActionListener();
         disableClickListenerForActions();
-        //todo card ha barAx shan va card haye tu board disabled shan
     }
 
     void startTurn(ClickListener clickListenerForCards, PlayActionListener clickListenerForActions, HeroActionListener clickListenerForHero) {
@@ -102,6 +99,7 @@ public class PlayerPanel extends SidePanel {
         playBtn.setEnabled(true);
         rightBtn.setEnabled(true);
         leftBtn.setEnabled(true);
+        cardPanel.setCardsBackward(false);
         setClickListenerForCards(clickListenerForCards);
         setClickListenerForActions(clickListenerForActions);
         setClickListenerForHero(clickListenerForHero);
