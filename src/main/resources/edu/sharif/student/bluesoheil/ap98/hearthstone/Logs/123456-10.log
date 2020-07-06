@@ -1870,3 +1870,102 @@ PLAY		2020/07/06  19:33:41	MageDefaultDeck is selected as opponent
 PLAY		2020/07/06  19:33:41	opponent has 'OffCards' passive
 NAVIGATION		2020/07/06  19:33:41	To Play
 PLAYER		2020/07/06  19:33:56	123456 logged out
+PLAYER		2020/07/06  19:39:29	123456 logged in
+NAVIGATION		2020/07/06  19:39:31	To Collection
+CLICK_BUTTON		2020/07/06  19:39:33	deck:  MageDefaultDeck  selected .
+CLICK_BUTTON		2020/07/06  19:39:35	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/06  19:39:36	MageDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/07/06  19:39:40	button: BACK selected .
+NAVIGATION		2020/07/06  19:39:40	Back to previous panel
+NAVIGATION		2020/07/06  19:39:41	To PlayStarter
+CLICK_BUTTON		2020/07/06  19:39:42	passive: OffCards  selected.
+PLAY		2020/07/06  19:39:44	you have 'OffCards' passive
+CLICK_BUTTON		2020/07/06  19:39:45	deck:  HunterDefaultDeck  selected .
+PLAY		2020/07/06  19:39:46	HunterDefaultDeck is selected as opponent
+PLAY		2020/07/06  19:39:46	opponent has 'ManaJump' passive
+NAVIGATION		2020/07/06  19:39:46	To Play
+PLAY		2020/07/06  19:39:48	you forfeited the fight
+NAVIGATION		2020/07/06  19:39:48	Back to previous panel
+NAVIGATION		2020/07/06  19:39:50	To Setting
+CLICK_BUTTON		2020/07/06  19:40:15	button: EXIT selected .
+PLAYER		2020/07/06  19:40:16	123456 logged out
+PLAYER		2020/07/06  20:13:29	123456 logged in
+NAVIGATION		2020/07/06  20:13:33	To Collection
+CLICK_BUTTON		2020/07/06  20:13:35	button: BACK selected .
+NAVIGATION		2020/07/06  20:13:35	Back to previous panel
+NAVIGATION		2020/07/06  20:13:37	To Setting
+CLICK_BUTTON		2020/07/06  20:13:42	card: 4.png  selected.
+CLICK_BUTTON		2020/07/06  20:13:50	card: 4.png  selected.
+CLICK_BUTTON		2020/07/06  20:13:52	button: EXIT selected .
+PLAYER		2020/07/06  20:13:53	123456 logged out
+PLAYER		2020/07/06  20:14:32	123456 logged in
+NAVIGATION		2020/07/06  20:14:33	To Setting
+CLICK_BUTTON		2020/07/06  20:14:41	button: EXIT selected .
+PLAYER		2020/07/06  20:14:42	123456 logged out
+PLAYER		2020/07/06  20:23:31	123456 logged in
+NAVIGATION		2020/07/06  20:23:33	To Collection
+CLICK_BUTTON		2020/07/06  20:23:37	button: BACK selected .
+NAVIGATION		2020/07/06  20:23:37	Back to previous panel
+NAVIGATION		2020/07/06  20:23:38	To Setting
+CLICK_BUTTON		2020/07/06  20:23:39	card: 4.png  selected.
+CLICK_BUTTON		2020/07/06  20:23:40	card: 2.png  selected.
+CLICK_BUTTON		2020/07/06  20:23:41	card: 3.png  selected.
+CLICK_BUTTON		2020/07/06  20:23:45	button: BACK selected .
+NAVIGATION		2020/07/06  20:23:45	Back to previous panel
+NAVIGATION		2020/07/06  20:24:03	To Collection
+CLICK_BUTTON		2020/07/06  20:24:04	deck:  RogueDefaultDeck  selected .
+CLICK_BUTTON		2020/07/06  20:24:05	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/06  20:24:05	RogueDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/07/06  20:24:07	button: BACK selected .
+NAVIGATION		2020/07/06  20:24:07	Back to previous panel
+NAVIGATION		2020/07/06  20:24:08	To PlayStarter
+CLICK_BUTTON		2020/07/06  20:24:09	passive: Warriors  selected.
+CLICK_BUTTON		2020/07/06  20:24:11	card: SATHROVARR  selected.
+PLAY		2020/07/06  20:24:13	you have 'Warriors' passive
+CLICK_BUTTON		2020/07/06  20:24:14	deck:  WarlockDefaultDeck  selected .
+PLAY		2020/07/06  20:24:15	WarlockDefaultDeck is selected as opponent
+PLAY		2020/07/06  20:24:15	opponent has 'ManaJump' passive
+NAVIGATION		2020/07/06  20:24:15	To Play
+PLAY		2020/07/06  20:24:24	you forfeited the fight
+NAVIGATION		2020/07/06  20:24:24	Back to previous panel
+NAVIGATION		2020/07/06  20:24:26	To Setting
+CLICK_BUTTON		2020/07/06  20:24:27	card: 6.png  selected.
+CLICK_BUTTON		2020/07/06  20:24:31	button: BACK selected .
+NAVIGATION		2020/07/06  20:24:31	Back to previous panel
+NAVIGATION		2020/07/06  20:24:32	To Setting
+CLICK_BUTTON		2020/07/06  20:24:34	button: BACK selected .
+NAVIGATION		2020/07/06  20:24:34	Back to previous panel
+NAVIGATION		2020/07/06  20:24:34	To PlayStarter
+CLICK_BUTTON		2020/07/06  20:24:36	passive: ManaJump  selected.
+PLAY		2020/07/06  20:24:38	you have 'ManaJump' passive
+CLICK_BUTTON		2020/07/06  20:24:38	deck:  WarlockDefaultDeck  selected .
+PLAY		2020/07/06  20:24:39	WarlockDefaultDeck is selected as opponent
+PLAY		2020/07/06  20:24:39	opponent has 'ManaJump' passive
+NAVIGATION		2020/07/06  20:24:39	To Play
+PLAYER		2020/07/06  20:24:48	123456 logged out
+PLAYER		2020/07/06  20:24:58	123456 logged in
+NAVIGATION		2020/07/06  20:25:00	To Setting
+CLICK_BUTTON		2020/07/06  20:25:01	card: 4.png  selected.
+CLICK_BUTTON		2020/07/06  20:25:03	card: 2.png  selected.
+CLICK_BUTTON		2020/07/06  20:25:09	button: BACK selected .
+NAVIGATION		2020/07/06  20:25:09	Back to previous panel
+NAVIGATION		2020/07/06  20:25:10	To Collection
+CLICK_BUTTON		2020/07/06  20:25:11	deck:  HunterDefaultDeck  selected .
+CLICK_BUTTON		2020/07/06  20:25:13	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/06  20:25:13	HunterDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/07/06  20:25:15	button: BACK selected .
+NAVIGATION		2020/07/06  20:25:15	Back to previous panel
+NAVIGATION		2020/07/06  20:25:16	To PlayStarter
+CLICK_BUTTON		2020/07/06  20:25:17	passive: nurse  selected.
+CLICK_BUTTON		2020/07/06  20:25:19	card: CURIO COLLECTOR  selected.
+PLAY		2020/07/06  20:25:22	you have 'nurse' passive
+CLICK_BUTTON		2020/07/06  20:25:22	deck:  MageDefaultDeck  selected .
+PLAY		2020/07/06  20:25:23	MageDefaultDeck is selected as opponent
+PLAY		2020/07/06  20:25:23	opponent has 'nurse' passive
+NAVIGATION		2020/07/06  20:25:23	To Play
+PLAYER		2020/07/06  20:25:42	123456 logged out
+PLAYER		2020/07/06  20:27:02	123456 logged in
+NAVIGATION		2020/07/06  20:27:05	To Setting
+CLICK_BUTTON		2020/07/06  20:27:08	card: 6.png  selected.
+CLICK_BUTTON		2020/07/06  20:28:53	button: EXIT selected .
+PLAYER		2020/07/06  20:28:55	123456 logged out

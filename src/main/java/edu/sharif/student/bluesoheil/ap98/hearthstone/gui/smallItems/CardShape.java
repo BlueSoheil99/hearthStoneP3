@@ -15,8 +15,10 @@ public class CardShape extends JButton {
     private static final int CARD_HEIGHT = GuiConstants.getInstance().getCardHeight();
     private static final int PASSIVE_WIDTH = GuiConstants.getInstance().getPassiveWidth();
     private static final int PASSIVE_HEIGHT = GuiConstants.getInstance().getPassiveHeight();
-    private static ImageIcon backCover = new ImageIcon(ImageLoader.loadImage(GuiConstants.getInstance().getDefaultBackCoverPath()));
-
+    private static ImageIcon backCover;
+    static {
+        updateBackCover();
+    }
     private String cardName;
     protected ImageIcon icon;
 
@@ -66,16 +68,16 @@ public class CardShape extends JButton {
         }
     }
 
+    public static void updateBackCover() {
+        backCover =  new ImageIcon(ImageLoader.loadImage(GuiConstants.getInstance().getDefaultBackCoverPath()));
+    }
+
     public static CardShape copyCardShape(CardShape shape) {
         return new CardShape(shape.cardName, (BufferedImage) shape.icon.getImage());
     }
 
     public String getCardName() {
         return cardName;
-    }
-
-    public static void setBackCover(ImageIcon backCover) {
-        CardShape.backCover = backCover;
     }
 
     public void showBackOfCard(boolean showBack) {

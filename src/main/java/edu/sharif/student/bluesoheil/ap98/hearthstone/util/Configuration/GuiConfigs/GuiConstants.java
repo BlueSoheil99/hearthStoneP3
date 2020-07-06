@@ -5,10 +5,10 @@ import edu.sharif.student.bluesoheil.ap98.hearthstone.util.Configuration.Configs
 
 public class GuiConstants extends GuiConfig {
     private static GuiConstants instance;
-    public String defaultBackCover;
+    public String defaultBackCover , backCoversPath;
     private Configs properties;
     private int gameWidth, gameHeight, cardWidth, cardHeight , passiveWidth, passiveHeight;
-    private int numberOfCardsInRow , numberOfCardsInRow_collection;
+    private int numberOfCardsInRow ;
     private String exitIconPath, backIconPath, filterIconPath, coinsIconPath , logOutPath;
 
     private GuiConstants() {
@@ -40,6 +40,7 @@ public class GuiConstants extends GuiConfig {
         filterIconPath = properties.getProperty("filterURL");
         logOutPath = properties.getProperty("logOutURL");
         defaultBackCover = properties.getProperty("defaultBackCover");
+        backCoversPath = properties.getProperty("backCoversPath");
     }
 
 
@@ -93,5 +94,14 @@ public class GuiConstants extends GuiConfig {
 
     public String getDefaultBackCoverPath() {
         return defaultBackCover;
+    }
+
+    public String getBackCoversPath() {
+        return backCoversPath;
+    }
+
+    public void setDefaultBackCoverPath(String selectedBackCoverNumber) {
+        properties.setProperty("defaultBackCover",backCoversPath+"/"+selectedBackCoverNumber);
+        defaultBackCover = properties.getProperty("defaultBackCover");
     }
 }
