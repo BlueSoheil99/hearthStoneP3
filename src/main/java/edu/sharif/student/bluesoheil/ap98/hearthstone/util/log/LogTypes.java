@@ -7,6 +7,7 @@ public enum LogTypes {
     SHOP,
     COLLECTION,
     PLAY,
-    STATUS
+    STATUS,
+    SETTING
 
 }
