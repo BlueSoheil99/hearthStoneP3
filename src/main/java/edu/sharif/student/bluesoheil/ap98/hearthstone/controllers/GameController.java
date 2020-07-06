@@ -1,13 +1,18 @@
 package edu.sharif.student.bluesoheil.ap98.hearthstone.controllers;
 
+import edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.PlayException;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Heroes.HeroTypes;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.models.InfoPassives.InfoPassive;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.cards.Card;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.Configuration.LogicConfigs.PlayLogicConfig;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.util.log.LogTypes;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.log.Logger;
+import org.omg.PortableServer.AdapterActivator;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Random;
 
 public class GameController {
     private static GameController instance;
@@ -67,6 +72,11 @@ public class GameController {
 
     public void setOpponent(String deckName) {
         Players.OPPONENT.gamePlayer = new GamePlayer(deckController.getDeck(deckName));
+        Random random = new Random();
+        int index = random.nextInt(InfoPassive.values().length);
+        String randomPassive =InfoPassive.values()[index].getName();
+        Players.OPPONENT.gamePlayer.setPassive(randomPassive);
+        Logger.log(LogTypes.PLAY, "opponent has '" + randomPassive + "' passive");
     }
 
     //***********************//
@@ -78,6 +88,8 @@ public class GameController {
     //***********************//
     public void setPassiveForUser(String passiveName) {
         Players.ME.gamePlayer.setPassive(passiveName);
+        Logger.log(LogTypes.PLAY, "you have '" + passiveName + "' passive");
+
     }
 
     //***********************//
@@ -124,9 +136,9 @@ public class GameController {
         currentPlayer.gamePlayer.purchaseCard(card);
     }
 
-    public void removeCard(Card card) {
-        currentPlayer.gamePlayer.removeCard(card);
-    }
+//    public void removeCard(Card card) {
+//        currentPlayer.gamePlayer.removeCard(card);
+//    }
 
     /////////////
     /////////////

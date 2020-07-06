@@ -169,7 +169,7 @@ public class PlayHandler {
     private Card getCardFromController(String playerSelectedCardInHand) throws PlayException {
         Card card = gameController.getCard(playerSelectedCardInHand);
         gameController.purchaseCard(card);
-        gameController.removeCard(card);
+//        gameController.removeCard(card);
         return card;
     }
 

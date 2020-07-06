@@ -122,6 +122,7 @@ public class GamePlayer {
         for (int i = 0; i < deck.getNumberOfCards(); i++) {
             playerCards.add(deck.getCards().get(i));
         }
+        playerHand = getHand();
     }
 
     ArrayList<Card> getHand() {
@@ -185,17 +186,15 @@ public class GamePlayer {
     }
 
     void purchaseCard(Card card) throws PlayException {
-        if (playerMana >= card.getManaCost()) { //todo implement offCards passive here
+        if (playerMana >= card.getManaCost()) {
             playerMana -= card.getManaCost();
+
+            if (card.getType()== Card.CardType.WEAPON) playerWeapon=card;
+            if (card.getType()== Card.CardType.MINION||card.getType()== Card.CardType.BEAST) summonedMinions.add(card);
+
+            playerHand.remove(card);
         } else {
             throw new PlayException("You Don't Have Enough Mana");
-        }
-    }
-
-    void removeCard(Card card) {
-        if (playerHand.contains(card)) {
-            if (card.getType() == Card.CardType.MINION) summonedMinions.add(card); // todo check is it ok or not
-            playerHand.remove(card);
         }
     }
 

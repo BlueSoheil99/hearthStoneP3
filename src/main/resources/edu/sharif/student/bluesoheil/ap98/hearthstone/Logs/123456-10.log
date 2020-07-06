@@ -1836,3 +1836,37 @@ PLAY		2020/07/06  16:19:41	opponent set weapon to HEAVY AXE
 CLICK_BUTTON		2020/07/06  16:20:02	card: LEARN DRACONIC  selected.
 PLAY		2020/07/06  16:20:04	you played the LEARN DRACONIC Q&R
 PLAYER		2020/07/06  16:20:46	123456 logged out
+PLAYER		2020/07/06  18:56:19	123456 logged in
+NAVIGATION		2020/07/06  18:56:21	To Collection
+CLICK_BUTTON		2020/07/06  18:56:22	deck:  MageDefaultDeck  selected .
+CLICK_BUTTON		2020/07/06  18:56:24	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/06  18:56:24	MageDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/07/06  18:56:25	button: BACK selected .
+NAVIGATION		2020/07/06  18:56:25	Back to previous panel
+NAVIGATION		2020/07/06  18:56:26	To PlayStarter
+CLICK_BUTTON		2020/07/06  18:56:28	passive: TwiceDraw  selected.
+CLICK_BUTTON		2020/07/06  18:56:29	card: STORMHAMMER  selected.
+PLAY		2020/07/06  18:56:31	passive 'TwiceDraw' selected
+CLICK_BUTTON		2020/07/06  18:56:42	deck:  WarlockDefaultDeck  selected .
+PLAY		2020/07/06  18:56:44	WarlockDefaultDeck is selected as opponent
+NAVIGATION		2020/07/06  18:56:44	To Play
+CLICK_BUTTON		2020/07/06  18:56:47	card: SLAM  selected.
+CLICK_BUTTON		2020/07/06  18:56:47	card: HEAVY AXE  selected.
+PLAY		2020/07/06  18:56:49	you set weapon to HEAVY AXE
+PLAYER		2020/07/06  18:57:12	123456 logged out
+PLAYER		2020/07/06  19:33:28	123456 logged in
+NAVIGATION		2020/07/06  19:33:29	To Collection
+CLICK_BUTTON		2020/07/06  19:33:31	deck:  WarlockDefaultDeck  selected .
+CLICK_BUTTON		2020/07/06  19:33:33	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/06  19:33:33	WarlockDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/07/06  19:33:34	button: BACK selected .
+NAVIGATION		2020/07/06  19:33:34	Back to previous panel
+NAVIGATION		2020/07/06  19:33:35	To PlayStarter
+CLICK_BUTTON		2020/07/06  19:33:36	passive: OffCards  selected.
+CLICK_BUTTON		2020/07/06  19:33:37	card: CURIO COLLECTOR  selected.
+PLAY		2020/07/06  19:33:39	you have 'OffCards' passive
+CLICK_BUTTON		2020/07/06  19:33:40	deck:  MageDefaultDeck  selected .
+PLAY		2020/07/06  19:33:41	MageDefaultDeck is selected as opponent
+PLAY		2020/07/06  19:33:41	opponent has 'OffCards' passive
+NAVIGATION		2020/07/06  19:33:41	To Play
+PLAYER		2020/07/06  19:33:56	123456 logged out

@@ -15,20 +15,17 @@ public class CardShape extends JButton {
     private static final int CARD_HEIGHT = GuiConstants.getInstance().getCardHeight();
     private static final int PASSIVE_WIDTH = GuiConstants.getInstance().getPassiveWidth();
     private static final int PASSIVE_HEIGHT = GuiConstants.getInstance().getPassiveHeight();
+    private static ImageIcon backCover = new ImageIcon(ImageLoader.loadImage(GuiConstants.getInstance().getDefaultBackCoverPath()));
 
-    private static ImageIcon backCover;
-    static {
-        backCover = new ImageIcon(ImageLoader.loadImage(GuiConstants.getInstance().getDefaultBackCoverPath()));
-    }
     private String cardName;
-
     protected ImageIcon icon;
+
     public CardShape(String cardName, BufferedImage image) {
         this(cardName, image, true);
     }
 
     public CardShape(String cardName, String description) { //this constructor is used for creating passives
-        this(cardName, (BufferedImage) null, true);
+        this(cardName,  null, true);
         setPreferredSize(new Dimension(PASSIVE_WIDTH, PASSIVE_HEIGHT));
         setBackground(new Color(192, 135, 107));
         setBorder(BorderFactory.createMatteBorder(2, 2, 2, 2, new Color(62, 164, 176)));
@@ -77,14 +74,14 @@ public class CardShape extends JButton {
         return cardName;
     }
 
-    public static void setBackCover(ImageIcon backCover){
+    public static void setBackCover(ImageIcon backCover) {
         CardShape.backCover = backCover;
     }
 
-    public void showBackOfCard(boolean showBack){
-        if (showBack){
+    public void showBackOfCard(boolean showBack) {
+        if (showBack) {
             setIcon(backCover);
-        }else {
+        } else {
             setIcon(icon);
         }
     }

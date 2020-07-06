@@ -92,7 +92,6 @@ public class Administer {
             PlayStarterPanel playStarterPanel = new PlayStarterPanel();
             playStarterPanel.setClickListener(objName -> {
                 gameController.setPassiveForUser(objName);
-                Logger.log(LogTypes.PLAY, "passive '" + objName + "' selected");
                 selectOpponent(gameController);
             });
             mainFrame.initFrame(playStarterPanel);
@@ -102,8 +101,8 @@ public class Administer {
     private void selectOpponent(GameController gameController) {
         OpponentSelectionPanel opponentSelectionPanel = new OpponentSelectionPanel();
         opponentSelectionPanel.setClickListener(objName -> {
-            gameController.setOpponent(objName);
             Logger.log(LogTypes.PLAY , objName+" is selected as opponent");
+            gameController.setOpponent(objName);
             startGame(gameController);
         });
 

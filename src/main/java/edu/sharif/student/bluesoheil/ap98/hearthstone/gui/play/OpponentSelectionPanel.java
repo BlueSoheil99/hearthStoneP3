@@ -1,16 +1,11 @@
 package edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play;
 
-import edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.PlayHandler;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.PlayException;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.GamePanel;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.CardPanel;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.DeckPanel;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.NavigationPanel;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.ClickListener;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.Configuration.GuiConfigs.PlayConfig;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.util.log.LogTypes;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.util.log.Logger;
 
 import javax.swing.*;
 import javax.swing.border.Border;
@@ -18,10 +13,10 @@ import java.awt.*;
 
 public class OpponentSelectionPanel extends GamePanel {
     private PlayConfig properties;
-    private JLabel selectLabel;
+    private JLabel selectLabel , descriptionLabel;
     private DeckPanel deckPanel;
-    private JButton selectBtn, playBtn;
-    private String selectedPassive, selectedDeck;
+    private JButton playBtn;
+    private String selectedDeck;
     private ClickListener clickListener;
 
     public OpponentSelectionPanel() {
@@ -38,8 +33,9 @@ public class OpponentSelectionPanel extends GamePanel {
     @Override
     protected void createFields() {
         Font font = new Font("serif", Font.ITALIC, 30);
-        selectLabel = new JLabel(" Select a deck as an opponent \n passive and first hand for opponent are random ");
+        selectLabel = new JLabel(" Select a deck as the opponent ");
         selectLabel.setFont(font);
+        descriptionLabel = new JLabel("passive and first hand for opponent are random");
 
         setupDeckPanel();
 
@@ -67,9 +63,9 @@ public class OpponentSelectionPanel extends GamePanel {
 
     private void SetPlayBtnActionListener() {
         playBtn.addActionListener(e -> {
-            if (selectedDeck == null){
-                JOptionPane.showMessageDialog(null , "Choose an opponent first ","match setup error" , JOptionPane.ERROR_MESSAGE);
-            }else clickListener.select(selectedDeck);
+            if (selectedDeck == null) {
+                JOptionPane.showMessageDialog(null, "Choose an opponent first ", "match setup error", JOptionPane.ERROR_MESSAGE);
+            } else clickListener.select(selectedDeck);
         });
     }
 
@@ -83,7 +79,10 @@ public class OpponentSelectionPanel extends GamePanel {
         gc.gridy = GridBagConstraints.RELATIVE;
 
         add(selectLabel, gc);
+        add(descriptionLabel, gc);
         add(playBtn, gc);
+        gc.gridheight=2;
+        gc.anchor =GridBagConstraints.PAGE_END;
         add(NavigationPanel.getInstance(), gc);
         gc.gridx = 1;
         gc.gridy = GridBagConstraints.RELATIVE;
