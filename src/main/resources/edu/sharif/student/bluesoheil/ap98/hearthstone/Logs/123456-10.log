@@ -1755,3 +1755,64 @@ CLICK_BUTTON		2020/07/06  13:13:02	deck:  RogueDefaultDeck  selected .
 PLAY		2020/07/06  13:13:03	RogueDefaultDeck is selected as opponent
 NAVIGATION		2020/07/06  13:13:03	To Play
 PLAYER		2020/07/06  13:13:10	123456 logged out
+PLAYER		2020/07/06  13:23:23	123456 logged in
+NAVIGATION		2020/07/06  13:23:25	To Collection
+CLICK_BUTTON		2020/07/06  13:23:27	deck:  RogueDefaultDeck  selected .
+CLICK_BUTTON		2020/07/06  13:23:29	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/06  13:23:30	RogueDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/07/06  13:23:31	button: BACK selected .
+NAVIGATION		2020/07/06  13:23:31	Back to previous panel
+NAVIGATION		2020/07/06  13:23:33	To PlayStarter
+CLICK_BUTTON		2020/07/06  13:23:34	passive: ManaJump  selected.
+CLICK_BUTTON		2020/07/06  13:23:35	card: SATHROVARR  selected.
+PLAY		2020/07/06  13:23:37	passive 'ManaJump' selected
+CLICK_BUTTON		2020/07/06  13:23:38	deck:  MageDefaultDeck  selected .
+PLAY		2020/07/06  13:23:39	MageDefaultDeck is selected as opponent
+NAVIGATION		2020/07/06  13:23:39	To Play
+CLICK_BUTTON		2020/07/06  13:23:42	card: SLAM  selected.
+CLICK_BUTTON		2020/07/06  13:23:47	card: SLAM  selected.
+CLICK_BUTTON		2020/07/06  13:23:51	card: HEAVY AXE  selected.
+CLICK_BUTTON		2020/07/06  13:26:09	card: SLAM  selected.
+CLICK_BUTTON		2020/07/06  13:26:12	card: SLAM  selected.
+CLICK_BUTTON		2020/07/06  13:26:16	card: FRIENDLY SMITH  selected.
+PLAY		2020/07/06  13:26:21	you forfeited the fight
+NAVIGATION		2020/07/06  13:26:21	Back to previous panel
+PLAYER		2020/07/06  13:26:23	123456 logged out
+PLAYER		2020/07/06  13:50:36	123456 logged in
+NAVIGATION		2020/07/06  13:50:38	To Collection
+CLICK_BUTTON		2020/07/06  13:50:40	deck:  MageDefaultDeck  selected .
+CLICK_BUTTON		2020/07/06  13:50:41	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/06  13:50:42	MageDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/07/06  13:50:43	button: BACK selected .
+NAVIGATION		2020/07/06  13:50:43	Back to previous panel
+NAVIGATION		2020/07/06  13:50:44	To PlayStarter
+CLICK_BUTTON		2020/07/06  13:50:46	passive: OffCards  selected.
+CLICK_BUTTON		2020/07/06  13:50:48	card: ZILLIAX  selected.
+PLAY		2020/07/06  13:50:49	passive 'OffCards' selected
+CLICK_BUTTON		2020/07/06  13:50:50	deck:  PriestDefaultDeck  selected .
+PLAY		2020/07/06  13:50:51	PriestDefaultDeck is selected as opponent
+NAVIGATION		2020/07/06  13:50:51	To Play
+CLICK_BUTTON		2020/07/06  13:50:54	card: HEAVY AXE  selected.
+PLAY		2020/07/06  13:50:55	you set weapon to HEAVY AXE
+CLICK_BUTTON		2020/07/06  13:51:40	card: SLAM  selected.
+CLICK_BUTTON		2020/07/06  13:51:55	card: MURLOC TIDEHUNTER  selected.
+PLAY		2020/07/06  13:51:57	you summoned MURLOC TIDEHUNTER
+CLICK_BUTTON		2020/07/06  13:52:01	card: SLAM  selected.
+PLAY		2020/07/06  13:52:03	opponent played the SLAM spell
+CLICK_BUTTON		2020/07/06  13:52:11	card: OMEGA MEDIC  selected.
+PLAY		2020/07/06  13:52:13	opponent summoned OMEGA MEDIC
+CLICK_BUTTON		2020/07/06  13:52:18	card: Omega Medic  selected.
+CLICK_BUTTON		2020/07/06  13:52:19	card: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/06  13:52:41	card: ZILLIAX  selected.
+PLAY		2020/07/06  13:52:42	you summoned ZILLIAX
+CLICK_BUTTON		2020/07/06  13:52:46	card: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/06  13:52:46	card: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/06  13:52:54	card: LEARN DRACONIC  selected.
+PLAY		2020/07/06  13:52:55	opponent played the LEARN DRACONIC Q&R
+CLICK_BUTTON		2020/07/06  13:53:03	card: MURLOC TIDEHUNTER  selected.
+PLAY		2020/07/06  13:53:04	opponent summoned MURLOC TIDEHUNTER
+CLICK_BUTTON		2020/07/06  13:53:17	card: CURIO COLLECTOR  selected.
+PLAY		2020/07/06  13:53:19	you summoned CURIO COLLECTOR
+CLICK_BUTTON		2020/07/06  13:53:28	card: ZILLIAX  selected.
+PLAY		2020/07/06  13:53:30	opponent summoned ZILLIAX
+PLAYER		2020/07/06  13:53:54	123456 logged out

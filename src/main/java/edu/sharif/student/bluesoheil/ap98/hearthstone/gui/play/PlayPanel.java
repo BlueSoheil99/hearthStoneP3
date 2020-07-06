@@ -20,15 +20,13 @@ public class PlayPanel extends GamePanel {
     private ActualCard playerSelectedCard, opponentSelectedCard;
     private String playerSelectedCardInHand, opponentSelectedCardInHand;
     private boolean myTurn = true;
-//   todo private Players currentTurn;
-//    private enum Players {
-//        ME,
-//        OPPONENT;
-//        private PlayerPanel playerPanel;
-//        void setPlayerPanel(PlayerPanel playerPanel) {
-//            this.playerPanel = playerPanel;
-//        }
-//    }
+    private Players currentTurn;
+
+    private enum Players {
+        ME,
+        OPPONENT;
+        private PlayerPanel playerPanel;
+    }
 
     @Override
     protected void loadConfig() {
@@ -41,7 +39,7 @@ public class PlayPanel extends GamePanel {
         playHandler = PlayHandler.getInstance();
         setupPlayerPanel();
         setupOpponentPanel();
-        playHandler = PlayHandler.getInstance();
+        currentTurn = Players.ME;
         setupPauseMenu();
         setupBoardPanel();
     }
@@ -66,7 +64,6 @@ public class PlayPanel extends GamePanel {
         board = new BoardPanel();
         //todo complete it
         board.setPlayerCardClickListeners(selectedCard -> playerSelectedCard = selectedCard);
-        //todo complete it
         board.setOpponentCardClickListeners(selectedCard -> opponentSelectedCard = selectedCard);
     }
 
@@ -77,6 +74,7 @@ public class PlayPanel extends GamePanel {
 
     private void setupPlayerPanel() {
         playerPanel = playHandler.getPlayerPanel(true);
+        Players.ME.playerPanel =playerPanel;
         playerPanel.updateHand(playHandler.getHand(true), playHandler.getHeroStates(true));
         ////setListeners////
         playerPanel.setClickListenerForCards(objName -> playerSelectedCardInHand = objName);
@@ -110,11 +108,11 @@ public class PlayPanel extends GamePanel {
     }
 
     private void setupOpponentPanel() {
-
         opponentPanel = playHandler.getPlayerPanel(false);
+        Players.OPPONENT.playerPanel = opponentPanel;
         opponentPanel.updateHand(playHandler.getHand(false), playHandler.getHeroStates(false));
         opponentPanel.endTurn();
-
+        opponentPanel.setClickListenerForCards(objName -> opponentSelectedCardInHand = objName);
         opponentPanel.setClickListenerForActions(new PlayActionListener() {
             @Override
             public void endTurn() {
@@ -124,6 +122,15 @@ public class PlayPanel extends GamePanel {
             @Override
             public void play() {
 
+                if (opponentSelectedCardInHand != null) {
+                    doHandCardAction(opponentSelectedCardInHand);
+                    opponentSelectedCardInHand = null;
+                } else if (opponentSelectedCard != null) {
+                    playHandler.playCard(opponentSelectedCard);
+                } else {
+                    JOptionPane.showMessageDialog(null, "select a card :/");
+                }
+                eventBox.update();
             }
 
             @Override
@@ -139,22 +146,52 @@ public class PlayPanel extends GamePanel {
     }
 
     private void changeTurn() {
-//        todo if (currentTurn.equals(Players.ME)) {
-//            currentTurn=Players.OPPONENT;
-//            playHandler.changeTurns();
-//        }
         playHandler.changeTurns();
-        if (myTurn) {
-            myTurn = false;
-            playerPanel.endTurn();
-            opponentPanel.startTurn();
-            opponentPanel.updateHand(playHandler.getHand(false), playHandler.getHeroStates(false));
+        currentTurn.playerPanel.endTurn();
+        if (currentTurn==Players.ME) {
+            currentTurn=Players.OPPONENT;
+        }else{
+            currentTurn = Players.ME;
+        }
+        currentTurn.playerPanel.startTurn();
+        currentTurn.playerPanel.updateHand(playHandler.getHand() , playHandler.getHeroStates());
+//        if (myTurn) {
+//            myTurn = false;
+//            playerPanel.endTurn();
+//            opponentPanel.startTurn();
+//            opponentPanel.updateHand(playHandler.getHand(false), playHandler.getHeroStates(false));
+//
+//        } else {
+//            myTurn = true;
+//            playerPanel.startTurn();
+//            playerPanel.updateHand(playHandler.getHand(true), playHandler.getHeroStates(true));
+//            opponentPanel.endTurn();
+//        }
+    }
 
-        } else {
-            myTurn = true;
-            playerPanel.startTurn();
-            playerPanel.updateHand(playHandler.getHand(true), playHandler.getHeroStates(true));
-            opponentPanel.endTurn();
+    private void doHandCardAction(String cardName) {
+        try {
+            switch (playHandler.getCardType(cardName)) {
+                case BEAST:
+//                summonBeast(playerSelectedCardInHand);
+//                break;
+                case MINION:
+                    summonMinion(cardName);
+                    break;
+                case WEAPON:
+                    summonWeapon(cardName);
+                    break;
+                case QUESTANDREWARD:
+                    playQuestAndReward(cardName);
+                    break;
+                case SPELL:
+                    playSpell(cardName);
+                    break;
+            }
+
+            currentTurn.playerPanel.updateHand(playHandler.getHand(), playHandler.getHeroStates());
+        } catch (PlayException e) {
+            JOptionPane.showMessageDialog(null, e.getMessage(), "Error in card selection", JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -177,7 +214,8 @@ public class PlayPanel extends GamePanel {
                     playSpell(playerSelectedCardInHand);
                     break;
             }
-            playerPanel.updateHand(playHandler.getHand(), playHandler.getHeroStates(true));
+
+            playerPanel.updateHand(playHandler.getHand(true), playHandler.getHeroStates(true));
         } catch (PlayException e) {
             JOptionPane.showMessageDialog(null, e.getMessage(), "Error in card selection", JOptionPane.ERROR_MESSAGE);
         }
@@ -188,13 +226,14 @@ public class PlayPanel extends GamePanel {
         //todo is there any need to have a different method for beasts?
         MinionActualCard cardToSummon;
         cardToSummon = playHandler.summonAndGetMinion(cardName);
-        board.addCardForPlayer(cardToSummon);
+        if (currentTurn == Players.ME)board.addCardForPlayer(cardToSummon);
+        if (currentTurn == Players.OPPONENT)board.addCardForOpponent(cardToSummon);
     }
 
     private void summonWeapon(String cardName) throws PlayException {
         WeaponActualCard weaponToSummon;
         weaponToSummon = playHandler.summonAndGetWeapon(cardName);
-        playerPanel.setWeaponCard(weaponToSummon);
+        currentTurn.playerPanel.setWeaponCard(weaponToSummon);
     }
 
     private void playSpell(String spellName) throws PlayException {
