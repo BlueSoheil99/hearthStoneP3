@@ -2060,3 +2060,27 @@ PLAY		2020/07/07  11:41:50	RogueDefaultDeck is selected as opponent
 PLAY		2020/07/07  11:41:50	opponent has 'OffCards' passive
 NAVIGATION		2020/07/07  11:41:50	To Play
 PLAYER		2020/07/07  11:43:41	123456 logged out
+PLAYER		2020/07/07  13:32:39	123456 logged in
+NAVIGATION		2020/07/07  13:32:40	To Collection
+CLICK_BUTTON		2020/07/07  13:32:41	deck:  PriestDefaultDeck  selected .
+CLICK_BUTTON		2020/07/07  13:32:43	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/07  13:32:43	PriestDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/07/07  13:32:44	button: BACK selected .
+NAVIGATION		2020/07/07  13:32:44	Back to previous panel
+NAVIGATION		2020/07/07  13:32:45	To PlayStarter
+CLICK_BUTTON		2020/07/07  13:32:47	passive: Warriors  selected.
+CLICK_BUTTON		2020/07/07  13:32:49	card: MURLOC TIDEHUNTER  selected.
+PLAY		2020/07/07  13:32:50	you have 'Warriors' passive
+CLICK_BUTTON		2020/07/07  13:32:51	deck:  WarlockDefaultDeck  selected .
+PLAY		2020/07/07  13:32:52	WarlockDefaultDeck is selected as opponent
+PLAY		2020/07/07  13:32:52	opponent has 'OffCards' passive
+NAVIGATION		2020/07/07  13:32:52	To Play
+CLICK_BUTTON		2020/07/07  13:33:07	card: MURLOC TIDEHUNTER  selected.
+PLAY		2020/07/07  13:33:08	you summoned MURLOC TIDEHUNTER
+CLICK_BUTTON		2020/07/07  13:33:26	card: HIGH PRIEST AMET  selected.
+CLICK_BUTTON		2020/07/07  13:33:27	card: HIGH PRIEST AMET  selected.
+CLICK_BUTTON		2020/07/07  13:33:32	card: OMEGA MEDIC  selected.
+PLAY		2020/07/07  13:33:34	opponent summoned OMEGA MEDIC
+PLAY		2020/07/07  13:33:44	opponent forfeited the fight
+NAVIGATION		2020/07/07  13:33:44	Back to previous panel
+PLAYER		2020/07/07  13:33:47	123456 logged out

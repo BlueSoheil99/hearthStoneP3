@@ -114,10 +114,10 @@ public class HeroPanel extends JPanel {
     }
 
     //todo setListener for hero panel for playing weapon or heroPower
-
     public void setHeroActionListener(HeroActionListener heroActionListener) {
         this.heroActionListener = heroActionListener;
     }
+
     public void disableHeroActionListener() {
         heroActionListener = null;
     }

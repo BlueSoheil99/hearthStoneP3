@@ -83,6 +83,13 @@ public class PlayerPanel extends SidePanel {
         heroPanel.setWeaponBtn(weaponCard);
     }
 
+    public void updateTimer(int remainingTime) {
+        endTurnBtn.setText("End Turn : "+remainingTime);
+        endTurnBtn.setBackground(Color.GREEN);
+        if (remainingTime<30) endTurnBtn.setBackground(Color.ORANGE);
+        if (remainingTime<10) endTurnBtn.setBackground(Color.RED);
+    }
+
     void endTurn() {
         endTurnBtn.setEnabled(false);
         playBtn.setEnabled(false);
@@ -138,5 +145,4 @@ public class PlayerPanel extends SidePanel {
             if (playActionListener != null) playActionListener.goLeft();
         });
     }
-
 }

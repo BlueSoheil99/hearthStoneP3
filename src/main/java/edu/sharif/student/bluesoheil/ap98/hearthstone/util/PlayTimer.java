@@ -35,7 +35,6 @@ public class PlayTimer extends Thread {
     public void stopTimer() {
         ticking.set(false);
         reset();
-
     }
 
     public void reset() {
@@ -65,8 +64,7 @@ public class PlayTimer extends Thread {
                     reset();
                 }
             }
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        } catch (InterruptedException ignored) {
         }
         System.out.println("timer stopped");
     }

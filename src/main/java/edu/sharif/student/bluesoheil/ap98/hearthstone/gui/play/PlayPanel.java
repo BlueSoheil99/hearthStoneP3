@@ -50,12 +50,13 @@ public class PlayPanel extends GamePanel {
         eventBox = new EventBox();
         playHandler = PlayHandler.getInstance();
         setupListeners();
-        timer =PlayTimer.setNewTimer(5);
-        timer.setTimeListener(timerListener);
         setupPlayerPanel();
         setupOpponentPanel();
         setupPauseMenu();
         setupBoardPanel();
+        timer =PlayTimer.setNewTimer();
+        timer.setTimeListener(timerListener);
+        startFrom(Players.ME);
     }
 
     @Override
@@ -106,12 +107,11 @@ public class PlayPanel extends GamePanel {
         timerListener = new TimerListener() {
             @Override
             public void tick() {
-                System.out.println(timer.getRemainingTime());
+                currentTurn.playerPanel.updateTimer(timer.getRemainingTime());
             }
 
             @Override
             public void ring() {
-                System.out.println("riiiiiing");
                 changeTurn();
             }
         };
@@ -163,8 +163,6 @@ public class PlayPanel extends GamePanel {
         playerPanel = playHandler.getPlayerPanel(true);
         Players.ME.playerPanel = playerPanel;
         playerPanel.updateHand(playHandler.getHand(true), playHandler.getHeroStates(true));
-        setTurn(Players.ME);
-        timer.start();
     }
 
     private void setupOpponentPanel() {
@@ -192,7 +190,10 @@ public class PlayPanel extends GamePanel {
         currentTurn = player;
         currentTurn.playerPanel.startTurn(handClickListener, playActionListener, heroActionListener);
         currentTurn.playerPanel.updateHand(playHandler.getHand(), playHandler.getHeroStates());
-//        timer.start();
+    }
+    private void startFrom(Players player){
+        setTurn(player);
+        timer.start();
     }
 
     //**********************************//
