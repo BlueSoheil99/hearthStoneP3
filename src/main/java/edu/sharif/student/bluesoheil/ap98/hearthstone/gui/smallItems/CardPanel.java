@@ -33,13 +33,14 @@ public class CardPanel extends SidePanel implements ActionListener {
         return cards;
     }
 
-    public void setCards(ArrayList<CardShape> cardShapes, int cardsInRow) {
-        cards = cardShapes;
+    public void setCards(ArrayList<? extends CardShape> cardShapes, int cardsInRow) {
+        cards = new ArrayList<>();
+        for (CardShape cardShape : cardShapes) cards.add((CardShape) cardShape);
         paintCardsInPanel(cardsInRow);
         for (CardShape cardShape : cards) cardShape.addActionListener(this);
     }
 
-    public void setCards(ArrayList<CardShape> cardShapes) {
+    public void setCards(ArrayList<? extends CardShape> cardShapes) {
         setCards(cardShapes, GuiConstants.getInstance().getNumberOfCardsInRow());
     }
 
@@ -96,12 +97,13 @@ public class CardPanel extends SidePanel implements ActionListener {
         if (lastBorder != null) selectedCard.setBorder(lastBorder);
     }
 
-    public void setClickListener(ClickListener listener) {
-        this.clickListener = listener;
+    protected void selectCard(CardShape selectedCard) {
+        lastBorder = selectedCard.getBorder();
+        selectedCard.setBorder(BorderFactory.createMatteBorder(6, 6, 6, 6, new Color(16, 90, 115)));
     }
 
-    public void setCardClickListener(CardClickListener cardClickListener) {
-        this.cardClickListener = cardClickListener;
+    public void setClickListener(ClickListener listener) {
+        this.clickListener = listener;
     }
 
     public void disableClickListener() {
@@ -109,20 +111,15 @@ public class CardPanel extends SidePanel implements ActionListener {
         unselectCard();
     }
 
-    public void disableCardClickListener() {
-        cardClickListener = null;
-        unselectCard();
-    }
-
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (clickListener != null || cardClickListener != null) {
+//        if (clickListener != null || cardClickListener != null) {
+        if (clickListener != null) {
             unselectCard();
             selectedCard = (CardShape) e.getSource();
-            lastBorder = selectedCard.getBorder();
-            selectedCard.setBorder(BorderFactory.createMatteBorder(6, 6, 6, 6, new Color(16, 90, 115)));
+            selectCard(selectedCard);
             if (clickListener != null) clickListener.select(selectedCard.getCardName());
-            if (cardClickListener != null) cardClickListener.selectCard((ActualCard) selectedCard);
+//            if (cardClickListener != null) cardClickListener.selectCard((ActualCard) selectedCard);
             if (!isPassive) {
                 Logger.log(LogTypes.CLICK_BUTTON, "card: " + selectedCard.getCardName() + "  selected.");
             } else {

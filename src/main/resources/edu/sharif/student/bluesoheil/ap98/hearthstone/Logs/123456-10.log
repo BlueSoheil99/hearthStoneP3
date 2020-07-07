@@ -2084,3 +2084,48 @@ PLAY		2020/07/07  13:33:34	opponent summoned OMEGA MEDIC
 PLAY		2020/07/07  13:33:44	opponent forfeited the fight
 NAVIGATION		2020/07/07  13:33:44	Back to previous panel
 PLAYER		2020/07/07  13:33:47	123456 logged out
+PLAYER		2020/07/07  17:18:00	123456 logged in
+NAVIGATION		2020/07/07  17:18:01	To Collection
+CLICK_BUTTON		2020/07/07  17:18:03	deck:  WarlockDefaultDeck  selected .
+CLICK_BUTTON		2020/07/07  17:18:04	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/07  17:18:05	WarlockDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/07/07  17:18:06	button: BACK selected .
+NAVIGATION		2020/07/07  17:18:06	Back to previous panel
+NAVIGATION		2020/07/07  17:18:07	To PlayStarter
+CLICK_BUTTON		2020/07/07  17:18:08	passive: Warriors  selected.
+PLAY		2020/07/07  17:18:10	you have 'Warriors' passive
+CLICK_BUTTON		2020/07/07  17:18:11	deck:  MageDefaultDeck  selected .
+PLAY		2020/07/07  17:18:13	MageDefaultDeck is selected as opponent
+PLAY		2020/07/07  17:18:13	opponent has 'TwiceDraw' passive
+NAVIGATION		2020/07/07  17:18:13	To Play
+CLICK_BUTTON		2020/07/07  17:18:15	card: OMEGA MEDIC  selected.
+CLICK_BUTTON		2020/07/07  17:18:21	card: HEAVY AXE  selected.
+CLICK_BUTTON		2020/07/07  17:18:22	card: MURLOC TIDEHUNTER  selected.
+PLAY		2020/07/07  17:18:24	you summoned MURLOC TIDEHUNTER
+CLICK_BUTTON		2020/07/07  17:18:37	card: OMEGA MEDIC  selected.
+PLAY		2020/07/07  17:18:39	you summoned OMEGA MEDIC
+CLICK_BUTTON		2020/07/07  17:18:45	card: HEAVY AXE  selected.
+PLAY		2020/07/07  17:18:47	opponent set weapon to HEAVY AXE
+CLICK_BUTTON		2020/07/07  17:19:00	card: ZILLIAX  selected.
+CLICK_BUTTON		2020/07/07  17:19:08	card: CURIO COLLECTOR  selected.
+PLAY		2020/07/07  17:19:09	opponent summoned CURIO COLLECTOR
+PLAYER		2020/07/07  17:20:42	123456 logged out
+PLAYER		2020/07/07  17:42:42	123456 logged in
+NAVIGATION		2020/07/07  17:42:43	To Collection
+CLICK_BUTTON		2020/07/07  17:42:45	deck:  RogueDefaultDeck  selected .
+CLICK_BUTTON		2020/07/07  17:42:47	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/07  17:42:47	RogueDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/07/07  17:42:49	button: BACK selected .
+NAVIGATION		2020/07/07  17:42:49	Back to previous panel
+NAVIGATION		2020/07/07  17:42:50	To PlayStarter
+CLICK_BUTTON		2020/07/07  17:42:51	passive: OffCards  selected.
+PLAY		2020/07/07  17:42:53	you have 'OffCards' passive
+CLICK_BUTTON		2020/07/07  17:42:53	deck:  WarlockDefaultDeck  selected .
+PLAY		2020/07/07  17:42:54	WarlockDefaultDeck is selected as opponent
+PLAY		2020/07/07  17:42:54	opponent has 'ManaJump' passive
+NAVIGATION		2020/07/07  17:42:54	To Play
+CLICK_BUTTON		2020/07/07  17:43:11	card: HEAVY AXE  selected.
+CLICK_BUTTON		2020/07/07  17:43:15	card: DREADSCALE  selected.
+CLICK_BUTTON		2020/07/07  17:43:21	card: HEAVY AXE  selected.
+PLAY		2020/07/07  17:43:22	opponent set weapon to HEAVY AXE
+PLAYER		2020/07/07  17:43:31	123456 logged out

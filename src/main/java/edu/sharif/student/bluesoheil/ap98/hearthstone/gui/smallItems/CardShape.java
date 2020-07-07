@@ -9,7 +9,8 @@ import java.awt.image.BufferedImage;
 import java.awt.image.ColorModel;
 import java.awt.image.WritableRaster;
 
-//todo change JButton to something less complicated. phase4 inshalla !
+//todo change JButton to JLabel and set mouseListener for it.
+// for different occasions you can have different mouseEntered methods which can be very helpful for a better gui . phase4 inshalla !
 public class CardShape extends JButton {
     private static final int CARD_WIDTH = GuiConstants.getInstance().getCardWidth();
     private static final int CARD_HEIGHT = GuiConstants.getInstance().getCardHeight();
