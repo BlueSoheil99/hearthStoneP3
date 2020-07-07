@@ -50,7 +50,7 @@ public class PlayPanel extends GamePanel {
         eventBox = new EventBox();
         playHandler = PlayHandler.getInstance();
         setupListeners();
-        timer =PlayTimer.setNewTimer(14);
+        timer =PlayTimer.setNewTimer(5);
         timer.setTimeListener(timerListener);
         setupPlayerPanel();
         setupOpponentPanel();
@@ -179,6 +179,7 @@ public class PlayPanel extends GamePanel {
 
     private void changeTurn() {
         playHandler.changeTurns();
+        timer.reset();
         currentTurn.playerPanel.endTurn();
         if (currentTurn == Players.ME) {
             setTurn(Players.OPPONENT);

@@ -2028,3 +2028,35 @@ CLICK_BUTTON		2020/07/07  00:41:02	card: Murloc Tidehunter  selected.
 PLAY		2020/07/07  00:48:15	you forfeited the fight
 NAVIGATION		2020/07/07  00:48:15	Back to previous panel
 PLAYER		2020/07/07  00:48:20	123456 logged out
+PLAYER		2020/07/07  11:24:45	123456 logged in
+NAVIGATION		2020/07/07  11:24:47	To Collection
+CLICK_BUTTON		2020/07/07  11:24:48	deck:  MageDefaultDeck  selected .
+CLICK_BUTTON		2020/07/07  11:24:49	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/07  11:24:49	MageDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/07/07  11:24:50	button: BACK selected .
+NAVIGATION		2020/07/07  11:24:50	Back to previous panel
+NAVIGATION		2020/07/07  11:24:51	To PlayStarter
+CLICK_BUTTON		2020/07/07  11:24:52	passive: TwiceDraw  selected.
+PLAY		2020/07/07  11:24:54	you have 'TwiceDraw' passive
+CLICK_BUTTON		2020/07/07  11:24:55	deck:  HunterDefaultDeck  selected .
+PLAY		2020/07/07  11:24:56	HunterDefaultDeck is selected as opponent
+PLAY		2020/07/07  11:24:56	opponent has 'ManaJump' passive
+NAVIGATION		2020/07/07  11:24:56	To Play
+PLAY		2020/07/07  11:25:24	you forfeited the fight
+NAVIGATION		2020/07/07  11:25:24	Back to previous panel
+PLAYER		2020/07/07  11:25:56	123456 logged out
+PLAYER		2020/07/07  11:41:39	123456 logged in
+NAVIGATION		2020/07/07  11:41:40	To Collection
+CLICK_BUTTON		2020/07/07  11:41:42	deck:  WarlockDefaultDeck  selected .
+CLICK_BUTTON		2020/07/07  11:41:43	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/07  11:41:43	WarlockDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/07/07  11:41:45	button: BACK selected .
+NAVIGATION		2020/07/07  11:41:45	Back to previous panel
+NAVIGATION		2020/07/07  11:41:46	To PlayStarter
+CLICK_BUTTON		2020/07/07  11:41:47	passive: ManaJump  selected.
+PLAY		2020/07/07  11:41:49	you have 'ManaJump' passive
+CLICK_BUTTON		2020/07/07  11:41:49	deck:  RogueDefaultDeck  selected .
+PLAY		2020/07/07  11:41:50	RogueDefaultDeck is selected as opponent
+PLAY		2020/07/07  11:41:50	opponent has 'OffCards' passive
+NAVIGATION		2020/07/07  11:41:50	To Play
+PLAYER		2020/07/07  11:43:41	123456 logged out
