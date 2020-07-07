@@ -2000,3 +2000,31 @@ CLICK_BUTTON		2020/07/06  21:02:47	card: 3.png  selected.
 SETTING		2020/07/06  21:02:48	default backCover has changed to 3.png
 CLICK_BUTTON		2020/07/06  21:03:04	button: EXIT selected .
 PLAYER		2020/07/06  21:03:05	123456 logged out
+PLAYER		2020/07/07  00:10:33	123456 logged in
+NAVIGATION		2020/07/07  00:10:43	To Collection
+CLICK_BUTTON		2020/07/07  00:10:46	deck:  WarlockDefaultDeck  selected .
+CLICK_BUTTON		2020/07/07  00:10:48	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/07  00:10:48	WarlockDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/07/07  00:10:49	button: BACK selected .
+NAVIGATION		2020/07/07  00:10:49	Back to previous panel
+NAVIGATION		2020/07/07  00:10:50	To PlayStarter
+CLICK_BUTTON		2020/07/07  00:33:42	passive: ManaJump  selected.
+CLICK_BUTTON		2020/07/07  00:33:46	card: SATHROVARR  selected.
+PLAY		2020/07/07  00:33:48	you have 'ManaJump' passive
+CLICK_BUTTON		2020/07/07  00:33:53	deck:  MageDefaultDeck  selected .
+PLAY		2020/07/07  00:33:54	MageDefaultDeck is selected as opponent
+PLAY		2020/07/07  00:33:54	opponent has 'Warriors' passive
+NAVIGATION		2020/07/07  00:33:54	To Play
+CLICK_BUTTON		2020/07/07  00:34:01	card: HEAVY AXE  selected.
+PLAY		2020/07/07  00:34:07	you set weapon to HEAVY AXE
+CLICK_BUTTON		2020/07/07  00:34:09	card: SWARM OF LOCUSTS  selected.
+CLICK_BUTTON		2020/07/07  00:34:27	card: MURLOC TIDEHUNTER  selected.
+PLAY		2020/07/07  00:34:29	you summoned MURLOC TIDEHUNTER
+CLICK_BUTTON		2020/07/07  00:34:43	card: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/07  00:35:13	card: SLAM  selected.
+PLAY		2020/07/07  00:35:14	you played the SLAM spell
+CLICK_BUTTON		2020/07/07  00:41:00	card: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/07  00:41:02	card: Murloc Tidehunter  selected.
+PLAY		2020/07/07  00:48:15	you forfeited the fight
+NAVIGATION		2020/07/07  00:48:15	Back to previous panel
+PLAYER		2020/07/07  00:48:20	123456 logged out

@@ -3,11 +3,9 @@ package edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.PlayHandler;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.PlayException;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.GamePanel;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.CardClickListener;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.ClickListener;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.HeroActionListener;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.PlayActionListener;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.*;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.Configuration.GuiConfigs.PlayConfig;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.util.PlayTimer;
 
 import javax.swing.*;
 import java.awt.*;
@@ -20,7 +18,9 @@ public class PlayPanel extends GamePanel {
     private PlayerPanel playerPanel, opponentPanel;
     private EventBox eventBox;
     private BoardPanel board;
+    private PlayTimer timer;
 
+    private TimerListener timerListener;
     private CardClickListener currentPlayerCardListener, currentOpponentCardListener;
     private ActualCard playerSelectedCard, opponentSelectedCard;
     private ActualCard selectedCard; // it will be deleted probably
@@ -50,6 +50,8 @@ public class PlayPanel extends GamePanel {
         eventBox = new EventBox();
         playHandler = PlayHandler.getInstance();
         setupListeners();
+        timer =PlayTimer.setNewTimer(14);
+        timer.setTimeListener(timerListener);
         setupPlayerPanel();
         setupOpponentPanel();
         setupPauseMenu();
@@ -100,6 +102,20 @@ public class PlayPanel extends GamePanel {
             }
 
         };
+
+        timerListener = new TimerListener() {
+            @Override
+            public void tick() {
+                System.out.println(timer.getRemainingTime());
+            }
+
+            @Override
+            public void ring() {
+                System.out.println("riiiiiing");
+                changeTurn();
+            }
+        };
+
         playActionListener = new PlayActionListener() {
             @Override
             public void endTurn() {
@@ -148,6 +164,7 @@ public class PlayPanel extends GamePanel {
         Players.ME.playerPanel = playerPanel;
         playerPanel.updateHand(playHandler.getHand(true), playHandler.getHeroStates(true));
         setTurn(Players.ME);
+        timer.start();
     }
 
     private void setupOpponentPanel() {
@@ -174,6 +191,7 @@ public class PlayPanel extends GamePanel {
         currentTurn = player;
         currentTurn.playerPanel.startTurn(handClickListener, playActionListener, heroActionListener);
         currentTurn.playerPanel.updateHand(playHandler.getHand(), playHandler.getHeroStates());
+//        timer.start();
     }
 
     //**********************************//

@@ -5,6 +5,7 @@ import edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.PlayException;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play.*;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.CardShape;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.cards.*;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.util.PlayTimer;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.log.LogTypes;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.log.Logger;
 
@@ -135,6 +136,7 @@ public class PlayHandler {
 
     public void forfeitMatch() {
         Logger.log(LogTypes.PLAY, gameController.getPlayingSide() + " forfeited the fight");
+        PlayTimer.getCurrentTimer().stopTimer();
         administer.back();
     }
 
