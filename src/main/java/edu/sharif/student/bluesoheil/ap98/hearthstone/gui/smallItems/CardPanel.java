@@ -94,10 +94,16 @@ public class CardPanel extends SidePanel implements ActionListener {
     }
 
     public void unselectCard() {
-        if (lastBorder != null) selectedCard.setBorder(lastBorder);
+        if (selectedCard != null) {
+            if (lastBorder != null) {
+                selectedCard.setBorder(lastBorder);
+                selectedCard = null;
+            }
+        }
     }
 
     protected void selectCard(CardShape selectedCard) {
+        this.selectedCard = selectedCard;
         lastBorder = selectedCard.getBorder();
         selectedCard.setBorder(BorderFactory.createMatteBorder(6, 6, 6, 6, new Color(16, 90, 115)));
     }
@@ -113,20 +119,15 @@ public class CardPanel extends SidePanel implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-//        if (clickListener != null || cardClickListener != null) {
         if (clickListener != null) {
             unselectCard();
-            selectedCard = (CardShape) e.getSource();
-            selectCard(selectedCard);
-            if (clickListener != null) clickListener.select(selectedCard.getCardName());
-//            if (cardClickListener != null) cardClickListener.selectCard((ActualCard) selectedCard);
-            if (!isPassive) {
-                Logger.log(LogTypes.CLICK_BUTTON, "card: " + selectedCard.getCardName() + "  selected.");
-            } else {
-                Logger.log(LogTypes.CLICK_BUTTON, "passive: " + selectedCard.getCardName() + "  selected.");
-            }
-        }
+            selectCard((CardShape) e.getSource());
 
+            if (!isPassive) Logger.log(LogTypes.CLICK_BUTTON, "card: " + selectedCard.getCardName() + "  selected.");
+            else Logger.log(LogTypes.CLICK_BUTTON, "passive: " + selectedCard.getCardName() + "  selected.");
+
+            if (clickListener != null) clickListener.select(selectedCard.getCardName());
+        }
     }
 
 }

@@ -76,22 +76,36 @@ public class PlayPanel extends GamePanel {
     }
 
     private void setupListeners() {
-        handClickListener = objName -> selectedCardInHand = objName;
-        //todo  2 listeners for board will be made // maybe you need a new Interface  named boardListener
-//        currentPlayerCardListener = new CardClickListener() {
-//            @Override
-//            public void selectCard(ActualCard selectedCard) {
-//                    currentPlayerSelectedCard = selectedCard;
-//                    updateSelections();
-//            }
-//        };
-//        currentOpponentCardListener = new CardClickListener() {
-//            @Override
-//            public void selectCard(ActualCard selectedCard) {
-//                    currentOpponentSelectedCard = selectedCard;
+        timerListener = new TimerListener() {
+            @Override
+            public void tick() {
+                currentTurn.panel.updateTimer(timer.getRemainingTime());
+            }
+
+            @Override
+            public void ring() {
+                changeTurn();
+            }
+        };
+        handClickListener = objName -> {
+            selectAHandCard(objName);
+
+        };
+        currentPlayerCardListener = new CardClickListener() {
+            @Override
+            public void selectCard(ActualCard selectedCard) {
+                selectBoardCard(selectedCard);
+            }
+        };
+        currentOpponentCardListener = new CardClickListener() {
+            @Override
+            public void selectCard(ActualCard selectedCard) {
+                currentOpponentSelectedCard = selectedCard;
+                System.out.println(selectedCard.getCardName() + " selected from other board");
+
 //                    attack(currentPlayerSelectedCard , currentOpponentSelectedCard);
-//            }
-//        };
+            }
+        };
         heroActionListener = new HeroActionListener() {
             //todo complete it
             @Override
@@ -102,18 +116,6 @@ public class PlayPanel extends GamePanel {
             @Override
             public void playWeapon(WeaponActualCard playedWeapon) {
                 System.out.println(playedWeapon.getCardName() + " played");
-            }
-        };
-
-        timerListener = new TimerListener() {
-            @Override
-            public void tick() {
-                currentTurn.panel.updateTimer(timer.getRemainingTime());
-            }
-
-            @Override
-            public void ring() {
-                changeTurn();
             }
         };
 
@@ -168,6 +170,7 @@ public class PlayPanel extends GamePanel {
         opponentPanel.updateHand(playHandler.getHand(false), playHandler.getHeroStates(false));
     }
 
+
     //**********************************//
     //****methods for turn settings*****//
 
@@ -188,17 +191,52 @@ public class PlayPanel extends GamePanel {
         currentTurn.panel.startTurn(handClickListener, playActionListener, heroActionListener);
         currentTurn.panel.updateHand(playHandler.getHand(), playHandler.getHeroStates());
         currentTurn.board.startTurn(currentPlayerCardListener);
+        getOppositeSide(currentTurn).board.setCardClickListener(currentOpponentCardListener);
     }
 
     private void startFrom(Players player) {
-        if (player == Players.ME) currentTurn = Players.OPPONENT; // this line is just for avoiding exception
-        if (player == Players.OPPONENT) currentTurn = Players.ME; // this line is just for avoiding exception
+        currentTurn = getOppositeSide(player); // this line is just for avoiding exception
         setTurn(player);
         timer.start();
     }
 
+    private Players getOppositeSide(Players player) {
+        //or you can make a property named someThing like currentOpponent and initialize it in setTurn method
+        if (player == Players.OPPONENT) return Players.ME;
+        else return Players.OPPONENT;
+    }
     //**********************************//
     //*******methods for playing********//
+
+    private void selectAHandCard(String cardName) {
+        currentPlayerSelectedCard = null;
+        currentTurn.board.unselectCard();
+        if (selectedCardInHand != null && selectedCardInHand.equals(cardName)) {
+            selectedCardInHand = null;
+            currentTurn.panel.unselectCard();
+//            currentTurn.board.setCardClickListener(currentPlayerCardListener);
+        } else {
+            selectedCardInHand = cardName;
+//            currentTurn.board.disableCardClickListener();
+        }
+    }
+
+    private void selectBoardCard(ActualCard selectedCard) {
+        selectedCardInHand = null;
+        currentTurn.panel.unselectCard();
+
+//                    updateSelections();
+        if (currentPlayerSelectedCard != null && currentPlayerSelectedCard==selectedCard) {
+            currentPlayerSelectedCard = null;
+            currentTurn.board.unselectCard();
+            System.out.println(selectedCard.getCardName() + " unselected from board");
+//            currentTurn.panel.(currentPlayerCardListener);
+        } else {
+            currentPlayerSelectedCard = selectedCard;
+            System.out.println(selectedCard.getCardName() + " selected from board");
+//            currentTurn.board.disableCardClickListener();
+        }
+    }
 
     private void doHandCardAction() {
         try {

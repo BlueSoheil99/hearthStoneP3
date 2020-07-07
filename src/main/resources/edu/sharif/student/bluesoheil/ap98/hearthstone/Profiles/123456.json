@@ -805,6 +805,18 @@
           "rarity": "COMMON",
           "description": "N/A",
           "cost": 2
+        },
+        {
+          "inRush": false,
+          "HP": 1,
+          "attack": 2,
+          "name": "Voodoo doctor",
+          "manaCost": 1,
+          "type": "MINION",
+          "heroClass": "NEUTRAL",
+          "rarity": "COMMON",
+          "description": "N/A",
+          "cost": 2
         }
       ],
       "cardsUsage": {
@@ -816,6 +828,7 @@
         "Heavy Axe": 0,
         "Learn Draconic": 0,
         "Swarm of Locusts": 0,
+        "Voodoo doctor": 0,
         "Friendly Smith": 0,
         "Curio Collector": 0
       }

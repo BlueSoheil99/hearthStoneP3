@@ -145,4 +145,8 @@ public class PlayerPanel extends SidePanel {
             if (playActionListener != null) playActionListener.goLeft();
         });
     }
+
+    void unselectCard() {
+        cardPanel.unselectCard();
+    }
 }
