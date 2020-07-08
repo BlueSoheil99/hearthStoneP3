@@ -80,26 +80,22 @@ public class PlayerBoard extends CardPanel {
     }
 
     void previewCard(MinionActualCard card, int index) {
-
+        disablePreviewMode();
         card.setBackground(Color.ORANGE);
+        latestAddedCardIndex = index;
         hasPreview = true;
+        cards.add(index, card);
 
-        //disableTheListenerForThatCard
+        ArrayList<MinionActualCard> previewCards = new ArrayList<>();
+        previewCards.add(card);
+        setCards(cards, CARDS_LIMIT , previewCards);
     }
 
     public void addCard(MinionActualCard card, int index) {
         if (index <= cards.size() ) {
-            if (hasPreview) {
-                cards.remove(latestAddedCardIndex);
-                card.setBackground(Color.ORANGE);
-                //disableTheListenerForThatCard
-//                card
-            }
-            latestAddedCardIndex = index;
-            if (index == cards.size()) cards.add(card);
+            if (index == cards.size()) cards.add(card); //
             else cards.add(index, card);
             setCards(cards);
-//            if (hasPreview)cards.get(latestAddedCardIndex).removeActionListener(this);
         }
     }
 
@@ -125,7 +121,7 @@ public class PlayerBoard extends CardPanel {
             unselectCard();
             selectCard((MinionActualCard) e.getSource());
 
-            Logger.log(LogTypes.CLICK_BUTTON, "passive: " + selectedCard.getCardName() + "  selected.");
+            Logger.log(LogTypes.CLICK_BUTTON, "card " + selectedCard.getCardName() + "  selected.");
 
             if (cardClickListener != null) cardClickListener.selectCard(selectedCard);
         }

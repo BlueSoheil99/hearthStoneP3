@@ -3376,3 +3376,168 @@ PLAY		2020/07/08  15:49:01	opponent summoned VOODOO DOCTOR
 CLICK_BUTTON		2020/07/08  15:49:25	card: OMEGA MEDIC  selected.
 PLAY		2020/07/08  15:49:29	opponent summoned OMEGA MEDIC
 PLAYER		2020/07/08  15:49:41	123456 logged out
+PLAYER		2020/07/08  17:56:53	123456 logged in
+NAVIGATION		2020/07/08  17:56:55	To Collection
+CLICK_BUTTON		2020/07/08  17:56:57	deck:  fullMinionDeck  selected .
+CLICK_BUTTON		2020/07/08  17:56:59	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/08  17:56:59	fullMinionDeck has been set as current deck
+CLICK_BUTTON		2020/07/08  17:57:00	button: BACK selected .
+NAVIGATION		2020/07/08  17:57:00	Back to previous panel
+NAVIGATION		2020/07/08  17:57:01	To PlayStarter
+CLICK_BUTTON		2020/07/08  17:57:03	passive: OffCards  selected.
+CLICK_BUTTON		2020/07/08  17:57:06	card: PHARAOH'S BLESSING  selected.
+PLAY		2020/07/08  17:57:08	you have 'OffCards' passive
+CLICK_BUTTON		2020/07/08  17:57:09	deck:  RogueDefaultDeck  selected .
+PLAY		2020/07/08  17:57:10	RogueDefaultDeck is selected as opponent
+PLAY		2020/07/08  17:57:10	opponent has 'ManaJump' passive
+NAVIGATION		2020/07/08  17:57:10	To Play
+CLICK_BUTTON		2020/07/08  17:57:19	card: ZILLIAX  selected.
+CLICK_BUTTON		2020/07/08  17:57:23	card: WATERBOY  selected.
+CLICK_BUTTON		2020/07/08  17:57:24	card: ABOMINATION  selected.
+CLICK_BUTTON		2020/07/08  17:57:28	card: ZILLIAX  selected.
+CLICK_BUTTON		2020/07/08  17:57:35	card: WATERBOY  selected.
+PLAY		2020/07/08  17:57:46	you summoned WATERBOY
+CLICK_BUTTON		2020/07/08  17:57:48	card: ZILLIAX  selected.
+CLICK_BUTTON		2020/07/08  17:57:54	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:57:54	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:57:54	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:57:54	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:57:54	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:57:54	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:57:54	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:58:14	card: CURIO COLLECTOR  selected.
+CLICK_BUTTON		2020/07/08  17:58:30	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:58:30	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:58:30	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:58:30	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:58:30	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:58:30	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:58:30	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:58:49	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:58:49	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:58:49	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:58:49	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:58:49	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:58:49	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:58:49	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:59:03	card: HEAVY AXE  selected.
+CLICK_BUTTON		2020/07/08  17:59:05	card: CURIO COLLECTOR  selected.
+CLICK_BUTTON		2020/07/08  17:59:06	card: HEAVY AXE  selected.
+PLAY		2020/07/08  17:59:08	opponent set weapon to HEAVY AXE
+CLICK_BUTTON		2020/07/08  17:59:12	card: OMEGA MEDIC  selected.
+PLAY		2020/07/08  17:59:13	you summoned OMEGA MEDIC
+CLICK_BUTTON		2020/07/08  17:59:15	card: VOODOO DOCTOR  selected.
+PLAY		2020/07/08  17:59:18	you summoned VOODOO DOCTOR
+CLICK_BUTTON		2020/07/08  17:59:22	card: ZILLIAX  selected.
+PLAY		2020/07/08  17:59:26	you summoned ZILLIAX
+CLICK_BUTTON		2020/07/08  17:59:30	card Zilliax  selected.
+CLICK_BUTTON		2020/07/08  17:59:33	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:59:33	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:59:33	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:59:33	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:59:33	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:59:33	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:59:33	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:59:33	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:59:33	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:59:33	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:59:33	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:59:33	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:59:33	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:59:33	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:59:33	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:59:33	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:59:33	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:59:33	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:59:33	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:59:33	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:59:33	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:59:33	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:59:33	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:59:33	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:59:33	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:59:33	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  17:59:40	card Voodoo doctor  selected.
+CLICK_BUTTON		2020/07/08  17:59:40	card Voodoo doctor  selected.
+CLICK_BUTTON		2020/07/08  17:59:40	card Voodoo doctor  selected.
+CLICK_BUTTON		2020/07/08  17:59:40	card Voodoo doctor  selected.
+CLICK_BUTTON		2020/07/08  17:59:40	card Voodoo doctor  selected.
+CLICK_BUTTON		2020/07/08  17:59:40	card Voodoo doctor  selected.
+CLICK_BUTTON		2020/07/08  17:59:40	card Voodoo doctor  selected.
+CLICK_BUTTON		2020/07/08  17:59:40	card Voodoo doctor  selected.
+CLICK_BUTTON		2020/07/08  17:59:40	card Voodoo doctor  selected.
+CLICK_BUTTON		2020/07/08  17:59:40	card Voodoo doctor  selected.
+CLICK_BUTTON		2020/07/08  17:59:40	card Voodoo doctor  selected.
+CLICK_BUTTON		2020/07/08  17:59:40	card Voodoo doctor  selected.
+CLICK_BUTTON		2020/07/08  17:59:43	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  17:59:43	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  17:59:43	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  17:59:43	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  17:59:43	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  17:59:43	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  17:59:43	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  17:59:43	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  17:59:43	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  17:59:43	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  17:59:43	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  17:59:43	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  17:59:43	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  17:59:43	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  17:59:43	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  17:59:43	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  17:59:43	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  17:59:50	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  17:59:50	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  17:59:50	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  17:59:50	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  17:59:50	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  17:59:50	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  17:59:50	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  17:59:50	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  17:59:50	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  17:59:50	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  17:59:50	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  17:59:50	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  17:59:50	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  17:59:50	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  17:59:50	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  17:59:50	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  17:59:50	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  18:00:02	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  18:00:02	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  18:00:02	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  18:00:02	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  18:00:02	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  18:00:02	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  18:00:02	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  18:00:02	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  18:00:02	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  18:00:02	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  18:00:02	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  18:00:02	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  18:00:02	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  18:00:02	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  18:00:02	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  18:00:02	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  18:00:02	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  18:00:05	card: ABOMINATION  selected.
+CLICK_BUTTON		2020/07/08  18:00:25	card: CURIO COLLECTOR  selected.
+PLAY		2020/07/08  18:00:27	opponent summoned CURIO COLLECTOR
+CLICK_BUTTON		2020/07/08  18:00:29	card: MURLOC TIDEHUNTER  selected.
+CLICK_BUTTON		2020/07/08  18:00:43	card: ABOMINATION  selected.
+CLICK_BUTTON		2020/07/08  18:00:44	card Voodoo doctor  selected.
+CLICK_BUTTON		2020/07/08  18:00:44	card Voodoo doctor  selected.
+CLICK_BUTTON		2020/07/08  18:00:44	card Voodoo doctor  selected.
+CLICK_BUTTON		2020/07/08  18:00:44	card Voodoo doctor  selected.
+CLICK_BUTTON		2020/07/08  18:00:44	card Voodoo doctor  selected.
+CLICK_BUTTON		2020/07/08  18:00:44	card Voodoo doctor  selected.
+CLICK_BUTTON		2020/07/08  18:00:44	card Voodoo doctor  selected.
+CLICK_BUTTON		2020/07/08  18:00:44	card Voodoo doctor  selected.
+CLICK_BUTTON		2020/07/08  18:00:44	card Voodoo doctor  selected.
+CLICK_BUTTON		2020/07/08  18:00:44	card Voodoo doctor  selected.
+CLICK_BUTTON		2020/07/08  18:00:44	card Voodoo doctor  selected.
+CLICK_BUTTON		2020/07/08  18:00:44	card Voodoo doctor  selected.
+CLICK_BUTTON		2020/07/08  18:00:44	card Voodoo doctor  selected.
+CLICK_BUTTON		2020/07/08  18:00:44	card Voodoo doctor  selected.
+CLICK_BUTTON		2020/07/08  18:00:44	card Voodoo doctor  selected.
+PLAYER		2020/07/08  18:01:02	123456 logged out

@@ -1,7 +1,5 @@
 package edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems;
 
-import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play.ActualCard;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.CardClickListener;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.ClickListener;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.Configuration.GuiConfigs.GuiConstants;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.log.LogTypes;
@@ -20,7 +18,6 @@ public class CardPanel extends SidePanel implements ActionListener {
     private CardShape selectedCard;
     private Border lastBorder;
     private ClickListener clickListener;
-    private CardClickListener cardClickListener;
     private boolean isPassive;
 
     public CardPanel() {
@@ -33,24 +30,24 @@ public class CardPanel extends SidePanel implements ActionListener {
         return cards;
     }
 
-    public void setCards(ArrayList<? extends CardShape> cardShapes, int cardsInRow) {
-        cards = new ArrayList<>();
-        for (CardShape cardShape : cardShapes) cards.add((CardShape) cardShape);
-        paintCardsInPanel(cardsInRow);
-        for (CardShape cardShape : cards) cardShape.addActionListener(this);
-    }
-
-//    public void setCards(ArrayList<? extends CardShape> cardShapes, int cardsInRow ,
-//                         ArrayList<? extends  CardShape> cardsToListen) {
-//        cards = new ArrayList<>();
-//        for (CardShape cardShape : cardShapes) cards.add((CardShape) cardShape);
-//        paintCardsInPanel(cardsInRow);
-//        if (cardsToListen == null)for (CardShape cardShape : cards) cardShape.addActionListener(this);
-//        if (cardsToListen != null)for (CardShape cardShape : cardsToListen) cardShape.addActionListener(this);
-//    }
-
     public void setCards(ArrayList<? extends CardShape> cardShapes) {
         setCards(cardShapes, GuiConstants.getInstance().getNumberOfCardsInRow());
+    }
+
+    public void setCards(ArrayList<? extends CardShape> cardShapes, int cardsInRow) {
+        setCards(cardShapes , cardsInRow , null);
+    }
+
+    public void setCards(ArrayList<? extends CardShape> cardShapes, int cardsInRow ,
+                         ArrayList<? extends  CardShape> cardsRefuseToListen) {
+        cards = new ArrayList<>();
+        for (CardShape cardShape : cardShapes) cards.add((CardShape) cardShape); //i think these 2 loops can be merged into one and next line goes last one...check it later
+        paintCardsInPanel(cardsInRow);
+        for (CardShape cardShape : cards) {
+            if (cardsRefuseToListen == null || !cardsRefuseToListen.contains(cardShape) ){
+                cardShape.addActionListener(this);
+            }
+        }
     }
 
     private void paintCardsInPanel(int numberOfCardsInRow) {
@@ -77,11 +74,6 @@ public class CardPanel extends SidePanel implements ActionListener {
         }
     }
 
-    public void addCard(CardShape card, int index) {
-        cards.add(index, card);
-        setCards(cards);
-    }
-
     public void setEmpty() {
         removeAll();
         revalidate();
@@ -105,6 +97,12 @@ public class CardPanel extends SidePanel implements ActionListener {
         this.selectedCard = selectedCard;
         lastBorder = selectedCard.getBorder();
         selectedCard.setBorder(BorderFactory.createMatteBorder(6, 6, 6, 6, new Color(16, 90, 115)));
+    }
+
+    //todo check 2 methods below and delete them
+    public void addCard(CardShape card, int index) {
+        cards.add(index, card);
+        setCards(cards);
     }
 
     public void addCard(CardShape card) {

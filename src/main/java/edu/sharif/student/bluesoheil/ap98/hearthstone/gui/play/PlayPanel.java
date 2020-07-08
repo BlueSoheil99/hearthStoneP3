@@ -227,8 +227,8 @@ public class PlayPanel extends GamePanel {
                         "Your Board is full.\nCan't summon more minions or beasts", "Full Board", JOptionPane.ERROR_MESSAGE);
             } else {
                 MinionActualCard cardToPreview = playHandler.getMinion(selectedCardInHand);
-                currentTurn.board.addCard(cardToPreview, indexToSummonAMinion);
-                currentTurn.board.enablePreviewMode(); // this should be under the line above
+                currentTurn.board.previewCard(cardToPreview, indexToSummonAMinion);
+//                currentTurn.board.enablePreviewMode(); // this should be under the line above
             }
         }
     }
@@ -246,7 +246,7 @@ public class PlayPanel extends GamePanel {
             } else {
                 if (indexToSummonAMinion > 0) indexToSummonAMinion--;
             }
-            currentTurn.board.addCard(cardToPreview, indexToSummonAMinion);
+            currentTurn.board.previewCard(cardToPreview, indexToSummonAMinion);
         }
     }
 
@@ -304,7 +304,6 @@ public class PlayPanel extends GamePanel {
 
     private void selectBoardCard(ActualCard selectedCard) {
         selectedCardInHand = null;
-//        currentTurn.panel.unselectCard();
         unselectHand();
 
         if (currentPlayerSelectedCard != null && currentPlayerSelectedCard == selectedCard) {
