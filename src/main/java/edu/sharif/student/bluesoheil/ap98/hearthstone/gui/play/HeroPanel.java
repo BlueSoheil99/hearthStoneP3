@@ -1,21 +1,26 @@
 package edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play;
 
+import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.smallItems.CardShape;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.HeroActionListener;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Heroes.HeroTypes;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.Configuration.GuiConfigs.PlayConfig;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.ImageLoader;
 
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 import java.awt.image.BufferedImage;
 import java.util.HashMap;
 
 public class HeroPanel extends JPanel {
-
     private static HashMap<HeroTypes, BufferedImage> heroImages = new HashMap<>();
     private HeroActionListener heroActionListener;
+    private boolean isOpponent;
+    private JButton heroPower, weaponBtn;
+    private JButton selectedCard;
+    private Border lastBorder;
+
     private JLabel hpLabel = new JLabel("HP : ");
     private JLabel manaLabel = new JLabel("Mana : ");
     private JLabel remainingCardsLabel = new JLabel("Remaining Cards : ");
@@ -23,7 +28,7 @@ public class HeroPanel extends JPanel {
     private JLabel mana = new JLabel("");
     private JLabel remainingCards = new JLabel("");
     private JLabel heroIcon;
-    private JButton heroPower, weaponBtn;
+
     static {
         setupHeroImages();
     }
@@ -54,12 +59,11 @@ public class HeroPanel extends JPanel {
         weaponBtn.setBorder(BorderFactory.createMatteBorder(5, 5, 5, 5, new Color(77, 10, 69)));
         weaponBtn.setForeground(Color.white);
         weaponBtn.setEnabled(false);
-        //todo ...do something so when card gets changed or goes default, listeners won't get ruined
     }
 
     private void createHeroPower() {
         heroPower = new JButton("hero power");
-        //todo hey make this shit up
+        //todo hey make this shit up:(
     }
 
     private void init() {
@@ -100,9 +104,9 @@ public class HeroPanel extends JPanel {
     }
 
     void setWeaponBtn(WeaponActualCard weaponBtn) {
-        if (weaponBtn == null){
+        if (weaponBtn == null) {
             makeWeaponBtnDefault();
-        }else{
+        } else {
             this.weaponBtn = weaponBtn;
             setActionListeners();
             Dimension size = weaponBtn.getSize();
@@ -113,9 +117,9 @@ public class HeroPanel extends JPanel {
         init();
     }
 
-    //todo setListener for hero panel for playing weapon or heroPower
-    public void setHeroActionListener(HeroActionListener heroActionListener) {
+    public void setHeroActionListener(HeroActionListener heroActionListener, boolean isOpponent) {
         this.heroActionListener = heroActionListener;
+        this.isOpponent = isOpponent;
     }
 
     public void disableHeroActionListener() {
@@ -124,20 +128,61 @@ public class HeroPanel extends JPanel {
 
     private void setActionListeners() {
         heroPower.addActionListener(e -> {
-            if (heroActionListener != null){
-                heroActionListener.playHeroPower();
+            if (heroActionListener != null) {
+                if (!isOpponent) {
+                    heroActionListener.playHeroPower();
+                }
             }
         });
         weaponBtn.addActionListener(e -> {
-            if (heroActionListener != null){
-                heroActionListener.playWeapon((WeaponActualCard) weaponBtn);
+            if (heroActionListener != null) {
+                if (!isOpponent) {
+//                    unselectCards();
+//                    selectCard((JButton) e.getSource());
+                    heroActionListener.playWeapon((WeaponActualCard) weaponBtn);
+                }
             }
         });
+        heroIcon.addMouseListener(
+                new MouseAdapter() {
+                    @Override
+                    public void mouseClicked(MouseEvent e) {
+                        if (heroActionListener != null) {
+                            if (isOpponent) heroActionListener.selectHero();
+                        }
+                    }
+
+                    @Override
+                    public void mouseEntered(MouseEvent e) {
+                        if (heroActionListener != null)
+                            if (isOpponent) heroIcon.setBorder(BorderFactory.createLoweredSoftBevelBorder());
+                    }
+
+                    @Override
+                    public void mouseExited(MouseEvent e) {
+                        if (heroActionListener != null)
+                            if (isOpponent) heroIcon.setBorder(null);
+                    }
+                }
+        );
     }
 
+    public void unselectCards() {
+        if (selectedCard != null) {
+            if (lastBorder != null) {
+                selectedCard.setBorder(lastBorder);
+                selectedCard = null;
+            }
+        }
+    }
+    private void selectCard(JButton selectedCard){
+        this.selectedCard = selectedCard;
+        lastBorder = selectedCard.getBorder();
+        selectedCard.setBorder(BorderFactory.createMatteBorder(6, 6, 6, 6, new Color(16, 90, 115)));
+    }
 
     private class heroLabel {
-        //todo use this class to have more attractive labels in hero panel
+        //todo use this class to have more attractive labels(hp , mana , remaining cards) in hero panel
 
     }
 

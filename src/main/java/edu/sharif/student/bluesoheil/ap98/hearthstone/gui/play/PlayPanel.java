@@ -7,6 +7,7 @@ import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.*;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.cards.Card;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.Configuration.GuiConfigs.PlayConfig;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.PlayTimer;
+import jdk.nashorn.internal.scripts.JO;
 
 import javax.swing.*;
 import java.awt.*;
@@ -24,7 +25,7 @@ public class PlayPanel extends GamePanel {
 
     private TimerListener timerListener;
     private PlayActionListener playActionListener;
-    private HeroActionListener heroActionListener;
+    private HeroActionListener currentTurnHeroActionListener, currentOpponentHeroActionListener;
     private CardClickListener currentPlayerCardListener, currentOpponentCardListener;
     private ActualCard currentPlayerSelectedCard, currentOpponentSelectedCard;
     private ClickListener handClickListener;
@@ -97,20 +98,48 @@ public class PlayPanel extends GamePanel {
         handClickListener = this::selectAHandCard;
         currentPlayerCardListener = this::selectBoardCard;
         currentOpponentCardListener = this::selectOpponentBoardCard;
-        heroActionListener = new HeroActionListener() {
-            //todo complete it
+        setupHeroActionListeners();
+        setupPlayActionListener();
+    }
+
+    private void setupHeroActionListeners() {
+        currentTurnHeroActionListener = new HeroActionListener() { //this is used for attack of a hero
             @Override
             public void playHeroPower() {
-                unselectHand();
+//                for now i can't use this method for heroPower because heroPower can't be treated like cards
+//                unselectHand();
                 System.out.println("played hero power");
             }
 
             @Override
             public void playWeapon(WeaponActualCard playedWeapon) {
-                unselectHand();
-                System.out.println(playedWeapon.getCardName() + " played");
+                selectAHandCard(playedWeapon.getCardName());
+                currentPlayerSelectedCard = playedWeapon;
+                System.out.println("weapon "+playedWeapon.getCardName() + " selected");
+            }
+
+            @Override
+            public void selectHero() {
             }
         };
+
+        currentOpponentHeroActionListener = new HeroActionListener() { // this one is used for a hero being attacked
+            @Override
+            public void playHeroPower() {
+            }
+
+            @Override
+            public void playWeapon(WeaponActualCard playedWeapon) {
+            }
+
+            @Override
+            public void selectHero() {
+                attackToHero();
+            }
+        };
+    }
+
+    private void setupPlayActionListener() {
         playActionListener = new PlayActionListener() {
             @Override
             public void endTurn() {
@@ -140,6 +169,7 @@ public class PlayPanel extends GamePanel {
                 if (selectedCardInHand != null) checkForMinionPreview(false);
             }
         };
+
     }
 
     private void setupPlayerPanel() {
@@ -147,7 +177,7 @@ public class PlayPanel extends GamePanel {
         playerBoard = new PlayerBoard();
         Players.ME.panel = playerPanel;
         Players.ME.board = playerBoard;
-        playerPanel.updateHand(playHandler.getHand(true), playHandler.getHeroStates(true));
+        playerPanel.updatePlayer(playHandler.getHand(true), playHandler.getHeroStates(true));
     }
 
     private void setupOpponentPanel() {
@@ -155,7 +185,7 @@ public class PlayPanel extends GamePanel {
         opponentBoard = new PlayerBoard();
         Players.OPPONENT.panel = opponentPanel;
         Players.OPPONENT.board = opponentBoard;
-        opponentPanel.updateHand(playHandler.getHand(false), playHandler.getHeroStates(false));
+        opponentPanel.updatePlayer(playHandler.getHand(false), playHandler.getHeroStates(false));
     }
 
     //**********************************//
@@ -173,10 +203,10 @@ public class PlayPanel extends GamePanel {
 
     private void setTurn(Players player) {
         currentTurn.board.endTurn();
-        currentTurn.panel.endTurn();
+        currentTurn.panel.endTurn(currentOpponentHeroActionListener);
         currentTurn = player;
-        currentTurn.panel.startTurn(handClickListener, playActionListener, heroActionListener);
-        currentTurn.panel.updateHand(playHandler.getHand(), playHandler.getHeroStates());
+        currentTurn.panel.startTurn(handClickListener, playActionListener, currentTurnHeroActionListener);
+        currentTurn.panel.updatePlayer(playHandler.getCurrentTurnHand(), playHandler.getCurrentTurnHeroStates());
         currentTurn.board.startTurn(currentPlayerCardListener);
         getOppositeSide(currentTurn).board.setCardClickListener(currentOpponentCardListener);
     }
@@ -194,19 +224,24 @@ public class PlayPanel extends GamePanel {
     }
 
     private void unselectHand() {
+        selectedCardInHand = null;
         currentTurn.panel.unselectCard();
+//        currentTurn.panel.unselectHeroOptions();
         currentTurn.board.disablePreviewMode();
+    }
+
+    private void unselectBoard() {
+        currentPlayerSelectedCard = null;
+        currentTurn.board.unselectCard();
     }
 
     //*************************************************//
     //*******methods for playing a card in hand********//
     private void selectAHandCard(String cardName) {
-        currentPlayerSelectedCard = null;
-        currentTurn.board.unselectCard();
-
+        // we both use this method for handCards and weapon and heroPower
+        unselectBoard();
         indexToSummonAMinion = 0;
         if (selectedCardInHand != null && selectedCardInHand.equals(cardName)) {
-            selectedCardInHand = null;
             unselectHand();
         } else {
             selectedCardInHand = cardName;
@@ -219,7 +254,6 @@ public class PlayPanel extends GamePanel {
         Card.CardType type = playHandler.getCardType(selectedCardInHand);
         if (type == Card.CardType.MINION || type == Card.CardType.BEAST) {
             if (currentTurn.board.isFull()) {
-                selectedCardInHand = null;
                 unselectHand();
                 JOptionPane.showMessageDialog(null,
                         "Your Board is full.\nCan't summon more minions or beasts", "Full Board", JOptionPane.ERROR_MESSAGE);
@@ -267,17 +301,17 @@ public class PlayPanel extends GamePanel {
                     playSpell(selectedCardInHand);
                     break;
             }
-            currentTurn.panel.updateHand(playHandler.getHand(), playHandler.getHeroStates());
+            currentTurn.panel.updatePlayer(playHandler.getCurrentTurnHand(), playHandler.getCurrentTurnHeroStates());
         } catch (PlayException e) {
             unselectHand();
-            JOptionPane.showMessageDialog(null, e.getMessage(), "Error in card selection", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, e.getMessage(), "Invalid selected card", JOptionPane.ERROR_MESSAGE);
         }
     }
 
     private void summonMinion(String cardName) throws PlayException {
         //todo is there any need to have a different method for beasts?
         MinionActualCard cardToSummon;
-        cardToSummon = playHandler.summonAndGetMinion(cardName , indexToSummonAMinion);
+        cardToSummon = playHandler.summonAndGetMinion(cardName, indexToSummonAMinion);
         currentTurn.board.disablePreviewMode();
         currentTurn.board.addCard(cardToSummon, indexToSummonAMinion);
     }
@@ -300,7 +334,6 @@ public class PlayPanel extends GamePanel {
     //******* methods for playing a card in board ********//
 
     private void selectBoardCard(ActualCard selectedCard) {
-        selectedCardInHand = null;
         unselectHand();
 
         if (currentPlayerSelectedCard != null && currentPlayerSelectedCard == selectedCard) {
@@ -320,8 +353,32 @@ public class PlayPanel extends GamePanel {
     private void selectOpponentBoardCard(ActualCard selectedCard) {
         currentOpponentSelectedCard = selectedCard;
         System.out.println(selectedCard.getCardName() + " selected from other board");
-
-//                    attack(currentPlayerSelectedCard , currentOpponentSelectedCard);
+//      attack(currentPlayerSelectedCard , currentOpponentSelectedCard);
     }
 
+    private void attackToHero() {
+        if (currentPlayerSelectedCard != null) {
+//todo  if (opponentHeroCanBeAttacked) { //write opponentHeroCanBeAttacked as a method
+//          if (thereIsNoTaunt) //write thereIsNoTaunt as a method
+            try {
+                playHandler.attackToHero(currentPlayerSelectedCard);
+                System.out.println("attacked to hero ");
+                updatePlayers();
+            } catch (PlayException e) {
+                JOptionPane.showMessageDialog(null, e.getMessage(), "invalid move", JOptionPane.ERROR_MESSAGE);
+            }
+            unselectBoard();
+        }
+    }
+
+    private void attackToBoardCard() {
+
+    }
+
+    private void updatePlayers() {
+        //for now i think it's only useful after attacking to hero
+        currentTurn.panel.updatePlayer(playHandler.getCurrentTurnHand(), playHandler.getCurrentTurnHeroStates());
+        getOppositeSide(currentTurn).panel.updatePlayer(playHandler.getCurrentOpponentHand(), playHandler.getCurrentOpponentHeroStates());
+        System.out.println("players are updated");
+    }
 }

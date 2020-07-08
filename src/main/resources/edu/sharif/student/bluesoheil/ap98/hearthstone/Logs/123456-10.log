@@ -3734,3 +3734,501 @@ CLICK_BUTTON		2020/07/08  20:14:28	card: OMEGA MEDIC  selected.
 PLAY		2020/07/08  20:14:35	you summoned OMEGA MEDIC
 CLICK_BUTTON		2020/07/08  20:14:40	card: SATHROVARR  selected.
 PLAYER		2020/07/08  20:15:51	123456 logged out
+PLAYER		2020/07/08  20:36:36	123456 logged in
+NAVIGATION		2020/07/08  20:36:49	To Collection
+CLICK_BUTTON		2020/07/08  20:36:50	deck:  fullMinionDeck  selected .
+CLICK_BUTTON		2020/07/08  20:36:52	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/08  20:36:52	fullMinionDeck has been set as current deck
+CLICK_BUTTON		2020/07/08  20:36:53	button: BACK selected .
+NAVIGATION		2020/07/08  20:36:53	Back to previous panel
+NAVIGATION		2020/07/08  20:36:54	To PlayStarter
+CLICK_BUTTON		2020/07/08  20:36:56	passive: ManaJump  selected.
+PLAY		2020/07/08  20:36:59	you have 'ManaJump' passive
+CLICK_BUTTON		2020/07/08  20:37:00	deck:  RogueDefaultDeck  selected .
+PLAY		2020/07/08  20:37:01	RogueDefaultDeck is selected as opponent
+PLAY		2020/07/08  20:37:01	opponent has 'OffCards' passive
+NAVIGATION		2020/07/08  20:37:01	To Play
+CLICK_BUTTON		2020/07/08  20:37:50	card: HEAVY AXE  selected.
+PLAY		2020/07/08  20:37:51	opponent set weapon to HEAVY AXE
+PLAYER		2020/07/08  20:38:23	123456 logged out
+PLAYER		2020/07/08  20:53:47	123456 logged in
+NAVIGATION		2020/07/08  20:54:11	To Collection
+CLICK_BUTTON		2020/07/08  20:54:13	deck:  fullMinionDeck  selected .
+CLICK_BUTTON		2020/07/08  20:54:14	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/08  20:54:15	fullMinionDeck has been set as current deck
+CLICK_BUTTON		2020/07/08  20:54:16	button: BACK selected .
+NAVIGATION		2020/07/08  20:54:16	Back to previous panel
+NAVIGATION		2020/07/08  20:54:17	To PlayStarter
+CLICK_BUTTON		2020/07/08  20:54:18	passive: OffCards  selected.
+PLAY		2020/07/08  20:54:20	you have 'OffCards' passive
+CLICK_BUTTON		2020/07/08  20:54:21	deck:  WarlockDefaultDeck  selected .
+PLAY		2020/07/08  20:54:21	WarlockDefaultDeck is selected as opponent
+PLAY		2020/07/08  20:54:21	opponent has 'Warriors' passive
+NAVIGATION		2020/07/08  20:54:21	To Play
+PLAYER		2020/07/08  20:55:46	123456 logged out
+PLAYER		2020/07/08  22:14:05	123456 logged in
+NAVIGATION		2020/07/08  22:14:07	To Collection
+CLICK_BUTTON		2020/07/08  22:14:09	deck:  HunterDefaultDeck  selected .
+CLICK_BUTTON		2020/07/08  22:14:10	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/08  22:14:10	HunterDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/07/08  22:14:11	button: BACK selected .
+NAVIGATION		2020/07/08  22:14:11	Back to previous panel
+NAVIGATION		2020/07/08  22:14:13	To PlayStarter
+CLICK_BUTTON		2020/07/08  22:14:14	passive: Warriors  selected.
+CLICK_BUTTON		2020/07/08  22:14:16	card: SWAMP KING DRED  selected.
+PLAY		2020/07/08  22:14:18	you have 'Warriors' passive
+CLICK_BUTTON		2020/07/08  22:14:19	deck:  MageDefaultDeck  selected .
+PLAY		2020/07/08  22:14:19	MageDefaultDeck is selected as opponent
+PLAY		2020/07/08  22:14:19	opponent has 'TwiceDraw' passive
+NAVIGATION		2020/07/08  22:14:19	To Play
+CLICK_BUTTON		2020/07/08  22:14:21	card: WATERBOY  selected.
+CLICK_BUTTON		2020/07/08  22:14:27	card: WATERBOY  selected.
+PLAY		2020/07/08  22:14:29	you summoned WATERBOY
+CLICK_BUTTON		2020/07/08  22:14:36	card: MURLOC TIDEHUNTER  selected.
+PLAY		2020/07/08  22:14:38	opponent summoned MURLOC TIDEHUNTER
+CLICK_BUTTON		2020/07/08  22:14:39	card Murloc Tidehunter  selected.
+PLAYER		2020/07/08  22:14:59	123456 logged out
+PLAYER		2020/07/08  23:23:59	123456 logged in
+NAVIGATION		2020/07/08  23:24:11	To Collection
+CLICK_BUTTON		2020/07/08  23:24:13	deck:  fullMinionDeck  selected .
+CLICK_BUTTON		2020/07/08  23:24:14	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/08  23:24:15	fullMinionDeck has been set as current deck
+CLICK_BUTTON		2020/07/08  23:24:18	deck:  fullMinionDeck  selected .
+CLICK_BUTTON		2020/07/08  23:24:19	card: LEARN DRACONIC  selected.
+CLICK_BUTTON		2020/07/08  23:24:20	button : REMOVE CARD selected.
+COLLECTION		2020/07/08  23:24:22	LEARN DRACONIC has been removed from fullMinionDeck
+CLICK_BUTTON		2020/07/08  23:24:26	button : REMOVE CARD selected.
+COLLECTION		2020/07/08  23:24:28	LEARN DRACONIC has been removed from fullMinionDeck
+CLICK_BUTTON		2020/07/08  23:24:31	deck:  fullMinionDeck  selected .
+CLICK_BUTTON		2020/07/08  23:24:42	deck:  newDeck2  selected .
+CLICK_BUTTON		2020/07/08  23:24:45	card: DREADSCALE  selected.
+CLICK_BUTTON		2020/07/08  23:24:46	button : ADD CARD selected.
+COLLECTION		2020/07/08  23:24:47	DREADSCALE has been added to newDeck2
+CLICK_BUTTON		2020/07/08  23:24:52	button : ADD CARD selected.
+ERROR: COLLECTION	2020/07/08  23:24:54	edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.DeckControllerException: You only have 1 of this card. Can't have more in a deck
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.DeckController.addCard(DeckController.java:175)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer.addCardToDeck(Administer.java:317)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.CollectionHandler.addCardToDeck(CollectionHandler.java:54)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.CollectionPanel$1.addCard(CollectionPanel.java:155)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.FilterPanel$5.actionPerformed(FilterPanel.java:342)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+CLICK_BUTTON		2020/07/08  23:25:04	button: EXIT selected .
+PLAYER		2020/07/08  23:25:10	123456 logged out
+PLAYER		2020/07/08  23:32:22	123456 logged in
+NAVIGATION		2020/07/08  23:32:23	To Collection
+CLICK_BUTTON		2020/07/08  23:32:25	deck:  RogueDefaultDeck  selected .
+CLICK_BUTTON		2020/07/08  23:32:28	card: DREADSCALE  selected.
+CLICK_BUTTON		2020/07/08  23:32:29	button : ADD CARD selected.
+ERROR: COLLECTION	2020/07/08  23:32:30	edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.DeckControllerException: this card is not valid for this hero
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.models.Deck.addCard(Deck.java:142)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.DeckController.addCard(DeckController.java:173)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer.addCardToDeck(Administer.java:317)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.CollectionHandler.addCardToDeck(CollectionHandler.java:54)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.CollectionPanel$1.addCard(CollectionPanel.java:157)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.FilterPanel$5.actionPerformed(FilterPanel.java:346)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+CLICK_BUTTON		2020/07/08  23:32:35	deck:  fullMinionDeck  selected .
+CLICK_BUTTON		2020/07/08  23:32:37	card: LEARN DRACONIC  selected.
+CLICK_BUTTON		2020/07/08  23:32:39	button : REMOVE CARD selected.
+COLLECTION		2020/07/08  23:32:41	LEARN DRACONIC has been removed from fullMinionDeck
+CLICK_BUTTON		2020/07/08  23:32:47	card: FRIENDLY SMITH  selected.
+CLICK_BUTTON		2020/07/08  23:32:48	button : ADD CARD selected.
+ERROR: COLLECTION	2020/07/08  23:32:50	edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.DeckControllerException: this card is not valid for this hero
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.models.Deck.addCard(Deck.java:142)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.DeckController.addCard(DeckController.java:173)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer.addCardToDeck(Administer.java:317)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.CollectionHandler.addCardToDeck(CollectionHandler.java:54)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.CollectionPanel$1.addCard(CollectionPanel.java:157)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.FilterPanel$5.actionPerformed(FilterPanel.java:346)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+CLICK_BUTTON		2020/07/08  23:32:52	card: SWARM OF LOCUSTS  selected.
+CLICK_BUTTON		2020/07/08  23:32:53	button : ADD CARD selected.
+COLLECTION		2020/07/08  23:32:54	SWARM OF LOCUSTS has been added to fullMinionDeck
+CLICK_BUTTON		2020/07/08  23:33:12	card: POLYMORPH  selected.
+CLICK_BUTTON		2020/07/08  23:33:16	button : ADD CARD selected.
+COLLECTION		2020/07/08  23:33:17	POLYMORPH has been added to fullMinionDeck
+CLICK_BUTTON		2020/07/08  23:33:24	card: PHARAOH'S BLESSING  selected.
+CLICK_BUTTON		2020/07/08  23:33:25	button : REMOVE CARD selected.
+COLLECTION		2020/07/08  23:33:26	PHARAOH'S BLESSING has been removed from fullMinionDeck
+CLICK_BUTTON		2020/07/08  23:33:27	buPLAYER		2020/07/08  23:35:06	123456 logged in
+NAVIGATION		2020/07/08  23:35:08	To Collection
+CLICK_BUTTON		2020/07/08  23:35:11	deck:  fullMinionDeck  selected .
+CLICK_BUTTON		2020/07/08  23:35:13	card: LEARN DRACONIC  selected.
+CLICK_BUTTON		2020/07/08  23:35:15	button : REMOVE CARD selected.
+COLLECTION		2020/07/08  23:35:15	LEARN DRACONIC has been removed from fullMinionDeck
+CLICK_BUTTON		2020/07/08  23:35:18	card: SLAM  selected.
+CLICK_BUTTON		2020/07/08  23:35:20	button : ADD CARD selected.
+COLLECTION		2020/07/08  23:35:20	SLAM has been added to fullMinionDeck
+CLICK_BUTTON		2020/07/08  23:35:21	button: BACK selected .
+NAVIGATION		2020/07/08  23:35:21	Back to previous panel
+NAVIGATION		2020/07/08  23:35:23	To Collection
+CLICK_BUTTON		2020/07/08  23:35:24	deck:  fullMinionDeck  selected .
+CLICK_BUTTON		2020/07/08  23:35:25	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/08  23:35:26	fullMinionDeck has been set as current deck
+CLICK_BUTTON		2020/07/08  23:35:27	button: BACK selected .
+NAVIGATION		2020/07/08  23:35:27	Back to previous panel
+NAVIGATION		2020/07/08  23:35:29	To PlayStarter
+CLICK_BUTTON		2020/07/08  23:35:30	passive: Warriors  selected.
+CLICK_BUTTON		2020/07/08  23:35:31	card: CURIO COLLECTOR  selected.
+PLAY		2020/07/08  23:35:34	you have 'Warriors' passive
+CLICK_BUTTON		2020/07/08  23:35:36	deck:  MageDefaultDeck  selected .
+PLAY		2020/07/08  23:35:37	MageDefaultDeck is selected as opponent
+PLAY		2020/07/08  23:35:37	opponent has 'nurse' passive
+NAVIGATION		2020/07/08  23:35:37	To Play
+CLICK_BUTTON		2020/07/08  23:36:00	card: MURLOC TIDEHUNTER  selected.
+PLAY		2020/07/08  23:36:02	you summoned MURLOC TIDEHUNTER
+CLICK_BUTTON		2020/07/08  23:36:03	card Murloc Tidehunter  selected.
+PLAYER		2020/07/08  23:36:38	123456 logged out
+PLAYER		2020/07/09  00:16:22	123456 logged in
+NAVIGATION		2020/07/09  00:16:23	To Collection
+CLICK_BUTTON		2020/07/09  00:16:25	deck:  PriestDefaultDeck  selected .
+CLICK_BUTTON		2020/07/09  00:16:27	deck:  fullMinionDeck  selected .
+CLICK_BUTTON		2020/07/09  00:16:29	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/09  00:16:29	fullMinionDeck has been set as current deck
+CLICK_BUTTON		2020/07/09  00:16:30	button: BACK selected .
+NAVIGATION		2020/07/09  00:16:30	Back to previous panel
+NAVIGATION		2020/07/09  00:16:31	To PlayStarter
+CLICK_BUTTON		2020/07/09  00:16:32	passive: OffCards  selected.
+PLAY		2020/07/09  00:16:36	you have 'OffCards' passive
+CLICK_BUTTON		2020/07/09  00:16:38	deck:  RogueDefaultDeck  selected .
+PLAY		2020/07/09  00:16:40	RogueDefaultDeck is selected as opponent
+PLAY		2020/07/09  00:16:40	opponent has 'nurse' passive
+NAVIGATION		2020/07/09  00:16:40	To Play
+CLICK_BUTTON		2020/07/09  00:16:43	card: WATERBOY  selected.
+PLAY		2020/07/09  00:16:45	you summoned WATERBOY
+CLICK_BUTTON		2020/07/09  00:16:47	card Waterboy  selected.
+CLICK_BUTTON		2020/07/09  00:16:54	card: PHARAOH'S BLESSING  selected.
+CLICK_BUTTON		2020/07/09  00:16:55	card Waterboy  selected.
+CLICK_BUTTON		2020/07/09  00:16:56	card Waterboy  selected.
+CLICK_BUTTON		2020/07/09  00:16:59	card Waterboy  selected.
+CLICK_BUTTON		2020/07/09  00:16:59	card Waterboy  selected.
+CLICK_BUTTON		2020/07/09  00:17:05	card Waterboy  selected.
+CLICK_BUTTON		2020/07/09  00:17:12	card Waterboy  selected.
+CLICK_BUTTON		2020/07/09  00:17:12	card Waterboy  selected.
+PLAYER		2020/07/09  00:17:20	123456 logged out
+PLAYER		2020/07/09  00:18:33	123456 logged in
+NAVIGATION		2020/07/09  00:18:35	To Collection
+CLICK_BUTTON		2020/07/09  00:18:37	deck:  fullMinionDeck  selected .
+CLICK_BUTTON		2020/07/09  00:18:39	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/09  00:18:39	fullMinionDeck has been set as current deck
+CLICK_BUTTON		2020/07/09  00:18:40	button: BACK selected .
+NAVIGATION		2020/07/09  00:18:40	Back to previous panel
+NAVIGATION		2020/07/09  00:18:41	To PlayStarter
+CLICK_BUTTON		2020/07/09  00:18:42	passive: TwiceDraw  selected.
+CLICK_BUTTON		2020/07/09  00:18:43	card: CURIO COLLECTOR  selected.
+PLAY		2020/07/09  00:18:44	you have 'TwiceDraw' passive
+CLICK_BUTTON		2020/07/09  00:18:45	deck:  WarlockDefaultDeck  selected .
+PLAY		2020/07/09  00:18:46	WarlockDefaultDeck is selected as opponent
+PLAY		2020/07/09  00:18:46	opponent has 'Warriors' passive
+NAVIGATION		2020/07/09  00:18:46	To Play
+CLICK_BUTTON		2020/07/09  00:18:47	card: ZILLIAX  selected.
+CLICK_BUTTON		2020/07/09  00:18:51	card: SATHROVARR  selected.
+CLICK_BUTTON		2020/07/09  00:19:02	card: OMEGA MEDIC  selected.
+CLICK_BUTTON		2020/07/09  00:19:11	card: OMEGA MEDIC  selected.
+PLAY		2020/07/09  00:19:12	opponent summoned OMEGA MEDIC
+CLICK_BUTTON		2020/07/09  00:19:13	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/09  00:19:19	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/09  00:19:25	card: OMEGA MEDIC  selected.
+PLAY		2020/07/09  00:19:27	you summoned OMEGA MEDIC
+CLICK_BUTTON		2020/07/09  00:19:30	card Omega Medic  selected.
+PLAYER		2020/07/09  00:20:25	123456 logged out
+PLAYER		2020/07/09  00:24:57	123456 logged in
+NAVIGATION		2020/07/09  00:24:58	To Collection
+CLICK_BUTTON		2020/07/09  00:25:00	deck:  RogueDefaultDeck  selected .
+CLICK_BUTTON		2020/07/09  00:25:02	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/09  00:25:02	RogueDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/07/09  00:25:03	button: BACK selected .
+NAVIGATION		2020/07/09  00:25:03	Back to previous panel
+NAVIGATION		2020/07/09  00:25:04	To PlayStarter
+CLICK_BUTTON		2020/07/09  00:25:05	passive: TwiceDraw  selected.
+CLICK_BUTTON		2020/07/09  00:25:07	card: MURLOC TIDEHUNTER  selected.
+CLICK_BUTTON		2020/07/09  00:25:09	card: CURIO COLLECTOR  selected.
+CLICK_BUTTON		2020/07/09  00:25:11	card: LEARN DRACONIC  selected.
+PLAY		2020/07/09  00:25:13	you have 'TwiceDraw' passive
+CLICK_BUTTON		2020/07/09  00:25:15	deck:  PriestDefaultDeck  selected .
+PLAY		2020/07/09  00:25:17	PriestDefaultDeck is selected as opponent
+PLAY		2020/07/09  00:25:17	opponent has 'OffCards' passive
+NAVIGATION		2020/07/09  00:25:17	To Play
+CLICK_BUTTON		2020/07/09  00:25:19	card: CURIO COLLECTOR  selected.
+CLICK_BUTTON		2020/07/09  00:25:23	card: VOODOO DOCTOR  selected.
+PLAY		2020/07/09  00:25:24	you summoned VOODOO DOCTOR
+CLICK_BUTTON		2020/07/09  00:25:25	card Voodoo doctor  selected.
+CLICK_BUTTON		2020/07/09  00:25:32	card Voodoo doctor  selected.
+CLICK_BUTTON		2020/07/09  00:25:35	card Voodoo doctor  selected.
+CLICK_BUTTON		2020/07/09  00:25:57	card Voodoo doctor  selected.
+CLICK_BUTTON		2020/07/09  00:25:58	card Voodoo doctor  selected.
+CLICK_BUTTON		2020/07/09  00:26:09	card Voodoo doctor  selected.
+CLICK_BUTTON		2020/07/09  00:26:14	card: HIGH PRIEST AMET  selected.
+PLAY		2020/07/09  00:26:18	opponent summoned HIGH PRIEST AMET
+CLICK_BUTTON		2020/07/09  00:26:19	card High Priest Amet  selected.
+CLICK_BUTTON		2020/07/09  00:26:26	card: LEARN DRACONIC  selected.
+CLICK_BUTTON		2020/07/09  00:26:27	card: WATERBOY  selected.
+PLAY		2020/07/09  00:26:28	you summoned WATERBOY
+CLICK_BUTTON		2020/07/09  00:26:29	card Voodoo doctor  selected.
+CLICK_BUTTON		2020/07/09  00:26:31	card Voodoo doctor  selected.
+CLICK_BUTTON		2020/07/09  00:26:32	card Waterboy  selected.
+CLICK_BUTTON		2020/07/09  00:26:36	card Voodoo doctor  selected.
+CLICK_BUTTON		2020/07/09  00:26:56	card: FRIENDLY SMITH  selected.
+PLAY		2020/07/09  00:26:58	you played the FRIENDLY SMITH spell
+CLICK_BUTTON		2020/07/09  00:27:04	card: ZILLIAX  selected.
+PLAY		2020/07/09  00:27:07	you summoned ZILLIAX
+CLICK_BUTTON		2020/07/09  00:27:11	card Zilliax  selected.
+CLICK_BUTTON		2020/07/09  00:27:14	card Waterboy  selected.
+CLICK_BUTTON		2020/07/09  00:27:16	card Voodoo doctor  selected.
+CLICK_BUTTON		2020/07/09  00:27:19	card Voodoo doctor  selected.
+CLICK_BUTTON		2020/07/09  00:27:22	card Waterboy  selected.
+CLICK_BUTTON		2020/07/09  00:28:23	card High Priest Amet  selected.
+CLICK_BUTTON		2020/07/09  00:28:26	card High Priest Amet  selected.
+CLICK_BUTTON		2020/07/09  00:28:31	card: MURLOC TIDEHUNTER  selected.
+PLAY		2020/07/09  00:28:35	you summoned MURLOC TIDEHUNTER
+CLICK_BUTTON		2020/07/09  00:28:37	card Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/09  00:28:40	card Zilliax  selected.
+CLICK_BUTTON		2020/07/09  00:28:43	card Waterboy  selected.
+CLICK_BUTTON		2020/07/09  00:28:45	card Voodoo doctor  selected.
+PLAYER		2020/07/09  00:28:56	123456 logged out
+PLAYER		2020/07/09  00:33:36	123456 logged in
+NAVIGATION		2020/07/09  00:33:39	To Collection
+CLICK_BUTTON		2020/07/09  00:33:41	deck:  MageDefaultDeck  selected .
+CLICK_BUTTON		2020/07/09  00:33:43	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/09  00:33:43	MageDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/07/09  00:33:44	button: BACK selected .
+NAVIGATION		2020/07/09  00:33:44	Back to previous panel
+NAVIGATION		2020/07/09  00:33:45	To PlayStarter
+CLICK_BUTTON		2020/07/09  00:33:46	passive: OffCards  selected.
+CLICK_BUTTON		2020/07/09  00:33:49	card: SWARM OF LOCUSTS  selected.
+CLICK_BUTTON		2020/07/09  00:33:50	card: SLAM  selected.
+PLAY		2020/07/09  00:33:52	you have 'OffCards' passive
+CLICK_BUTTON		2020/07/09  00:33:54	deck:  PriestDefaultDeck  selected .
+CLICK_BUTTON		2020/07/09  00:33:54	deck:  PriestDefaultDeck  selected .
+PLAY		2020/07/09  00:33:55	PriestDefaultDeck is selected as opponent
+PLAY		2020/07/09  00:33:55	opponent has 'ManaJump' passive
+NAVIGATION		2020/07/09  00:33:55	To Play
+CLICK_BUTTON		2020/07/09  00:33:57	card: HEAVY AXE  selected.
+PLAY		2020/07/09  00:33:58	you set weapon to HEAVY AXE
+CLICK_BUTTON		2020/07/09  00:34:38	card: CURIO COLLECTOR  selected.
+PLAY		2020/07/09  00:34:40	you summoned CURIO COLLECTOR
+CLICK_BUTTON		2020/07/09  00:34:49	card Curio Collector  selected.
+CLICK_BUTTON		2020/07/09  00:34:58	card Curio Collector  selected.
+CLICK_BUTTON		2020/07/09  00:35:03	card: STORMHAMMER  selected.
+PLAY		2020/07/09  00:35:05	you set weapon to STORMHAMMER
+CLICK_BUTTON		2020/07/09  00:35:19	card Curio Collector  selected.
+PLAYER		2020/07/09  00:35:26	123456 logged out
+PLAYER		2020/07/09  01:16:04	123456 logged in
+NAVIGATION		2020/07/09  01:16:05	To Collection
+CLICK_BUTTON		2020/07/09  01:16:07	deck:  PriestDefaultDeck  selected .
+CLICK_BUTTON		2020/07/09  01:16:08	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/09  01:16:08	PriestDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/07/09  01:16:09	button: BACK selected .
+NAVIGATION		2020/07/09  01:16:09	Back to previous panel
+NAVIGATION		2020/07/09  01:16:10	To PlayStarter
+CLICK_BUTTON		2020/07/09  01:16:12	passive: ManaJump  selected.
+CLICK_BUTTON		2020/07/09  01:16:14	card: SWARM OF LOCUSTS  selected.
+PLAY		2020/07/09  01:16:16	you have 'ManaJump' passive
+CLICK_BUTTON		2020/07/09  01:16:17	deck:  RogueDefaultDeck  selected .
+PLAY		2020/07/09  01:16:18	RogueDefaultDeck is selected as opponent
+PLAY		2020/07/09  01:16:18	opponent has 'OffCards' passive
+NAVIGATION		2020/07/09  01:16:18	To Play
+CLICK_BUTTON		2020/07/09  01:16:22	card: ZILLIAX  selected.
+CLICK_BUTTON		2020/07/09  01:16:28	card: HEAVY AXE  selected.
+PLAY		2020/07/09  01:16:29	opponent set weapon to HEAVY AXE
+CLICK_BUTTON		2020/07/09  01:16:44	card: VOODOO DOCTOR  selected.
+CLICK_BUTTON		2020/07/09  01:17:31	card: MURLOC TIDEHUNTER  selected.
+PLAY		2020/07/09  01:17:33	you summoned MURLOC TIDEHUNTER
+CLICK_BUTTON		2020/07/09  01:17:34	card Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/09  01:18:01	card: VOODOO DOCTOR  selected.
+CLICK_BUTTON		2020/07/09  01:18:02	card: VOODOO DOCTOR  selected.
+CLICK_BUTTON		2020/07/09  01:18:03	card: LEARN DRACONIC  selected.
+CLICK_BUTTON		2020/07/09  01:18:03	card: WATERBOY  selected.
+CLICK_BUTTON		2020/07/09  01:18:04	card: WATERBOY  selected.
+CLICK_BUTTON		2020/07/09  01:18:05	card: WATERBOY  selected.
+CLICK_BUTTON		2020/07/09  01:18:08	card: VOODOO DOCTOR  selected.
+CLICK_BUTTON		2020/07/09  01:18:31	card: VOODOO DOCTOR  selected.
+CLICK_BUTTON		2020/07/09  01:18:34	card: VOODOO DOCTOR  selected.
+CLICK_BUTTON		2020/07/09  01:18:34	card: VOODOO DOCTOR  selected.
+PLAYER		2020/07/09  01:18:44	123456 logged out
+PLAYER		2020/07/09  01:21:05	123456 logged in
+NAVIGATION		2020/07/09  01:21:07	To Collection
+CLICK_BUTTON		2020/07/09  01:21:08	deck:  newDeck2  selected .
+CLICK_BUTTON		2020/07/09  01:21:10	button: SET CURRENT DECK selected.
+ERROR: COLLECTION	2020/07/09  01:21:11	edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.DeckControllerException: You should atLeast have 5cards in currentDeck
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.DeckController.setCurrentDeck(DeckController.java:91)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer.setCurrentDeck(Administer.java:335)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.CollectionHandler.setCurrentDeck(CollectionHandler.java:62)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.CollectionPanel$1.setCurrentDeck(CollectionPanel.java:182)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.FilterPanel$7.actionPerformed(FilterPanel.java:364)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+CLICK_BUTTON		2020/07/09  01:21:13	deck:  RogueDefaultDeck  selected .
+CLICK_BUTTON		2020/07/09  01:21:15	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/09  01:21:15	RogueDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/07/09  01:21:16	button: BACK selected .
+NAVIGATION		2020/07/09  01:21:16	Back to previous panel
+NAVIGATION		2020/07/09  01:21:17	To PlayStarter
+CLICK_BUTTON		2020/07/09  01:21:18	passive: OffCards  selected.
+PLAY		2020/07/09  01:21:20	you have 'OffCards' passive
+CLICK_BUTTON		2020/07/09  01:21:21	deck:  MageDefaultDeck  selected .
+PLAY		2020/07/09  01:21:22	MageDefaultDeck is selected as opponent
+PLAY		2020/07/09  01:21:22	opponent has 'nurse' passive
+NAVIGATION		2020/07/09  01:21:22	To Play
+CLICK_BUTTON		2020/07/09  01:21:23	card: FRIENDLY SMITH  selected.
+PLAY		2020/07/09  01:21:25	you played the FRIENDLY SMITH spell
+CLICK_BUTTON		2020/07/09  01:21:35	card: WATERBOY  selected.
+PLAY		2020/07/09  01:21:37	you summoned WATERBOY
+CLICK_BUTTON		2020/07/09  01:21:39	card: OMEGA MEDIC  selected.
+CLICK_BUTTON		2020/07/09  01:21:44	card: STORMHAMMER  selected.
+PLAY		2020/07/09  01:21:46	opponent set weapon to STORMHAMMER
+CLICK_BUTTON		2020/07/09  01:31:20	card Waterboy  selected.
+CLICK_BUTTON		2020/07/09  01:32:04	card: HEAVY AXE  selected.
+PLAY		2020/07/09  01:32:06	you set weapon to HEAVY AXE
+CLICK_BUTTON		2020/07/09  01:32:19	card Waterboy  selected.
+CLICK_BUTTON		2020/07/09  01:33:40	card: SATHROVARR  selected.
+CLICK_BUTTON		2020/07/09  01:33:42	card: OMEGA MEDIC  selected.
+PLAY		2020/07/09  01:33:45	you summoned OMEGA MEDIC
+CLICK_BUTTON		2020/07/09  01:33:55	card: SATHROVARR  selected.
+CLICK_BUTTON		2020/07/09  01:33:57	card: SATHROVARR  selected.
+CLICK_BUTTON		2020/07/09  01:34:20	card: SLAM  selected.
+CLICK_BUTTON		2020/07/09  01:34:32	card: LEARN DRACONIC  selected.
+PLAYER		2020/07/09  01:34:39	123456 logged out

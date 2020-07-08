@@ -74,8 +74,10 @@ public class PlayerPanel extends SidePanel {
         add(jScrollPane, gb);
     }
 
-    void updateHand(ArrayList<CardShape> latestHand, HashMap<String, Integer> latestHeroStates) {
+    void updatePlayer(ArrayList<CardShape> latestHand, HashMap<String, Integer> latestHeroStates) {
         cardPanel.setCards(latestHand, latestHand.size());
+        //hand cards need to back to us after attacking to hero and updating its states.other buttons can be used instead of endTurnBtn
+        cardPanel.setCardsBackward(!endTurnBtn.isEnabled());
         heroPanel.updateStates(latestHeroStates.get("HP"), latestHeroStates.get("MANA"), latestHeroStates.get("CARDS"));
     }
 
@@ -90,7 +92,7 @@ public class PlayerPanel extends SidePanel {
         if (remainingTime<10) endTurnBtn.setBackground(Color.RED);
     }
 
-    void endTurn() {
+    void endTurn( HeroActionListener heroActionListener) {
         endTurnBtn.setEnabled(false);
         playBtn.setEnabled(false);
         rightBtn.setEnabled(false);
@@ -98,6 +100,7 @@ public class PlayerPanel extends SidePanel {
         cardPanel.setCardsBackward(true);
         cardPanel.disableClickListener();
         heroPanel.disableHeroActionListener();
+        heroPanel.setHeroActionListener(heroActionListener  ,true);
         disableClickListenerForActions();
     }
 
@@ -109,15 +112,22 @@ public class PlayerPanel extends SidePanel {
         cardPanel.setCardsBackward(false);
         setClickListenerForCards(clickListenerForCards);
         setClickListenerForActions(clickListenerForActions);
-        setClickListenerForHero(clickListenerForHero);
+        heroPanel.setHeroActionListener(clickListenerForHero , false);
+
     }
+
+    void unselectCard() {
+        cardPanel.unselectCard();
+    }
+    void unselectHeroOptions() {
+        heroPanel.unselectCards();
+    }
+
+    ///////////////
+    ///////////////
 
     private void setClickListenerForCards(ClickListener clickListener) {
         cardPanel.setClickListener(clickListener);
-    }
-
-    private void setClickListenerForHero(HeroActionListener heroActionListener) {
-        heroPanel.setHeroActionListener(heroActionListener);
     }
 
     private void setClickListenerForActions(PlayActionListener playActionListener) {
@@ -146,7 +156,4 @@ public class PlayerPanel extends SidePanel {
         });
     }
 
-    void unselectCard() {
-        cardPanel.unselectCard();
-    }
 }

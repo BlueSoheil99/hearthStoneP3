@@ -12,6 +12,7 @@ import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
 
+//todo for phase4, make an abstract class named MatchStarterPanel with 2 children, this and OpponentSelectionPanel
 public class PlayStarterPanel extends GamePanel {
     private PlayConfig properties;
     private CardPanel passivePanel, handPanel;
@@ -51,7 +52,7 @@ public class PlayStarterPanel extends GamePanel {
         passivePanel.setPassives(PlayHandler.getInstance().get3Passives());
         passivePanel.setClickListener(objName -> selectedPassive = objName);
         handPanel = new CardPanel();
-        handPanel.setCards(PlayHandler.getInstance().getHand());
+        handPanel.setCards(PlayHandler.getInstance().getHand(true));
     }
 
     private void makeBtnLookBetter(JButton button, String fontName, int fontSize, boolean blueBorder) {
@@ -86,7 +87,7 @@ public class PlayStarterPanel extends GamePanel {
             } else {
                 try {
                     PlayHandler.getInstance().replaceCard(selectedCard);
-                    handPanel.setCards(PlayHandler.getInstance().getHand());
+                    handPanel.setCards(PlayHandler.getInstance().getHand(true));
                 } catch (PlayException ex) {
                     JOptionPane.showMessageDialog(null, ex.getMessage(),"match setup error",JOptionPane.ERROR_MESSAGE);
                 }

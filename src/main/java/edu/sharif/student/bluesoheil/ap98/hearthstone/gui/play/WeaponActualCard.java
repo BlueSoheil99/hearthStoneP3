@@ -75,6 +75,10 @@ public class WeaponActualCard extends ActualCard {
         ////////
     }
 
+    public Weapon getCard() {
+        return card;
+    }
+
     void setAttack(int attack) {
         this.attack.setText(String.valueOf(attack));
     }
@@ -82,5 +86,4 @@ public class WeaponActualCard extends ActualCard {
     void setDurability(int durability) {
         this.durability.setText(String.valueOf(durability));
     }
-
 }

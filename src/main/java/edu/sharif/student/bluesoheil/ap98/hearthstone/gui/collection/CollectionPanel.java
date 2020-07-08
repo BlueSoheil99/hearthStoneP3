@@ -142,6 +142,8 @@ public class CollectionPanel extends GamePanel {
                     JOptionPane.showMessageDialog(null, selectedCard + " has been removed from " + selectedDeck
                             , "Done!", JOptionPane.INFORMATION_MESSAGE);
                     Logger.log(LogTypes.COLLECTION, selectedCard + " has been removed from " + selectedDeck);
+                    selectedCard = null;
+                    filterPanel.setAddAndRemoveEditable(false);
                     revalidateSelections(false);
                 } catch (Exception e) {
                     handleException(e);
@@ -156,6 +158,8 @@ public class CollectionPanel extends GamePanel {
                         JOptionPane.showMessageDialog(null, selectedCard + " has been added to " + selectedDeck
                                 , "Done!", JOptionPane.INFORMATION_MESSAGE);
                         Logger.log(LogTypes.COLLECTION, selectedCard + " has been added to " + selectedDeck);
+                        selectedCard = null;
+                        filterPanel.setAddAndRemoveEditable(false);
                         revalidateSelections(false);
                     } catch (Exception e) {
                         handleException(e);

@@ -74,8 +74,14 @@ public class PlayHandler {
                 gameController.getHeroStates(isMe).get("HP"), gameController.getHeroStates(isMe).get("MANA"));
     }
 
-    public Card.CardType getCardType(String playerSelectedCard) {
-        return gameController.getCard(playerSelectedCard).getType();
+    public Card.CardType getCardType(String playerSelectedCard) { //tofMali shode in !
+        Card.CardType type;
+        try {
+            type = gameController.getCardFromHand(playerSelectedCard).getType();
+        } catch (Exception ignored) {
+            type = gameController.getSummonedCard(playerSelectedCard).getType();
+        }
+        return type;
     }
 
     public void replaceCard(String cardName) throws PlayException {
@@ -83,6 +89,7 @@ public class PlayHandler {
     }
 
     //***********************//
+    //todo check if getHand is really necessary or not, for next phase
 
     /**
      * it returns hand of a specific player
@@ -92,13 +99,21 @@ public class PlayHandler {
     }
 
     /**
-     * it returns hand of the player with turn(currentPlayer)
+     * it returns hand of the player with turn(currentTurn)
      */
-    public ArrayList<CardShape> getHand() {
-        return administer.getCardShapes(GameController.getInstance().getPlayerHand());
+    public ArrayList<CardShape> getCurrentTurnHand() {
+        return administer.getCardShapes(GameController.getInstance().getCurrentTurnHand());
+    }
+
+    /**
+     * it returns hand of the player without turn(currentPlayer)
+     */
+    public ArrayList<CardShape> getCurrentOpponentHand() {
+        return administer.getCardShapes(GameController.getInstance().getCurrentOpponentHand());
     }
 
     //***********************//
+    //todo check if getHeroStates is really necessary or not, for next phase
 
     /**
      * it returns states of  a specific player
@@ -110,8 +125,15 @@ public class PlayHandler {
     /**
      * it returns states of the player with turn
      */
-    public HashMap<String, Integer> getHeroStates() {
-        return gameController.getHeroStates();
+    public HashMap<String, Integer> getCurrentTurnHeroStates() {
+        return gameController.getCurrentTurnHeroStates();
+    }
+
+    /**
+     * it returns states of the player without turn
+     */
+    public HashMap<String, Integer> getCurrentOpponentHeroStates() {
+        return gameController.getCurrentOpponentHeroStates();
     }
     //***********************//
 
@@ -144,17 +166,17 @@ public class PlayHandler {
     //
 
     public MinionActualCard getMinion(String playerSelectedCardInHand) {
-        Minion minion = (Minion) gameController.getCard(playerSelectedCardInHand);
+        Minion minion = (Minion) gameController.getCardFromHand(playerSelectedCardInHand);
         return new MinionActualCard(minion, null);
     }
 
     public MinionActualCard summonAndGetMinion(String playerSelectedCardInHand, int index) throws PlayException {
-        Minion minion = (Minion) playHandMinionOrBeast(playerSelectedCardInHand , index);
+        Minion minion = (Minion) playHandMinionOrBeast(playerSelectedCardInHand, index);
         Logger.log(LogTypes.PLAY, gameController.getPlayingSide() + " summoned " + playerSelectedCardInHand);
         return new MinionActualCard(minion, null);
     }
 
-    public WeaponActualCard summonAndGetWeapon(String playerSelectedCardInHand ) throws PlayException {
+    public WeaponActualCard summonAndGetWeapon(String playerSelectedCardInHand) throws PlayException {
         Weapon weapon = (Weapon) playHandCard(playerSelectedCardInHand);
         Logger.log(LogTypes.PLAY, gameController.getPlayingSide() + " set weapon to " + playerSelectedCardInHand);
         return new WeaponActualCard(weapon, null);
@@ -171,13 +193,14 @@ public class PlayHandler {
     }
 
     private Card playHandCard(String playerSelectedCardInHand) throws PlayException {
-        Card card = gameController.getCard(playerSelectedCardInHand);
+        Card card = gameController.getCardFromHand(playerSelectedCardInHand);
         gameController.purchaseCard(card);
         return card;
     }
-    private Card playHandMinionOrBeast(String cardToSummon , int index) throws PlayException {
-        Card card = gameController.getCard(cardToSummon);
-        gameController.purchaseMinionOrBeast(card , index);
+
+    private Card playHandMinionOrBeast(String cardToSummon, int index) throws PlayException {
+        Card card = gameController.getCardFromHand(cardToSummon);
+        gameController.purchaseMinionOrBeast(card, index);
         return card;
     }
 
@@ -189,4 +212,16 @@ public class PlayHandler {
     }
 
 
+    public void attackToHero(ActualCard attackingCard) throws PlayException {
+
+        switch (gameController.getSummonedCard(attackingCard.getCardName()).getType()) {
+            case BEAST:
+            case MINION:
+                gameController.attackToHero(((MinionActualCard) attackingCard).getCard());
+                break;
+            case WEAPON:
+                gameController.attackToHero(((WeaponActualCard) attackingCard).getCard());
+                break;
+        }
+    }
 }

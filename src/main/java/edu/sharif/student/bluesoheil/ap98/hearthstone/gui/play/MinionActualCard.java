@@ -74,6 +74,9 @@ public class MinionActualCard extends ActualCard {
         add(hpLabel);
     }
 
+    public Minion getCard(){
+        return card;
+    }
     void setHp(int hp) {
         this.hp.setText(String.valueOf(hp));
     }

@@ -194,7 +194,7 @@ public class FilterPanel extends SidePanel {
         defineButtons();
     }
 
-    public void setDeckHandlerEditable(boolean editable) {
+    void setDeckHandlerEditable(boolean editable) {
         renameBtn.setEnabled(editable);
         deleteDeckBtn.setEnabled(editable);
         currentDeckBtn.setEnabled(editable);
@@ -205,7 +205,11 @@ public class FilterPanel extends SidePanel {
         removeCardBtn.setEnabled(false);
         addCardBtn.setEnabled(false);
     }
-    public void isSelectedCardFromDeck(boolean isCardAvailableInDeck){
+    void setAddAndRemoveEditable(boolean editable) {
+        removeCardBtn.setEnabled(editable);
+        addCardBtn.setEnabled(editable);
+    }
+    void isSelectedCardFromDeck(boolean isCardAvailableInDeck){
         removeCardBtn.setEnabled(isCardAvailableInDeck);
         addCardBtn.setEnabled(!isCardAvailableInDeck);
     }

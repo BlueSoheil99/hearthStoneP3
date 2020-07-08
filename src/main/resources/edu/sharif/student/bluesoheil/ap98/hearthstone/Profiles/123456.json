@@ -997,10 +997,23 @@
           "rarity": "COMMON",
           "description": "N/A",
           "cost": 1
+        },
+        {
+          "inRush": false,
+          "HP": 2,
+          "attack": 4,
+          "name": "Dreadscale",
+          "manaCost": 3,
+          "type": "BEAST",
+          "heroClass": "WARLOCK",
+          "rarity": "LEGENDARY",
+          "description": "N/A",
+          "cost": 3
         }
       ],
       "cardsUsage": {
-        "Murloc Tidehunter": 0
+        "Murloc Tidehunter": 0,
+        "Dreadscale": 0
       }
     },
     {
@@ -1009,26 +1022,6 @@
       "wins": 0,
       "hero": "MAGE",
       "cards": [
-        {
-          "value": 0,
-          "name": "Learn Draconic",
-          "manaCost": 1,
-          "type": "QUESTANDREWARD",
-          "heroClass": "NEUTRAL",
-          "rarity": "COMMON",
-          "description": "N/A",
-          "cost": 2
-        },
-        {
-          "value": 0,
-          "name": "Learn Draconic",
-          "manaCost": 1,
-          "type": "QUESTANDREWARD",
-          "heroClass": "NEUTRAL",
-          "rarity": "COMMON",
-          "description": "N/A",
-          "cost": 2
-        },
         {
           "inRush": false,
           "HP": 4,
@@ -1134,14 +1127,24 @@
           "rarity": "RARE",
           "description": "N/A",
           "cost": 4
+        },
+        {
+          "value": 0,
+          "name": "Slam",
+          "manaCost": 2,
+          "type": "SPELL",
+          "heroClass": "NEUTRAL",
+          "rarity": "COMMON",
+          "description": "N/A",
+          "cost": 1
         }
       ],
       "cardsUsage": {
         "Omega Medic": 0,
+        "Slam": 0,
         "Zilliax": 0,
         "Sathrovarr": 0,
         "Murloc Tidehunter": 0,
-        "Learn Draconic": 0,
         "Pharaoh\u0027s Blessing": 0,
         "Abomination": 0,
         "Voodoo doctor": 0,

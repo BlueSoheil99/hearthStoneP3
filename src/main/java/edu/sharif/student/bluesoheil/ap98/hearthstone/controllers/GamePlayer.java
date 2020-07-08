@@ -23,7 +23,8 @@ public class GamePlayer {
     private Hero hero;
     private Stack<Card> playerCards;
     private Card playerWeapon;
-    private ArrayList<Card> playerHand, summonedMinions;
+    private ArrayList<Card> playerHand, summonedMinions ;
+    private ArrayList<Card>  playedCardsInTurn , summonedCardsInThisTurn;
     private ArrayList<Integer> cardsPlayerChangedForHisFirstHand;
     private int initialMana, turnsPlayerPlayed, numberOfCardsCanBeDrawn, playerMana;
     private boolean isWarriorsEnabled, isNurseEnabled, isOffCardsEnabled;
@@ -101,6 +102,8 @@ public class GamePlayer {
     ///////turn changing//////////
 
     void newTurn() {
+        playedCardsInTurn = new ArrayList<>();
+        summonedCardsInThisTurn = new ArrayList<>();
         increaseMana();
     }
 
@@ -174,7 +177,8 @@ public class GamePlayer {
     //////////////////////////////
     ////////cards stuff///////////
 
-    Card getCard(String playerSelectedCard) {
+    Card getCardFromHand(String playerSelectedCard) {
+        // this method returns requested card referring to playerHand
         Card selectedCard = null;
         for (Card card : playerHand) {
             if (card.getName().toUpperCase().equals(playerSelectedCard)) {
@@ -185,10 +189,29 @@ public class GamePlayer {
         return selectedCard;
     }
 
+    Card getSummonedCard(String playerSelectedCard) {
+        // this method returns requested card referring to summoned minions or beasts or current Weapon
+        Card selectedCard = null;
+        for (Card card : summonedMinions) {
+            if (card.getName().equals(playerSelectedCard)) {
+                selectedCard = card;
+                break;
+            }
+        }
+        if (selectedCard == null && playerWeapon != null) {  //maybe requested card is a weapon
+            if (playerWeapon.getName().equals(playerSelectedCard))
+                selectedCard = playerWeapon;
+        }
+        return selectedCard;
+    }
+
     void purchaseCard(Card card) throws PlayException {
         if (playerMana >= card.getManaCost()) {
             playerMana -= card.getManaCost();
-            if (card.getType() == Card.CardType.WEAPON) playerWeapon = card;
+            if (card.getType() == Card.CardType.WEAPON) {
+                playerWeapon = card;
+                summonedCardsInThisTurn.add(card);
+            }
             playerHand.remove(card);
         } else {
             throw new PlayException("You Don't Have Enough Mana");
@@ -199,8 +222,30 @@ public class GamePlayer {
         purchaseCard(card);
         if (card.getType() == Card.CardType.MINION || card.getType() == Card.CardType.BEAST) {
             if (index == summonedMinions.size()) summonedMinions.add(card);
-            else summonedMinions.add(index,card);
+            else summonedMinions.add(index, card);
+            summonedCardsInThisTurn.add(card);
         }
     }
 
+
+    //////////////////////////////
+    ///////playing stuff//////////
+
+    void damageHero(int attack) {
+        int hp = hero.getHp() - attack;
+        if (hp>0){
+            hero.setHp(hp);
+        }else {
+            hero.setHp(0);
+            //todo show that the game is over
+        }
+    }
+
+    boolean cardIsAvailableInThisTurn(Card card) {
+        return !summonedCardsInThisTurn.contains(card) && !playedCardsInTurn.contains(card);
+    }
+
+    void cardPlayedInThisTurn(Card card){
+        playedCardsInTurn.add(card);
+    }
 }
