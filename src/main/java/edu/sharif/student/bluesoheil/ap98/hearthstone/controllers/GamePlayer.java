@@ -186,6 +186,7 @@ public class GamePlayer {
     }
 
     void purchaseCard(Card card) throws PlayException {
+//todo    void purchaseCard(Card card , int index) throws PlayException {
         if (playerMana >= card.getManaCost()) {
             playerMana -= card.getManaCost();
 
@@ -194,8 +195,6 @@ public class GamePlayer {
 //                if (index = summonedMinions.size()){
                 summonedMinions.add(card);
             }
-
-            playerHand.remove(card);
         } else {
             throw new PlayException("You Don't Have Enough Mana");
         }

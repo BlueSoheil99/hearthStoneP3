@@ -38,13 +38,11 @@ public class PlayHandler {
 
     public static void setNewHandler(GameController gameController) {
         instance.gameController = gameController;
-//        instance.playPanel = playPanel;
     }
 
     public static void dismissHandler() {
         instance.gameController = null;
     }
-
 
     //////////////////////////////
     /////////non-statics//////////
@@ -70,7 +68,6 @@ public class PlayHandler {
     public ArrayList<String> getEvents() {
         return Logger.getEventLogs();
     }
-
 
     public PlayerPanel getPlayerPanel(boolean isMe) {
         return new PlayerPanel(gameController.getPlayerHero(isMe),
@@ -150,6 +147,7 @@ public class PlayHandler {
         Minion minion = (Minion) gameController.getCard(playerSelectedCardInHand);
         return new MinionActualCard(minion, null);
     }
+
     public MinionActualCard summonAndGetMinion(String playerSelectedCardInHand) throws PlayException {
         Minion minion = (Minion) getCardFromController(playerSelectedCardInHand);
         Logger.log(LogTypes.PLAY, gameController.getPlayingSide() + " summoned " + playerSelectedCardInHand);
@@ -175,7 +173,6 @@ public class PlayHandler {
     private Card getCardFromController(String playerSelectedCardInHand) throws PlayException {
         Card card = gameController.getCard(playerSelectedCardInHand);
         gameController.purchaseCard(card);
-//        gameController.removeCard(card);
         return card;
     }
 
@@ -185,7 +182,6 @@ public class PlayHandler {
     public void playCard(ActualCard playerSelectedCard) {
 
     }
-
 
 
 }

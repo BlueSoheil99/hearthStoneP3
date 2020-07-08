@@ -44,6 +44,8 @@ public class CardPanel extends SidePanel implements ActionListener {
         for (CardShape cardShape : cardShapes) cards.add((CardShape) cardShape); //i think these 2 loops can be merged into one and next line goes last one...check it later
         paintCardsInPanel(cardsInRow);
         for (CardShape cardShape : cards) {
+            for (ActionListener al : cardShape.getActionListeners()) cardShape.removeActionListener(al);
+            //if you delete the line above, you will actually call the selected cardShape for multiple times each time you press them
             if (cardsRefuseToListen == null || !cardsRefuseToListen.contains(cardShape) ){
                 cardShape.addActionListener(this);
             }

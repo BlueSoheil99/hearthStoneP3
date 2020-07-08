@@ -19,7 +19,6 @@ public class PlayerBoard extends CardPanel {
 
     private ArrayList<MinionActualCard> cards;
     private MinionActualCard selectedCard;
-    //    private MinionActualCard emptyCard = getEmptyCard();
     private Border lastBorder;
     private boolean hasPreview = false;
     private CardClickListener cardClickListener;
@@ -31,44 +30,11 @@ public class PlayerBoard extends CardPanel {
         cards = new ArrayList<>();
     }
 
-//    ArrayList<MinionActualCard> getSummonedMinions() {
-//        return cards;
-//    }//getCards from parent does the trick
-
-    void setCardClickListener(CardClickListener cardListener) {
-        cardClickListener = cardListener;
-    }
-
-    void disableCardClickListener() {
-        cardClickListener = null;
-        unselectCard();
-    }
-
-
-    protected void selectCard(MinionActualCard selectedCard) {
-        this.selectedCard = selectedCard;
-        lastBorder = selectedCard.getBorder();
-        selectedCard.setBorder(BorderFactory.createMatteBorder(6, 6, 6, 6, new Color(16, 90, 115)));
-    }
-
-    @Override
-    public void unselectCard() {
-        if (selectedCard != null) {
-            if (lastBorder != null) {
-                selectedCard.setBorder(lastBorder);
-                selectedCard = null;
-            }
-        }
-    }
+    //////////////////
+    //////////////////
 
     boolean isFull() {
         return cards.size() >= CARDS_LIMIT;
-    }
-
-    void enablePreviewMode() {
-        hasPreview = true;
-        cards.get(0).setBackground(Color.ORANGE); // preview mode enables only after a card has just putted in 0 index
-        //disableTheListenerForThatCard
     }
 
     void disablePreviewMode() {
@@ -99,12 +65,20 @@ public class PlayerBoard extends CardPanel {
         }
     }
 
-    public void addCard(MinionActualCard card) {
-        addCard(card, 0);
+    //////////////////
+    //////////////////
+
+    void setCardClickListener(CardClickListener cardListener) {
+        cardClickListener = cardListener;
     }
 
-    void startTurn(CardClickListener currentPlayerCardListener) {
-        setCardClickListener(currentPlayerCardListener);
+    void disableCardClickListener() {
+        cardClickListener = null;
+        unselectCard();
+    }
+
+    void startTurn(CardClickListener cardListener) {
+        setCardClickListener(cardListener);
         //todo if there's no more to do, just use setCardClickListener method
     }
 
@@ -113,6 +87,22 @@ public class PlayerBoard extends CardPanel {
         disablePreviewMode();
 
         //todo if there's no more to do, just use disableCardClickListener method
+    }
+
+    protected void selectCard(MinionActualCard selectedCard) {
+        this.selectedCard = selectedCard;
+        lastBorder = selectedCard.getBorder();
+        selectedCard.setBorder(BorderFactory.createMatteBorder(6, 6, 6, 6, new Color(16, 90, 115)));
+    }
+
+    @Override
+    public void unselectCard() {
+        if (selectedCard != null) {
+            if (lastBorder != null) {
+                selectedCard.setBorder(lastBorder);
+                selectedCard = null;
+            }
+        }
     }
 
     @Override
@@ -124,6 +114,7 @@ public class PlayerBoard extends CardPanel {
             Logger.log(LogTypes.CLICK_BUTTON, "card " + selectedCard.getCardName() + "  selected.");
 
             if (cardClickListener != null) cardClickListener.selectCard(selectedCard);
+
         }
     }
 }

@@ -207,8 +207,6 @@ public class PlayPanel extends GamePanel {
         indexToSummonAMinion = 0;
         if (selectedCardInHand != null && selectedCardInHand.equals(cardName)) {
             selectedCardInHand = null;
-//            currentTurn.panel.unselectCard();
-//            currentTurn.board.disablePreviewMode();
             unselectHand();
         } else {
             selectedCardInHand = cardName;
@@ -228,7 +226,6 @@ public class PlayPanel extends GamePanel {
             } else {
                 MinionActualCard cardToPreview = playHandler.getMinion(selectedCardInHand);
                 currentTurn.board.previewCard(cardToPreview, indexToSummonAMinion);
-//                currentTurn.board.enablePreviewMode(); // this should be under the line above
             }
         }
     }
@@ -281,6 +278,7 @@ public class PlayPanel extends GamePanel {
         //todo is there any need to have a different method for beasts?
         MinionActualCard cardToSummon;
         cardToSummon = playHandler.summonAndGetMinion(cardName);
+//        cardToSummon = playHandler.summonAndGetMinion(cardName , indexToSummonAMinion);//todo you should also arrange the cards in GamePlayer classes
         currentTurn.board.disablePreviewMode();
         currentTurn.board.addCard(cardToSummon, indexToSummonAMinion);
     }
@@ -299,8 +297,8 @@ public class PlayPanel extends GamePanel {
         playHandler.playQuestAndReward(QRName);
     }
 
-    //*************************************************//
-    //*******methods for playing a card in hand********//
+    //****************************************************//
+    //******* methods for playing a card in board ********//
 
     private void selectBoardCard(ActualCard selectedCard) {
         selectedCardInHand = null;
