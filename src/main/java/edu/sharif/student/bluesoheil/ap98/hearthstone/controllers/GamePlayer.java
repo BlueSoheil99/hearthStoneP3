@@ -90,7 +90,7 @@ public class GamePlayer {
     } //todo enable it
 
     public void setOffCardsEnable(boolean enabled) {
-        if (enabled){
+        if (enabled) {
             for (Card card : playerCards) card.setManaCost(card.getManaCost() - 1);
             for (Card card : playerHand) card.setManaCost(card.getManaCost() - 1);
             //todo because of this passive, some weapons can't  be displayed well...WTF ??
@@ -186,17 +186,20 @@ public class GamePlayer {
     }
 
     void purchaseCard(Card card) throws PlayException {
-//todo    void purchaseCard(Card card , int index) throws PlayException {
         if (playerMana >= card.getManaCost()) {
             playerMana -= card.getManaCost();
-
-            if (card.getType()== Card.CardType.WEAPON) playerWeapon=card;
-            if (card.getType()== Card.CardType.MINION||card.getType()== Card.CardType.BEAST) {
-//                if (index = summonedMinions.size()){
-                summonedMinions.add(card);
-            }
+            if (card.getType() == Card.CardType.WEAPON) playerWeapon = card;
+            playerHand.remove(card);
         } else {
             throw new PlayException("You Don't Have Enough Mana");
+        }
+    }
+
+    void purchaseMinionOrBeast(Card card, int index) throws PlayException {
+        purchaseCard(card);
+        if (card.getType() == Card.CardType.MINION || card.getType() == Card.CardType.BEAST) {
+            if (index == summonedMinions.size()) summonedMinions.add(card);
+            else summonedMinions.add(index,card);
         }
     }
 

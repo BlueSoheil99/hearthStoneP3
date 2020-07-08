@@ -3541,3 +3541,196 @@ CLICK_BUTTON		2020/07/08  18:00:44	card Voodoo doctor  selected.
 CLICK_BUTTON		2020/07/08  18:00:44	card Voodoo doctor  selected.
 CLICK_BUTTON		2020/07/08  18:00:44	card Voodoo doctor  selected.
 PLAYER		2020/07/08  18:01:02	123456 logged out
+PLAYER		2020/07/08  20:02:37	123456 logged in
+NAVIGATION		2020/07/08  20:02:39	To Collection
+CLICK_BUTTON		2020/07/08  20:02:41	deck:  fullMinionDeck  selected .
+CLICK_BUTTON		2020/07/08  20:03:16	card: EAGLE  selected.
+CLICK_BUTTON		2020/07/08  20:03:18	card: EAGLE  selected.
+CLICK_BUTTON		2020/07/08  20:03:29	button : ADD CARD selected.
+COLLECTION		2020/07/08  20:03:29	player hasn't this card
+NAVIGATION		2020/07/08  20:03:33	To Shop
+CLICK_BUTTON		2020/07/08  20:03:36	card: EAGLE  selected.
+CLICK_BUTTON		2020/07/08  20:03:38	button: SELL selected .
+ERROR: SHOP	2020/07/08  20:03:42	edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.CardControllerException: players hasn't EAGLE card
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.CardController.sellCard(CardController.java:201)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer.sellCard(Administer.java:260)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.ShopPanel.lambda$setControllerActionListeners$1(ShopPanel.java:150)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+CLICK_BUTTON		2020/07/08  20:03:45	card: EAGLE  selected.
+CLICK_BUTTON		2020/07/08  20:03:46	button: BUY selected .
+SHOP		2020/07/08  20:03:49	card: EAGLE purchased
+CLICK_BUTTON		2020/07/08  20:03:54	button: BACK selected .
+NAVIGATION		2020/07/08  20:03:54	Back to previous panel
+CLICK_BUTTON		2020/07/08  20:04:00	button: BACK selected .
+NAVIGATION		2020/07/08  20:04:00	Back to previous panel
+CLICK_BUTTON		2020/07/08  20:04:01	button: LOGOUT  selected.
+NAVIGATION		2020/07/08  20:04:07	To Collection
+CLICK_BUTTON		2020/07/08  20:04:08	deck:  newDeck2  selected .
+CLICK_BUTTON		2020/07/08  20:04:10	deck:  newDeck2  selected .
+CLICK_BUTTON		2020/07/08  20:04:12	card: EAGLE  selected.
+CLICK_BUTTON		2020/07/08  20:04:14	button : ADD CARD selected.
+ERROR: COLLECTION	2020/07/08  20:04:15	edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.DeckControllerException: this card is not valid for this hero
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.models.Deck.addCard(Deck.java:142)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.DeckController.addCard(DeckController.java:173)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer.addCardToDeck(Administer.java:317)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.CollectionHandler.addCardToDeck(CollectionHandler.java:54)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.CollectionPanel$1.addCard(CollectionPanel.java:155)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.FilterPanel$5.actionPerformed(FilterPanel.java:342)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+CLICK_BUTTON		2020/07/08  20:04:18	deck:  fullMinionDeck  selected .
+CLICK_BUTTON		2020/07/08  20:04:21	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/08  20:04:22	fullMinionDeck has been set as current deck
+CLICK_BUTTON		2020/07/08  20:04:24	button: BACK selected .
+NAVIGATION		2020/07/08  20:04:24	Back to previous panel
+NAVIGATION		2020/07/08  20:04:42	To PlayStarter
+CLICK_BUTTON		2020/07/08  20:04:44	passive: nurse  selected.
+CLICK_BUTTON		2020/07/08  20:04:46	card: PHARAOH'S BLESSING  selected.
+CLICK_BUTTON		2020/07/08  20:04:48	card: CURIO COLLECTOR  selected.
+CLICK_BUTTON		2020/07/08  20:04:52	card: ZILLIAX  selected.
+CLICK_BUTTON		2020/07/08  20:04:55	button: BACK selected .
+NAVIGATION		2020/07/08  20:04:55	Back to previous panel
+NAVIGATION		2020/07/08  20:04:56	To PlayStarter
+CLICK_BUTTON		2020/07/08  20:05:01	passive: nurse  selected.
+CLICK_BUTTON		2020/07/08  20:05:03	card: LEARN DRACONIC  selected.
+PLAY		2020/07/08  20:05:06	you have 'nurse' passive
+CLICK_BUTTON		2020/07/08  20:05:07	deck:  MageDefaultDeck  selected .
+PLAY		2020/07/08  20:05:08	MageDefaultDeck is selected as opponent
+PLAY		2020/07/08  20:05:08	opponent has 'ManaJump' passive
+NAVIGATION		2020/07/08  20:05:08	To Play
+CLICK_BUTTON		2020/07/08  20:05:12	card: CURIO COLLECTOR  selected.
+CLICK_BUTTON		2020/07/08  20:05:21	card: SLAM  selected.
+CLICK_BUTTON		2020/07/08  20:05:22	card: MURLOC TIDEHUNTER  selected.
+PLAY		2020/07/08  20:05:24	opponent summoned MURLOC TIDEHUNTER
+CLICK_BUTTON		2020/07/08  20:05:28	card: MURLOC TIDEHUNTER  selected.
+CLICK_BUTTON		2020/07/08  20:05:34	card: MURLOC TIDEHUNTER  selected.
+CLICK_BUTTON		2020/07/08  20:05:39	card: MURLOC TIDEHUNTER  selected.
+PLAY		2020/07/08  20:05:41	opponent summoned MURLOC TIDEHUNTER
+CLICK_BUTTON		2020/07/08  20:05:58	card: OMEGA MEDIC  selected.
+PLAY		2020/07/08  20:05:59	you summoned OMEGA MEDIC
+CLICK_BUTTON		2020/07/08  20:06:39	card Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  20:06:43	card: PHARAOH'S BLESSING  selected.
+CLICK_BUTTON		2020/07/08  20:06:47	card: SLAM  selected.
+PLAY		2020/07/08  20:06:48	opponent played the SLAM spell
+PLAYER		2020/07/08  20:06:55	123456 logged out
+PLAYER		2020/07/08  20:09:59	123456 logged in
+NAVIGATION		2020/07/08  20:10:02	To Collection
+CLICK_BUTTON		2020/07/08  20:10:10	deck:  newDeck2  selected .
+CLICK_BUTTON		2020/07/08  20:10:13	deck:  fullMinionDeck  selected .
+CLICK_BUTTON		2020/07/08  20:10:15	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/08  20:10:15	fullMinionDeck has been set as current deck
+CLICK_BUTTON		2020/07/08  20:10:16	button: BACK selected .
+NAVIGATION		2020/07/08  20:10:16	Back to previous panel
+NAVIGATION		2020/07/08  20:10:17	To PlayStarter
+CLICK_BUTTON		2020/07/08  20:10:22	passive: ManaJump  selected.
+CLICK_BUTTON		2020/07/08  20:10:31	card: WATERBOY  selected.
+PLAY		2020/07/08  20:10:32	you have 'ManaJump' passive
+CLICK_BUTTON		2020/07/08  20:10:33	deck:  MageDefaultDeck  selected .
+PLAY		2020/07/08  20:10:34	MageDefaultDeck is selected as opponent
+PLAY		2020/07/08  20:10:34	opponent has 'OffCards' passive
+NAVIGATION		2020/07/08  20:10:34	To Play
+CLICK_BUTTON		2020/07/08  20:10:36	card: WATERBOY  selected.
+PLAY		2020/07/08  20:10:41	you summoned WATERBOY
+CLICK_BUTTON		2020/07/08  20:10:53	card: MURLOC TIDEHUNTER  selected.
+PLAY		2020/07/08  20:10:57	you summoned MURLOC TIDEHUNTER
+CLICK_BUTTON		2020/07/08  20:11:06	card: CURIO COLLECTOR  selected.
+PLAY		2020/07/08  20:11:09	you summoned CURIO COLLECTOR
+CLICK_BUTTON		2020/07/08  20:11:25	card: ABOMINATION  selected.
+PLAY		2020/07/08  20:11:54	you summoned ABOMINATION
+CLICK_BUTTON		2020/07/08  20:12:13	card Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  20:12:17	card Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  20:12:24	card Abomination  selected.
+CLICK_BUTTON		2020/07/08  20:12:30	card Abomination  selected.
+CLICK_BUTTON		2020/07/08  20:12:41	card: CURIO COLLECTOR  selected.
+PLAY		2020/07/08  20:12:59	opponent summoned CURIO COLLECTOR
+CLICK_BUTTON		2020/07/08  20:13:06	card: HEAVY AXE  selected.
+PLAY		2020/07/08  20:13:08	opponent set weapon to HEAVY AXE
+CLICK_BUTTON		2020/07/08  20:13:18	card: MURLOC TIDEHUNTER  selected.
+PLAY		2020/07/08  20:13:20	opponent summoned MURLOC TIDEHUNTER
+CLICK_BUTTON		2020/07/08  20:13:22	card Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  20:13:31	card Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  20:13:32	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  20:13:43	card Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  20:13:57	card Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  20:14:00	card Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  20:14:06	card: VOODOO DOCTOR  selected.
+PLAY		2020/07/08  20:14:09	you summoned VOODOO DOCTOR
+CLICK_BUTTON		2020/07/08  20:14:13	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  20:14:13	card Waterboy  selected.
+CLICK_BUTTON		2020/07/08  20:14:16	card: ZILLIAX  selected.
+PLAY		2020/07/08  20:14:17	you summoned ZILLIAX
+CLICK_BUTTON		2020/07/08  20:14:28	card: OMEGA MEDIC  selected.
+PLAY		2020/07/08  20:14:35	you summoned OMEGA MEDIC
+CLICK_BUTTON		2020/07/08  20:14:40	card: SATHROVARR  selected.
+PLAYER		2020/07/08  20:15:51	123456 logged out

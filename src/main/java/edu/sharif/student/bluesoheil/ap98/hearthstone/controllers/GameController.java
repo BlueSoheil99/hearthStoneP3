@@ -1,6 +1,5 @@
 package edu.sharif.student.bluesoheil.ap98.hearthstone.controllers;
 
-import edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.PlayException;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Heroes.HeroTypes;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.InfoPassives.InfoPassive;
@@ -8,7 +7,6 @@ import edu.sharif.student.bluesoheil.ap98.hearthstone.models.cards.Card;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.Configuration.LogicConfigs.PlayLogicConfig;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.log.LogTypes;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.log.Logger;
-import org.omg.PortableServer.AdapterActivator;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -74,7 +72,7 @@ public class GameController {
         Players.OPPONENT.gamePlayer = new GamePlayer(deckController.getDeck(deckName));
         Random random = new Random();
         int index = random.nextInt(InfoPassive.values().length);
-        String randomPassive =InfoPassive.values()[index].getName();
+        String randomPassive = InfoPassive.values()[index].getName();
         Players.OPPONENT.gamePlayer.setPassive(randomPassive);
         Logger.log(LogTypes.PLAY, "opponent has '" + randomPassive + "' passive");
     }
@@ -136,9 +134,9 @@ public class GameController {
         currentPlayer.gamePlayer.purchaseCard(card);
     }
 
-//    public void removeCard(Card card) {
-//        currentPlayer.gamePlayer.removeCard(card);
-//    }
+    public void purchaseMinionOrBeast(Card card , int index) throws PlayException {
+        currentPlayer.gamePlayer.purchaseMinionOrBeast(card , index);
+    }
 
     /////////////
     /////////////
@@ -151,6 +149,7 @@ public class GameController {
         }
         updateHand();
     }
+
     private void updateHand() {
         currentPlayer.gamePlayer.updateHand();
     }

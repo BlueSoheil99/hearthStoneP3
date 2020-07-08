@@ -148,31 +148,36 @@ public class PlayHandler {
         return new MinionActualCard(minion, null);
     }
 
-    public MinionActualCard summonAndGetMinion(String playerSelectedCardInHand) throws PlayException {
-        Minion minion = (Minion) getCardFromController(playerSelectedCardInHand);
+    public MinionActualCard summonAndGetMinion(String playerSelectedCardInHand, int index) throws PlayException {
+        Minion minion = (Minion) playHandMinionOrBeast(playerSelectedCardInHand , index);
         Logger.log(LogTypes.PLAY, gameController.getPlayingSide() + " summoned " + playerSelectedCardInHand);
         return new MinionActualCard(minion, null);
     }
 
-    public WeaponActualCard summonAndGetWeapon(String playerSelectedCardInHand) throws PlayException {
-        Weapon weapon = (Weapon) getCardFromController(playerSelectedCardInHand);
+    public WeaponActualCard summonAndGetWeapon(String playerSelectedCardInHand ) throws PlayException {
+        Weapon weapon = (Weapon) playHandCard(playerSelectedCardInHand);
         Logger.log(LogTypes.PLAY, gameController.getPlayingSide() + " set weapon to " + playerSelectedCardInHand);
         return new WeaponActualCard(weapon, null);
     }
 
     public void playSpell(String playerSelectedCardInHand) throws PlayException {
-        Spell spell = (Spell) getCardFromController(playerSelectedCardInHand);
+        Spell spell = (Spell) playHandCard(playerSelectedCardInHand);
         Logger.log(LogTypes.PLAY, gameController.getPlayingSide() + " played the " + playerSelectedCardInHand + " spell");
     }
 
     public void playQuestAndReward(String playerSelectedCardInHand) throws PlayException {
-        QuestAndReward qAndR = (QuestAndReward) getCardFromController(playerSelectedCardInHand);
+        QuestAndReward qAndR = (QuestAndReward) playHandCard(playerSelectedCardInHand);
         Logger.log(LogTypes.PLAY, gameController.getPlayingSide() + " played the " + playerSelectedCardInHand + " Q&R");
     }
 
-    private Card getCardFromController(String playerSelectedCardInHand) throws PlayException {
+    private Card playHandCard(String playerSelectedCardInHand) throws PlayException {
         Card card = gameController.getCard(playerSelectedCardInHand);
         gameController.purchaseCard(card);
+        return card;
+    }
+    private Card playHandMinionOrBeast(String cardToSummon , int index) throws PlayException {
+        Card card = gameController.getCard(cardToSummon);
+        gameController.purchaseMinionOrBeast(card , index);
         return card;
     }
 

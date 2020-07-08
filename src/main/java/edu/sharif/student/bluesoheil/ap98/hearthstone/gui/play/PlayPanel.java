@@ -277,8 +277,7 @@ public class PlayPanel extends GamePanel {
     private void summonMinion(String cardName) throws PlayException {
         //todo is there any need to have a different method for beasts?
         MinionActualCard cardToSummon;
-        cardToSummon = playHandler.summonAndGetMinion(cardName);
-//        cardToSummon = playHandler.summonAndGetMinion(cardName , indexToSummonAMinion);//todo you should also arrange the cards in GamePlayer classes
+        cardToSummon = playHandler.summonAndGetMinion(cardName , indexToSummonAMinion);
         currentTurn.board.disablePreviewMode();
         currentTurn.board.addCard(cardToSummon, indexToSummonAMinion);
     }

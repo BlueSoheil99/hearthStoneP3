@@ -2,7 +2,7 @@
   "userName": "123456",
   "password": "123456",
   "userId": 10,
-  "coins": 36,
+  "coins": 28,
   "profilePath": "src/main/resources/edu/sharif/student/bluesoheil/ap98/hearthstone/Profiles/123456.json",
   "logPath": "src/main/resources/edu/sharif/student/bluesoheil/ap98/hearthstone/Logs/123456-10.log",
   "playerTotalCards": [
@@ -280,6 +280,18 @@
       "rarity": "RARE",
       "description": "N/A",
       "cost": 3
+    },
+    {
+      "inRush": false,
+      "HP": 5,
+      "attack": 4,
+      "name": "Eagle",
+      "manaCost": 4,
+      "type": "BEAST",
+      "heroClass": "HUNTER",
+      "rarity": "EPIC",
+      "description": "Attacks opponent beasts at the start of your turn",
+      "cost": 8
     }
   ],
   "playerDecks": [
