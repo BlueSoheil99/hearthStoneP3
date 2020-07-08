@@ -40,23 +40,17 @@ public class CardPanel extends SidePanel implements ActionListener {
         for (CardShape cardShape : cards) cardShape.addActionListener(this);
     }
 
+//    public void setCards(ArrayList<? extends CardShape> cardShapes, int cardsInRow ,
+//                         ArrayList<? extends  CardShape> cardsToListen) {
+//        cards = new ArrayList<>();
+//        for (CardShape cardShape : cardShapes) cards.add((CardShape) cardShape);
+//        paintCardsInPanel(cardsInRow);
+//        if (cardsToListen == null)for (CardShape cardShape : cards) cardShape.addActionListener(this);
+//        if (cardsToListen != null)for (CardShape cardShape : cardsToListen) cardShape.addActionListener(this);
+//    }
+
     public void setCards(ArrayList<? extends CardShape> cardShapes) {
         setCards(cardShapes, GuiConstants.getInstance().getNumberOfCardsInRow());
-    }
-
-    public void addCard(CardShape card, int index) {
-        cards.add(index, card);
-        setCards(cards);
-    }
-
-    public void addCard(CardShape card) {
-        if (cards.size() == 0) addCard(card, 0);
-        else addCard(card, cards.size() - 1);
-    }
-
-    public void setPassives(ArrayList<CardShape> passives) {
-        setCards(passives);
-        isPassive = true;
     }
 
     private void paintCardsInPanel(int numberOfCardsInRow) {
@@ -83,6 +77,11 @@ public class CardPanel extends SidePanel implements ActionListener {
         }
     }
 
+    public void addCard(CardShape card, int index) {
+        cards.add(index, card);
+        setCards(cards);
+    }
+
     public void setEmpty() {
         removeAll();
         revalidate();
@@ -106,6 +105,16 @@ public class CardPanel extends SidePanel implements ActionListener {
         this.selectedCard = selectedCard;
         lastBorder = selectedCard.getBorder();
         selectedCard.setBorder(BorderFactory.createMatteBorder(6, 6, 6, 6, new Color(16, 90, 115)));
+    }
+
+    public void addCard(CardShape card) {
+        if (cards.size() == 0) addCard(card, 0);
+        else addCard(card, cards.size() - 1);
+    }
+
+    public void setPassives(ArrayList<CardShape> passives) {
+        setCards(passives);
+        isPassive = true;
     }
 
     public void setClickListener(ClickListener listener) {

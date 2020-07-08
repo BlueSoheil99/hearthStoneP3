@@ -4,6 +4,7 @@ import edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.PlayHandler;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.PlayException;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.GamePanel;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.*;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.models.cards.Card;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.Configuration.GuiConfigs.PlayConfig;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.PlayTimer;
 
@@ -28,6 +29,7 @@ public class PlayPanel extends GamePanel {
     private ActualCard currentPlayerSelectedCard, currentOpponentSelectedCard;
     private ClickListener handClickListener;
     private String selectedCardInHand;
+    private int indexToSummonAMinion;
 
     private Players currentTurn;
 
@@ -75,6 +77,11 @@ public class PlayPanel extends GamePanel {
         add(scrollPane);
     }
 
+    private void setupPauseMenu() {
+        pauseMenu = PauseMenu.getInstance();
+        pauseMenu.setVisible(true);
+    }
+
     private void setupListeners() {
         timerListener = new TimerListener() {
             @Override
@@ -87,38 +94,23 @@ public class PlayPanel extends GamePanel {
                 changeTurn();
             }
         };
-        handClickListener = objName -> {
-            selectAHandCard(objName);
-
-        };
-        currentPlayerCardListener = new CardClickListener() {
-            @Override
-            public void selectCard(ActualCard selectedCard) {
-                selectBoardCard(selectedCard);
-            }
-        };
-        currentOpponentCardListener = new CardClickListener() {
-            @Override
-            public void selectCard(ActualCard selectedCard) {
-                currentOpponentSelectedCard = selectedCard;
-                System.out.println(selectedCard.getCardName() + " selected from other board");
-
-//                    attack(currentPlayerSelectedCard , currentOpponentSelectedCard);
-            }
-        };
+        handClickListener = this::selectAHandCard;
+        currentPlayerCardListener = this::selectBoardCard;
+        currentOpponentCardListener = this::selectOpponentBoardCard;
         heroActionListener = new HeroActionListener() {
             //todo complete it
             @Override
             public void playHeroPower() {
+                unselectHand();
                 System.out.println("played hero power");
             }
 
             @Override
             public void playWeapon(WeaponActualCard playedWeapon) {
+                unselectHand();
                 System.out.println(playedWeapon.getCardName() + " played");
             }
         };
-
         playActionListener = new PlayActionListener() {
             @Override
             public void endTurn() {
@@ -140,18 +132,14 @@ public class PlayPanel extends GamePanel {
 
             @Override
             public void goRight() {
+                if (selectedCardInHand != null) checkForMinionPreview(true);
             }
 
             @Override
             public void goLeft() {
-
+                if (selectedCardInHand != null) checkForMinionPreview(false);
             }
         };
-    }
-
-    private void setupPauseMenu() {
-        pauseMenu = PauseMenu.getInstance();
-        pauseMenu.setVisible(true);
     }
 
     private void setupPlayerPanel() {
@@ -169,7 +157,6 @@ public class PlayPanel extends GamePanel {
         Players.OPPONENT.board = opponentBoard;
         opponentPanel.updateHand(playHandler.getHand(false), playHandler.getHeroStates(false));
     }
-
 
     //**********************************//
     //****methods for turn settings*****//
@@ -205,38 +192,64 @@ public class PlayPanel extends GamePanel {
         if (player == Players.OPPONENT) return Players.ME;
         else return Players.OPPONENT;
     }
-    //**********************************//
-    //*******methods for playing********//
 
+    private void unselectHand() {
+        currentTurn.panel.unselectCard();
+        currentTurn.board.disablePreviewMode();
+    }
+
+    //*************************************************//
+    //*******methods for playing a card in hand********//
     private void selectAHandCard(String cardName) {
         currentPlayerSelectedCard = null;
         currentTurn.board.unselectCard();
+
+        indexToSummonAMinion = 0;
         if (selectedCardInHand != null && selectedCardInHand.equals(cardName)) {
             selectedCardInHand = null;
-            currentTurn.panel.unselectCard();
-//            currentTurn.board.setCardClickListener(currentPlayerCardListener);
+//            currentTurn.panel.unselectCard();
+//            currentTurn.board.disablePreviewMode();
+            unselectHand();
         } else {
             selectedCardInHand = cardName;
-//            currentTurn.board.disableCardClickListener();
+            currentTurn.board.disablePreviewMode();
+            checkForMinionPreview();
         }
     }
 
-    private void selectBoardCard(ActualCard selectedCard) {
-        selectedCardInHand = null;
-        currentTurn.panel.unselectCard();
-
-//                    updateSelections();
-        if (currentPlayerSelectedCard != null && currentPlayerSelectedCard==selectedCard) {
-            currentPlayerSelectedCard = null;
-            currentTurn.board.unselectCard();
-            System.out.println(selectedCard.getCardName() + " unselected from board");
-//            currentTurn.panel.(currentPlayerCardListener);
-        } else {
-            currentPlayerSelectedCard = selectedCard;
-            System.out.println(selectedCard.getCardName() + " selected from board");
-//            currentTurn.board.disableCardClickListener();
+    private void checkForMinionPreview() {
+        Card.CardType type = playHandler.getCardType(selectedCardInHand);
+        if (type == Card.CardType.MINION || type == Card.CardType.BEAST) {
+            if (currentTurn.board.isFull()) {
+                selectedCardInHand = null;
+                unselectHand();
+                JOptionPane.showMessageDialog(null,
+                        "Your Board is full.\nCan't summon more minions or beasts", "Full Board", JOptionPane.ERROR_MESSAGE);
+            } else {
+                MinionActualCard cardToPreview = playHandler.getMinion(selectedCardInHand);
+                currentTurn.board.addCard(cardToPreview, indexToSummonAMinion);
+                currentTurn.board.enablePreviewMode(); // this should be under the line above
+            }
         }
     }
+
+    private void checkForMinionPreview(boolean falseForLeftAndTrueForRight) {
+        Card.CardType type = playHandler.getCardType(selectedCardInHand);
+        if (type == Card.CardType.MINION || type == Card.CardType.BEAST) {
+            MinionActualCard cardToPreview = playHandler.getMinion(selectedCardInHand);
+            if (falseForLeftAndTrueForRight) {
+                if (indexToSummonAMinion < PlayerBoard.CARDS_LIMIT - 1) {
+                    indexToSummonAMinion++;
+                    if (currentTurn.board.getCards().size() <= indexToSummonAMinion)
+                        indexToSummonAMinion = currentTurn.board.getCards().size() - 1;
+                }
+            } else {
+                if (indexToSummonAMinion > 0) indexToSummonAMinion--;
+            }
+            currentTurn.board.addCard(cardToPreview, indexToSummonAMinion);
+        }
+    }
+
 
     private void doHandCardAction() {
         try {
@@ -259,16 +272,17 @@ public class PlayPanel extends GamePanel {
             }
             currentTurn.panel.updateHand(playHandler.getHand(), playHandler.getHeroStates());
         } catch (PlayException e) {
+            unselectHand();
             JOptionPane.showMessageDialog(null, e.getMessage(), "Error in card selection", JOptionPane.ERROR_MESSAGE);
         }
     }
 
     private void summonMinion(String cardName) throws PlayException {
-        //todo have a minionCard and show possible arranges of cards in board before calling summonAndGetCard method in playHandler\
         //todo is there any need to have a different method for beasts?
         MinionActualCard cardToSummon;
         cardToSummon = playHandler.summonAndGetMinion(cardName);
-        currentTurn.board.addCard(cardToSummon);
+        currentTurn.board.disablePreviewMode();
+        currentTurn.board.addCard(cardToSummon, indexToSummonAMinion);
     }
 
     private void summonWeapon(String cardName) throws PlayException {
@@ -283,6 +297,35 @@ public class PlayPanel extends GamePanel {
 
     private void playQuestAndReward(String QRName) throws PlayException {
         playHandler.playQuestAndReward(QRName);
+    }
+
+    //*************************************************//
+    //*******methods for playing a card in hand********//
+
+    private void selectBoardCard(ActualCard selectedCard) {
+        selectedCardInHand = null;
+//        currentTurn.panel.unselectCard();
+        unselectHand();
+
+        if (currentPlayerSelectedCard != null && currentPlayerSelectedCard == selectedCard) {
+            currentPlayerSelectedCard = null;
+            currentTurn.board.unselectCard();
+            System.out.println(selectedCard.getCardName() + " unselected from board");
+            //                    dismissUpdateSelections();
+
+        } else {
+            currentPlayerSelectedCard = selectedCard;
+            //                    updateSelections();
+
+            System.out.println(selectedCard.getCardName() + " selected from board");
+        }
+    }
+
+    private void selectOpponentBoardCard(ActualCard selectedCard) {
+        currentOpponentSelectedCard = selectedCard;
+        System.out.println(selectedCard.getCardName() + " selected from other board");
+
+//                    attack(currentPlayerSelectedCard , currentOpponentSelectedCard);
     }
 
 }

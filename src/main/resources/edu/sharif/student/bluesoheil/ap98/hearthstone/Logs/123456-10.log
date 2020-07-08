@@ -2235,3 +2235,1144 @@ CLICK_BUTTON		2020/07/08  00:59:54	passive: Murloc Tidehunter  selected.
 CLICK_BUTTON		2020/07/08  00:59:54	passive: Murloc Tidehunter  selected.
 CLICK_BUTTON		2020/07/08  00:59:55	passive: Curio Collector  selected.
 PLAYER		2020/07/08  01:00:05	123456 logged out
+PLAYER		2020/07/08  13:10:38	123456 logged in
+NAVIGATION		2020/07/08  13:10:39	To Collection
+CLICK_BUTTON		2020/07/08  13:10:41	deck:  512  selected .
+CLICK_BUTTON		2020/07/08  13:10:43	deck:  newDecknew  selected .
+CLICK_BUTTON		2020/07/08  13:10:45	deck:  512  selected .
+CLICK_BUTTON		2020/07/08  13:10:46	button : DELETE DECK selected.
+CLICK_BUTTON		2020/07/08  13:10:47	delete confirmed
+COLLECTION		2020/07/08  13:10:48	512 has been deleted from player's decks
+CLICK_BUTTON		2020/07/08  13:10:49	deck:  newDecknew  selected .
+CLICK_BUTTON		2020/07/08  13:10:55	card: VOODOO DOCTOR  selected.
+CLICK_BUTTON		2020/07/08  13:10:56	button : ADD CARD selected.
+COLLECTION		2020/07/08  13:10:56	VOODOO DOCTOR has been added to newDecknew
+CLICK_BUTTON		2020/07/08  13:11:00	deck:  newDecknew  selected .
+CLICK_BUTTON		2020/07/08  13:11:02	card: OMEGA MEDIC  selected.
+CLICK_BUTTON		2020/07/08  13:11:04	button : ADD CARD selected.
+COLLECTION		2020/07/08  13:11:04	OMEGA MEDIC has been added to newDecknew
+CLICK_BUTTON		2020/07/08  13:11:06	deck:  newDecknew  selected .
+CLICK_BUTTON		2020/07/08  13:11:08	card: DREADSCALE  selected.
+CLICK_BUTTON		2020/07/08  13:11:11	button : ADD CARD selected.
+ERROR: COLLECTION	2020/07/08  13:11:13	edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.DeckControllerException: this card is not valid for this hero
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.models.Deck.addCard(Deck.java:142)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.DeckController.addCard(DeckController.java:173)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer.addCardToDeck(Administer.java:317)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.CollectionHandler.addCardToDeck(CollectionHandler.java:54)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.CollectionPanel$1.addCard(CollectionPanel.java:149)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.FilterPanel$5.actionPerformed(FilterPanel.java:342)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+CLICK_BUTTON		2020/07/08  13:11:16	card: OMEGA MEDIC  selected.
+CLICK_BUTTON		2020/07/08  13:11:18	button : ADD CARD selected.
+ERROR: COLLECTION	2020/07/08  13:11:18	edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.DeckControllerException: You only have 1 of this card. Can't have more in a deck
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.DeckController.addCard(DeckController.java:175)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer.addCardToDeck(Administer.java:317)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.CollectionHandler.addCardToDeck(CollectionHandler.java:54)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.CollectionPanel$1.addCard(CollectionPanel.java:149)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.FilterPanel$5.actionPerformed(FilterPanel.java:342)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+CLICK_BUTTON		2020/07/08  13:11:21	card: HIGH PRIEST AMET  selected.
+CLICK_BUTTON		2020/07/08  13:11:23	button : ADD CARD selected.
+ERROR: COLLECTION	2020/07/08  13:11:23	edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.DeckControllerException: this card is not valid for this hero
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.models.Deck.addCard(Deck.java:142)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.DeckController.addCard(DeckController.java:173)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer.addCardToDeck(Administer.java:317)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.CollectionHandler.addCardToDeck(CollectionHandler.java:54)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.CollectionPanel$1.addCard(CollectionPanel.java:149)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.FilterPanel$5.actionPerformed(FilterPanel.java:342)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+CLICK_BUTTON		2020/07/08  13:11:25	card: MURLOC TIDEHUNTER  selected.
+CLICK_BUTTON		2020/07/08  13:11:27	button : ADD CARD selected.
+COLLECTION		2020/07/08  13:11:27	MURLOC TIDEHUNTER has been added to newDecknew
+CLICK_BUTTON		2020/07/08  13:11:29	deck:  newDecknew  selected .
+CLICK_BUTTON		2020/07/08  13:11:30	card: MURLOC TIDEHUNTER  selected.
+CLICK_BUTTON		2020/07/08  13:11:31	button : ADD CARD selected.
+ERROR: COLLECTION	2020/07/08  13:11:32	edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.DeckControllerException: You only have 1 of this card. Can't have more in a deck
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.DeckController.addCard(DeckController.java:175)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer.addCardToDeck(Administer.java:317)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.CollectionHandler.addCardToDeck(CollectionHandler.java:54)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.CollectionPanel$1.addCard(CollectionPanel.java:149)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.FilterPanel$5.actionPerformed(FilterPanel.java:342)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+CLICK_BUTTON		2020/07/08  13:11:36	card: SWAMP KING DRED  selected.
+CLICK_BUTTON		2020/07/08  13:11:37	button : ADD CARD selected.
+ERROR: COLLECTION	2020/07/08  13:11:38	edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.DeckControllerException: this card is not valid for this hero
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.models.Deck.addCard(Deck.java:142)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.DeckController.addCard(DeckController.java:173)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer.addCardToDeck(Administer.java:317)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.CollectionHandler.addCardToDeck(CollectionHandler.java:54)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.CollectionPanel$1.addCard(CollectionPanel.java:149)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.FilterPanel$5.actionPerformed(FilterPanel.java:342)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+CLICK_BUTTON		2020/07/08  13:11:43	card: WATERBOY  selected.
+CLICK_BUTTON		2020/07/08  13:11:45	button : ADD CARD selected.
+COLLECTION		2020/07/08  13:11:46	WATERBOY has been added to newDecknew
+CLICK_BUTTON		2020/07/08  13:11:51	deck:  newDeck2  selected .
+CLICK_BUTTON		2020/07/08  13:11:52	deck:  newDecknew  selected .
+CLICK_BUTTON		2020/07/08  13:11:56	card: ABOMINATION  selected.
+CLICK_BUTTON		2020/07/08  13:11:58	button : ADD CARD selected.
+COLLECTION		2020/07/08  13:11:58	ABOMINATION has been added to newDecknew
+CLICK_BUTTON		2020/07/08  13:12:00	deck:  newDecknew  selected .
+CLICK_BUTTON		2020/07/08  13:12:01	card: ZILLIAX  selected.
+CLICK_BUTTON		2020/07/08  13:12:03	button : ADD CARD selected.
+COLLECTION		2020/07/08  13:12:05	ZILLIAX has been added to newDecknew
+CLICK_BUTTON		2020/07/08  13:12:07	deck:  newDeck2  selected .
+CLICK_BUTTON		2020/07/08  13:12:08	deck:  newDecknew  selected .
+CLICK_BUTTON		2020/07/08  13:12:20	card: CURIO COLLECTOR  selected.
+CLICK_BUTTON		2020/07/08  13:12:21	button : ADD CARD selected.
+COLLECTION		2020/07/08  13:12:22	CURIO COLLECTOR has been added to newDecknew
+CLICK_BUTTON		2020/07/08  13:12:25	deck:  newDecknew  selected .
+CLICK_BUTTON		2020/07/08  13:12:29	card: CURIO COLLECTOR  selected.
+CLICK_BUTTON		2020/07/08  13:12:30	button : ADD CARD selected.
+ERROR: COLLECTION	2020/07/08  13:12:31	edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.DeckControllerException: You only have 1 of this card. Can't have more in a deck
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.DeckController.addCard(DeckController.java:175)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer.addCardToDeck(Administer.java:317)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.CollectionHandler.addCardToDeck(CollectionHandler.java:54)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.CollectionPanel$1.addCard(CollectionPanel.java:149)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.FilterPanel$5.actionPerformed(FilterPanel.java:342)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+CLICK_BUTTON		2020/07/08  13:12:33	card: SATHROVARR  selected.
+CLICK_BUTTON		2020/07/08  13:12:35	button : ADD CARD selected.
+COLLECTION		2020/07/08  13:12:35	SATHROVARR has been added to newDecknew
+CLICK_BUTTON		2020/07/08  13:12:37	deck:  newDeck  selected .
+CLICK_BUTTON		2020/07/08  13:12:40	deck:  newDeck2  selected .
+CLICK_BUTTON		2020/07/08  13:12:41	deck:  newDeck  selected .
+CLICK_BUTTON		2020/07/08  13:12:43	deck:  newDecknew  selected .
+CLICK_BUTTON		2020/07/08  13:12:51	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/08  13:12:52	newDecknew has been set as current deck
+CLICK_BUTTON		2020/07/08  13:12:53	button: BACK selected .
+NAVIGATION		2020/07/08  13:12:53	Back to previous panel
+NAVIGATION		2020/07/08  13:12:54	To PlayStarter
+CLICK_BUTTON		2020/07/08  13:12:55	passive: TwiceDraw  selected.
+CLICK_BUTTON		2020/07/08  13:12:57	card: LEARN DRACONIC  selected.
+PLAY		2020/07/08  13:12:59	you have 'TwiceDraw' passive
+CLICK_BUTTON		2020/07/08  13:13:01	deck:  MageDefaultDeck  selected .
+PLAY		2020/07/08  13:13:02	MagePLAYER		2020/07/08  13:27:21	123456 logged in
+NAVIGATION		2020/07/08  13:27:22	To Collection
+CLICK_BUTTON		2020/07/08  13:27:23	deck:  PriestDefaultDeck  selected .
+CLICK_BUTTON		2020/07/08  13:27:24	deck:  512  selected .
+CLICK_BUTTON		2020/07/08  13:27:26	deck:  newDecknew  selected .
+CLICK_BUTTON		2020/07/08  13:27:29	card: CURIO COLLECTOR  selected.
+CLICK_BUTTON		2020/07/08  13:27:30	button : ADD CARD selected.
+COLLECTION		2020/07/08  13:27:31	CURIO COLLECTOR has been added to newDecknew
+CLICK_BUTTON		2020/07/08  13:27:33	deck:  WarlockDefaultDeck  selected .
+CLICK_BUTTON		2020/07/08  13:27:35	deck:  newDecknew  selected .
+CLICK_BUTTON		2020/07/08  13:27:39	card: VOODOO DOCTOR  selected.
+CLICK_BUTTON		2020/07/08  13:27:40	button : ADD CARD selected.
+COLLECTION		2020/07/08  13:27:41	VOODOO DOCTOR has been added to newDecknew
+CLICK_BUTTON		2020/07/08  13:27:42	card: WATERBOY  selected.
+CLICK_BUTTON		2020/07/08  13:27:43	button : ADD CARD selected.
+COLLECTION		2020/07/08  13:27:43	WATERBOY has been added to newDecknew
+CLICK_BUTTON		2020/07/08  13:27:45	card: OMEGA MEDIC  selected.
+CLICK_BUTTON		2020/07/08  13:27:47	button : ADD CARD selected.
+COLLECTION		2020/07/08  13:27:47	OMEGA MEDIC has been added to newDecknew
+CLICK_BUTTON		2020/07/08  13:27:49	card: CURIO COLLECTOR  selected.
+CLICK_BUTTON		2020/07/08  13:27:51	button : ADD CARD selected.
+ERROR: COLLECTION	2020/07/08  13:27:51	edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.DeckControllerException: You only have 1 of this card. Can't have more in a deck
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.DeckController.addCard(DeckController.java:175)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer.addCardToDeck(Administer.java:317)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.CollectionHandler.addCardToDeck(CollectionHandler.java:54)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.CollectionPanel$1.addCard(CollectionPanel.java:149)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.FilterPanel$5.actionPerformed(FilterPanel.java:342)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+CLICK_BUTTON		2020/07/08  13:27:53	card: DREADSCALE  selected.
+CLICK_BUTTON		2020/07/08  13:27:54	button : ADD CARD selected.
+ERROR: COLLECTION	2020/07/08  13:27:54	edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.DeckControllerException: this card is not valid for this hero
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.models.Deck.addCard(Deck.java:142)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.DeckController.addCard(DeckController.java:173)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer.addCardToDeck(Administer.java:317)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.CollectionHandler.addCardToDeck(CollectionHandler.java:54)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.CollectionPanel$1.addCard(CollectionPanel.java:149)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.FilterPanel$5.actionPerformed(FilterPanel.java:342)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+CLICK_BUTTON		2020/07/08  13:27:56	card: ABOMINATION  selected.
+CLICK_BUTTON		2020/07/08  13:27:57	button : ADD CARD selected.
+COLLECTION		2020/07/08  13:27:57	ABOMINATION has been added to newDecknew
+CLICK_BUTTON		2020/07/08  13:27:59	card: ZILLIAX  selected.
+CLICK_BUTTON		2020/07/08  13:28:00	button : ADD CARD selected.
+COLLECTION		2020/07/08  13:28:00	ZILLIAX has been added to newDecknew
+CLICK_BUTTON		2020/07/08  13:28:04	card: SATHROVARR  selected.
+CLICK_BUTTON		2020/07/08  13:28:06	button : ADD CARD selected.
+COLLECTION		2020/07/08  13:28:06	SATHROVARR has been added to newDecknew
+CLICK_BUTTON		2020/07/08  13:28:08	card: MURLOC TIDEHUNTER  selected.
+CLICK_BUTTON		2020/07/08  13:28:10	button : ADD CARD selected.
+COLLECTION		2020/07/08  13:28:11	MURLOC TIDEHUNTER has been added to newDecknew
+CLICK_BUTTON		2020/07/08  13:28:17	deck:  512  selected .
+CLICK_BUTTON		2020/07/08  13:28:19	button : DELETE DECK selected.
+CLICK_BUTTON		2020/07/08  13:28:20	delete confirmed
+COLLECTION		2020/07/08  13:28:20	512 has been deleted from player's decks
+CLICK_BUTTON		2020/07/08  13:28:29	deck:  newDecknew  selected .
+CLICK_BUTTON		2020/07/08  13:29:01	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/08  13:29:02	newDecknew has been set as current deck
+CLICK_BUTTON		2020/07/08  13:30:26	button: EXIT selected .
+PLAYER		2020/07/08  13:30:27	123456 logged out
+PLAYER		2020/07/08  13:30:39	123456 logged in
+NAVIGATION		2020/07/08  13:30:41	To Collection
+CLICK_BUTTON		2020/07/08  13:30:42	deck:  MageDefaultDeck  selected .
+CLICK_BUTTON		2020/07/08  13:30:45	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/08  13:30:45	MageDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/07/08  13:30:50	deck:  RogueDefaultDeck  selected .
+CLICK_BUTTON		2020/07/08  13:30:58	card: WATERBOY  selected.
+CLICK_BUTTON		2020/07/08  13:31:07	button : ADD CARD selected.
+COLLECTION		2020/07/08  13:31:08	WATERBOY has been added to RogueDefaultDeck
+CLICK_BUTTON		2020/07/08  13:31:24	card: ZILLIAX  selected.
+CLICK_BUTTON		2020/07/08  13:31:29	button : ADD CARD selected.
+ERROR: COLLECTION	2020/07/08  13:31:30	edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.DeckControllerException: You only have 1 of this card. Can't have more in a deck
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.DeckController.addCard(DeckController.java:175)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer.addCardToDeck(Administer.java:317)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.CollectionHandler.addCardToDeck(CollectionHandler.java:54)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.CollectionPanel$1.addCard(CollectionPanel.java:149)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.FilterPanel$5.actionPerformed(FilterPanel.java:342)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+CLICK_BUTTON		2020/07/08  13:31:37	card: ZILLIAX  selected.
+CLICK_BUTTON		2020/07/08  13:31:38	deck:  RogueDefaultDeck  selected .
+CLICK_BUTTON		2020/07/08  13:31:48	deck:  PriestDefaultDeck  selected .
+CLICK_BUTTON		2020/07/08  13:31:51	deck:  newDeck2  selected .
+CLICK_BUTTON		2020/07/08  13:31:52	deck:  RogueDefaultDeck  selected .
+CLICK_BUTTON		2020/07/08  13:31:56	deck:  newDeck  selected .
+CLICK_BUTTON		2020/07/08  13:32:00	deck:  newDecknew  selected .
+CLICK_BUTTON		2020/07/08  13:32:02	card: MURLOC TIDEHUNTER  selected.
+CLICK_BUTTON		2020/07/08  13:32:03	button : ADD CARD selected.
+ERROR: COLLECTION	2020/07/08  13:32:05	edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.DeckControllerException: You only have 1 of this card. Can't have more in a deck
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.DeckController.addCard(DeckController.java:175)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer.addCardToDeck(Administer.java:317)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.CollectionHandler.addCardToDeck(CollectionHandler.java:54)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.CollectionPanel$1.addCard(CollectionPanel.java:149)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.FilterPanel$5.actionPerformed(FilterPanel.java:342)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+CLICK_BUTTON		2020/07/08  13:32:08	deck:  newDeck  selected .
+CLICK_BUTTON		2020/07/08  13:32:10	button : DELETE DECK selected.
+CLICK_BUTTON		2020/07/08  13:32:10	delete confirmed
+COLLECTION		2020/07/08  13:32:11	newDeck has been deleted from player's decks
+CLICK_BUTTON		2020/07/08  13:32:16	deck:  newDeck2  selected .
+CLICK_BUTTON		2020/07/08  13:32:17	deck:  newDecknew  selected .
+CLICK_BUTTON		2020/07/08  13:33:21	button: EXIT selected .
+PLAYER		2020/07/08  13:33:21	123456 logged out
+PLAYER		2020/07/08  13:35:36	123456 logged in
+NAVIGATION		2020/07/08  13:35:38	To Collection
+CLICK_BUTTON		2020/07/08  13:35:39	deck:  MageDefaultDeck  selected .
+CLICK_BUTTON		2020/07/08  13:35:41	deck:  RogueDefaultDeck  selected .
+CLICK_BUTTON		2020/07/08  13:35:44	card: DREADSCALE  selected.
+CLICK_BUTTON		2020/07/08  13:35:45	button : ADD CARD selected.
+ERROR: COLLECTION	2020/07/08  13:35:46	edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.DeckControllerException: this card is not valid for this hero
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.models.Deck.addCard(Deck.java:142)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.DeckController.addCard(DeckController.java:173)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer.addCardToDeck(Administer.java:317)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.CollectionHandler.addCardToDeck(CollectionHandler.java:54)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.CollectionPanel$1.addCard(CollectionPanel.java:149)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.FilterPanel$5.actionPerformed(FilterPanel.java:342)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+CLICK_BUTTON		2020/07/08  13:35:51	card: SWARM OF LOCUSTS  selected.
+CLICK_BUTTON		2020/07/08  13:35:53	button : REMOVE CARD selected.
+COLLECTION		2020/07/08  13:35:53	SWARM OF LOCUSTS has been removed from RogueDefaultDeck
+CLICK_BUTTON		2020/07/08  13:35:57	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/08  13:35:58	RogueDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/07/08  13:36:13	deck:  newDecknew  selected .
+CLICK_BUTTON		2020/07/08  13:36:19	deck:  PriestDefaultDeck  selected .
+CLICK_BUTTON		2020/07/08  13:36:20	deck:  newDecknew  selected .
+CLICK_BUTTON		2020/07/08  13:36:22	card: FRIENDLY SMITH  selected.
+CLICK_BUTTON		2020/07/08  13:36:24	button : ADD CARD selected.
+ERROR: COLLECTION	2020/07/08  13:36:25	edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.DeckControllerException: this card is not valid for this hero
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.models.Deck.addCard(Deck.java:142)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.controllers.DeckController.addCard(DeckController.java:173)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.Administer.addCardToDeck(Administer.java:317)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.connectors.CollectionHandler.addCardToDeck(CollectionHandler.java:54)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.CollectionPanel$1.addCard(CollectionPanel.java:149)
+	at edu.sharif.student.bluesoheil.ap98.hearthstone.gui.collection.FilterPanel$5.actionPerformed(FilterPanel.java:342)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6539)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6304)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4904)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4535)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4476)
+	at java.awt.Container.dispatchEventImpl(Container.java:2283)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+CLICK_BUTTON		2020/07/08  13:36:27	card: PHARAOH'S BLESSING  selected.
+CLICK_BUTTON		2020/07/08  13:36:29	button : ADD CARD selected.
+COLLECTION		2020/07/08  13:36:30	PHARAOH'S BLESSING has been added to newDecknew
+CLICK_BUTTON		2020/07/08  13:36:36	button: RENAME selected.
+CLICK_BUTTON		2020/07/08  13:36:46	rename confirmed
+COLLECTION		2020/07/08  13:36:47	newDecknew has been renamed to fullMinionDeck
+CLICK_BUTTON		2020/07/08  13:37:04	button: FILTER selected.
+COLLECTION		2020/07/08  13:37:04	cards filtered with {regex,owned,notOwned,manaCost,hero}= {voodoo,true,true,-1,All}
+CLICK_BUTTON		2020/07/08  13:37:07	deck:  RogueDefaultDeck  selected .
+CLICK_BUTTON		2020/07/08  13:37:10	deck:  MageDefaultDeck  selected .
+CLICK_BUTTON		2020/07/08  13:37:11	deck:  RogueDefaultDeck  selected .
+CLICK_BUTTON		2020/07/08  13:37:12	deck:  PriestDefaultDeck  selected .
+CLICK_BUTTON		2020/07/08  13:37:12	deck:  newDeck2  selected .
+CLICK_BUTTON		2020/07/08  13:37:15	deck:  fullMinionDeck  selected .
+CLICK_BUTTON		2020/07/08  13:37:19	button: BACK selected .
+NAVIGATION		2020/07/08  13:37:19	Back to previous panel
+NAVIGATION		2020/07/08  13:37:20	To Collection
+CLICK_BUTTON		2020/07/08  13:37:22	deck:  HunterDefaultDeck  selected .
+CLICK_BUTTON		2020/07/08  13:37:29	card: SATHROVARR  selected.
+CLICK_BUTTON		2020/07/08  13:37:34	button : REMOVE CARD selected.
+COLLECTION		2020/07/08  13:37:34	SATHROVARR has been removed from HunterDefaultDeck
+CLICK_BUTTON		2020/07/08  13:37:39	card: WATERBOY  selected.
+CLICK_BUTTON		2020/07/08  13:37:42	button : ADD CARD selected.
+COLLECTION		2020/07/08  13:37:42	WATERBOY has been added to HunterDefaultDeck
+CLICK_BUTTON		2020/07/08  13:37:56	button: BACK selected .
+NAVIGATION		2020/07/08  13:37:56	Back to previous panel
+NAVIGATION		2020/07/08  13:37:57	To Status
+STATUS		2020/07/08  13:37:59	HunterDefaultDeck states showed .
+CLICK_BUTTON		2020/07/08  13:37:59	deck:  HunterDefaultDeck  selected .
+STATUS		2020/07/08  13:38:00	WarlockDefaultDeck states showed .
+CLICK_BUTTON		2020/07/08  13:38:00	deck:  WarlockDefaultDeck  selected .
+STATUS		2020/07/08  13:38:01	MageDefaultDeck states showed .
+CLICK_BUTTON		2020/07/08  13:38:01	deck:  MageDefaultDeck  selected .
+STATUS		2020/07/08  13:38:02	HunterDefaultDeck states showed .
+CLICK_BUTTON		2020/07/08  13:38:02	deck:  HunterDefaultDeck  selected .
+CLICK_BUTTON		2020/07/08  13:38:12	button: BACK selected .
+NAVIGATION		2020/07/08  13:38:12	Back to previous panel
+NAVIGATION		2020/07/08  13:38:13	To Collection
+CLICK_BUTTON		2020/07/08  13:38:15	deck:  PriestDefaultDeck  selected .
+CLICK_BUTTON		2020/07/08  13:38:19	button: EXIT selected .
+PLAYER		2020/07/08  13:38:20	123456 logged out
+PLAYER		2020/07/08  13:45:06	123456 logged in
+NAVIGATION		2020/07/08  13:45:07	To Collection
+CLICK_BUTTON		2020/07/08  13:45:09	deck:  MageDefaultDeck  selected .
+CLICK_BUTTON		2020/07/08  13:45:15	deck:  fullMinionDeck  selected .
+CLICK_BUTTON		2020/07/08  13:45:26	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/08  13:45:27	fullMinionDeck has been set as current deck
+CLICK_BUTTON		2020/07/08  13:45:31	button: BACK selected .
+NAVIGATION		2020/07/08  13:45:31	Back to previous panel
+NAVIGATION		2020/07/08  13:45:33	To Collection
+CLICK_BUTTON		2020/07/08  13:45:41	card: ZILLIAX  selected.
+CLICK_BUTTON		2020/07/08  13:45:42	deck:  MageDefaultDeck  selected .
+CLICK_BUTTON		2020/07/08  13:45:52	button: BACK selected .
+NAVIGATION		2020/07/08  13:45:52	Back to previous panel
+NAVIGATION		2020/07/08  13:45:53	To PlayStarter
+CLICK_BUTTON		2020/07/08  13:45:54	passive: nurse  selected.
+PLAY		2020/07/08  13:45:56	you have 'nurse' passive
+CLICK_BUTTON		2020/07/08  13:45:57	deck:  RogueDefaultDeck  selected .
+PLAY		2020/07/08  13:45:58	RogueDefaultDeck is selected as opponent
+PLAY		2020/07/08  13:45:58	opponent has 'ManaJump' passive
+NAVIGATION		2020/07/08  13:45:58	To Play
+CLICK_BUTTON		2020/07/08  13:45:59	card: ZILLIAX  selected.
+CLICK_BUTTON		2020/07/08  13:46:01	card: OMEGA MEDIC  selected.
+CLICK_BUTTON		2020/07/08  13:46:04	card: PHARAOH'S BLESSING  selected.
+CLICK_BUTTON		2020/07/08  13:46:11	card: OMEGA MEDIC  selected.
+CLICK_BUTTON		2020/07/08  13:46:12	card: PHARAOH'S BLESSING  selected.
+CLICK_BUTTON		2020/07/08  13:46:13	card: ZILLIAX  selected.
+PLAYER		2020/07/08  13:46:20	123456 logged out
+PLAYER		2020/07/08  15:20:17	123456 logged in
+NAVIGATION		2020/07/08  15:20:20	To Collection
+CLICK_BUTTON		2020/07/08  15:20:21	deck:  WarlockDefaultDeck  selected .
+CLICK_BUTTON		2020/07/08  15:20:22	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/08  15:20:23	WarlockDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/07/08  15:20:24	button: BACK selected .
+NAVIGATION		2020/07/08  15:20:24	Back to previous panel
+NAVIGATION		2020/07/08  15:20:25	To PlayStarter
+CLICK_BUTTON		2020/07/08  15:20:26	passive: nurse  selected.
+PLAY		2020/07/08  15:20:28	you have 'nurse' passive
+CLICK_BUTTON		2020/07/08  15:20:29	deck:  RogueDefaultDeck  selected .
+PLAY		2020/07/08  15:20:31	RogueDefaultDeck is selected as opponent
+PLAY		2020/07/08  15:20:31	opponent has 'OffCards' passive
+NAVIGATION		2020/07/08  15:20:31	To Play
+CLICK_BUTTON		2020/07/08  15:20:33	card: CURIO COLLECTOR  selected.
+CLICK_BUTTON		2020/07/08  15:20:34	card: DREADSCALE  selected.
+CLICK_BUTTON		2020/07/08  15:20:38	card: SWARM OF LOCUSTS  selected.
+CLICK_BUTTON		2020/07/08  15:20:39	card: DREADSCALE  selected.
+CLICK_BUTTON		2020/07/08  15:20:44	card: CURIO COLLECTOR  selected.
+CLICK_BUTTON		2020/07/08  15:21:08	card: MURLOC TIDEHUNTER  selected.
+PLAY		2020/07/08  15:21:11	you summoned MURLOC TIDEHUNTER
+CLICK_BUTTON		2020/07/08  15:21:16	card: DREADSCALE  selected.
+CLICK_BUTTON		2020/07/08  15:21:23	card: DREADSCALE  selected.
+PLAY		2020/07/08  15:21:27	you summoned DREADSCALE
+CLICK_BUTTON		2020/07/08  15:21:31	card: DREADSCALE  selected.
+PLAY		2020/07/08  15:21:41	you summoned DREADSCALE
+CLICK_BUTTON		2020/07/08  15:22:23	card: SWARM OF LOCUSTS  selected.
+CLICK_BUTTON		2020/07/08  15:22:24	card: SLAM  selected.
+CLICK_BUTTON		2020/07/08  15:22:33	card: SLAM  selected.
+PLAY		2020/07/08  15:22:35	opponent played the SLAM spell
+CLICK_BUTTON		2020/07/08  15:22:36	card: HEAVY AXE  selected.
+PLAY		2020/07/08  15:22:37	opponent set weapon to HEAVY AXE
+CLICK_BUTTON		2020/07/08  15:22:39	card: VOODOO DOCTOR  selected.
+CLICK_BUTTON		2020/07/08  15:22:51	card: CURIO COLLECTOR  selected.
+PLAY		2020/07/08  15:23:06	you summoned CURIO COLLECTOR
+CLICK_BUTTON		2020/07/08  15:23:32	card: OMEGA MEDIC  selected.
+CLICK_BUTTON		2020/07/08  15:23:34	card: OMEGA MEDIC  selected.
+CLICK_BUTTON		2020/07/08  15:23:36	card: OMEGA MEDIC  selected.
+CLICK_BUTTON		2020/07/08  15:23:41	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:41	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:41	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:41	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:41	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:41	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:41	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:41	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:41	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:41	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:41	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:41	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:41	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:41	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:43	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:43	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:43	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:43	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:43	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:43	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:43	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:43	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:43	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:43	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:43	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:43	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:43	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:43	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:43	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:44	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:23:44	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:23:44	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:23:44	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:23:44	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:23:45	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:45	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:45	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:45	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:45	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:45	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:45	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:45	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:45	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:45	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:45	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:45	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:45	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:45	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:45	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:45	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:45	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:45	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:45	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:45	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:45	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:45	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:45	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:45	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:45	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:45	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:45	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:45	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:46	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:46	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:46	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:46	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:46	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:46	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:46	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:46	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:46	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:46	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:46	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:46	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:46	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:46	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:46	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:46	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:46	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:46	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:46	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:46	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:46	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:46	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:46	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:46	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:46	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:46	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:46	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:46	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:47	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:23:47	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:23:47	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:23:47	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:23:47	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:23:48	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:48	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:48	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:48	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:48	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:48	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:48	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:48	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:48	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:48	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:48	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:48	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:48	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:48	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:48	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:48	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:48	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:48	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:48	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:48	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:48	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:48	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:48	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:48	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:48	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:48	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:48	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:48	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:53	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:53	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:53	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:53	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:53	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:53	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:53	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:53	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:53	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:53	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:53	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:53	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:53	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:53	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:53	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:53	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:53	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:53	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:53	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:53	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:53	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:53	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:53	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:53	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:53	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:53	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:53	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:53	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:54	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:54	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:54	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:54	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:54	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:54	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:54	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:54	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:54	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:54	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:54	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:54	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:54	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:54	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:54	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:54	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:54	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:54	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:54	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:54	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:54	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:54	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:55	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:55	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:55	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:55	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:55	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:55	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:55	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:55	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:55	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:55	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:55	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:55	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:55	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:55	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:55	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:56	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:23:56	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:23:56	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:23:56	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:23:56	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:23:56	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:56	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:56	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:56	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:56	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:56	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:56	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:56	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:56	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:56	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:56	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:56	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:56	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:56	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:56	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:56	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:56	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:56	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:56	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:56	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:56	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:56	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:56	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:56	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:56	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:56	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:56	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:56	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:23:57	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:57	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:57	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:57	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:57	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:57	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:57	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:57	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:57	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:57	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:57	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:57	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:57	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:57	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:57	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:57	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:57	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:57	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:57	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:57	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:57	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:23:57	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:24:07	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:24:07	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:24:07	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:24:07	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:24:07	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:24:07	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:24:07	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:24:07	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:24:07	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:24:07	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:24:07	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:24:07	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:24:07	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:24:07	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:24:07	passive: Dreadscale  selected.
+CLICK_BUTTON		2020/07/08  15:24:11	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:24:11	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:24:11	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:24:11	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:24:11	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:24:24	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:24:24	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:24:24	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:24:24	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:24:24	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:24:24	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:24:24	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:24:24	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:24:24	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:24:24	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:24:24	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:24:24	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:24:24	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:24:24	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:24:24	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:24:24	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:24:24	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:24:24	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:24:24	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:24:24	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:24:24	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:24:24	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:24:24	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:24:24	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:24:24	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:24:24	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:24:24	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:24:24	passive: Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/08  15:32:29	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:32:29	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:32:29	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:32:29	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:32:29	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:32:39	card: OMEGA MEDIC  selected.
+PLAY		2020/07/08  15:32:41	you summoned OMEGA MEDIC
+CLICK_BUTTON		2020/07/08  15:32:43	passive: Omega Medic  selected.
+CLICK_BUTTON		2020/07/08  15:32:47	card: ZILLIAX  selected.
+PLAY		2020/07/08  15:32:52	you summoned ZILLIAX
+CLICK_BUTTON		2020/07/08  15:32:53	passive: Zilliax  selected.
+CLICK_BUTTON		2020/07/08  15:33:08	card: SATHROVARR  selected.
+CLICK_BUTTON		2020/07/08  15:33:19	card: SATHROVARR  selected.
+CLICK_BUTTON		2020/07/08  15:33:31	card: SATHROVARR  selected.
+CLICK_BUTTON		2020/07/08  15:33:33	card: SATHROVARR  selected.
+PLAY		2020/07/08  15:33:37	you summoned SATHROVARR
+CLICK_BUTTON		2020/07/08  15:33:39	passive: Sathrovarr  selected.
+CLICK_BUTTON		2020/07/08  15:33:43	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:33:43	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:33:43	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:33:43	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:33:43	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:33:43	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:33:43	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:33:43	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:33:43	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:33:43	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:33:43	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:33:43	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:33:43	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:33:43	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:33:43	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:33:43	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:33:43	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:33:43	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:33:43	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:33:43	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:33:43	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:33:43	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:33:43	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:33:43	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:33:43	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:33:43	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:33:43	passive: Curio Collector  selected.
+CLICK_BUTTON		2020/07/08  15:33:43	passive: Curio Collector  selected.
+PLAYER		2020/07/08  15:34:09	123456 logged out
+PLAYER		2020/07/08  15:48:11	123456 logged in
+NAVIGATION		2020/07/08  15:48:14	To Collection
+CLICK_BUTTON		2020/07/08  15:48:15	deck:  WarlockDefaultDeck  selected .
+CLICK_BUTTON		2020/07/08  15:48:17	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/08  15:48:18	WarlockDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/07/08  15:48:19	button: BACK selected .
+NAVIGATION		2020/07/08  15:48:19	Back to previous panel
+NAVIGATION		2020/07/08  15:48:20	To PlayStarter
+CLICK_BUTTON		2020/07/08  15:48:22	passive: OffCards  selected.
+PLAY		2020/07/08  15:48:24	you have 'OffCards' passive
+CLICK_BUTTON		2020/07/08  15:48:25	deck:  RogueDefaultDeck  selected .
+PLAY		2020/07/08  15:48:26	RogueDefaultDeck is selected as opponent
+PLAY		2020/07/08  15:48:26	opponent has 'OffCards' passive
+NAVIGATION		2020/07/08  15:48:26	To Play
+CLICK_BUTTON		2020/07/08  15:48:34	card: ZILLIAX  selected.
+CLICK_BUTTON		2020/07/08  15:48:39	card: ZILLIAX  selected.
+CLICK_BUTTON		2020/07/08  15:49:00	card: VOODOO DOCTOR  selected.
+PLAY		2020/07/08  15:49:01	opponent summoned VOODOO DOCTOR
+CLICK_BUTTON		2020/07/08  15:49:25	card: OMEGA MEDIC  selected.
+PLAY		2020/07/08  15:49:29	opponent summoned OMEGA MEDIC
+PLAYER		2020/07/08  15:49:41	123456 logged out

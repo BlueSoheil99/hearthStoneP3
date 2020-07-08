@@ -190,7 +190,10 @@ public class GamePlayer {
             playerMana -= card.getManaCost();
 
             if (card.getType()== Card.CardType.WEAPON) playerWeapon=card;
-            if (card.getType()== Card.CardType.MINION||card.getType()== Card.CardType.BEAST) summonedMinions.add(card);
+            if (card.getType()== Card.CardType.MINION||card.getType()== Card.CardType.BEAST) {
+//                if (index = summonedMinions.size()){
+                summonedMinions.add(card);
+            }
 
             playerHand.remove(card);
         } else {

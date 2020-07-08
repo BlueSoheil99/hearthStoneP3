@@ -146,6 +146,10 @@ public class PlayHandler {
     ///
     //
 
+    public MinionActualCard getMinion(String playerSelectedCardInHand) {
+        Minion minion = (Minion) gameController.getCard(playerSelectedCardInHand);
+        return new MinionActualCard(minion, null);
+    }
     public MinionActualCard summonAndGetMinion(String playerSelectedCardInHand) throws PlayException {
         Minion minion = (Minion) getCardFromController(playerSelectedCardInHand);
         Logger.log(LogTypes.PLAY, gameController.getPlayingSide() + " summoned " + playerSelectedCardInHand);

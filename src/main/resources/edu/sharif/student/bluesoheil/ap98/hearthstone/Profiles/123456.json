@@ -347,18 +347,6 @@
         },
         {
           "inRush": false,
-          "HP": 5,
-          "attack": 5,
-          "name": "Sathrovarr",
-          "manaCost": 9,
-          "type": "MINION",
-          "heroClass": "NEUTRAL",
-          "rarity": "LEGENDARY",
-          "description": "N/A",
-          "cost": 6
-        },
-        {
-          "inRush": false,
           "HP": 4,
           "attack": 4,
           "name": "Curio Collector",
@@ -401,6 +389,18 @@
           "rarity": "COMMON",
           "description": "N/A",
           "cost": 2
+        },
+        {
+          "inRush": false,
+          "HP": 1,
+          "attack": 2,
+          "name": "Waterboy",
+          "manaCost": 2,
+          "type": "MINION",
+          "heroClass": "NEUTRAL",
+          "rarity": "RARE",
+          "description": "N/A",
+          "cost": 2
         }
       ],
       "cardsUsage": {
@@ -408,11 +408,11 @@
         "Omega Medic": 0,
         "Zilliax": 0,
         "Murloc Tidehunter": 0,
-        "Sathrovarr": 0,
         "Heavy Axe": 0,
         "Learn Draconic": 0,
         "Swarm of Locusts": 0,
         "Swamp King Dred": 0,
+        "Waterboy": 0,
         "Curio Collector": 0
       }
     },
@@ -716,16 +716,6 @@
           "cost": 1
         },
         {
-          "value": 0,
-          "name": "Swarm of Locusts",
-          "manaCost": 6,
-          "type": "SPELL",
-          "heroClass": "NEUTRAL",
-          "rarity": "RARE",
-          "description": "N/A",
-          "cost": 4
-        },
-        {
           "inRush": false,
           "HP": 2,
           "attack": 3,
@@ -817,6 +807,18 @@
           "rarity": "COMMON",
           "description": "N/A",
           "cost": 2
+        },
+        {
+          "inRush": false,
+          "HP": 1,
+          "attack": 2,
+          "name": "Waterboy",
+          "manaCost": 2,
+          "type": "MINION",
+          "heroClass": "NEUTRAL",
+          "rarity": "RARE",
+          "description": "N/A",
+          "cost": 2
         }
       ],
       "cardsUsage": {
@@ -827,8 +829,8 @@
         "Sathrovarr": 0,
         "Heavy Axe": 0,
         "Learn Draconic": 0,
-        "Swarm of Locusts": 0,
         "Voodoo doctor": 0,
+        "Waterboy": 0,
         "Friendly Smith": 0,
         "Curio Collector": 0
       }
@@ -967,45 +969,6 @@
       }
     },
     {
-      "name": "512",
-      "gamesPlayed": 0,
-      "wins": 0,
-      "hero": "MAGE",
-      "cards": [],
-      "cardsUsage": {}
-    },
-    {
-      "name": "newDecknew",
-      "gamesPlayed": 0,
-      "wins": 0,
-      "hero": "MAGE",
-      "cards": [
-        {
-          "value": 0,
-          "name": "Learn Draconic",
-          "manaCost": 1,
-          "type": "QUESTANDREWARD",
-          "heroClass": "NEUTRAL",
-          "rarity": "COMMON",
-          "description": "N/A",
-          "cost": 2
-        },
-        {
-          "value": 0,
-          "name": "Learn Draconic",
-          "manaCost": 1,
-          "type": "QUESTANDREWARD",
-          "heroClass": "NEUTRAL",
-          "rarity": "COMMON",
-          "description": "N/A",
-          "cost": 2
-        }
-      ],
-      "cardsUsage": {
-        "Learn Draconic": 0
-      }
-    },
-    {
       "name": "newDeck2",
       "gamesPlayed": 0,
       "wins": 0,
@@ -1029,61 +992,149 @@
       }
     },
     {
-      "name": "newDeck",
+      "name": "fullMinionDeck",
       "gamesPlayed": 0,
       "wins": 0,
       "hero": "MAGE",
       "cards": [
         {
           "value": 0,
-          "name": "Swarm of Locusts",
+          "name": "Learn Draconic",
+          "manaCost": 1,
+          "type": "QUESTANDREWARD",
+          "heroClass": "NEUTRAL",
+          "rarity": "COMMON",
+          "description": "N/A",
+          "cost": 2
+        },
+        {
+          "value": 0,
+          "name": "Learn Draconic",
+          "manaCost": 1,
+          "type": "QUESTANDREWARD",
+          "heroClass": "NEUTRAL",
+          "rarity": "COMMON",
+          "description": "N/A",
+          "cost": 2
+        },
+        {
+          "inRush": false,
+          "HP": 4,
+          "attack": 4,
+          "name": "Curio Collector",
+          "manaCost": 5,
+          "type": "MINION",
+          "heroClass": "NEUTRAL",
+          "rarity": "RARE",
+          "description": "N/A",
+          "cost": 3
+        },
+        {
+          "inRush": false,
+          "HP": 1,
+          "attack": 2,
+          "name": "Voodoo doctor",
+          "manaCost": 1,
+          "type": "MINION",
+          "heroClass": "NEUTRAL",
+          "rarity": "COMMON",
+          "description": "N/A",
+          "cost": 2
+        },
+        {
+          "inRush": false,
+          "HP": 1,
+          "attack": 2,
+          "name": "Waterboy",
+          "manaCost": 2,
+          "type": "MINION",
+          "heroClass": "NEUTRAL",
+          "rarity": "RARE",
+          "description": "N/A",
+          "cost": 2
+        },
+        {
+          "inRush": false,
+          "HP": 4,
+          "attack": 3,
+          "name": "Omega Medic",
+          "manaCost": 3,
+          "type": "MINION",
+          "heroClass": "NEUTRAL",
+          "rarity": "RARE",
+          "description": "N/A",
+          "cost": 2
+        },
+        {
+          "inRush": false,
+          "HP": 4,
+          "attack": 4,
+          "name": "Abomination",
+          "manaCost": 4,
+          "type": "MINION",
+          "heroClass": "NEUTRAL",
+          "rarity": "RARE",
+          "description": "N/A",
+          "cost": 3
+        },
+        {
+          "inRush": false,
+          "HP": 2,
+          "attack": 3,
+          "name": "Zilliax",
+          "manaCost": 5,
+          "type": "MINION",
+          "heroClass": "NEUTRAL",
+          "rarity": "LEGENDARY",
+          "description": "N/A",
+          "cost": 2
+        },
+        {
+          "inRush": false,
+          "HP": 5,
+          "attack": 5,
+          "name": "Sathrovarr",
+          "manaCost": 9,
+          "type": "MINION",
+          "heroClass": "NEUTRAL",
+          "rarity": "LEGENDARY",
+          "description": "N/A",
+          "cost": 6
+        },
+        {
+          "inRush": false,
+          "HP": 1,
+          "attack": 2,
+          "name": "Murloc Tidehunter",
+          "manaCost": 2,
+          "type": "MINION",
+          "heroClass": "NEUTRAL",
+          "rarity": "COMMON",
+          "description": "N/A",
+          "cost": 1
+        },
+        {
+          "value": 0,
+          "name": "Pharaoh\u0027s Blessing",
           "manaCost": 6,
           "type": "SPELL",
           "heroClass": "NEUTRAL",
           "rarity": "RARE",
           "description": "N/A",
           "cost": 4
-        },
-        {
-          "inRush": false,
-          "HP": 1,
-          "attack": 2,
-          "name": "Murloc Tidehunter",
-          "manaCost": 2,
-          "type": "MINION",
-          "heroClass": "NEUTRAL",
-          "rarity": "COMMON",
-          "description": "N/A",
-          "cost": 1
-        },
-        {
-          "inRush": false,
-          "HP": 1,
-          "attack": 2,
-          "name": "Murloc Tidehunter",
-          "manaCost": 2,
-          "type": "MINION",
-          "heroClass": "NEUTRAL",
-          "rarity": "COMMON",
-          "description": "N/A",
-          "cost": 1
-        },
-        {
-          "inRush": false,
-          "HP": 1,
-          "attack": 2,
-          "name": "Murloc Tidehunter",
-          "manaCost": 2,
-          "type": "MINION",
-          "heroClass": "NEUTRAL",
-          "rarity": "COMMON",
-          "description": "N/A",
-          "cost": 1
         }
       ],
       "cardsUsage": {
+        "Omega Medic": 0,
+        "Zilliax": 0,
+        "Sathrovarr": 0,
         "Murloc Tidehunter": 0,
-        "Swarm of Locusts": 0
+        "Learn Draconic": 0,
+        "Pharaoh\u0027s Blessing": 0,
+        "Abomination": 0,
+        "Voodoo doctor": 0,
+        "Waterboy": 0,
+        "Curio Collector": 0
       }
     }
   ]

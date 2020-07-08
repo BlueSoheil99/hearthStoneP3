@@ -7,7 +7,7 @@ public class PlayLogicConfig extends LogicConfig {
     private static PlayLogicConfig instance;
     private Configs config;
     private int maximumStartHints , maximumMana, maximumCardsInHand;
-    private int timerPeriod;
+    private int timerPeriod , boardLimit;
 
     @Override
     protected void setProperties() {
@@ -20,6 +20,7 @@ public class PlayLogicConfig extends LogicConfig {
         maximumMana = config.readInt("maximumMana");
         maximumCardsInHand = config.readInt("maximumCardsInHand");
         timerPeriod = config.readInt("timerPeriod");
+        boardLimit = config.readInt("boardLimit");
     }
 
     public static PlayLogicConfig getInstance(){
@@ -41,5 +42,9 @@ public class PlayLogicConfig extends LogicConfig {
 
     public int getDefaultTimerPeriod() {
         return timerPeriod;
+    }
+
+    public int getBoardLimit() {
+        return boardLimit;
     }
 }
