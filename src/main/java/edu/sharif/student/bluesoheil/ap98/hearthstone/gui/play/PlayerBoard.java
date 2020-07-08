@@ -65,6 +65,11 @@ public class PlayerBoard extends CardPanel {
         }
     }
 
+    public void updateBoard( ArrayList<MinionActualCard> cards) {
+        this.cards = cards;
+        setCards(cards);
+    }
+
     //////////////////
     //////////////////
 

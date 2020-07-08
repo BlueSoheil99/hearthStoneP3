@@ -7,7 +7,6 @@ import edu.sharif.student.bluesoheil.ap98.hearthstone.interefaces.*;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.cards.Card;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.Configuration.GuiConfigs.PlayConfig;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.PlayTimer;
-import jdk.nashorn.internal.scripts.JO;
 
 import javax.swing.*;
 import java.awt.*;
@@ -97,7 +96,7 @@ public class PlayPanel extends GamePanel {
         };
         handClickListener = this::selectAHandCard;
         currentPlayerCardListener = this::selectBoardCard;
-        currentOpponentCardListener = this::selectOpponentBoardCard;
+        currentOpponentCardListener = this::attackToBoardCard;
         setupHeroActionListeners();
         setupPlayActionListener();
     }
@@ -151,10 +150,8 @@ public class PlayPanel extends GamePanel {
                 if (selectedCardInHand != null) {
                     doHandCardAction();
                     selectedCardInHand = null;
-                } else if (currentPlayerSelectedCard != null) {
-                    playHandler.playCard(currentPlayerSelectedCard);
                 } else {
-                    JOptionPane.showMessageDialog(null, "select a card :/");
+                    JOptionPane.showMessageDialog(null, "select a hand card :/");
                 }
                 eventBox.update();
             }
@@ -281,7 +278,6 @@ public class PlayPanel extends GamePanel {
         }
     }
 
-
     private void doHandCardAction() {
         try {
             switch (playHandler.getCardType(selectedCardInHand)) {
@@ -350,10 +346,26 @@ public class PlayPanel extends GamePanel {
         }
     }
 
-    private void selectOpponentBoardCard(ActualCard selectedCard) {
-        currentOpponentSelectedCard = selectedCard;
+    private void attackToBoardCard(ActualCard selectedCard) {
+        if (currentPlayerSelectedCard != null) {
+//todo  if (opponentHeroCanBeAttacked) { //write opponentHeroCanBeAttacked as a method
+//          if (thereIsNoTaunt) //write thereIsNoTaunt as a method
+            try {
+                playHandler.attackToMinion(selectedCard , currentPlayerSelectedCard);
+                System.out.println("attacked to  "+selectedCard.getCardName());
+                updateBoards();
+            } catch (PlayException e) {
+                JOptionPane.showMessageDialog(null, e.getMessage(), "invalid move", JOptionPane.ERROR_MESSAGE);
+            }
+            unselectBoard();//for currentTurn
+            getOppositeSide(currentTurn).board.unselectCard(); // for currentOpponent
+        }
         System.out.println(selectedCard.getCardName() + " selected from other board");
-//      attack(currentPlayerSelectedCard , currentOpponentSelectedCard);
+    }
+
+    private void updateBoards() {
+        currentTurn.board.updateBoard(playHandler.getCurrentTurnBoardCards());
+        getOppositeSide(currentTurn).board.updateBoard(playHandler.getCurrentOpponentBoardCards());
     }
 
     private void attackToHero() {
@@ -371,14 +383,10 @@ public class PlayPanel extends GamePanel {
         }
     }
 
-    private void attackToBoardCard() {
-
-    }
-
     private void updatePlayers() {
-        //for now i think it's only useful after attacking to hero
         currentTurn.panel.updatePlayer(playHandler.getCurrentTurnHand(), playHandler.getCurrentTurnHeroStates());
         getOppositeSide(currentTurn).panel.updatePlayer(playHandler.getCurrentOpponentHand(), playHandler.getCurrentOpponentHeroStates());
         System.out.println("players are updated");
+        //todo check if the game is over or no
     }
 }

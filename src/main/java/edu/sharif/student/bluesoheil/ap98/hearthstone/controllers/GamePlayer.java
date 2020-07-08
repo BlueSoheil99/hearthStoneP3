@@ -6,6 +6,7 @@ import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Heroes.Hero;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Heroes.HeroTypes;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.InfoPassives.InfoPassive;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.cards.Card;
+import edu.sharif.student.bluesoheil.ap98.hearthstone.models.cards.Minion;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.util.Configuration.LogicConfigs.PlayLogicConfig;
 
 import java.util.ArrayList;
@@ -23,8 +24,8 @@ public class GamePlayer {
     private Hero hero;
     private Stack<Card> playerCards;
     private Card playerWeapon;
-    private ArrayList<Card> playerHand, summonedMinions ;
-    private ArrayList<Card>  playedCardsInTurn , summonedCardsInThisTurn;
+    private ArrayList<Card> playerHand, summonedMinions;
+    private ArrayList<Card> playedCardsInTurn, summonedCardsInThisTurn;
     private ArrayList<Integer> cardsPlayerChangedForHisFirstHand;
     private int initialMana, turnsPlayerPlayed, numberOfCardsCanBeDrawn, playerMana;
     private boolean isWarriorsEnabled, isNurseEnabled, isOffCardsEnabled;
@@ -189,6 +190,10 @@ public class GamePlayer {
         return selectedCard;
     }
 
+    ArrayList<Card> getSummonedCards(){
+        return summonedMinions;
+    }
+
     Card getSummonedCard(String playerSelectedCard) {
         // this method returns requested card referring to summoned minions or beasts or current Weapon
         Card selectedCard = null;
@@ -233,11 +238,23 @@ public class GamePlayer {
 
     void damageHero(int attack) {
         int hp = hero.getHp() - attack;
-        if (hp>0){
+        if (hp > 0) {
             hero.setHp(hp);
-        }else {
+        } else {
             hero.setHp(0);
             //todo show that the game is over
+        }
+    }
+
+    void damageMinion(Minion defenderMinion, int attack) {
+        //given minion has a reference in summoned minions so it's ok to to query the card from summonedMinions
+        int hp = defenderMinion.getHP() - attack;
+        if (hp > 0) {
+            defenderMinion.setHP(hp);
+        } else {
+            defenderMinion.setHP(0);
+            summonedMinions.remove(defenderMinion);
+
         }
     }
 
@@ -245,7 +262,7 @@ public class GamePlayer {
         return !summonedCardsInThisTurn.contains(card) && !playedCardsInTurn.contains(card);
     }
 
-    void cardPlayedInThisTurn(Card card){
+    void cardPlayedInThisTurn(Card card) {
         playedCardsInTurn.add(card);
     }
 }

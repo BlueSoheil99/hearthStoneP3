@@ -137,6 +137,25 @@ public class PlayHandler {
     }
     //***********************//
 
+    public ArrayList<MinionActualCard> getCurrentTurnBoardCards() {
+        return getActualCards(gameController.getCurrentTurnBoardCards());
+    }
+
+    public ArrayList<MinionActualCard> getCurrentOpponentBoardCards() {
+        return getActualCards(gameController.getCurrentOpponentBoardCards());
+    }
+
+    private ArrayList<MinionActualCard> getActualCards(ArrayList<Card> cards) {
+        ArrayList<MinionActualCard> actualCards = new ArrayList<>();
+        for (Card card : cards) {
+            if (card.getType() == Card.CardType.MINION) actualCards.add(new MinionActualCard((Minion) card, null));
+            if (card.getType() == Card.CardType.BEAST) actualCards.add(new MinionActualCard((Beast) card, null));
+        }
+        return actualCards;
+    }
+
+    //***********************//
+
     //
     ///
     ////general settings
@@ -207,13 +226,7 @@ public class PlayHandler {
     ////////////
     ////////////
 
-    public void playCard(ActualCard playerSelectedCard) {
-
-    }
-
-
     public void attackToHero(ActualCard attackingCard) throws PlayException {
-
         switch (gameController.getSummonedCard(attackingCard.getCardName()).getType()) {
             case BEAST:
             case MINION:
@@ -221,6 +234,21 @@ public class PlayHandler {
                 break;
             case WEAPON:
                 gameController.attackToHero(((WeaponActualCard) attackingCard).getCard());
+                break;
+        }
+    }
+
+    public void attackToMinion(ActualCard defenderMinion, ActualCard attackingCard) throws PlayException {
+        switch (gameController.getSummonedCard(attackingCard.getCardName()).getType()) {
+            case BEAST:
+            case MINION:
+                gameController.attackToBoardCard(((MinionActualCard) defenderMinion).getCard()
+                        , (Minion) ((MinionActualCard) attackingCard).getCard());
+                break;
+            case WEAPON:
+
+                gameController.attackToBoardCard(((MinionActualCard) defenderMinion).getCard()
+                        , (Weapon) ((WeaponActualCard) attackingCard).getCard());
                 break;
         }
     }

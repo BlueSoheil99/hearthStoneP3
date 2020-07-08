@@ -1,7 +1,6 @@
 package edu.sharif.student.bluesoheil.ap98.hearthstone.controllers;
 
 import edu.sharif.student.bluesoheil.ap98.hearthstone.exceptions.PlayException;
-import edu.sharif.student.bluesoheil.ap98.hearthstone.gui.play.PlayPanel;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.Heroes.HeroTypes;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.InfoPassives.InfoPassive;
 import edu.sharif.student.bluesoheil.ap98.hearthstone.models.cards.Beast;
@@ -29,7 +28,9 @@ public class GameController {
         OPPONENT;
 
         private GamePlayer gamePlayer;
+
     }
+
     private GameController() {
         properties = PlayLogicConfig.getInstance();
         deckController = DeckController.getInstance();
@@ -42,11 +43,11 @@ public class GameController {
     ///statics//////////
     /////////////////
     ///////////
-
     public static GameController getInstance() {
         if (instance == null) setNewGame();
         return instance;
     }
+
     public static void setNewGame() {
         instance = new GameController();
     }
@@ -68,6 +69,7 @@ public class GameController {
     ///non-statics//////
     /////////////////
     ///////////
+
     private void setPlayer() {
         Players.ME.gamePlayer = new GamePlayer(deckController.getCurrentDeck());
     }
@@ -81,29 +83,30 @@ public class GameController {
         Logger.log(LogTypes.PLAY, "opponent has '" + randomPassive + "' passive");
     }
 
-    //***********************//
 
+    //***********************//
     private GamePlayer getPlayer(boolean isME) {
         if (isME) return Players.ME.gamePlayer;
         else return Players.OPPONENT.gamePlayer;
     }
-    //***********************//
 
+    //***********************//
     public void setPassiveForUser(String passiveName) {
         Players.ME.gamePlayer.setPassive(passiveName);
         Logger.log(LogTypes.PLAY, "you have '" + passiveName + "' passive");
     }
-    //***********************//
 
+    //***********************//
     public HeroTypes getPlayerHero() {
         return currentTurn.gamePlayer.getHeroType();
     }
+
     public HeroTypes getPlayerHero(boolean isMe) {
         return getPlayer(isMe).getHeroType();
     }
 
-
     //***********************//
+
     public HashMap<String, Integer> getHeroStates(boolean isMe) {
         return getPlayer(isMe).getHeroStates();
     }
@@ -118,6 +121,7 @@ public class GameController {
 
 
     //***********************//
+
     public ArrayList<Card> getPlayerHand(boolean isMe) {
         return getPlayer(isMe).getHand();
     }
@@ -130,6 +134,15 @@ public class GameController {
         return getOppositeSide(currentTurn).gamePlayer.getHand();
     }
 
+
+    //***********************//
+    public ArrayList<Card> getCurrentTurnBoardCards() {
+        return currentTurn.gamePlayer.getSummonedCards();
+    }
+
+    public ArrayList<Card> getCurrentOpponentBoardCards() {
+        return getOppositeSide(currentTurn).gamePlayer.getSummonedCards();
+    }
 
     //***********************//
     public void drawHandAgain(String cardName) throws PlayException {
@@ -215,6 +228,28 @@ public class GameController {
 
     private void damageHero(int attack) {
         getOppositeSide(currentTurn).gamePlayer.damageHero(attack);
+    }
+
+    public void attackToBoardCard(Card defenderMinion, Card attackingCard) throws PlayException {
+        if (currentTurn.gamePlayer.cardIsAvailableInThisTurn(attackingCard)) {
+            switch (attackingCard.getType()) {
+                case WEAPON:
+                    damageMinion((Minion) defenderMinion, ((Weapon) attackingCard).getAttack());
+                    break;
+                case MINION:
+                    damageMinion((Minion) defenderMinion, ((Minion) attackingCard).getAttack());
+                    break;
+                case BEAST:
+                    damageMinion((Beast) defenderMinion, ((Beast) attackingCard).getAttack());
+                    break;
+            }
+
+            currentTurn.gamePlayer.cardPlayedInThisTurn(attackingCard);
+        } else throw new PlayException("you can't play with this card in this turn");
+    }
+
+    void damageMinion(Minion defenderMinion, int attack) {
+        getOppositeSide(currentTurn).gamePlayer.damageMinion(defenderMinion, attack);
     }
 
 }

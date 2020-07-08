@@ -4232,3 +4232,34 @@ CLICK_BUTTON		2020/07/09  01:33:57	card: SATHROVARR  selected.
 CLICK_BUTTON		2020/07/09  01:34:20	card: SLAM  selected.
 CLICK_BUTTON		2020/07/09  01:34:32	card: LEARN DRACONIC  selected.
 PLAYER		2020/07/09  01:34:39	123456 logged out
+PLAYER		2020/07/09  02:40:57	123456 logged in
+NAVIGATION		2020/07/09  02:40:58	To Collection
+CLICK_BUTTON		2020/07/09  02:41:00	deck:  MageDefaultDeck  selected .
+CLICK_BUTTON		2020/07/09  02:41:02	button: SET CURRENT DECK selected.
+COLLECTION		2020/07/09  02:41:02	MageDefaultDeck has been set as current deck
+CLICK_BUTTON		2020/07/09  02:41:04	button: BACK selected .
+NAVIGATION		2020/07/09  02:41:04	Back to previous panel
+NAVIGATION		2020/07/09  02:41:05	To PlayStarter
+CLICK_BUTTON		2020/07/09  02:41:07	passive: TwiceDraw  selected.
+CLICK_BUTTON		2020/07/09  02:41:08	card: MURLOC TIDEHUNTER  selected.
+CLICK_BUTTON		2020/07/09  02:41:09	card: SWARM OF LOCUSTS  selected.
+PLAY		2020/07/09  02:41:11	you have 'TwiceDraw' passive
+CLICK_BUTTON		2020/07/09  02:41:12	deck:  PriestDefaultDeck  selected .
+CLICK_BUTTON		2020/07/09  02:41:12	button: BACK selected .
+NAVIGATION		2020/07/09  02:41:12	Back to previous panel
+NAVIGATION		2020/07/09  02:41:14	To PlayStarter
+CLICK_BUTTON		2020/07/09  02:41:15	passive: TwiceDraw  selected.
+CLICK_BUTTON		2020/07/09  02:41:15	passive: ManaJump  selected.
+CLICK_BUTTON		2020/07/09  02:41:17	card: POLYMORPH  selected.
+PLAY		2020/07/09  02:41:20	you have 'ManaJump' passive
+CLICK_BUTTON		2020/07/09  02:41:21	deck:  PriestDefaultDeck  selected .
+PLAY		2020/07/09  02:41:22	PriestDefaultDeck is selected as opponent
+PLAY		2020/07/09  02:41:22	opponent has 'Warriors' passive
+NAVIGATION		2020/07/09  02:41:22	To Play
+CLICK_BUTTON		2020/07/09  02:41:32	card: STORMHAMMER  selected.
+PLAY		2020/07/09  02:41:34	you set weapon to STORMHAMMER
+CLICK_BUTTON		2020/07/09  02:41:36	card: MURLOC TIDEHUNTER  selected.
+PLAY		2020/07/09  02:41:37	opponent summoned MURLOC TIDEHUNTER
+CLICK_BUTTON		2020/07/09  02:41:41	card Murloc Tidehunter  selected.
+CLICK_BUTTON		2020/07/09  02:41:51	card Murloc Tidehunter  selected.
+PLAYER		2020/07/09  02:42:15	123456 logged out
